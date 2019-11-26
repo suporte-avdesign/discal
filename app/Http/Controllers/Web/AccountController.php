@@ -24,10 +24,12 @@ class AccountController extends Controller
      */
     public function index($slug)
     {
-
-        $photos = 1; #qtd de fotos da loja
+        $video = 1;   #video viemo (1,0)
+        $sound = 1;   #sound cloud (1,0)
+        $photos = 2;  #qtd de fotos da loja (1 >= 2)
+        $youtube = 1; #video youtube (1,0)
         return view("{$this->view}.account-1", compact(
-            'photos')
+            'video', 'sound', 'photos', 'youtube')
         );
     }
 

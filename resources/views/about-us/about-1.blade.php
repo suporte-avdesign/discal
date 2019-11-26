@@ -27,8 +27,9 @@
                             <div class="row">
                                 <div class="col-sm-8">
                                     <div class="about-work">
-                                        <h2> Bem-vindo ao BlogMag</h2>
-                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                                        <h2>Bem-vindo a {{config('app.name')}}</h2>
+                                        <p>O modelo de negócios inovador voltado aos dados da {{config('app.name')}}, que permite-o oferecer aos usuários do portal a satisfação ideal.</p>
+                                        <p>Fundada em 2008, a {{config('app.name')}} é uma plataforma abrangente de comércio eletrônico de terceiros no Brasil, desenvolvida e operada pela AV Design Ltd. É dedicada a atender o comércio global e fornecer alta qualidade, informações sobre produtos e fornecedores de calçados no Brasil para compradores globais. Atualmente, a {{config('app.name')}} é um portal líder na América Latina, especializado em preencher a lacuna entre compradores globais e fornecedores de calçados Brasileiros de qualidade.</p>
                                     </div>
                                 </div>
                                 <div class="col-sm-4">
@@ -36,12 +37,20 @@
                                         <img src="{{asset('images/about/vision.jpg')}}" alt="image">
                                     </div>
                                 </div>
+
                             </div>
+                        </div>
+
+                        <div class="about-work">
+                            <h2>Nossa Missão</h2>
+                            <p>Ajudar compradores e fornecedores a se comunicar e fazer negócios entre si de maneira eficaz e eficiente.</p>
+                            <p>Facilitar o comércio global entre compradores mundiais e fornecedores de Calçados Brasileiros.</p>
+                            <p>Fornecer informações precisas e confiáveis ​​sobre produtos e fornecedores Brasileiros para compradores globais.</p>
                         </div>
                         <div class="ad-content">
                             <img src="{{asset('images/advertisements/pd1.jpg')}}" alt="image">
                         </div>
-                        
+
                         <!-- Nosso Time -->
                         <div class="about-team">
                             <h3>Nosso Time</h3>
@@ -140,7 +149,7 @@
                                 <h3>Facebook</h3>
                                 <ul>
                                     <li class="text-center">
-                                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fpremierleague&tabs=timeline&width=230&height=350&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="230" height="350" style="border:none;overflow:hidden" allow="encrypted-media"></iframe>
+                                        <iframe src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/trendsfitness&tabs=timeline&width=230&height=350&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="230" height="350" style="border:none;overflow:hidden" allow="encrypted-media"></iframe>
                                     </li>
                                 </ul>
                             </div>
@@ -149,7 +158,11 @@
                             <div class="sidebar-title">
                                 <h3>Twitter</h3>
                                 <ul>
-                                    <li><blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">All the love as always. H</p>&mdash; Harry Styles. (@Harry_Styles) <a href="https://twitter.com/Harry_Styles/status/580932146874957824?ref_src=twsrc%5Etfw">March 26, 2015</a></blockquote>
+                                    <li>
+                                        <blockquote class="twitter-tweet" data-lang="pt_BR">
+                                            <p lang="pt_BR" dir="ltr">Todo o amor como sempre</p>&mdash; Anselmo Velame. (@penso10)
+                                            <a href="https://twitter.com/penso10">March 26, 2015</a>
+                                        </blockquote>
                                     </li>
                                 </ul>
                             </div>

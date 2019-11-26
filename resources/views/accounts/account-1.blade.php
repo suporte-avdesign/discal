@@ -9,117 +9,17 @@
             <div class="row">
                 <div class="col-md-8 col-sm-12">
                     <div class="blog-wrapper">
-                        <div class="blog-post-wrap">
-                            <div id="home_banner_blog">
-                                <div class="swiper-container">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <div class="slide-inner slide-overlay" style="background-image:url({{asset('images/slider/slider1.jpg')}}">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="slide-inner slide-overlay" style="background-image:url({{asset('images/slider/slider2.jpg')}}">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="slide-inner slide-overlay" style="background-image:url({{asset('images/slider/slider3.jpg')}}">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-button-next swiper-button-white"></div>
-                                    <div class="swiper-button-prev swiper-button-white"></div>
-                                </div>
-                            </div>
-                            <div class="blog-post-detail">
-                                <h3><a href="detail1.html">What Happens When?</a></h3>
-                                <div class="author-detail">
-                                    <p><a href="#"><i class="icon-profile-male"></i> John Doe</a></p>
-                                    <p><i class="icon-clock"></i> 12 May</p>
-                                    <p><a href="#"><i class="icon-chat"></i> 3 comments</a></p>
-                                </div>
-                                <p>Lorem ipsum dosectetur adipisicing elit, sed do.Lorem ipsum dolor sit amet, consectetur Nulla fringilla purus at leo dignissim congue. Mauris elementum accumsan leo vel tempor. Sit amet cursus nisl aliquam. </p>
-                                <a href="detail1.html" class="btn-white btn-red">Read More</a>
-                            </div>
-                        </div>
-                        <div class="blog-post-wrap">
-                            <div class="blog-post-upper">
-                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/UoD8G6X0y00" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                            </div>
-                            <div class="blog-post-detail">
-                                <h3><a href="detail1.html">What Happens When?</a></h3>
-                                <div class="author-detail">
-                                    <p><a href="#"><i class="icon-profile-male"></i> John Doe</a></p>
-                                    <p><i class="icon-clock"></i> 12 May</p>
-                                    <p><a href="#"><i class="icon-chat"></i> 3 comments</a></p>
-                                </div>
-                                <p>Lorem ipsum dosectetur adipisicing elit, sed do.Lorem ipsum dolor sit amet, consectetur Nulla fringilla purus at leo dignissim congue. Mauris elementum accumsan leo vel tempor. Sit amet cursus nisl aliquam. </p>
-                                <a href="detail1.html" class="btn-white btn-red">Read More</a>
-                            </div>
-                        </div>
-                        <div class="blog-post-wrap">
-                            <div class="blog-post-upper">
-                                <iframe width="700" height="166" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/34019569&amp;color=0066cc"></iframe>
-                            </div>
-                            <div class="blog-post-detail">
-                                <h3><a href="detail1.html">What Happens When?</a></h3>
-                                <div class="author-detail">
-                                    <p><a href="#"><i class="icon-profile-male"></i> John Doe</a></p>
-                                    <p><i class="icon-clock"></i> 12 May</p>
-                                    <p><a href="#"><i class="icon-chat"></i> 3 comments</a></p>
-                                </div>
-                                <p>Lorem ipsum dosectetur adipisicing elit, sed do.Lorem ipsum dolor sit amet, consectetur Nulla fringilla purus at leo dignissim congue. Mauris elementum accumsan leo vel tempor. Sit amet cursus nisl aliquam. </p>
-                                <a href="detail1.html" class="btn-white btn-red">Read More</a>
-                            </div>
-                        </div>
-                        <div class="blog-post-wrap">
-                            <div class="blog-post-upper">
-                                <img src="images/list1.jpg" alt="Image">
-                            </div>
-                            <div class="blog-post-detail">
-                                <h3><a href="detail1.html">What Happens When?</a></h3>
-                                <div class="author-detail">
-                                    <p><a href="#"><i class="icon-profile-male"></i> John Doe</a></p>
-                                    <p><i class="icon-clock"></i> 12 May</p>
-                                    <p><a href="#"><i class="icon-chat"></i> 3 comments</a></p>
-                                </div>
-                                <p>Lorem ipsum dosectetur adipisicing elit, sed do.Lorem ipsum dolor sit amet, consectetur Nulla fringilla purus at leo dignissim congue. Mauris elementum accumsan leo vel tempor. Sit amet cursus nisl aliquam. </p>
-                                <a href="detail1.html" class="btn-white btn-red">Read More</a>
-                            </div>
-                        </div>
-                        <div class="blog-post-wrap">
-                            <div class="blockquote-upper">
-                                <blockquote>
-                                    <p>Was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                                    <div class="sectionoverlay"></div>
-                                </blockquote>
-                            </div>
-                            <div class="blog-post-detail">
-                                <div class="author-detail">
-                                    <p><a href="#"><i class="icon-profile-male"></i> John Doe</a></p>
-                                    <p><i class="icon-clock"></i> 12 May</p>
-                                    <p><a href="#"><i class="icon-chat"></i> 3 comments</a></p>
-                                </div>
-                                <a href="detail1.html" class="btn-white btn-red">Read More</a>
-                            </div>
-                        </div>
-                        <div class="blog-post-wrap">
-                            <div class="blog-post-upper">
-                                <img src="images/list1.jpg" alt="Image">
-                                <div class="pulses">
-                                    <button type="button" class="play-btn js-video-button" data-video-id='326824980' data-channel="vimeo"><i class="fa fa-play"></i></button>
-                                </div>
-                            </div>
-                            <div class="blog-post-detail">
-                                <h3><a href="detail1.html">What Happens When?</a></h3>
-                                <div class="author-detail">
-                                    <p><a href="#"><i class="icon-profile-male"></i> John Doe</a></p>
-                                    <p><i class="icon-clock"></i> 12 May</p>
-                                    <p><a href="#"><i class="icon-chat"></i> 3 comments</a></p>
-                                </div>
-                                <p>Lorem ipsum dosectetur adipisicing elit, sed do.Lorem ipsum dolor sit amet, consectetur Nulla fringilla purus at leo dignissim congue. Mauris elementum accumsan leo vel tempor. Sit amet cursus nisl aliquam. </p>
-                                <a href="detail1.html" class="btn-white btn-red">Read More</a>
-                            </div>
-                        </div>
+                        <!-- Photos -->
+                        @include('accounts.photos.photo-1')
+
+                        <!-- Youtube -->
+                        @include('accounts.youtubes.youtube-1')
+
+                        <!-- Video -->
+                        @include('accounts.videos.vimeo-1')
+
+                        <!-- Sound -->
+                        @include('accounts.soundcloud.sound-1')
                     </div>
                     <div class="pagination">
                         <ul class="pagination">
@@ -224,7 +124,7 @@
                                 <h3>Advertisement</h3>
                             </div>
                             <div class="ad1-image">
-                                <img src="images/footer1.jpg" alt="Image">
+                                <img src="{{asset('images/banners/footer1.jpg')}}" alt="Image">
                             </div>
                         </div>
                         <div class="popular-post sidebar-box">

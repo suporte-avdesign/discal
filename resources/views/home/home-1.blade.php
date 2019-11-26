@@ -18,8 +18,8 @@
     <!-- Top Trending -->
     @include('home.trends.trend-1')
 
-    <!-- Advertisement Section -->
-    @include('home.advertisements.advertisement-1')
+    <!-- Advertisement Home -->
+    @include('advertisements.home-1')
 
     <!-- Latest Posts -->
     @include('home.posts.post-1')
