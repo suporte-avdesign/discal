@@ -1,7 +1,7 @@
 <section class="top_trending">
     <div class="container">
         <div class="section-title">
-            <h2>Top Trending</h2>
+            <h2>Principais Tendências</h2>
         </div>
         <div class="row">
             <div class="col-sm-6 col-xs-12">

@@ -6,7 +6,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title')</title>
+    @stack('title')
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('images/favicon.png')}}">
     <!-- Bootstrap core CSS -->
@@ -21,19 +21,28 @@
 </head>
 
 <body>
+<!-- Header -->
+@include('headers.header-1')
+<!-- Navigation Bar -->
+@include('headers.menu-1')
 
-    @yield('content')
+@yield('content')
 
-    <!-- back to top start -->
-    <div id="back-to-top">
-        <a href="#"></a>
-    </div>
+<!-- Footer -->
+@include('footers.footer-1')
 
-    <!-- *Scripts* -->
-    <script src="{{asset('js/jquery.min.js')}}"></script>
-    <script src="{{asset('js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('js/plugin.min.js')}}"></script>
-    <script src="{{asset('js/main.min.js')}}"></script>
-    <script src="{{asset('js/custom-mixitup.min.js')}}"></script>
+
+<!-- back to top start -->
+<div id="back-to-top">
+    <a href="#"></a>
+</div>
+
+<!-- *Scripts* -->
+<script src="{{asset('js/jquery.min.js')}}"></script>
+<script src="{{asset('js/bootstrap.min.js')}}"></script>
+<script src="{{asset('js/plugin.min.js')}}"></script>
+<script src="{{asset('js/main.min.js')}}"></script>
+@stack('scripts')
 </body>
 </html>
+

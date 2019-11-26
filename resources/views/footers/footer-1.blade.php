@@ -60,7 +60,7 @@
         <div class="footer-copyright">
             <div class="container">
                 <div class="copyright-content text-center">
-                    <span>Copyright © 2018 <a href="www.cyclonethemes.com">Cyclone Themes</a> - All Rights reserved</span>
+                    <span>Copyright © 2020 <a href="www.cyclonethemes.com">Cyclone Themes</a> - All Rights reserved</span>
                 </div>
             </div>
         </div>

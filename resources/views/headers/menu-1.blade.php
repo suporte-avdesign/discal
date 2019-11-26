@@ -5,73 +5,42 @@
                 <!-- start Navbar (Header) -->
                 <nav class="navbar navbar-default navbar-sticky-function navbar-arrow">
                     <div class="logo pull-left">
-                        <a href="index.html"><img alt="Image" src="images/logo1.png"></a>
+                        <a href="{{route('home')}}"><img alt="Image" src="{{asset('images/logo1.png')}}"></a>
                     </div>
                     <div id="navbar" class="navbar-nav-wrapper pull-right">
 
                         <ul class="nav navbar-nav" id="responsive-menu">
 
+
                             <li class="active has-child">
-                                <a href="#">Home <i class="fa fa-angle-down"></i></a>
-                                <ul>
-                                    <li><a href="#">Home Styles</a>
-                                        <ul>
-                                            <li><a href="index.html">Style 1</a></li>
-                                            <li><a href="index-magazine-2.html">Style 2</a></li>
-                                            <li><a href="index-magazine-dark.html">Style 3</a></li>
-                                            <li><a href="index-magazine-boxed.html">Style 4</a></li>
-                                            <li><a href="index-video.html">Home Video</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Magazine</a>
-                                        <ul>
-                                            <li><a href="index-beauty.html">Beauty</a></li>
-                                            <li><a href="index-sports.html">Sports</a></li>
-                                            <li><a href="index-business.html">Business</a></li>
-                                            <li><a href="index-tech.html">Technology</a></li>
-                                            <li><a href="index-food.html">Food</a></li>
-                                            <li><a href="index-travel.html">Travel</a></li>
-                                            <li><a href="index-fitness.html">Fitness</a></li>
-                                            <li><a href="index-entertainment.html">Entertainment</a></li>
-                                            <li><a href="index-wildlife.html">Wildlife</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Blog</a>
-                                        <ul>
-                                            <li><a href="index-blog.html">Style 1</a></li>
-                                            <li><a href="index-blog-2.html">Style 2</a></li>
-                                            <li><a href="index-blog-3.html">Style 3</a></li>
-                                            <li><a href="index-blog-4.html">Style 4</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                                <a href="{{route('home')}}">Home </a>
                             </li>
                             <li class="has-child">
-                                <a href="#">Pages <i class="fa fa-angle-down"></i></a>
+                                <a href="#">Páginas <i class="fa fa-angle-down"></i></a>
                                 <ul>
-                                    <li><a href="#">Blog List Category</a>
+                                    <li><a href="#">Clientes</a>
                                         <ul>
-                                            <li><a href="list-rightsidebar.html">Right Sidebar</a></li>
-                                            <li><a href="list-leftsidebar.html">Left Sidebar</a></li>
-                                            <li><a href="list.html">No Sidebar</a></li>
+                                            <li><a href="{{route('account', 'teste')}}">Lojas</a></li>
+                                            <li><a href="#">Left Sidebar</a></li>
+                                            <li><a href="#">No Sidebar</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#">Blog Grid Category</a>
                                         <ul>
-                                            <li><a href="list-gridview.html">3 Column</a></li>
-                                            <li><a href="list-gridview-2.html">2 Column</a></li>
-                                            <li><a href="list-gridview-3.html">Single Column</a></li>
+                                            <li><a href="#">3 Column</a></li>
+                                            <li><a href="#">2 Column</a></li>
+                                            <li><a href="#">Single Column</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#">Detail Page</a>
                                         <ul>
-                                            <li><a href="detail.html">Detail Page 1</a></li>
-                                            <li><a href="detail-fullwidth.html">Detail Page 2</a></li>
-                                            <li><a href="detail1.html">Detail Page 3</a></li>
+                                            <li><a href="#">Detail Page 1</a></li>
+                                            <li><a href="#">Detail Page 2</a></li>
+                                            <li><a href="#">Detail Page 3</a></li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="detail-default.html">Default Page</a>
+                                        <a href="#">Default Page</a>
                                     </li>
                                 </ul>
                             </li>
@@ -86,21 +55,19 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="detail.html">Sports</a>
+                                <a href="?action=light_mode"><span class="label label-success" style="padding-top: 5px;">Light</span></a>
                             </li>
                             <li>
-                                <a href="detail.html">Fashion</a>
+                                <a href="?action=dark_mode"><span class="label label-info" style="padding-top: 5px;">Dark</span></a>
                             </li>
                             <li>
-                                <a href="detail.html">Politics</a>
+                                <a href="{{route('about-us')}}">Quem Somos</a>
                             </li>
                             <li>
-                                <a href="about-us.html">About Us</a>
-                            </li>
-                            <li>
-                                <a href="contact-us.html">Contact Us</a>
+                                <a href="{{route('contact')}}">Contato</a>
                             </li>
                         </ul>
+
                         <a id="searchtoggl" class="searchtoggle"><i class="fa fa-search" aria-hidden="true"></i></a>
                     </div><!--/.nav-collapse -->
                     <div id="slicknav-mobile"></div>

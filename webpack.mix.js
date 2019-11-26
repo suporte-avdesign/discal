@@ -15,6 +15,7 @@ mix.copy('node_modules/et-line/fonts', 'public/fonts');
 mix.copy('resources/assets/images', 'public/images');
 
 mix.styles('resources/assets/css/style.css', 'public/css/style.min.css');
+mix.styles('resources/assets/themes/css/light.css', 'public/themes/css/light.min.css');
 mix.styles('resources/assets/css/plugin.css', 'public/css/plugin.min.css');
 
 
@@ -23,6 +24,7 @@ mix.scripts('node_modules/bootstrap/dist/js/bootstrap.min.js', 'public/js/bootst
 mix.scripts('resources/assets/js/plugin.js', 'public/js/plugin.min.js');
 mix.scripts('resources/assets/js/main.js', 'public/js/main.min.js');
 mix.scripts('resources/assets/js/custom-mixitup.js', 'public/js/custom-mixitup.min.js');
+mix.scripts('resources/assets/js/custom-map.js', 'public/js/custom-map.min.js');
 
 
 

@@ -1,7 +1,0 @@
-
-
-
-<!-- Footer Ends -->
-
-</body>
-</html>

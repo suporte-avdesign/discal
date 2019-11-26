@@ -17,4 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/', 'Web\HomeController@index')->name('home');
+Route::get('sobre-nos', 'Web\AboutUsController@index')->name('about-us');
+Route::get('contato', 'Web\ContactController@index')->name('contact');
+Route::get('loja/{slug}', 'Web\AccountController@index')->name('account');
