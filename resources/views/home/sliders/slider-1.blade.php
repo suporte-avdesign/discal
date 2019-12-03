@@ -2,7 +2,7 @@
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <div class="slide-inner half-slide slide-overlay" style="background-image:url({{asset('images/slider/slider1.jpg')}})">
+                <div class="slide-inner half-slide slide-overlay" style="background-image:url({{asset('images/slider/slider6.jpg')}})">
                     <div class="home_banner_text">
                         <div class="banner-tag">
                             <a href="#" class="tag tag-blue">#New</a>
@@ -30,7 +30,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="slide-inner quarter-slide quarter-slide-down slide-overlay" style="background-image:url({{asset('images/slider/slider3.jpg')}})">
+                <div class="slide-inner quarter-slide quarter-slide-down slide-overlay" style="background-image:url({{asset('images/slider/slider5.jpg')}})">
                     <div class="home_banner_text">
                         <div class="banner-tag">
                             <a href="#" class="tag tag-green">#Religion</a>
@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class="slide-inner half-slide slide-overlay" style="background-image:url({{asset('images/slider/slider2.jpg')}})">
+                <div class="slide-inner half-slide slide-overlay" style="background-image:url({{asset('images/slider/slider4.jpg')}})">
                     <div class="home_banner_text">
                         <div class="banner-tag">
                             <a href="#" class="tag tag-green">#New</a>
@@ -74,7 +74,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="slide-inner quarter-slide quarter-slide-down slide-overlay" style="background-image:url({{asset('images/slider/slider1.jpg')}})">
+                <div class="slide-inner quarter-slide quarter-slide-down slide-overlay" style="background-image:url({{asset('images/slider/slider6.jpg')}})">
                     <div class="home_banner_text">
                         <div class="banner-tag">
                             <a href="#" class="tag tag-gold">#New</a>

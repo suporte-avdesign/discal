@@ -169,28 +169,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tech-item">
-                            <div class="tech-content">
-                                <h4><a href="detail.html">How Many Calories Does CrossFit Really Burn?</a></h4>
-                                <div class="author-detail">
-                                    <p><a href="#"><i class="icon-profile-male"></i> John Doe</a></p>
-                                    <p><i class="icon-clock"></i> 12 May</p>
-                                    <p><a href="#"><i class="icon-chat"></i> 2 comments</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tech-item">
-                            <div class="tech-content">
-                                <h4><a href="detail.html">Best Gym Equipment for Building Abs and Legs</a></h4>
-                                <div class="author-detail">
-                                    <p><a href="#"><i class="icon-profile-male"></i> John Doe</a></p>
-                                    <p><i class="icon-clock"></i> 12 May</p>
-                                    <p><a href="#"><i class="icon-chat"></i> 2 comments</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tech-outer software mix" style="display: none;">
+
                         <div class="tech-item">
                             <div class="tech-image list-item-1">
                                 <img src="{{asset('images/fitness/trending2.jpg')}}" alt="Image">
@@ -205,19 +184,16 @@
                                 </div>
                             </div>
                         </div>
+
+                    </div>
+                    <div class="tech-outer software mix" style="display: none;">
                         <div class="tech-item">
-                            <div class="tech-content">
-                                <h4><a href="detail.html">How Many Calories Does CrossFit Really Burn?</a></h4>
-                                <div class="author-detail">
-                                    <p><a href="#"><i class="icon-profile-male"></i> John Doe</a></p>
-                                    <p><i class="icon-clock"></i> 12 May</p>
-                                    <p><a href="#"><i class="icon-chat"></i> 2 comments</a></p>
-                                </div>
+                            <div class="tech-image list-item-1">
+                                <img src="{{asset('images/fitness/trending2.jpg')}}" alt="Image">
+                                <div class="image-overlay"></div>
                             </div>
-                        </div>
-                        <div class="tech-item">
                             <div class="tech-content">
-                                <h4><a href="detail.html">Best Gym Equipment for Building Abs and Legs</a></h4>
+                                <h4><a href="detail.html">No Excuses: Cardio Pump Workout for a Healthy Body</a></h4>
                                 <div class="author-detail">
                                     <p><a href="#"><i class="icon-profile-male"></i> John Doe</a></p>
                                     <p><i class="icon-clock"></i> 12 May</p>
@@ -241,50 +217,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tech-item">
-                            <div class="tech-content">
-                                <h4><a href="detail.html">How Many Calories Does CrossFit Really Burn?</a></h4>
-                                <div class="author-detail">
-                                    <p><a href="#"><i class="icon-profile-male"></i> John Doe</a></p>
-                                    <p><i class="icon-clock"></i> 12 May</p>
-                                    <p><a href="#"><i class="icon-chat"></i> 2 comments</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tech-item">
-                            <div class="tech-content">
-                                <h4><a href="detail.html">Best Gym Equipment for Building Abs and Legs</a></h4>
-                                <div class="author-detail">
-                                    <p><a href="#"><i class="icon-profile-male"></i> John Doe</a></p>
-                                    <p><i class="icon-clock"></i> 12 May</p>
-                                    <p><a href="#"><i class="icon-chat"></i> 2 comments</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tech-box tech-categories">
-                    <div class="post-title">
-                        <h3>Categories</h3>
-                    </div>
-                    <div class="category-items">
-                        <ul>
-                            <li><a href="#"><i class="icon-layers"></i> Health</a></li>
-                            <li><a href="#"><i class="icon-layers"></i> Nutrition</a></li>
-                            <li><a href="#"><i class="icon-layers"></i> Weight Loss</a></li>
-                            <li><a href="#"><i class="icon-layers"></i> Equipment</a></li>
-                            <li><a href="#"><i class="icon-layers"></i> Lifestyle</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="connect tech-box">
-                    <div class="post-title">
-                        <h3>Stay Connected</h3>
-                    </div>
-                    <div class="follow-btns">
-                        <a href="#" class="instagram"><span><i class="fa fa-instagram" aria-hidden="true"></i></span><span class="pull-right">FOLLOW</span></a>
-                        <a href="#" class="facebook"><span><i class="fa fa-facebook" aria-hidden="true"></i></span><span class="pull-right">LIKE</span></a>
-                        <a href="#" class="twitter"><span><i class="fa fa-twitter" aria-hidden="true"></i></span><span class="pull-right">FOLLOW</span></a>
+
                     </div>
                 </div>
             </div>

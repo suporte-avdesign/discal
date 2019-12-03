@@ -2,12 +2,13 @@
     "/css/font-awesome.min.css": "/css/font-awesome.min.css",
     "/css/bootstrap.min.css": "/css/bootstrap.min.css",
     "/css/style.min.css": "/css/style.min.css",
-    "/themes/css/light.min.css": "/themes/css/light.min.css",
     "/css/plugin.min.css": "/css/plugin.min.css",
     "/js/jquery.min.js": "/js/jquery.min.js",
     "/js/bootstrap.min.js": "/js/bootstrap.min.js",
     "/js/plugin.min.js": "/js/plugin.min.js",
     "/js/main.min.js": "/js/main.min.js",
     "/js/custom-mixitup.min.js": "/js/custom-mixitup.min.js",
-    "/js/custom-map.min.js": "/js/custom-map.min.js"
+    "/js/custom-map.min.js": "/js/custom-map.min.js",
+    "/js/custom-video.min.js": "/js/custom-video.min.js",
+    "/js/custom-whatsapp.min.js": "/js/custom-whatsapp.min.js"
 }

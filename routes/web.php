@@ -17,7 +17,15 @@ Route::get('/', function () {
 
 Auth::routes();
 
+/**
+ * Route: Stores
+ */
+Route::get('loja/{slug}', 'Web\StoreController@index')->name('store-slug');
+
+
 Route::get('/', 'Web\HomeController@index')->name('home');
 Route::get('sobre-nos', 'Web\AboutUsController@index')->name('about-us');
 Route::get('contato', 'Web\ContactController@index')->name('contact');
-Route::get('loja/{slug}', 'Web\AccountController@index')->name('account');
+
+Route::get('whatsapp', 'Web\WhatsappController@index')->name('whatsapp');
+

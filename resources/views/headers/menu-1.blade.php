@@ -20,7 +20,7 @@
                                 <ul>
                                     <li><a href="#">Clientes</a>
                                         <ul>
-                                            <li><a href="{{route('account', 'teste')}}">Lojas</a></li>
+                                            <li><a href="{{route('store-slug', 'teste')}}">Lojas</a></li>
                                             <li><a href="#">Left Sidebar</a></li>
                                             <li><a href="#">No Sidebar</a></li>
                                         </ul>

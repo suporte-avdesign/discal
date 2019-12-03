@@ -1,4 +1,4 @@
-<section class="categories" data-ref="container-1">
+<section class="categories" data-ref="container-2">
     <div class="container">
         <div class="section-title">
             <h2>Categories</h2>

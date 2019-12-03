@@ -8,7 +8,10 @@
                 <div class="row">
                     <div class="col-sm-4 col-xs-12">
                         <div class="about">
-                            <h3>BlogMag</h3>
+                            <div class="logo "><img src="{{asset('images/logo-white.png')}}"></div>
+
+                            <h3></h3>
+
                             <p>amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
                             <ul class="header-social-links">
                                 <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
