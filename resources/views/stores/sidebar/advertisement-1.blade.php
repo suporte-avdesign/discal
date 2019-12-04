@@ -1,4 +1,4 @@
-@if($cofigStore->advertisement == 1)
+@if($configStore->advertisement == 1)
     <div class="ad1 sidebar-box">
         <div class="sidebar-title">
             <h3>Anúncio</h3>

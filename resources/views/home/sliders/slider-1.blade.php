@@ -2,15 +2,15 @@
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <div class="slide-inner half-slide slide-overlay" style="background-image:url({{asset('images/slider/slider6.jpg')}})">
+                <div class="slide-inner half-slide slide-overlay" style="background-image:url({{asset('images/slider/slider1.jpg')}})">
                     <div class="home_banner_text">
                         <div class="banner-tag">
-                            <a href="#" class="tag tag-blue">#New</a>
-                            <a href="#" class="tag tag-gold">#Health</a>
+                            <a href="{{route('store', 'clovisatacado')}}" class="tag tag-blue">#ClovisAtacado</a>
+                            <a href="{{route('store', 'clovisatacado')}}" class="tag tag-gold">Veja Mais</a>
                         </div>
-                        <h2><a href="detail.html">Discover your true health</a></h2>
+                        <h2><a href="javascript:">Anuncie Aqui #01</a></h2>
                         <div class="author-detail">
-                            <p><a href="#"><i class="icon-profile-male"></i> John Doe</a></p>
+                            <p><a href="#"><i class="icon-profile-male"></i> Anselmo Velame</a></p>
                             <p><i class="icon-clock"></i> 12 May</p>
                             <p><a href="#"><i class="icon-chat"></i> 5 comments</a></p>
                         </div>
@@ -18,11 +18,13 @@
                 </div>
                 <div class="slide-inner quarter-slide slide-overlay" style="background-image:url({{asset('images/slider/slider2.jpg')}})">
                     <div class="home_banner_text">
+                        <!--
                         <div class="banner-tag">
-                            <a href="#" class="tag tag-blue">#Entertainment</a>
-                            <a href="#" class="tag tag-green">#Health</a>
+                            <a href="{{route('store', 'clovisatacado')}}" class="tag tag-blue">#ClovisAtacado</a>
+                            <a href="{{route('store', 'clovisatacado')}}" class="tag tag-gold">Veja Mais</a>
                         </div>
                         <h2><a href="detail.html">Top 10 Dancers you should</a></h2>
+                        -->
                         <div class="author-detail">
                             <p><a href="#"><i class="icon-profile-male"></i> Micheal Jackson</a></p>
                             <p><i class="icon-clock"></i> 1 July</p>
@@ -30,7 +32,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="slide-inner quarter-slide quarter-slide-down slide-overlay" style="background-image:url({{asset('images/slider/slider5.jpg')}})">
+                <div class="slide-inner quarter-slide quarter-slide-down slide-overlay" style="background-image:url({{asset('images/slider/slider3.jpg')}})">
                     <div class="home_banner_text">
                         <div class="banner-tag">
                             <a href="#" class="tag tag-green">#Religion</a>
@@ -60,7 +62,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="slide-inner quarter-slide slide-overlay" style="background-image:url({{asset('images/slider/slider3.jpg')}})">
+                <div class="slide-inner quarter-slide slide-overlay" style="background-image:url({{asset('images/slider/slider5.jpg')}})">
                     <div class="home_banner_text">
                         <div class="banner-tag">
                             <a href="#" class="tag tag-blue">#New</a>
@@ -90,7 +92,7 @@
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class="slide-inner half-slide slide-overlay" style="background-image:url({{asset('images/slider/slider3.jpg')}})">
+                <div class="slide-inner half-slide slide-overlay" style="background-image:url({{asset('images/slider/slider7.jpg')}})">
                     <div class="home_banner_text">
                         <div class="banner-tag">
                             <a href="#" class="tag tag-blue">#New</a>
@@ -104,7 +106,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="slide-inner quarter-slide slide-overlay" style="background-image:url({{asset('images/slider/slider1.jpg')}})">
+                <div class="slide-inner quarter-slide slide-overlay" style="background-image:url({{asset('images/slider/slider8.jpg')}})">
                     <div class="home_banner_text">
                         <div class="banner-tag">
                             <a href="#" class="tag tag-green">#New</a>
@@ -118,7 +120,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="slide-inner quarter-slide quarter-slide-down slide-overlay" style="background-image:url({{asset('images/slider/slider2.jpg')}})">
+                <div class="slide-inner quarter-slide quarter-slide-down slide-overlay" style="background-image:url({{asset('images/slider/slider9.jpg')}})">
                     <div class="home_banner_text">
                         <div class="banner-tag">
                             <a href="#" class="tag tag-gold">#New</a>

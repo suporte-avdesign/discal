@@ -1,4 +1,4 @@
-@if($cofigStore->photos == 1)
+@if($configStore->photos == 1)
 
     <div class="blog-post-wrap">
         <div class="blog-post-upper">
@@ -18,10 +18,10 @@
         -->
     </div>
 
-@elseif($cofigStore->photos >= 2)
+@elseif($configStore->photos >= 2)
 
     <div class="blog-post-wrap">
-        <div id="home_banner_blog" style="height: {{$cofigStore->banner_height}}px;">
+        <div id="home_banner_blog" style="height: {{$configStore->banner_height}}px;">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     @foreach($content->banners as $banner)

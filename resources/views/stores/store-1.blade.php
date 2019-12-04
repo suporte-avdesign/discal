@@ -1,6 +1,11 @@
 @extends('layouts.template')
 @push('title')
-<title>Nome da Loja</title>
+<title>{{$configStore->title}}</title>
+<meta name="description" content="{{$configStore->description}}" />
+@endpush
+@push('head')
+<!--Plugin Leaflet: Interactive maps-->
+<link href="{{asset('plugins/leaflet/leaflet.min.css')}}" rel="stylesheet" type="text/css">
 
 @endpush
 @section('content')
@@ -55,9 +60,10 @@
         </div>
     </section>
 
-    <!-- Maps -->
-    @include('stores.maps.map-1')
-    @include('stores.maps.iframe-1')
+    <div class="map">
+        <div id="mapid" style="height: {{config('stores.map.height')}}px; width: {{config('stores.map.width')}}%;"></div>
+    </div>
+
 
 @endsection
 
@@ -66,6 +72,26 @@
 <script src="{{asset('js/custom-map.min.js')}}"></script>
 <script src="{{asset('js/custom-whatsapp.min.js')}}"></script>
 <script src="{{asset('js/custom-mixitup.min.js')}}"></script>
+<!--Plugin Leaflet: Interactive maps-->
+<script src="{{asset('plugins/leaflet/leaflet.min.js')}}"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        var storeMap = L.map('mapid').setView([{{$configStore->map_marker}}], 18);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(storeMap);
+        L.marker([{{$configStore->map_marker}}]).addTo(storeMap)
+            .bindPopup("<b>{{$configStore->title}}</b><br/>{{$configStore->address}}").openPopup();
+        var popup = L.popup();
+        function onMapClick(e) {
+            popup
+                .setLatLng(e.latlng)
+                .setContent("Você clicou em " + e.latlng.toString())
+                .openOn(storeMap);
+        }
+        storeMap.on('click', onMapClick);
+    });
+</script>
 
 <script type="text/javascript">
     function isMobile()

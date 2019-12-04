@@ -1,4 +1,4 @@
-@if($cofigStore->categories == 1)
+@if($configStore->categories == 1)
     <div class="tech-box tech-categories">
         <div class="post-title">
             <h3>Categorias</h3>

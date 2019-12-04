@@ -1,4 +1,4 @@
-@if($cofigStore->posts == 1)
+@if($configStore->posts == 1)
     <div class="recent-post clearfix sidebar-box">
         <div class="sidebar-title">
             <h3>Postagens Recentes</h3>

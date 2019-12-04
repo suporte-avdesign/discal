@@ -1,4 +1,4 @@
-@if($cofigStore->socialLinks->whatsapp == 1)
+@if($configStore->socialLinks->whatsapp == 1)
 <div class="product=inline-share-buttons"></div>
     <!-- BTN POPUP -->
     <div class="wa__btn_popup">

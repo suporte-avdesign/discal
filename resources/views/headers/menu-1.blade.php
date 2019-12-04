@@ -10,48 +10,25 @@
                     <div id="navbar" class="navbar-nav-wrapper pull-right">
 
                         <ul class="nav navbar-nav" id="responsive-menu">
-
-
                             <li class="active has-child">
                                 <a href="{{route('home')}}">Home </a>
                             </li>
                             <li class="has-child">
-                                <a href="#">Páginas <i class="fa fa-angle-down"></i></a>
+                                <a href="#">Cidades<i class="fa fa-angle-down"></i></a>
                                 <ul>
-                                    <li><a href="#">Clientes</a>
+                                    <li><a href="#">São Paulo</a>
                                         <ul>
-                                            <li><a href="{{route('store-slug', 'teste')}}">Lojas</a></li>
-                                            <li><a href="#">Left Sidebar</a></li>
-                                            <li><a href="#">No Sidebar</a></li>
+                                            <li><a href="{{route('store', 'clovisatacado')}}">Clovis Atacado</a></li>
+                                            <li><a href="{{route('store', 'danielatacado')}}">Daniel Calçados</a></li>
                                         </ul>
-                                    </li>
-                                    <li><a href="#">Blog Grid Category</a>
-                                        <ul>
-                                            <li><a href="#">3 Column</a></li>
-                                            <li><a href="#">2 Column</a></li>
-                                            <li><a href="#">Single Column</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Detail Page</a>
-                                        <ul>
-                                            <li><a href="#">Detail Page 1</a></li>
-                                            <li><a href="#">Detail Page 2</a></li>
-                                            <li><a href="#">Detail Page 3</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#">Default Page</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="has-child">
-                                <a href="#">Shop <i class="fa fa-angle-down"></i></a>
+                                <a href="#">Lojas Atacado <i class="fa fa-angle-down"></i></a>
                                 <ul>
-                                    <li><a href="shop.html">Shop List</a></li>
-                                    <li><a href="store-detail.html">Shop Single</a></li>
-                                    <li><a href="login.html">Account</a></li>
-                                    <li><a href="cart.html">Cart</a></li>
-                                    <li><a href="checkout.html">Checkout</a></li>
+                                    <li><a href="{{route('store', 'clovisatacado')}}">Clovis Atacado</a></li>
+                                    <li><a href="{{route('store', 'danielatacado')}}">Daniel Calçados</a></li>
                                 </ul>
                             </li>
                             <li>

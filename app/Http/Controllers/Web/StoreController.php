@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class StoreController extends Controller
 {
     private $view = 'stores';
-    private $cofigStore;
+    private $configStore;
     private $storesService;
 
     /**
@@ -17,7 +17,7 @@ class StoreController extends Controller
      */
     public function __construct()
     {
-        $this->cofigStore = [
+        $this->configStore = [
             'video' => 0,             #video viemo (1,0)
             'sound' => 0,             #sound cloud (1,0)
             'posts' => 0,             #post (1,0)
@@ -28,8 +28,8 @@ class StoreController extends Controller
             'categories' => 0,        #categories (1,0)
             'advertisement' => 0,     #advertisement (1,0)
             'maps' => [
-                'map' => 0,           #map (1,0)
-                'iframe' => 1         #iframe (1,0)
+                'map' => 1,           #map (1,0)
+                'iframe' => 0,        #iframe (1,0)
             ],
             'socialLinks' => [
                 'facebook' => 1,      #facebook (1,0)
@@ -53,23 +53,24 @@ class StoreController extends Controller
 
         $content = StoresServices::getStore($slug);
 
-        $map = config("stores.{$slug}.maps.iframe");
 
         $agent = new \Jenssegers\Agent\Agent;
         ($agent->isMobile() == true ? $sub = 'api' : $sub = 'web');
 
-        (count($content->banners) == 1 ? $this->cofigStore['photos'] = 1 : $this->cofigStore['photos'] = count($content->banners));
+        (count($content->banners) == 1 ? $this->configStore['photos'] = 1 : $this->configStore['photos'] = count($content->banners));
 
 
-        $this->cofigStore['title'] = config("stores.{$slug}.title");
-        $this->cofigStore['description'] = config("stores.{$slug}.description");
-        $this->cofigStore['banner_height'] = config("stores.{$slug}.banners.height");
-        $this->cofigStore['bg_logo'] = config("stores.{$slug}.logo.style");
+        $this->configStore['title'] = config("stores.{$slug}.title");
+        $this->configStore['address'] = config("stores.{$slug}.address");
+        $this->configStore['description'] = config("stores.{$slug}.description");
+        $this->configStore['banner_height'] = config("stores.{$slug}.banners.height");
+        $this->configStore['bg_logo'] = config("stores.{$slug}.logo.style");
+        $this->configStore['map_marker'] = config("stores.{$slug}.maps.marker");
 
-        $cofigStore = typeJson($this->cofigStore);
+        $configStore = typeJson($this->configStore);
 
         return view("{$this->view}.store-1", compact(
-            'sub', 'map', 'content', 'cofigStore')
+            'sub', 'content', 'configStore')
         );
     }
 

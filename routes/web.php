@@ -20,7 +20,7 @@ Auth::routes();
 /**
  * Route: Stores
  */
-Route::get('loja/{slug}', 'Web\StoreController@index')->name('store-slug');
+Route::get('loja/{slug}', 'Web\StoreController@index')->name('store');
 
 
 Route::get('/', 'Web\HomeController@index')->name('home');

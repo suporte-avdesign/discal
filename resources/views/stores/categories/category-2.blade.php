@@ -1,4 +1,4 @@
-@if($cofigStore->categories == 1)
+@if($configStore->categories == 1)
     <section class="categories-tech" data-ref="container-1" id="MixItUpBDFD80">
         <div class="container">
             <div class="row">

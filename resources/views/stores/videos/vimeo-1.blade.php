@@ -1,4 +1,4 @@
-@if($cofigStore->video == 1)
+@if($configStore->video == 1)
     <div class="blog-post-wrap">
         <div class="blog-post-upper">
             <img src="{{asset('images/stores/videos/video1.jpg')}}" alt="Image">

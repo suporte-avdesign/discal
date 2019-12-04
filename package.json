@@ -26,6 +26,7 @@
     },
     "dependencies": {
         "et-line": "^1.0.1",
-        "ionicons": "^2.0.1"
+        "ionicons": "^2.0.1",
+        "leaflet": "^1.6.0"
     }
 }

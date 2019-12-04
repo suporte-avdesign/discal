@@ -18,6 +18,9 @@
     <link href="{{asset('css/plugin.min.css')}}" rel="stylesheet" type="text/css">
     <!--Font Awesome-->
     <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
+
+    @stack('head')
+
 </head>
 
 <body>

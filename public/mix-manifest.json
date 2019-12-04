@@ -1,4 +1,6 @@
 {
+    "/plugins/leaflet/leaflet.min.css": "/plugins/leaflet/leaflet.min.css",
+    "/plugins/leaflet/leaflet.min.js": "/plugins/leaflet/leaflet.min.js",
     "/css/font-awesome.min.css": "/css/font-awesome.min.css",
     "/css/bootstrap.min.css": "/css/bootstrap.min.css",
     "/css/style.min.css": "/css/style.min.css",

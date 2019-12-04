@@ -2,6 +2,17 @@ const mix = require('laravel-mix');
 
 /*
  |--------------------------------------------------------------------------
+ | Plugins:
+ | 1- Leaflet: Interactive maps
+ |--------------------------------------------------------------------------
+ */
+mix.styles('node_modules/leaflet/dist/leaflet.css', 'public/plugins/leaflet/leaflet.min.css');
+mix.scripts('node_modules/leaflet/dist/leaflet.js', 'public/plugins/leaflet/leaflet.min.js');
+mix.copy('node_modules/leaflet/dist/images', 'public/plugins/leaflet/images');
+
+
+/*
+ |--------------------------------------------------------------------------
  | bootstrap, font-awesome
  |--------------------------------------------------------------------------
  */
