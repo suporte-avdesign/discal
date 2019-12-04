@@ -23,7 +23,8 @@
 
 </head>
 
-<body>
+@stack('body')
+
 <!-- Header -->
 @include('headers.header-1')
 <!-- Navigation Bar -->

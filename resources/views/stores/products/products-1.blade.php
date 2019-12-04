@@ -3,6 +3,7 @@
         <div class="container">
             <div class="row">
                 @foreach($content->products as $product)
+                    @if($loop->index <= 11)
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="rt-product-wrapper">
                             <div class="product-thumbnail-wrapper">
@@ -16,7 +17,7 @@
                             </div>
                             <div class="rt-product-meta-wrapper">
                                 <p class="product_title">
-                                    <a title="{{$product->title}}" href="{{$product->link}}">{{str_replace( range( 0, 9 ), null, $product->title )}}</a>
+                                    <a title="{{$product->title}}" href="{{$product->link}}">{{$product->title}}</a>
                                 </p>
                                 <div class="rt-cartprice-wrapper">
                                     <span class="price mar-bottom-20">
@@ -40,6 +41,7 @@
                             </div>
                         </div>
                     </div>
+                    @endif
                 @endforeach
             </div>
         </div>

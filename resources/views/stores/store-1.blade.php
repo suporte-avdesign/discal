@@ -6,7 +6,11 @@
 @push('head')
 <!--Plugin Leaflet: Interactive maps-->
 <link href="{{asset('plugins/leaflet/leaflet.min.css')}}" rel="stylesheet" type="text/css">
-
+@endpush
+@push('body')
+<body class="page">
+<!--PRELOADER-->
+<div class="preloader"><div class="spinner"></div></div>
 @endpush
 @section('content')
     <!-- Blog Content -->
@@ -50,15 +54,13 @@
                         @include('stores.sounds.sound-cloud-1')
                     </div>
                 </div>
-
-
-            </div>
-
-            <div class="row">
-                @include('stores.products.products-1')
+                
             </div>
         </div>
     </section>
+
+    @include('stores.products.products-1')
+
 
     <div class="map">
         <div id="mapid" style="height: {{config('stores.map.height')}}px; width: {{config('stores.map.width')}}%;"></div>
