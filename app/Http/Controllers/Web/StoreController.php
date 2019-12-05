@@ -51,6 +51,7 @@ class StoreController extends Controller
             return redirect()->route('home');
         }
 
+
         $content = StoresServices::getStore($slug);
 
 

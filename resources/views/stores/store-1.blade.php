@@ -4,6 +4,17 @@
 <meta name="description" content="{{$configStore->description}}" />
 @endpush
 @push('head')
+<style>
+    .slide-inner {
+        height: 1px;
+    }
+    #home_banner_blog{
+        position: relative;
+        padding: 0;
+        z-index: 5;
+        height: {{$configStore->banner_height}}px;
+    }
+</style>
 <!--Plugin Leaflet: Interactive maps-->
 <link href="{{asset('plugins/leaflet/leaflet.min.css')}}" rel="stylesheet" type="text/css">
 @endpush
@@ -54,7 +65,7 @@
                         @include('stores.sounds.sound-cloud-1')
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </section>
