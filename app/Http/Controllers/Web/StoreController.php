@@ -51,6 +51,8 @@ class StoreController extends Controller
             return redirect()->route('home');
         }
 
+        dd(config('slogan'));
+
 
         $content = StoresServices::getStore($slug);
 

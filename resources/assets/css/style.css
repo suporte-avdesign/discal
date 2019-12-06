@@ -245,6 +245,50 @@ a.tag-gold{
     border: none;
     background: #e36493;
 }
+
+a.tag-dark{
+    border: none;
+    background: #343526;
+}
+
+
+/** Slogan **/
+h2.slogan-gold {
+    border: none;
+    color: #fff;
+    background: #e36493;
+    padding: 5px 10px;
+    transition: all ease-in-out 0.3s;
+    display: inline-block;
+}
+
+h2.slogan-green {
+    border: none;
+    color: #fff;
+    background: #69b74f;
+    padding: 5px 10px;
+    transition: all ease-in-out 0.3s;
+    display: inline-block;
+}
+
+h2.slogan-blue {
+    border: none;
+    color: #fff;
+    background: #3d9ddf;
+    padding: 5px 10px;
+    transition: all ease-in-out 0.3s;
+    display: inline-block;
+}
+
+h2.slogan-dark {
+    border: none;
+    color: #fff;
+    background: #343526;
+    padding: 5px 10px;
+    transition: all ease-in-out 0.3s;
+    display: inline-block;
+}
+
 .sectionoverlay{
     position: absolute;
     height: 100%;
@@ -1493,6 +1537,63 @@ a.searchtoggle{
 }
 
 
+/** Slider home_banner_text_center **/
+
+.home_banner_text_center{
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 2;
+    width: 80%;
+    padding: 5px 30px;
+    text-align: center;
+}
+.in_th_030_slide_right .home_banner_text_center,
+.fw_il_011_slide_right .home_banner_text_center{
+    text-align: right;
+    left: auto;
+    margin-right: 0;
+}
+.in_th_030_slide_center .home_banner_text_center,
+.fw_il_011_slide_left .home_banner_text_center{
+    text-align: left;
+    right: auto;
+    margin-left: 0;
+}
+.home_banner_text_center_2{
+    position: relative;
+}
+.home_banner_text_center h2{
+    margin: 10px 0 6px;
+}
+#home_banner_paradise .home_banner_text_center h2{
+    font-size: 50px;
+    animation-delay: .5s;
+    animation-timing-function: cubic-bezier(0.230,1.000,0.320,1.000);
+}
+#home_banner_paradise .home_banner_text_center .author-detail p{
+    font-size: 15px;
+}
+.home_banner_text_center h2 a{
+    color: #fff;
+}
+.home_banner_text_center h2 a:hover{
+    opacity: 0.7;
+}
+
+.home_banner_text_center p{
+    margin: 0;
+    color: #fff;
+    padding-right: 5px;
+    display: inline-block;
+}
+.home_banner_text_center .author-detail{
+    padding: 0;
+}
+
+
 
 /* Breaking News */
 .breaking-news{
@@ -1809,7 +1910,7 @@ section.latest_posts{
     padding-bottom: 55px;
 }
 section.buy-now, div.buy-now{
-    background: url(../images/pd2.jpg) no-repeat;
+    background: url(../images/bg/bg9.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -1918,7 +2019,7 @@ section.gallery{
 
 footer{
     padding: 40px 0 80px;
-    background: #000 url(../images/footerbg.png) no-repeat;
+    background: #000 url(../images/bg/bg10.png) no-repeat;
     background-size: 100%;
     background-attachment: fixed;
     position: relative;
@@ -2094,7 +2195,7 @@ section.page-cover{
     border-left: none;
     position: relative;
     padding: 50px 20px;
-    background: url(../images/pd2.jpg) no-repeat;
+    background: url(../images/bg/bg9.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -3024,7 +3125,7 @@ body#boxed{
     padding-bottom: 50px;
 }
 #beauty section.buy-now{
-    background: url(../images/beauty/pd2.jpg) no-repeat;
+    background: url(../images/bg/bg8.jpg) no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -3052,7 +3153,7 @@ body#boxed{
     padding-bottom: 0;
 }
 #beauty footer{
-    background: #000 url(../images/beauty/footerbg.jpg) no-repeat;
+    background: #000 url(../images/bg/bg7.jpg) no-repeat;
     background-size: 100%;
     background-attachment: fixed;
     position: relative;
@@ -3164,7 +3265,7 @@ section.follow-trend{
     opacity: 0.4;
 }
 #sports section.buy-now{
-    background: url(../images/sports/pd2.jpg) no-repeat;
+    background: url(../images/bg/bg6.jpg) no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -3197,7 +3298,7 @@ section.follow-trend{
 }
 #sports footer{
     padding: 80px 0;
-    background: #000 url(../images/sports/footerbg.jpg) no-repeat;
+    background: #000 url(../images/bg/bg5.jpg) no-repeat;
     background-size: 100%;
     background-attachment: fixed;
     position: relative;
@@ -3265,7 +3366,7 @@ span.win{
     margin-top: 30px;
 }
 #business section.buy-now{
-    background: url(../images/business/pd2.jpg) no-repeat;
+    background: url(../images/bg/bg4.jpg) no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -3280,7 +3381,7 @@ span.win{
 }
 #business footer{
     padding: 80px 0;
-    background: #000 url(../images/business/footerbg.jpg) no-repeat;
+    background: #000 url(../images/bg/bg2.jpg) no-repeat;
     background-size: 100%;
     background-attachment: fixed;
     position: relative;
@@ -3340,7 +3441,7 @@ span.stock-red{
     padding-top: 0px;
 }
 #tech section.buy-now{
-    background: url(../images/tech/pd2.jpg) no-repeat;
+    background: url(../images/bg/bg2.jpg) no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -3353,7 +3454,7 @@ span.stock-red{
 }
 #tech footer{
     padding: 80px 0;
-    background: #000 url(../images/tech/footerbg.jpg) no-repeat;
+    background: #000 url(../images/bg/bg1.jpg) no-repeat;
     background-size: 100%;
     background-attachment: fixed;
     position: relative;
@@ -3458,7 +3559,7 @@ section.categories-3{
 }
 #travel footer{
     padding: 80px 0;
-    background: #000 url(../images/travel/footerbg.jpg) no-repeat;
+    background: #000 url(../images/bg/bg11.jpg) no-repeat;
     background-size: 100%;
     background-attachment: fixed;
     position: relative;
@@ -3474,7 +3575,7 @@ section.categories-3{
 }
 #fitness footer{
     padding: 80px 0;
-    background: #000 url(../images/fitness/footerbg.jpg) no-repeat;
+    background: #000 url(../images/bg/bg12.jpg) no-repeat;
     background-size: 100%;
     background-attachment: fixed;
     position: relative;
@@ -3484,7 +3585,7 @@ section.categories-3{
 
 #food footer{
     padding: 80px 0;
-    background: #000 url(../images/food/footerbg.jpg) no-repeat;
+    background: #000 url(../images/bg/bg13.jpg) no-repeat;
     background-size: 100%;
     background-attachment: fixed;
     position: relative;
@@ -3531,7 +3632,7 @@ section.categories-3{
 }
 #entertainment footer{
     padding: 80px 0;
-    background: #000 url(../images/entertainment/footerbg.jpg) no-repeat;
+    background: #000 url(../images/bg/bg14.jpg) no-repeat;
     background-size: 100%;
     background-attachment: fixed;
     position: relative;
@@ -3547,7 +3648,7 @@ section.ent-news{
 
 #wildlife footer{
     padding: 80px 0;
-    background: #000 url(../images/wildlife/footerbg.jpg) no-repeat;
+    background: #000 url(../images/bg/bg15.jpg) no-repeat;
     background-size: 100%;
     background-attachment: fixed;
     position: relative;
