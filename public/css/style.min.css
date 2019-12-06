@@ -15,6 +15,7 @@
  2.* Navbar
  3.* Header
  4.* Slider
+     home_banner_text
  5.* Marquee
  6.* Section Title
  7.* Homepage Content
@@ -1304,6 +1305,8 @@ a.searchtoggle{
     left: 25px;
 }
 
+/** Slider home text bootom **/
+
 .home_banner_text{
     position: absolute;
     bottom: 10px;
@@ -1314,7 +1317,6 @@ a.searchtoggle{
     width: 80%;
     padding: 5px 30px;
     text-align: center;
-
 }
 .in_th_030_slide_right .home_banner_text,
 .fw_il_011_slide_right .home_banner_text{
@@ -1375,6 +1377,122 @@ a.searchtoggle{
 .post-tag a:last-child, .banner-tag a:last-child{
     margin-right: 0;
 }
+
+
+/** Slider home_banner_text_top **/
+
+.home_banner_text_top{
+    position: absolute;
+    top: 10px;
+    left: 0%;
+    right: 0;
+    margin: 0 auto;
+    z-index: 2;
+    width: 80%;
+    padding: 5px 30px;
+    text-align: center;
+}
+.in_th_030_slide_right .home_banner_text_top,
+.fw_il_011_slide_right .home_banner_text_top{
+    text-align: right;
+    left: auto;
+    margin-right: 0;
+}
+.in_th_030_slide_center .home_banner_text_top,
+.fw_il_011_slide_left .home_banner_text_top{
+    text-align: left;
+    right: auto;
+    margin-left: 0;
+}
+.home_banner_text_top_2{
+    position: relative;
+}
+.home_banner_text_top h2{
+    margin: 10px 0 6px;
+}
+#home_banner_paradise .home_banner_text_top h2{
+    font-size: 50px;
+    animation-delay: .5s;
+    animation-timing-function: cubic-bezier(0.230,1.000,0.320,1.000);
+}
+#home_banner_paradise .home_banner_text_top .author-detail p{
+    font-size: 15px;
+}
+.home_banner_text_top h2 a{
+    color: #fff;
+}
+.home_banner_text_top h2 a:hover{
+    opacity: 0.7;
+}
+
+.home_banner_text_top p{
+    margin: 0;
+    color: #fff;
+    padding-right: 5px;
+    display: inline-block;
+}
+.home_banner_text_top .author-detail{
+    padding: 0;
+}
+
+
+/** Slider home_banner_text_top_left **/
+
+.home_banner_text_top_left{
+    position: absolute;
+    top: 10px;
+    left: 0%;
+    right: 0;
+    margin: 0 auto;
+    z-index: 2;
+    width: 80%;
+    padding: 5px 30px;
+    text-align: center;
+}
+.in_th_030_slide_right .home_banner_text_top_left,
+.fw_il_011_slide_right .home_banner_text_top_left{
+    text-align: right;
+    left: auto;
+    margin-right: 0;
+}
+.in_th_030_slide_center .home_banner_text_top_left,
+.fw_il_011_slide_left .home_banner_text_top_left{
+    text-align: left;
+    right: auto;
+    margin-left: 0;
+}
+.home_banner_text_top_left_2{
+    position: relative;
+}
+.home_banner_text_top_left h2{
+    margin: 10px 0 6px;
+}
+#home_banner_paradise .home_banner_text_top_left h2{
+    font-size: 50px;
+    animation-delay: .5s;
+    animation-timing-function: cubic-bezier(0.230,1.000,0.320,1.000);
+}
+#home_banner_paradise .home_banner_text_top_left .author-detail p{
+    font-size: 15px;
+}
+.home_banner_text_top_left h2 a{
+    color: #fff;
+}
+.home_banner_text_top_left h2 a:hover{
+    opacity: 0.7;
+}
+
+.home_banner_text_top_left p{
+    margin: 0;
+    color: #fff;
+    padding-right: 5px;
+    display: inline-block;
+}
+.home_banner_text_top_left .author-detail{
+    padding: 0;
+}
+
+
 
 /* Breaking News */
 .breaking-news{
