@@ -16,7 +16,7 @@
                         <div class="author-detail">
                             <p><a href="#"><i class="icon-profile-male"></i> {{getComment('name')}}</a></p>
                             <p><i class="icon-clock"></i> {{getComment('hour')}}</p>
-                            <p><a href="#"><i class="icon-chat"></i> {{getComment('comments')}} comentarios</a></p>
+                            <p><a href="#"><i class="icon-chat"></i> {{getComment('comments')}} comentários</a></p>
                         </div>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                         <div class="author-detail">
                             <p><a href="#"><i class="icon-profile-male"></i> {{getComment('name')}}</a></p>
                             <p><i class="icon-clock"></i> {{getComment('day')}}</p>
-                            <p><a href="#"><i class="icon-chat"></i> {{getComment('comments')}} comentarios</a></p>
+                            <p><a href="#"><i class="icon-chat"></i> {{getComment('comments')}} comentários</a></p>
                         </div>
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                         <div class="author-detail">
                             <p><a href="#"><i class="icon-profile-male"></i> {{getComment('name')}}</a></p>
                             <p><i class="icon-clock"></i> {{getComment('month')}}</p>
-                            <p><a href="#"><i class="icon-chat"></i> {{getComment('comments')}} comentarios</a></p>
+                            <p><a href="#"><i class="icon-chat"></i> {{getComment('comments')}} comentários</a></p>
                         </div>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                         <div class="author-detail">
                             <p><a href="#"><i class="icon-profile-male"></i> {{getComment('name')}}</a></p>
                             <p><i class="icon-clock"></i> {{getComment('second')}}</p>
-                            <p><a href="#"><i class="icon-chat"></i> {{getComment('comments')}} comentarios</a></p>
+                            <p><a href="#"><i class="icon-chat"></i> {{getComment('comments')}} comentários</a></p>
                         </div>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                         <div class="author-detail">
                             <p><a href="#"><i class="icon-profile-male"></i> {{getComment('name')}}</a></p>
                             <p><i class="icon-clock"></i> {{getComment('hour')}}</p>
-                            <p><a href="#"><i class="icon-chat"></i> {{getComment('comments')}} comentarios</a></p>
+                            <p><a href="#"><i class="icon-chat"></i> {{getComment('comments')}} comentários</a></p>
                         </div>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
                         <div class="author-detail">
                             <p><a href="#"><i class="icon-profile-male"></i> {{getComment('name')}}</a></p>
                             <p><i class="icon-clock"></i> {{getComment('second')}}</p>
-                            <p><a href="#"><i class="icon-chat"></i> {{getComment('comments')}} comentarios</a></p>
+                            <p><a href="#"><i class="icon-chat"></i> {{getComment('comments')}} comentários</a></p>
                         </div>
                     </div>
                 </div>
@@ -113,7 +113,7 @@
                         <div class="author-detail">
                             <p><a href="#"><i class="icon-profile-male"></i> {{getComment('name')}}</a></p>
                             <p><i class="icon-clock"></i> {{getComment('minute')}}</p>
-                            <p><a href="#"><i class="icon-chat"></i> {{getComment('comments')}} comentarios</a></p>
+                            <p><a href="#"><i class="icon-chat"></i> {{getComment('comments')}} comentários</a></p>
                         </div>
                     </div>
                 </div>
@@ -129,7 +129,7 @@
                         <div class="author-detail">
                             <p><a href="#"><i class="icon-profile-male"></i> {{getComment('name')}}</a></p>
                             <p><i class="icon-clock"></i> {{getComment('day')}}</p>
-                            <p><a href="#"><i class="icon-chat"></i> {{getComment('comments')}} comentarios</a></p>
+                            <p><a href="#"><i class="icon-chat"></i> {{getComment('comments')}} comentários</a></p>
                         </div>
                     </div>
                 </div>
@@ -144,7 +144,7 @@
                         <div class="author-detail">
                             <p><a href="#"><i class="icon-profile-male"></i> {{getComment('name')}}</a></p>
                             <p><i class="icon-clock"></i> {{getComment('minute')}}</p>
-                            <p><a href="#"><i class="icon-chat"></i> {{getComment('comments')}} comentarios</a></p>
+                            <p><a href="#"><i class="icon-chat"></i> {{getComment('comments')}} comentários</a></p>
                         </div>
                     </div>
                 </div>

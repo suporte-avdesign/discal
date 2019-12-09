@@ -1903,14 +1903,14 @@ ul.post-category li i{
     font-size: 12px;
 }
 ul.post-category li:hover, ul.post-category li.mixitup-control-active{
-    background: #32373C;
+    background: #303e4b;
     color: #fff;
 }
 section.latest_posts{
     padding-bottom: 55px;
 }
 section.buy-now, div.buy-now{
-    background: url(../images/bg/bg9.jpg) no-repeat;
+    background: url(../images/bg/bg4.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

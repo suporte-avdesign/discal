@@ -14,40 +14,6 @@ use Symfony\Component\DomCrawler\Crawler;
 class StoresServices
 {
 
-    public static function getProducts($url)
-    {
-        $client = new Client;
-        $response = $client->get($url);
-        $html = $response->getBody()->getContents();
-        $crawler = new Crawler($html);
-
-        $count = $crawler->evaluate('count(//div[@class="prateleira__item2"])');
-        if((int)$count[0] < 1) {
-            return null;
-        }
-
-        $product = $crawler->filter('.prateleira__item')->each(function (Crawler $crawler) {
-
-            $data = $crawler->filter('.prateleira__content .prateleira__price');
-            $prices = $data->outerHtml();
-
-            $link = $crawler->filter('.prateleira__image-link')->attr('href');
-            $title = $crawler->filter('.prateleira__item')->attr('title');
-            $image = $crawler->filter('.prateleira__image img')->attr('src');
-
-
-            return [
-                'title' => $title,
-                'link' => $link,
-                'image' => $image,
-                'prices' => $prices
-
-
-            ];
-        });
-
-        return $product;
-    }
 
 
     public static function getStore($slug)

@@ -13,7 +13,7 @@
     @include('home.news.breaking-news-1')
 
     <!-- Categorias -->
-    @include('home.categories.category-1')
+    @include('home.distributors.stores-1')
 
     <!-- Top Trending -->
     @include('home.trends.trend-1')
@@ -31,7 +31,7 @@
     @include('home.most-viewed.viewed-1')
 
     <!-- Categorias -->
-    @include('home.categories.category-2')
+    @include('home.clews.clew-1')
 
     <!-- Banners -->
     @include('home.banners.banners-2')

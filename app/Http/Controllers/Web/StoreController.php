@@ -51,17 +51,12 @@ class StoreController extends Controller
             return redirect()->route('home');
         }
 
-        dd(config('slogan'));
-
-
         $content = StoresServices::getStore($slug);
-
 
         $agent = new \Jenssegers\Agent\Agent;
         ($agent->isMobile() == true ? $sub = 'api' : $sub = 'web');
 
         (count($content->banners) == 1 ? $this->configStore['photos'] = 1 : $this->configStore['photos'] = count($content->banners));
-
 
         $this->configStore['title'] = config("stores.{$slug}.title");
         $this->configStore['address'] = config("stores.{$slug}.address");

@@ -32,7 +32,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="?action=light_mode"><span class="label label-success" style="padding-top: 5px;">Light</span></a>
+                                <a href="{{route('plans')}}"><span class="label label-success" style="padding-top: 5px;">Planos</span></a>
                             </li>
                             <li>
                                 <a href="?action=dark_mode"><span class="label label-info" style="padding-top: 5px;">Dark</span></a>

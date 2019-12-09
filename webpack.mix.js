@@ -27,6 +27,7 @@ mix.copy('resources/assets/images', 'public/images');
 
 mix.styles('resources/assets/css/style.css', 'public/css/style.min.css');
 mix.styles('resources/assets/css/plugin.css', 'public/css/plugin.min.css');
+mix.styles('resources/assets/css/pricing.css', 'public/css/pricing.min.css');
 
 
 mix.scripts('node_modules/jquery/dist/jquery.min.js', 'public/js/jquery.min.js');
