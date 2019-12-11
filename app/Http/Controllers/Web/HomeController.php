@@ -47,7 +47,6 @@ class HomeController extends Controller
 
 
 
-
         $news = typeJson($breakingNews->getNews());
 
         return view('home.home-1', compact('news', 'claws'));

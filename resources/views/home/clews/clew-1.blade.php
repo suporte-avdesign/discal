@@ -25,15 +25,15 @@
                             <div class="item-large-content">
                                 <h3><a href="{{$claw->link}}">{{$claw->title}}</a></h3>
                                 <div class="post-tag">
-                                    <a href="#" class="tag tag-blue">#Dicas</a>
-                                    <a href="#" class="tag tag-green">#Revendedor</a>
-                                    <a href="#" class="tag tag-gold">#Calçados</a>
+                                    <a href="{{$claw->link}}" class="tag tag-blue">#Dicas</a>
+                                    <a href="{{$claw->link}}" class="tag tag-green">#Revendedor</a>
+                                    <a href="{{$claw->link}}" class="tag tag-gold">#Calçados</a>
                                 </div>
                                 <p>{{$claw->description}}</p>
                                 <div class="author-detail">
-                                    <p><a href="#"><i class="icon-profile-male"></i> {{$claw->author}}</a></p>
+                                    <p><a href="{{$claw->link}}"><i class="icon-profile-male"></i> {{$claw->author}}</a></p>
                                     <p><i class="icon-clock"></i> {{$claw->date}}</p>
-                                    <p><a href="#"><i class="icon-chat"></i> {{getComment('comments')}} comentários</a></p>
+                                    <p><a href="{{$claw->link}}"><i class="icon-chat"></i> {{getComment('comments')}} comentários</a></p>
                                 </div>
                             </div>
                         </div>
@@ -52,13 +52,13 @@
                             <div class="item-small-content">
                                 <h4><a href="detail.html">{{$claw->title}}</a></h4>
                                 <div class="author-detail">
-                                    <p><a href="#"><i class="icon-profile-male"></i> {{$claw->author}}</a></p>
+                                    <p><a href="{{$claw->link}}"><i class="icon-profile-male"></i> {{$claw->author}}</a></p>
                                     <p><i class="icon-clock"></i> {{$claw->date}}</p>
-                                    <p><a href="#"><i class="icon-chat"></i> {{getComment('comments')}} comentários</a></p>
+                                    <p><a href="{{$claw->link}}"><i class="icon-chat"></i> {{getComment('comments')}} comentários</a></p>
                                 </div>
                                 <div class="post-tag">
-                                    <a href="#" class="tag-gold tag">#New</a>
-                                    <a href="#" class="tag-green tag">#Sports</a>
+                                    <a href="{{$claw->link}}" class="tag-gold tag">#New</a>
+                                    <a href="{{$claw->link}}" class="tag-green tag">#Sports</a>
                                 </div>
                             </div>
                         </div>
@@ -81,15 +81,15 @@
                             <div class="item-large-content">
                                 <h3><a href="detail.html">{{$claw->title}}</a></h3>
                                 <div class="post-tag">
-                                    <a href="#" class="tag tag-blue">#Dicas</a>
-                                    <a href="#" class="tag tag-green">#Revendedor</a>
-                                    <a href="#" class="tag tag-gold">#Calçados</a>
+                                    <a href="{{$claw->link}}" class="tag tag-blue">#Dicas</a>
+                                    <a href="{{$claw->link}}" class="tag tag-green">#Revendedor</a>
+                                    <a href="{{$claw->link}}" class="tag tag-gold">#Calçados</a>
                                 </div>
                                 <p>{{$claw->description}}</p>
                                 <div class="author-detail">
-                                    <p><a href="#"><i class="icon-profile-male"></i> {{$claw->author}}</a></p>
+                                    <p><a href="{{$claw->link}}"><i class="icon-profile-male"></i> {{$claw->author}}</a></p>
                                     <p><i class="icon-clock"></i> {{$claw->date}}</p>
-                                    <p><a href="#"><i class="icon-chat"></i> {{getComment('comments')}} comentários</a></p>
+                                    <p><a href="{{$claw->link}}"><i class="icon-chat"></i> {{getComment('comments')}} comentários</a></p>
                                 </div>
                             </div>
                         </div>
@@ -108,13 +108,13 @@
                             <div class="item-small-content">
                                 <h4><a href="detail.html">{{$claw->title}}</a></h4>
                                 <div class="author-detail">
-                                    <p><a href="#"><i class="icon-profile-male"></i> {{$claw->author}}</a></p>
+                                    <p><a href="{{$claw->link}}"><i class="icon-profile-male"></i> {{$claw->author}}</a></p>
                                     <p><i class="icon-clock"></i> {{$claw->date}}</p>
-                                    <p><a href="#"><i class="icon-chat"></i> {{getComment('comments')}} comentários</a></p>
+                                    <p><a href="{{$claw->link}}"><i class="icon-chat"></i> {{getComment('comments')}} comentários</a></p>
                                 </div>
                                 <div class="post-tag">
-                                    <a href="#" class="tag-gold tag">#New</a>
-                                    <a href="#" class="tag-green tag">#Sports</a>
+                                    <a href="{{$claw->link}}" class="tag-gold tag">#New</a>
+                                    <a href="{{$claw->link}}" class="tag-green tag">#Sports</a>
                                 </div>
                             </div>
                         </div>
@@ -136,13 +136,13 @@
                             <div class="item-small-content">
                                 <h4><a href="detail.html">{{$claw->title}}</a></h4>
                                 <div class="author-detail">
-                                    <p><a href="#"><i class="icon-profile-male"></i> {{$claw->author}}</a></p>
+                                    <p><a href="{{$claw->link}}"><i class="icon-profile-male"></i> {{$claw->author}}</a></p>
                                     <p><i class="icon-clock"></i> {{$claw->date}}</p>
-                                    <p><a href="#"><i class="icon-chat"></i> {{getComment('comments')}} comentários</a></p>
+                                    <p><a href="{{$claw->link}}"><i class="icon-chat"></i> {{getComment('comments')}} comentários</a></p>
                                 </div>
                                 <div class="post-tag">
-                                    <a href="#" class="tag-gold tag">#New</a>
-                                    <a href="#" class="tag-green tag">#Sports</a>
+                                    <a href="{{$claw->link}}" class="tag-gold tag">#New</a>
+                                    <a href="{{$claw->link}}" class="tag-green tag">#Sports</a>
                                 </div>
                             </div>
                         </div>
@@ -161,15 +161,15 @@
                             <div class="item-large-content">
                                 <h3><a href="detail.html">{{$claw->title}}</a></h3>
                                 <div class="post-tag">
-                                    <a href="#" class="tag tag-blue">#Dicas</a>
-                                    <a href="#" class="tag tag-green">#Revendedor</a>
-                                    <a href="#" class="tag tag-gold">#Calçados</a>
+                                    <a href="{{$claw->link}}" class="tag tag-blue">#Dicas</a>
+                                    <a href="{{$claw->link}}" class="tag tag-green">#Revendedor</a>
+                                    <a href="{{$claw->link}}" class="tag tag-gold">#Calçados</a>
                                 </div>
                                 <p>{{$claw->description}}</p>
                                 <div class="author-detail">
-                                    <p><a href="#"><i class="icon-profile-male"></i> {{$claw->author}}</a></p>
+                                    <p><a href="{{$claw->link}}"><i class="icon-profile-male"></i> {{$claw->author}}</a></p>
                                     <p><i class="icon-clock"></i> {{$claw->date}}</p>
-                                    <p><a href="#"><i class="icon-chat"></i> {{getComment('comments')}} comentários</a></p>
+                                    <p><a href="{{$claw->link}}"><i class="icon-chat"></i> {{getComment('comments')}} comentários</a></p>
                                 </div>
                             </div>
                         </div>
@@ -193,15 +193,15 @@
                             <div class="item-large-content">
                                 <h3><a href="detail.html">{{$claw->title}}</a></h3>
                                 <div class="post-tag">
-                                    <a href="#" class="tag tag-blue">#Dicas</a>
-                                    <a href="#" class="tag tag-green">#Revendedor</a>
-                                    <a href="#" class="tag tag-gold">#Calçados</a>
+                                    <a href="{{$claw->link}}" class="tag tag-blue">#Dicas</a>
+                                    <a href="{{$claw->link}}" class="tag tag-green">#Revendedor</a>
+                                    <a href="{{$claw->link}}" class="tag tag-gold">#Calçados</a>
                                 </div>
                                 <p>{{$claw->description}}</p>
                                 <div class="author-detail">
-                                    <p><a href="#"><i class="icon-profile-male"></i> {{$claw->author}}</a></p>
+                                    <p><a href="{{$claw->link}}"><i class="icon-profile-male"></i> {{$claw->author}}</a></p>
                                     <p><i class="icon-clock"></i> {{$claw->date}}</p>
-                                    <p><a href="#"><i class="icon-chat"></i> {{getComment('comments')}} comentários</a></p>
+                                    <p><a href="{{$claw->link}}"><i class="icon-chat"></i> {{getComment('comments')}} comentários</a></p>
                                 </div>
                             </div>
                         </div>
@@ -220,13 +220,13 @@
                             <div class="item-small-content">
                                 <h4><a href="detail.html">{{$claw->title}}</a></h4>
                                 <div class="author-detail">
-                                    <p><a href="#"><i class="icon-profile-male"></i> {{$claw->author}}</a></p>
+                                    <p><a href="{{$claw->link}}"><i class="icon-profile-male"></i> {{$claw->author}}</a></p>
                                     <p><i class="icon-clock"></i> {{$claw->date}}</p>
-                                    <p><a href="#"><i class="icon-chat"></i> {{getComment('comments')}} comentários</a></p>
+                                    <p><a href="{{$claw->link}}"><i class="icon-chat"></i> {{getComment('comments')}} comentários</a></p>
                                 </div>
                                 <div class="post-tag">
-                                    <a href="#" class="tag-gold tag">#New</a>
-                                    <a href="#" class="tag-green tag">#Sports</a>
+                                    <a href="{{$claw->link}}" class="tag-gold tag">#New</a>
+                                    <a href="{{$claw->link}}" class="tag-green tag">#Sports</a>
                                 </div>
                             </div>
                         </div>

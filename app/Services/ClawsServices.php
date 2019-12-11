@@ -56,12 +56,8 @@ class ClawsServices
         return $crawler;
     }
 
-
-
-
     private static function filterClaws($crawler, $menu, $slug)
     {
-
         $config = typeJson(config("claws.{$slug}.{$menu}"));
 
         $claws = $crawler->filter($config->element)->each(function (Crawler $crawler) use($config, $slug) {
@@ -122,8 +118,6 @@ class ClawsServices
         return $claws[0];
     }
 
-
-
     public static function getDetails($slug, $url)
     {
         try {
@@ -160,10 +154,19 @@ class ClawsServices
                 $content['date'] = '';
             }
 
-            //dd($content);
+            $remove = config("claws.{$slug}.details.remove");
+            if ($remove) {
+                foreach ($remove as $item) {
+                    $crawler = self::removeDetails($crawler, $slug, $item);
+                }
+            }
 
-
-            //$content['content'] = self::filterDetails($crawler, $slug);
+            $replace = config("claws.{$slug}.details.replace");
+            if ($replace) {
+                foreach ($replace as $key => $value) {
+                    $content['html'] = $crawler = self::replaceDetails($crawler, $key, $value);
+                }
+            }
 
             return $content;
 
@@ -190,24 +193,28 @@ class ClawsServices
     }
 
 
-    private static function filterDetails($crawler, $slug)
+    private static function removeDetails($crawler, $slug, $ele)
     {
-        $config = typeJson(config("claws.{$slug}.details"));
+        $parent = config("claws.{$slug}.details.parent");
+
+        $html = $crawler->filter($parent)->outerHtml();
+        $crawler = new Crawler($html);
 
 
-            return $crawler->filter($config->parent)->each(function (Crawler $crawler) use($config, $slug) {
 
-                return [
-                    'date' => $date,
-                    'title' => $title,
-                    'description' => $descriptio,
+        $crawler->filter($ele)->each(function (Crawler $crawler) {
+            foreach ($crawler as $node) {
+                $node->parentNode->removeChild($node);
+            }
+        });
 
-                    'image' => $image
-                ];
-            });
+        return $crawler->outerHtml();
+    }
 
 
-        return $claws[0];
+    private static function replaceDetails($crawler, $key, $value)
+    {
+        return str_replace($key, $value, $crawler);
     }
 
 

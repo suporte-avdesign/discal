@@ -1,4 +1,7 @@
 <?php
+/**
+ * Slug: 1 para cada modulo.
+ */
 $slug = [
     'doutorvarejo',
     'doutorvarejo',
@@ -12,6 +15,7 @@ $menu = [
     'manager',
     'product'
 ];
+
 
 
 return [
@@ -163,7 +167,21 @@ return [
                 '.thumb-wrap',
                 'img'
             ],
-
+            'remove' => [
+                'figure'
+            ],
+            'replace' => [
+                '<html><body><div class="the-content">' => '',
+                '</div></body></html>' => '',
+                'href' => 'href="javascript:void(0)" data-link',
+                ' target="_blank"' => '',
+                '<br></p>' => '</p>',
+                '<p></p>' => '',
+                'src' => 'src="'.asset('images/bg/clear.png').'" img-data',
+                'width' => 'width="1px" img-width',
+                'height' => 'height="1px" img-height',
+                'sizes' => 'img-sizes',
+            ]
         ]
     ]
 ];

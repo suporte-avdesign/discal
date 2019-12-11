@@ -41,14 +41,9 @@
             <div class="row">
                 <div class="col-sm-8">
                     <div class="item-wrapper">
-                        <div class="item-detail">
-                            <p class="articlepara">A sazonalidade é muito importante para o comércio. Cada época do ano tem suas particularidades e seu potencial de vendas, e isso influencia diretamente na forma de se planejar.
+                        <div class="item-detail">{!! $details->html !!}</div>
 
-                            <div class="detail-image">
-                                <img src="images/trending1.jpg" alt="Image">
-                            </div>
-                            <p class="articlepara">Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line. Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
-                        </div>
+
                         <blockquote>
                             <p>Was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                             <div class="sectionoverlay"></div>

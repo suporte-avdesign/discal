@@ -12,7 +12,6 @@ class ClawsDetailsController extends Controller
     private $view = 'blog.details';
     private $content;
 
-
     /**
      * @var ClawsServices
      */
@@ -30,17 +29,20 @@ class ClawsDetailsController extends Controller
      */
     public function index($slug, $segment)
     {
-        $url = config("claws.{$slug}.domain").'/'.$segment;
+        $url  = config("claws.{$slug}.domain").'/'.$segment;
 
         $crawler = $this->clawsServices->getDetails($slug, $url);
-        $details = typeJson($crawler);
+
+        $form = '<input type="hidden" name="slug" value="'.$slug.'">';
+        $form .= '<input type="hidden" name="_token" value="'.csrf_token().'"></form>';
+        $html = str_replace('</form>', $form, $crawler);
+
+        $details = typeJson($html);
         $this->content = [
             'title' => 'Dica para logistas ',
             'description' => $details->title
         ];
         $content = typeJson($this->content);
-
-
 
         return view("{$this->view}.detail-1", compact(
             'content','details')
@@ -53,9 +55,9 @@ class ClawsDetailsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function form(Request $request)
     {
-        //
+        dd($request->all());
     }
 
     /**
