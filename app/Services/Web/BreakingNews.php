@@ -6,14 +6,16 @@
  * Time: 18:04
  */
 
-namespace App\Services;
+namespace App\Services\Web;
 
 use GuzzleHttp\Client;
 use Symfony\Component\DomCrawler\Crawler;
 
 class BreakingNews
 {
-
+    /**
+     * @return array
+     */
     public function getNews()
     {
         $client = new Client;

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
-use App\Services\ClawsServices;
+use App\Services\Web\ClawsServices;
 use Illuminate\Http\Request;
 
 class ClawsDetailsController extends Controller
@@ -21,6 +21,7 @@ class ClawsDetailsController extends Controller
     {
 
         $this->clawsServices = $clawsServices;
+
     }
     /**
      * Display a listing of the resource.
@@ -29,13 +30,18 @@ class ClawsDetailsController extends Controller
      */
     public function index($slug, $segment)
     {
-        $url  = config("claws.{$slug}.domain").'/'.$segment;
+        //Change slug
+        $slug = $this->clawsServices->changeSlug($slug);
+        $config = typeJson($this->clawsServices->getConfig());
+        $url = $config->$slug->domain.'/'.$segment;
 
         $crawler = $this->clawsServices->getDetails($slug, $url);
 
         $form = '<input type="hidden" name="slug" value="'.$slug.'">';
         $form .= '<input type="hidden" name="_token" value="'.csrf_token().'"></form>';
         $html = str_replace('</form>', $form, $crawler);
+
+
 
         $details = typeJson($html);
         $this->content = [

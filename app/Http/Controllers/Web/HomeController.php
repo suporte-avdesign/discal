@@ -2,14 +2,17 @@
 
 namespace App\Http\Controllers\Web;
 
-use App\Services\ClawsServices;
-use Illuminate\Http\Request;
+use App\Services\Web\ClawsServices;
 use App\Http\Controllers\Controller;
 
-use App\Services\BreakingNews;
+use App\Services\Web\BreakingNews;
 
 class HomeController extends Controller
 {
+    /**
+     * @var BreakingNews
+     */
+    private $breakingNews;
     /**
      * @var ClawsServices
      */
@@ -20,11 +23,11 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct(ClawsServices $clawsServices)
+    public function __construct(ClawsServices $clawsServices, BreakingNews $breakingNews)
     {
         //$this->middleware('auth');
+        $this->breakingNews = $breakingNews;
         $this->clawsServices = $clawsServices;
-
     }
 
     /**
@@ -32,23 +35,34 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index(BreakingNews $breakingNews)
+    public function index()
     {
 
-        $menu = config('claws.menu');
-        $slugs = config('claws.slug');
+        //Últimas notícias
+        $news  = typeJson($this->breakingNews->getNews());
+        //Dicas para Loistas
+        $claws = typeJson($this->getClaws());
+
+
+        return view('home.home-1', compact('news', 'claws'));
+    }
+
+    /**
+     * Retorna modulo dicas.
+     * @return mixed
+     */
+    public function getClaws()
+    {
+        $config = typeJson($this->clawsServices->getConfig());
+        $menu = $this->clawsServices->getMenu();
+        $slugs = $this->clawsServices->getSlug();
         $i=0;
         foreach ($slugs as $slug) {
-            $claws_slugs[] = $this->clawsServices->getClaws($slug, $menu[$i], config("claws.{$slug}.{$menu[$i]}.url"));
+            $item = $menu[$i];
+            $claws_slugs[] = $this->clawsServices->getClaws($slug, $menu[$i], $config->$slug->$item->url);
             $i++;
         }
 
-        $claws = typeJson($claws_slugs);
-
-
-
-        $news = typeJson($breakingNews->getNews());
-
-        return view('home.home-1', compact('news', 'claws'));
+        return $claws_slugs;
     }
 }

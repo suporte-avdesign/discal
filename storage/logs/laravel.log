@@ -418,3 +418,33 @@
 #13 /home/avdesign/Projects/discal/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #14 {main}
 "} 
+[2019-12-11 12:05:58] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [] is not defined. at /home/avdesign/Projects/discal/vendor/laravel/framework/src/Illuminate/Log/LogManager.php:184)
+[stacktrace]
+#0 /home/avdesign/Projects/discal/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(118): Illuminate\\Log\\LogManager->resolve(NULL)
+#1 /home/avdesign/Projects/discal/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(98): Illuminate\\Log\\LogManager->get(NULL)
+#2 /home/avdesign/Projects/discal/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(539): Illuminate\\Log\\LogManager->driver()
+#3 /home/avdesign/Projects/discal/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(121): Illuminate\\Log\\LogManager->error('Argument 2 pass...', Array)
+#4 /home/avdesign/Projects/discal/app/Exceptions/Handler.php(39): Illuminate\\Foundation\\Exceptions\\Handler->report(Object(Symfony\\Component\\Debug\\Exception\\FatalThrowableError))
+#5 /home/avdesign/Projects/discal/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(376): App\\Exceptions\\Handler->report(Object(Symfony\\Component\\Debug\\Exception\\FatalThrowableError))
+#6 /home/avdesign/Projects/discal/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(141): Illuminate\\Foundation\\Console\\Kernel->reportException(Object(Symfony\\Component\\Debug\\Exception\\FatalThrowableError))
+#7 /home/avdesign/Projects/discal/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2019-12-11 12:05:58] laravel.ERROR: Argument 2 passed to Illuminate\Routing\UrlGenerator::__construct() must be an instance of Illuminate\Http\Request, null given, called in /home/avdesign/Projects/discal/vendor/laravel/framework/src/Illuminate/Routing/RoutingServiceProvider.php on line 63 {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Argument 2 passed to Illuminate\\Routing\\UrlGenerator::__construct() must be an instance of Illuminate\\Http\\Request, null given, called in /home/avdesign/Projects/discal/vendor/laravel/framework/src/Illuminate/Routing/RoutingServiceProvider.php on line 63 at /home/avdesign/Projects/discal/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:120)
+[stacktrace]
+#0 /home/avdesign/Projects/discal/vendor/laravel/framework/src/Illuminate/Routing/RoutingServiceProvider.php(63): Illuminate\\Routing\\UrlGenerator->__construct(Object(Illuminate\\Routing\\RouteCollection), NULL, NULL)
+#1 /home/avdesign/Projects/discal/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate\\Routing\\RoutingServiceProvider->Illuminate\\Routing\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#2 /home/avdesign/Projects/discal/vendor/laravel/framework/src/Illuminate/Container/Container.php(681): Illuminate\\Container\\Container->build(Object(Closure))
+#3 /home/avdesign/Projects/discal/vendor/laravel/framework/src/Illuminate/Container/Container.php(629): Illuminate\\Container\\Container->resolve('url', Array)
+#4 /home/avdesign/Projects/discal/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(769): Illuminate\\Container\\Container->make('url', Array)
+#5 /home/avdesign/Projects/discal/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(121): Illuminate\\Foundation\\Application->make('url', Array)
+#6 /home/avdesign/Projects/discal/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(148): app('url')
+#7 /home/avdesign/Projects/discal/config/claws.php(180): asset('images/bg/clear...')
+#8 /home/avdesign/Projects/discal/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(72): require('/home/avdesign/...')
+#9 /home/avdesign/Projects/discal/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(39): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->loadConfigurationFiles(Object(Illuminate\\Foundation\\Application), Object(Illuminate\\Config\\Repository))
+#10 /home/avdesign/Projects/discal/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(212): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->bootstrap(Object(Illuminate\\Foundation\\Application))
+#11 /home/avdesign/Projects/discal/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#12 /home/avdesign/Projects/discal/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#13 /home/avdesign/Projects/discal/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 {main}
+"} 

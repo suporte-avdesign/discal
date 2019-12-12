@@ -6,19 +6,38 @@
  * Time: 10:05
  */
 
-namespace App\Services;
+namespace App\Services\Web;
 
 use GuzzleHttp\Client;
-
 use GuzzleHttp\Exception\ClientException;
 use Symfony\Component\DomCrawler\Crawler;
+
+use App\Services\Web\Traits\ClawsTrait;
+
 
 
 class ClawsServices
 {
 
+    use ClawsTrait;
 
-    public static function getClaws($slug, $menu, $url)
+    private $url;
+    private $config;
+
+    public function __construct()
+    {
+        $this->config = typeJson($this->getConfig());
+    }
+
+    /**
+     * Retorna os posts referente ao menu.
+     * Box/Dicas
+     *
+     * @param $menu
+     * @param $url
+     * @return null|$content
+     */
+    public function getClaws($slug, $menu, $url)
     {
         try {
             $client = new Client;
@@ -26,13 +45,12 @@ class ClawsServices
             $html = $response->getBody()->getContents();
             $evaluate = new Crawler($html);
 
-            $crawler = self::outerHtml($evaluate, $menu, $slug);
+            $crawler = $this->outerHtml($evaluate, $menu, $slug);
             if (!$crawler) {
                 return null;
             }
 
-            $content[$menu] = self::filterClaws($crawler, $menu, $slug);
-
+            $content[$menu] = $this->filterClaws($crawler, $slug, $menu);
 
             return $content;
 
@@ -41,11 +59,21 @@ class ClawsServices
         }
     }
 
-    private static function outerHtml($crawler, $menu, $slug)
+    /**
+     * Retorna o html desidratado.
+     * Box/Dicas
+     *
+     * @param $crawler
+     * @param $menu
+     * @param $slug
+     * @return null|Crawler
+     */
+    private  function outerHtml($crawler, $menu, $slug)
     {
-        $ev = config("claws.{$slug}.{$menu}.evaluate");
-        $ele = config("claws.{$slug}.{$menu}.element");
-        $count =  $crawler->evaluate("count($ev)");
+        $eva = $this->config->$slug->$menu->evaluate;
+        $ele = $this->config->$slug->$menu->element;
+
+        $count =  $crawler->evaluate("count($eva)");
         if ((int)$count[0] == 0) {
             return null;
         }
@@ -56,9 +84,19 @@ class ClawsServices
         return $crawler;
     }
 
-    private static function filterClaws($crawler, $menu, $slug)
+
+    /**
+     * Filtra a url e verifica se não quebrou o html.
+     * Verifica a url amigavel
+     *
+     * @param $crawler
+     * @param $menu
+     * @param $slug
+     * @return mixed
+     */
+    private function filterClaws($crawler, $slug, $menu)
     {
-        $config = typeJson(config("claws.{$slug}.{$menu}"));
+        $config = typeJson($this->config->$slug->$menu);
 
         $claws = $crawler->filter($config->element)->each(function (Crawler $crawler) use($config, $slug) {
 
@@ -75,7 +113,12 @@ class ClawsServices
                     $url = implode(' ', $config->link);
                     $url = $crawler->filter($url)->attr('href');
                     $seg = explode('/', $url);
-                    $segment = config("claws.{$slug}.details.segment");
+
+                    //Posição do array[...]
+                    $segment = $this->config->$slug->details->segment;
+                    //Altera Slug
+                    $slug = $this->changeSlug($slug);
+
                     $link = route('details-claws', ['slug' => $slug, 'segment' => $seg[$segment]]);
 
                 } catch( \InvalidArgumentException $e) {
@@ -118,20 +161,29 @@ class ClawsServices
         return $claws[0];
     }
 
-    public static function getDetails($slug, $url)
+    /**
+     * Retorna o conteudo em html
+     *
+     * @param $slug
+     * @param $url
+     * @return null|$content
+     */
+    public function getDetails($slug, $url)
     {
+
         try {
+            $config = $this->config->$slug->details;
+
             $client = new Client;
             $response = $client->get($url);
             $html = $response->getBody()->getContents();
             $evaluate = new Crawler($html);
 
-            $crawler = self::detailsHtml($evaluate, $slug);
+            $crawler = $this->detailsHtml($evaluate, $slug);
             if (!$crawler) {
                 return null;
             }
 
-            $config = typeJson(config("claws.{$slug}.details"));
             $content['author'] = $config->author;
             try {
                 $title = implode(' ', $config->title);
@@ -154,17 +206,17 @@ class ClawsServices
                 $content['date'] = '';
             }
 
-            $remove = config("claws.{$slug}.details.remove");
+            $remove = $config->remove;
             if ($remove) {
                 foreach ($remove as $item) {
-                    $crawler = self::removeDetails($crawler, $slug, $item);
+                    $crawler = $this->removeDetails($crawler, $slug, $item);
                 }
             }
 
-            $replace = config("claws.{$slug}.details.replace");
+            $replace = $config->replace;
             if ($replace) {
                 foreach ($replace as $key => $value) {
-                    $content['html'] = $crawler = self::replaceDetails($crawler, $key, $value);
+                    $content['html'] = $crawler = $this->replaceDetails($crawler, $key, $value);
                 }
             }
 
@@ -177,11 +229,12 @@ class ClawsServices
     }
 
 
-    private static function detailsHtml($crawler, $slug)
+    private function detailsHtml($crawler, $slug)
     {
-        $ev = config("claws.{$slug}.details.evaluate");
-        $ele = config("claws.{$slug}.details.element");
-        $count =  $crawler->evaluate("count($ev)");
+        $config = $this->config->$slug->details;
+        $eva = $config->evaluate;
+        $ele = $config->element;
+        $count =  $crawler->evaluate("count($eva)");
         if ((int)$count[0] == 0) {
             return null;
         }
@@ -192,15 +245,19 @@ class ClawsServices
         return $crawler;
     }
 
-
-    private static function removeDetails($crawler, $slug, $ele)
+    /**
+     * Remove html element
+     *
+     * @param $crawler
+     * @param $slug
+     * @param $ele
+     * @return html
+     */
+    private function removeDetails($crawler, $slug, $ele)
     {
-        $parent = config("claws.{$slug}.details.parent");
-
+        $parent = $this->config->$slug->details->parent;
         $html = $crawler->filter($parent)->outerHtml();
         $crawler = new Crawler($html);
-
-
 
         $crawler->filter($ele)->each(function (Crawler $crawler) {
             foreach ($crawler as $node) {
@@ -208,13 +265,54 @@ class ClawsServices
             }
         });
 
+        //$crawler = $this->createHtml($crawler);
+
+
         return $crawler->outerHtml();
     }
 
-
-    private static function replaceDetails($crawler, $key, $value)
+    /**
+     * Substituir tags do html
+     *
+     * @param $crawler
+     * @param $key
+     * @param $value
+     * @return mixed
+     */
+    private function replaceDetails($crawler, $key, $value)
     {
         return str_replace($key, $value, $crawler);
+    }
+
+
+    private function createHtml($crawler)
+    {
+        //é assim que você começa get domDocument
+        //$domDocument = $crawler->getNode(0)->parentNode;
+
+
+        /*
+        //creating div
+        $form = $domDocument->createElement('form');
+        $form->setAttribute('method', 'post');
+        $form->setAttribute('id', 'form-claws');
+        $input = $domDocument->createElement('input');
+        $input->setAttribute('type', 'text');
+        $input->setAttribute('id', 'email-claws');
+        $input->setAttribute('name', 'email-claws');
+        */
+
+
+
+        //adicionando div após a tag h4
+        $ele = $crawler->filter('.the-content')->getNode(0);
+        $ele->parentNode->insertBefore( $crawler, $ele->nextSibling);
+
+
+
+
+        dd($crawler);
+
     }
 
 
