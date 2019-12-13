@@ -3,7 +3,13 @@
 <title>{{$content->title}}</title>
 <meta name="description" content="{{$content->description}}" />
 @endpush
-
+@push('head')
+<style>
+    .item-detail a {
+        color: #2a3fff;
+    }
+</style>
+@endpush
 @push('body')
 <body>
 <!--PRELOADER-->

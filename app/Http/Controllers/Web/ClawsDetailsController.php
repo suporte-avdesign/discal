@@ -36,16 +36,14 @@ class ClawsDetailsController extends Controller
         $url = $config->$slug->domain.'/'.$segment;
 
         $crawler = $this->clawsServices->getDetails($slug, $url);
+        if (!$crawler) {
+            return redirect()->route('home');
+        }
 
-        $form = '<input type="hidden" name="slug" value="'.$slug.'">';
-        $form .= '<input type="hidden" name="_token" value="'.csrf_token().'"></form>';
-        $html = str_replace('</form>', $form, $crawler);
+        $details = typeJson($crawler);
 
-
-
-        $details = typeJson($html);
         $this->content = [
-            'title' => 'Dica para logistas ',
+            'title' => "Dica para logistas:  {$details->title}",
             'description' => $details->title
         ];
         $content = typeJson($this->content);

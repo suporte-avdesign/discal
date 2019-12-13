@@ -177,12 +177,15 @@ class ClawsServices
             $client = new Client;
             $response = $client->get($url);
             $html = $response->getBody()->getContents();
-            $evaluate = new Crawler($html);
+            $crawler = new Crawler($html);
 
-            $crawler = $this->detailsHtml($evaluate, $slug);
+            $crawler = $this->detailsHtml($crawler, $slug);
             if (!$crawler) {
                 return null;
             }
+
+
+            /** Header **/
 
             $content['author'] = $config->author;
             try {
@@ -206,18 +209,17 @@ class ClawsServices
                 $content['date'] = '';
             }
 
-            $remove = $config->remove;
-            if ($remove) {
-                foreach ($remove as $item) {
-                    $crawler = $this->removeDetails($crawler, $slug, $item);
-                }
-            }
-
+            //Remover nodes
+            $html = $this->removeDetails($crawler, $slug);
             $replace = $config->replace;
             if ($replace) {
+                $i=0;
                 foreach ($replace as $key => $value) {
-                    $content['html'] = $crawler = $this->replaceDetails($crawler, $key, $value);
+                    $html = $this->replaceDetails($key, $value, $html);
+                    $i++;
                 }
+
+                $content['html'] = $html;
             }
 
             return $content;
@@ -228,18 +230,22 @@ class ClawsServices
         }
     }
 
-
+    /**
+     * Retorna o html do conteúdo principal.
+     *
+     * @param $crawler
+     * @param $slug
+     * @return null|Crawler
+     */
     private function detailsHtml($crawler, $slug)
     {
         $config = $this->config->$slug->details;
-        $eva = $config->evaluate;
-        $ele = $config->element;
-        $count =  $crawler->evaluate("count($eva)");
-        if ((int)$count[0] == 0) {
+        $count = $crawler->filter($config->content)->count();
+        if(!$count) {
             return null;
         }
 
-        $html = $crawler->filter($ele)->outerHtml();
+        $html = $crawler->filter($config->content)->html();
         $crawler = new Crawler($html);
 
         return $crawler;
@@ -253,22 +259,58 @@ class ClawsServices
      * @param $ele
      * @return html
      */
-    private function removeDetails($crawler, $slug, $ele)
+    private function removeDetails($crawler, $slug)
     {
-        $parent = $this->config->$slug->details->parent;
-        $html = $crawler->filter($parent)->outerHtml();
+
+        $config = $this->config->$slug->details;
+
+        //remove script
+        $cs = $crawler->filter($config->parent. ' script')->count();
+        if ($cs) {
+            $crawler = $this->removeElement($crawler, $config->parent. ' script');
+        }
+        //remove form
+        $cf = $crawler->filter($config->parent. ' form')->count();
+        if ($cf) {
+            $crawler = $this->removeElement($crawler, $config->parent. ' form');
+        }
+
+        $elements = $config->remove;
+        if ($elements) {
+            foreach ($elements as $item) {
+                $ele = $crawler->filter("{$config->parent} {$item}")->count();
+                if ($ele) {
+                    $crawler = $this->removeElement($crawler, "{$config->parent} {$item}");
+                }
+            }
+        }
+
+        return $crawler->filter($config->parent)->html();
+        /*
+        $html = $crawler->filter($config->parent)->html();
         $crawler = new Crawler($html);
 
-        $crawler->filter($ele)->each(function (Crawler $crawler) {
+        return $crawler;
+        */
+
+    }
+
+    /**
+     * Remove elementos específicos.
+     *
+     * @param $crawler
+     * @param $ele
+     * @return mixed
+     */
+    private function removeElement($crawler, $element)
+    {
+        $crawler->filter($element)->each(function (Crawler $crawler) {
             foreach ($crawler as $node) {
                 $node->parentNode->removeChild($node);
             }
         });
 
-        //$crawler = $this->createHtml($crawler);
-
-
-        return $crawler->outerHtml();
+        return $crawler;
     }
 
     /**
@@ -279,10 +321,12 @@ class ClawsServices
      * @param $value
      * @return mixed
      */
-    private function replaceDetails($crawler, $key, $value)
+    private function replaceDetails($key, $value, $html)
     {
-        return str_replace($key, $value, $crawler);
+
+        return str_replace($key, $value, $html);
     }
+
 
 
     private function createHtml($crawler)

@@ -151,7 +151,7 @@ trait ClawsTrait
                 ],
                 'details' => [
                     'segment' => 3,
-                    'evaluate' => '//div[@class="block-content"]',
+                    'content' => '.block-content',
                     'element' => '.single-post-box',
                     'parent' => '.the-content',
                     'author' => 'doutorvarejo',
@@ -169,25 +169,21 @@ trait ClawsTrait
                         '.thumb-wrap',
                         'img'
                     ],
+                    'tags' => [
+                        'h2'
+                    ],
                     'remove' => [
                         'figure'
                     ],
                     'replace' => [
-                        "<html><body><div class=\"the-content\">" => "",
-                        "</div></body></html>" => "",
-                        "href" => "href=\"javascript:void(0)\" data-link",
-                        " target=\"_blank\"" => "",
-                        '<br></p>' => '</p>',
-                        '<p></p>' => '',
+                        'http://www.doutorvarejo.com' => config('app.url').'/dicas/lojista',
+                        'http://www.doutorvarejo.com/gestao' => config('app.url').'/dicas/lojista',
+                        'href="https://www.wilsonatacado.com.br' => 'href= "javascript:void(0)" rel="https://www.wilsonatacado.com.br',
+                        ' target="_blank"' => '',
                         'src' => 'src="'.asset('images/bg/clear.png').'" img-data',
-                        'width' => "width=\"1px\" img-width",
-                        'height' => "height=\"1px\" img-height",
-                        'sizes' => 'img-sizes',
-                        'FNAME' => 'claws_name',
-                        'EMAIL' => 'claws_email',
-                        "<i class=\"fa fa-arrow-circle-right\"></i>" => "",
-                        "id=\"submit-subscribe\">" => "",
-                        "</button>" => "type=\"submit\" class=\"btn btn-primary\">Enviar</button>"
+                        'width' => 'width="1px" img-width',
+                        'height' => 'height="1px" img-height',
+                        'sizes' => 'img-sizes'
                     ]
                 ]
             ]
