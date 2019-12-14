@@ -37,7 +37,7 @@ class ClawsDetailsController extends Controller
 
         $crawler = $this->clawsServices->getDetails($slug, $url);
         if (!$crawler) {
-            return redirect()->route('home');
+            abort(404, 'OOPS !! PÁGINA NÃO ENCONTRADA');
         }
 
         $details = typeJson($crawler);

@@ -50,8 +50,10 @@
                         <div class="item-detail">{!! $details->html !!}</div>
 
 
+
+
                         <blockquote>
-                            <p>Was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <p>Você sabe o que é preciso para dar o pontapé inicial na suas vendas?</p>
                             <div class="sectionoverlay"></div>
                         </blockquote>
                         <div class="author-profile">
@@ -75,7 +77,7 @@
                         </div>
                         <div class="item-tags">
                             @foreach($details->tags as $tag)
-                                <a href="{{$tag->link}}" class="tag tag-blue">#{{$tag->text}}</a>
+                                <a href="{{$tag->link}}" class="tag tag-transparent">#{{$tag->text}}</a>
                             @endforeach
                         </div>
                         <div class="comment-box">

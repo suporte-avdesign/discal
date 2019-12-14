@@ -2,7 +2,7 @@
     <section class="categories" data-ref="container-2">
     <div class="container">
         <div class="section-title">
-            <h2>Dicas: Lojas Varejos</h2>
+            <h2>Dicas pra lojistas</h2>
             <div class="category-box">
                 <ul class="post-category">
                     <li class="filter" data-filter=".sales">Vendas</li>

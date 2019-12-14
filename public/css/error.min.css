@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans);
+
+about-intro p {
+    margin-bottom: 25px
+}
+
+h1.error_number {
+    text-align: center;
+    line-height: .7;
+    margin-bottom: 50px;
+    font-size: 200px;
+    font-weight: 600;
+    font-family: 'Fira Sans',sans-serif;
+
+}
+
+h1.error_number span {
+    color: #eaa200;
+    font-size: 250px;
+    position: relative
+}
+
+.main_title.text-center {
+    margin-bottom: 15px
+}
+
+
+.btn-white a {
+    padding: 10px 20px;
+    border: 1px solid #eaa200;
+    color: #fff;
+    background: inherit;
+    transition: all ease-in-out 0.3s;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 5px;
+    background: #eaa200
+}
+
+.btn-white a {
+    padding: 5px 10px
+}
+
+.btn-white a:hover {
+    background: #eaa200;
+    color: #fff;
+    border-color: #eaa200
+}
+
+
+.btn-white a.my-account p:before {
+    content: '\f007';
+    color: #eaa200;
+    font-size: 15px;
+    font-family: 'FontAwesome';
+    padding-right: 4px
+}
+
+a.hvr-pop{
+    margin-left:10px
+}

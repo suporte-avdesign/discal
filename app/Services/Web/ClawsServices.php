@@ -327,6 +327,12 @@ class ClawsServices
             }
         }
 
+        //remove other
+        $other = $crawler->filter($config->other)->count();
+        if ($other) {
+            return $crawler->filter($config->other)->html();
+        }
+
         return $crawler->filter($config->parent)->html();
         /*
         $html = $crawler->filter($config->parent)->html();

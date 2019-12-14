@@ -154,12 +154,14 @@ trait ClawsTrait
                         'parent' => '.tagcloud',
                         'replace' => [
                             'http://www.doutorvarejo.com/tag' => config('app.url').'/dicas/lojista',
+                            'http://www.doutorvarejo.com/gestao' => config('app.url').'/dicas/lojista',
                         ]
                     ],
                     'segment' => 3,
                     'content' => '.block-content',
                     'element' => '.single-post-box',
                     'parent' => '.the-content',
+                    'other' => '.wpb_wrapper',
                     'author' => 'doutorvarejo',
                     'title' => [
                         '.title-post',
@@ -180,8 +182,8 @@ trait ClawsTrait
                     ],
                     'replace' => [
                         'http://www.doutorvarejo.com' => config('app.url').'/dicas/lojista',
-                        'http://www.doutorvarejo.com/gestao' => config('app.url').'/dicas/lojista',
                         'href="https://www.wilsonatacado.com.br' => 'href= "javascript:void(0)" rel="https://www.wilsonatacado.com.br',
+                        'gestao/' => '',
                         ' target="_blank"' => '',
                         'src' => 'src="'.asset('images/bg/clear.png').'" img-data',
                         'width' => 'width="1px" img-width',
