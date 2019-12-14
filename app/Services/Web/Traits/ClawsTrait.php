@@ -150,6 +150,12 @@ trait ClawsTrait
                     ]
                 ],
                 'details' => [
+                    'tags' => [
+                        'parent' => '.tagcloud',
+                        'replace' => [
+                            'http://www.doutorvarejo.com/tag' => config('app.url').'/dicas/lojista',
+                        ]
+                    ],
                     'segment' => 3,
                     'content' => '.block-content',
                     'element' => '.single-post-box',
@@ -168,9 +174,6 @@ trait ClawsTrait
                         '.post-gallery',
                         '.thumb-wrap',
                         'img'
-                    ],
-                    'tags' => [
-                        'h2'
                     ],
                     'remove' => [
                         'figure'

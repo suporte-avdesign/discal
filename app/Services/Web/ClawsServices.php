@@ -179,6 +179,9 @@ class ClawsServices
             $html = $response->getBody()->getContents();
             $crawler = new Crawler($html);
 
+            $content['tags'] = $this->detailsTags($crawler, $slug);
+
+
             $crawler = $this->detailsHtml($crawler, $slug);
             if (!$crawler) {
                 return null;
@@ -209,8 +212,11 @@ class ClawsServices
                 $content['date'] = '';
             }
 
+
+
             //Remover nodes
             $html = $this->removeDetails($crawler, $slug);
+            //Replace attributes
             $replace = $config->replace;
             if ($replace) {
                 $i=0;
@@ -229,6 +235,42 @@ class ClawsServices
             return null;
         }
     }
+
+    /**
+     * Retorna as tags da págna.
+     * Subistitui a url
+     *
+     * @param $crawler
+     * @param $slug
+     * @return null|Crawler
+     */
+    private function detailsTags($crawler, $slug)
+    {
+        $config = $this->config->$slug->details;
+        $count = $crawler->filter($config->tags->parent)->count();
+        if(!$count) {
+            return null;
+        }
+
+        $tags = $crawler->filter($config->tags->parent)->each(function (Crawler $crawler) use($config) {
+            return $crawler->filter('a')->each(function (Crawler $crawler) use($config) {
+                //Replace attributes
+                $replace = $config->tags->replace;
+                if ($replace) {
+                    foreach ($replace as $key => $value) {
+                        return [
+                            'link' => str_replace($key, $value, $crawler->link()->getUri()),
+                            'text' => ucfirst($crawler->text())
+                        ];
+                    }
+                }
+            });
+
+        });
+
+        return collect($tags[0])->shuffle();
+    }
+
 
     /**
      * Retorna o html do conteúdo principal.
@@ -292,7 +334,6 @@ class ClawsServices
 
         return $crawler;
         */
-
     }
 
     /**
@@ -323,7 +364,6 @@ class ClawsServices
      */
     private function replaceDetails($key, $value, $html)
     {
-
         return str_replace($key, $value, $html);
     }
 
@@ -333,7 +373,6 @@ class ClawsServices
     {
         //é assim que você começa get domDocument
         //$domDocument = $crawler->getNode(0)->parentNode;
-
 
         /*
         //creating div
@@ -346,15 +385,9 @@ class ClawsServices
         $input->setAttribute('name', 'email-claws');
         */
 
-
-
         //adicionando div após a tag h4
         $ele = $crawler->filter('.the-content')->getNode(0);
         $ele->parentNode->insertBefore( $crawler, $ele->nextSibling);
-
-
-
-
         dd($crawler);
 
     }

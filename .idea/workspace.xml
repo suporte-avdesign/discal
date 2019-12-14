@@ -3,15 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d7e04cb8-e67b-4392-830f-4a20da941231" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Web/ClawsDetailsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Web/ClawsDetailsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Services/Web/ClawsServices.php" afterPath="$PROJECT_DIR$/app/Services/Web/ClawsServices.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Services/Web/Traits/ClawsTrait.php" afterPath="$PROJECT_DIR$/app/Services/Web/Traits/ClawsTrait.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/blog/details/detail-1.blade.php" afterPath="$PROJECT_DIR$/resources/views/blog/details/detail-1.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage/logs/laravel-2019-12-10.log" afterPath="$PROJECT_DIR$/storage/logs/laravel-2019-12-10.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage/logs/laravel-2019-12-11.log" afterPath="$PROJECT_DIR$/storage/logs/laravel-2019-12-11.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage/logs/laravel-2019-12-12.log" afterPath="$PROJECT_DIR$/storage/logs/laravel-2019-12-12.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage/logs/laravel.log" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage/logs/laravel-2019-12-13.log" afterPath="$PROJECT_DIR$/storage/logs/laravel-2019-12-13.log" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,8 +30,8 @@
       <file leaf-file-name="ClawsDetailsController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Web/ClawsDetailsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="38" column="24" lean-forward="true" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+            <state relative-caret-position="235">
+              <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding>
                 <element signature="e#44#80#0#PHP" expanded="true" />
               </folding>
@@ -54,31 +49,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClawsServices.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ClawsServices.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Services/Web/ClawsServices.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="343">
-              <caret line="221" column="41" lean-forward="false" selection-start-line="221" selection-start-column="41" selection-end-line="221" selection-end-column="41" />
+              <caret line="267" column="0" lean-forward="true" selection-start-line="267" selection-start-column="0" selection-end-line="267" selection-end-column="0" />
               <folding>
                 <element signature="e#119#141#0#PHP" expanded="true" />
                 <element signature="e#610#1178#0#PHP" expanded="false" />
+                <element signature="e#1350#1763#0#PHP" expanded="false" />
                 <element signature="e#1962#4300#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClawsTrait.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ClawsTrait.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Services/Web/Traits/ClawsTrait.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="168" column="38" lean-forward="true" selection-start-line="168" selection-start-column="38" selection-end-line="168" selection-end-column="38" />
+            <state relative-caret-position="256">
+              <caret line="158" column="35" lean-forward="true" selection-start-line="158" selection-start-column="35" selection-end-line="158" selection-end-column="35" />
               <folding>
                 <element signature="e#6#95#0#PHP" expanded="true" />
                 <element signature="e#1627#2725#1#PHP" expanded="false" />
                 <element signature="e#2756#3851#1#PHP" expanded="false" />
                 <element signature="e#3882#4978#1#PHP" expanded="false" />
-                <marker date="1576269167309" expanded="true" signature="5955:5977" ph="..." />
+                <marker date="1576288385953" expanded="true" signature="6141:6163" ph="..." />
               </folding>
             </state>
           </provider>
@@ -97,7 +93,7 @@
       <file leaf-file-name="clew-1.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/home/clews/clew-1.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="-3541">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -107,8 +103,8 @@
       <file leaf-file-name="detail-1.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/blog/details/detail-1.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+            <state relative-caret-position="450">
+              <caret line="82" column="53" lean-forward="true" selection-start-line="82" selection-start-column="53" selection-end-line="82" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -208,10 +204,10 @@
         <option value="$PROJECT_DIR$/app/Helpers/functions.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Web/ClawsDetailsController.php" />
-        <option value="$PROJECT_DIR$/resources/views/blog/details/detail-1.blade.php" />
-        <option value="$PROJECT_DIR$/app/Services/Web/ClawsServices.php" />
         <option value="$PROJECT_DIR$/app/Services/Web/Traits/ClawsTrait.php" />
+        <option value="$PROJECT_DIR$/resources/views/blog/details/detail-1.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Web/ClawsDetailsController.php" />
+        <option value="$PROJECT_DIR$/app/Services/Web/ClawsServices.php" />
       </list>
     </option>
   </component>
@@ -526,12 +522,12 @@
       <workItem from="1576067119383" duration="44919000" />
       <workItem from="1576152663685" duration="33480000" />
       <workItem from="1576239506346" duration="2945000" />
-      <workItem from="1576252240093" duration="10015000" />
+      <workItem from="1576252240093" duration="18916000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="542429000" />
+    <option name="totallyTimeSpent" value="551330000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -880,14 +876,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home/clews/clew-1.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Helpers/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -896,46 +884,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/Web/Traits/ClawsTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="158" column="35" lean-forward="true" selection-start-line="158" selection-start-column="35" selection-end-line="158" selection-end-column="35" />
+          <folding>
+            <element signature="e#6#95#0#PHP" expanded="true" />
+            <element signature="e#1627#2725#1#PHP" expanded="false" />
+            <element signature="e#2756#3851#1#PHP" expanded="false" />
+            <element signature="e#3882#4978#1#PHP" expanded="false" />
+            <marker date="1576288385953" expanded="true" signature="6141:6163" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home/clews/clew-1.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3541">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/blog/details/detail-1.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="82" column="53" lean-forward="true" selection-start-line="82" selection-start-column="53" selection-end-line="82" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Web/ClawsDetailsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="38" column="24" lean-forward="true" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+        <state relative-caret-position="235">
+          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding>
             <element signature="e#44#80#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/blog/details/detail-1.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Services/Web/ClawsServices.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="343">
-          <caret line="221" column="41" lean-forward="false" selection-start-line="221" selection-start-column="41" selection-end-line="221" selection-end-column="41" />
+          <caret line="267" column="0" lean-forward="true" selection-start-line="267" selection-start-column="0" selection-end-line="267" selection-end-column="0" />
           <folding>
             <element signature="e#119#141#0#PHP" expanded="true" />
             <element signature="e#610#1178#0#PHP" expanded="false" />
+            <element signature="e#1350#1763#0#PHP" expanded="false" />
             <element signature="e#1962#4300#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/Web/Traits/ClawsTrait.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="168" column="38" lean-forward="true" selection-start-line="168" selection-start-column="38" selection-end-line="168" selection-end-column="38" />
-          <folding>
-            <element signature="e#6#95#0#PHP" expanded="true" />
-            <element signature="e#1627#2725#1#PHP" expanded="false" />
-            <element signature="e#2756#3851#1#PHP" expanded="false" />
-            <element signature="e#3882#4978#1#PHP" expanded="false" />
-            <marker date="1576269167309" expanded="true" signature="5955:5977" ph="..." />
           </folding>
         </state>
       </provider>

@@ -74,10 +74,9 @@
                             <a href="#" class="btn-large btn-twitter"><i class="fa fa-twitter" aria-hidden="true"></i> Share on Twitter</a>
                         </div>
                         <div class="item-tags">
-                            <a href="#" class="tag-blue tag">#Sports</a>
-                            <a href="#" class="tag tag-blue">#World Cup</a>
-                            <a href="#" class="tag tag-blue">#Football</a>
-                            <a href="#" class="tag tag-blue">#Qatar</a>
+                            @foreach($details->tags as $tag)
+                                <a href="{{$tag->link}}" class="tag tag-blue">#{{$tag->text}}</a>
+                            @endforeach
                         </div>
                         <div class="comment-box">
                             <h3>Comments</h3>
