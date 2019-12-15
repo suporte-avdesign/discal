@@ -44,7 +44,7 @@ class ClawsDetailsController extends Controller
 
         $this->content = [
             'title' => "Dica para logistas:  {$details->title}",
-            'description' => $details->title
+            'description' => $segment
         ];
         $content = typeJson($this->content);
 

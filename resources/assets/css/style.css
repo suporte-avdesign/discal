@@ -2203,6 +2203,7 @@ section.page-cover{
 .blockquote-upper blockquote{
     margin-bottom: 0;
 }
+
 .item-wrapper blockquote p, .blockquote-upper blockquote p{
     font-weight: 600;
     font-size: initial;
