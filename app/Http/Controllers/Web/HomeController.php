@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Web;
 
+use App\Services\Web\BreakingNews;
 use App\Services\Web\ClawsServices;
+use App\Services\Web\RelatedServices;
+
 use App\Http\Controllers\Controller;
 
-use App\Services\Web\BreakingNews;
 
 class HomeController extends Controller
 {
@@ -17,17 +19,27 @@ class HomeController extends Controller
      * @var ClawsServices
      */
     private $clawsServices;
+    /**
+     * @var RelatedServices
+     */
+    private $relatedServices;
 
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct(ClawsServices $clawsServices, BreakingNews $breakingNews)
+    public function __construct(
+        RelatedServices $relatedServices,
+        ClawsServices $clawsServices,
+        BreakingNews $breakingNews)
     {
         //$this->middleware('auth');
         $this->breakingNews = $breakingNews;
         $this->clawsServices = $clawsServices;
+        $this->relatedServices = $relatedServices;
+
+
     }
 
     /**
@@ -37,14 +49,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-
+        //Slider RelatedStore
+        $relateds = typeJson($this->getRelated());
         //Últimas notícias
         $news  = typeJson($this->breakingNews->getNews());
         //Dicas para Loistas
         $claws = typeJson($this->getClaws());
 
 
-        return view('home.home-1', compact('news', 'claws'));
+        return view('home.home-1', compact('news', 'claws', 'relateds'));
     }
 
     /**
@@ -64,5 +77,12 @@ class HomeController extends Controller
         }
 
         return $claws_slugs;
+    }
+
+
+    public function getRelated()
+    {
+        return  typeJson($this->relatedServices->getConfig());
+
     }
 }

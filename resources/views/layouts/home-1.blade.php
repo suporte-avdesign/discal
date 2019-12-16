@@ -18,6 +18,7 @@
     <link href="{{asset('css/plugin.min.css')}}" rel="stylesheet" type="text/css">
     <!--Font Awesome-->
     <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
+    @stack('head')
 </head>
 
 <body>
@@ -35,5 +36,7 @@
     <script src="{{asset('js/plugin.min.js')}}"></script>
     <script src="{{asset('js/main.min.js')}}"></script>
     <script src="{{asset('js/custom-mixitup.min.js')}}"></script>
+
+    @stack('scripts')
 </body>
 </html>

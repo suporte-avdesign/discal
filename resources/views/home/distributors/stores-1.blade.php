@@ -13,35 +13,44 @@
                             <div class="col-md-6 col-xs-12">
                                 <div class="tech-item">
                                     <div class="tech-image list-item-1">
-                                        <img src="{{asset('images/fitness/trending2.jpg')}}" alt="Image">
-                                        <div class="image-overlay"></div>
+                                        <a href="{{route('store', 'clovisatacado')}}"> <img src="{{asset('images/lojas/clovisatacado.gif')}}" alt="Clovis Atacado"></a>
+                                        <div class="image-overlay-clovisatacado">
+                                            <img src="{{asset('images/lojas/logos/clovisatacado.png')}}"alt="Clovis Atacado">
+                                        </div>
                                     </div>
                                     <div class="tech-content">
-                                        <h4><a href="detail.html">Best Gym Equipment for Building Abs and Legs</a></h4>
+                                        <h4><a href="{{route('store', 'clovisatacado')}}">Calçados no Atacado em Até 6x Sem Juros </a></h4>
                                         <div class="author-detail">
-                                            <p><a href="#"><i class="icon-profile-male"></i> John Doe</a></p>
-                                            <p><i class="icon-clock"></i> 12 May</p>
-                                            <p><a href="#"><i class="icon-chat"></i> 2 comments</a></p>
+                                            <p><a href="{{route('store', 'clovisatacado')}}"><i class="icon-profile-male"></i> {{getComment('name')}}</a></p>
+                                            <p><i class="icon-clock"></i> {{getComment('day')}}</p>
+                                            <p><a href="{{route('store', 'clovisatacado')}}"><i class="icon-chat"></i> {{getComment('comments')}} </a></p>
                                         </div>
                                     </div>
                                 </div>
+
+
+
                             </div>
                             <div class="col-md-6 col-xs-12">
-                                <div class="tech-item">
+                                <div class="tech-item margin-top-20">
                                     <div class="tech-image list-item-1">
-                                        <img src="{{asset('images/fitness/trending3.jpg')}}" alt="Image">
-                                        <div class="image-overlay"></div>
+                                        <img src="{{asset('images/lojas/danielatacado.png')}}" alt="Daniel Atacado">
+                                        <div class="image-overlay-danielatacado">
+                                            <img src="{{asset('images/lojas/logos/danielatacado.png')}}"alt="Daniel Atacado">
+                                        </div>
                                     </div>
                                     <div class="tech-content">
                                         <h4><a href="detail.html">No Excuses: Cardio Pump Workout for a Healthy Body</a></h4>
                                         <div class="author-detail">
-                                            <p><a href="#"><i class="icon-profile-male"></i> John Doe</a></p>
-                                            <p><i class="icon-clock"></i> 12 May</p>
-                                            <p><a href="#"><i class="icon-chat"></i> 2 comments</a></p>
+                                            <p><a href="{{route('store', 'clovisatacado')}}"><i class="icon-profile-male"></i> {{getComment('name')}}</a></p>
+                                            <p><i class="icon-clock"></i> {{getComment('day')}}</p>
+                                            <p><a href="{{route('store', 'clovisatacado')}}"><i class="icon-chat"></i> {{getComment('comments')}} </a></p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
+
                         </div>
                     </div>
                     <div class="cosmetic-posts">

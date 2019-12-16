@@ -27,7 +27,15 @@ Route::get('planos', 'Web\PlansController@index')->name('plans');
 
 Route::get('whatsapp', 'Web\WhatsappController@index')->name('whatsapp');
 
+/**
+ * Route: Claws
+ */
 Route::get('dicas/{slug}/{segment}', 'Web\ClawsDetailsController@index')->name('details-claws');
 Route::post('dicas/{slug}/{segment}', 'Web\ClawsDetailsController@form')->name('claws-form');
 
+/**
+ * Route: Relateds
+Route::get('novidade/{slug}/{segment}', 'Web\ClawsDetailsController@index')->name('details-claws');
+Route::post('novidade/{slug}/{segment}', 'Web\ClawsDetailsController@form')->name('claws-form');
+*/
 

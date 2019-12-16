@@ -68,7 +68,7 @@ class ClawsServices
      * @param $slug
      * @return null|Crawler
      */
-    private  function outerHtml($crawler, $menu, $slug)
+    private function outerHtml($crawler, $menu, $slug)
     {
         $eva = $this->config->$slug->$menu->evaluate;
         $ele = $this->config->$slug->$menu->element;
