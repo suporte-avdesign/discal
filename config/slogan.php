@@ -6,6 +6,19 @@
  * Time: 05:18
  */
 
+$whatsapp = 'Olá,
+
+Obrigado por cadastrar seu numero de Whatsapp. A partir de agora você já poderá receber nossas novidades e campanhas exclusivas para este canal.
+
+Lembre-se, é muito importante que você adicione nosso numero na agenda do seu celular, caso contrário as mensagens não chegarão em seu Whatsapp.
+
+O numero é esse: (11) 98595-1795
+
+Para deixar de receber nossas mensagens basta enviar uma mensagem de texto através do Whatsapp com a palavra SAIR que iremos descadastrar seu numero de nossa base de dados.
+
+Obrigado e boas vendas!';
+
+
 return [
     0 => 'Anuncie Conosco!',
     1 => 'Anuncie com a gente!',

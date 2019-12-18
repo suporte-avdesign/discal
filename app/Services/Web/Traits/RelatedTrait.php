@@ -18,8 +18,37 @@ trait RelatedTrait
             'grendenekids' => [
                 'name' => 'Grendene Kids',
                 'domain' => 'http://www.grendenekids.com.br',
-                'page' => 'produto',
-                'banners' => $this->getBanners()->grendenekids
+                'segment' => [
+                    'produto'
+                ],
+                'banners' => $this->getBanners()->grendenekids,
+                'details' => [
+                    'evaluate' => '.page-product',
+                    'element' => '.product-info',
+                    'parent' => '.product-colors',
+                    'title' => [
+                        '.product-info',
+                        'h1',
+                    ],
+                    'description' => [
+                        '.product-info',
+                        '.product-subtitle'
+                    ],
+                    'banner' => [
+                        '.product-header',
+                        'img'
+                    ],
+                    'images' => [
+                        'ele' => 'li',
+                        'attr' => 'data-variation-img',
+                        'link' => 'data-variation-url'
+                    ],
+                    'remove' => [
+                        '.game-banner',
+                        '.related-products',
+                        '.js-remodal'
+                    ]
+                ]
             ]
 
         ];
@@ -40,7 +69,7 @@ trait RelatedTrait
                     'description' => 'Uma super novidade das Princesas',
                     'overlay' => 'right',
                     'link' => 'disney-fantasy-sandalia',
-                    'image' => asset('images/fabricas/grendene/kids/disneyfantasy.png')
+                    'image' => asset('images/fabricas/grendene/kids/disneyfantasy.png'),
                 ],
                 1 => [
                     'title' => 'Hora do Duelo!',
@@ -91,7 +120,7 @@ trait RelatedTrait
                     'link' => 'lol-diva-bag-sandalia',
                     'image' => asset('images/fabricas/grendene/kids/loldiva.png')
                 ]
-           ]
+            ]
         ];
 
         return typeJson($banners);

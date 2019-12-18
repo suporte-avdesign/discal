@@ -13,7 +13,7 @@
 
             <div class="row slider-shop">
 
-                @foreach($relateds->$slug->banners as $related)
+               @foreach($relateds->$slug->banners as $related)
                     <div class="col-md-3 col-xs-12">
                         <div class="rt-product-wrapper">
                             <div class="product-thumbnail-wrapper">
@@ -24,7 +24,7 @@
                                     <img src="{{asset("images/fabricas/{$slug}.png")}}"alt="Clovis Atacado">
                                 </div>
                             </div>
-                            <div class="product-label text-center"><h4>{{$related->title}}</h4></div>
+                            <div class="text-center margin-top-20"><h4>{{$related->title}}</h4></div>
                             <p>{{$related->description}}</p>
                             <div class="author-detail">
                                 <p><a href=""><i class="icon-profile-male"></i> {{getComment('name')}}</a></p>
