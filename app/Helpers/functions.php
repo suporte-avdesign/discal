@@ -4,6 +4,11 @@
  * Return the date with string.
  *
  */
+/**
+ * Return Json
+ */
+
+
 if ( !function_exists('strDateBr'))
 {
     function strDateBr()
@@ -81,6 +86,7 @@ if ( !function_exists('typeJson'))
         return json_decode(json_encode($array, FALSE));
     }
 }
+
 
 
 

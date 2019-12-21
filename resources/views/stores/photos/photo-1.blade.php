@@ -2,7 +2,7 @@
 
     <div class="blog-post-wrap">
         <div class="blog-post-upper">
-            <img src="{{asset('images/products/list1.jpg')}}" alt="Image">
+            <img src="{{asset('relateds')}}" alt="Image">
         </div>
         <!--
         <div class="blog-post-detail">

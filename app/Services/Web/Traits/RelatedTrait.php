@@ -14,18 +14,25 @@ trait RelatedTrait
     public function getConfig()
     {
         return [
+            'segment' => 'produto',
             'slug' => $this->getSlug(),
             'grendenekids' => [
                 'name' => 'Grendene Kids',
                 'domain' => 'http://www.grendenekids.com.br',
                 'segment' => [
                     'produto'
+
                 ],
                 'banners' => $this->getBanners()->grendenekids,
                 'details' => [
                     'evaluate' => '.page-product',
                     'element' => '.product-info',
                     'parent' => '.product-colors',
+                    'photos' => 'li',
+                    'photo' => [
+                        '.product-media__image',
+                        ' img'
+                    ],
                     'title' => [
                         '.product-info',
                         'h1',
@@ -40,13 +47,20 @@ trait RelatedTrait
                     ],
                     'images' => [
                         'ele' => 'li',
+                        'src' => 'src',
+                        'href' => 'href',
                         'attr' => 'data-variation-img',
                         'link' => 'data-variation-url'
                     ],
                     'remove' => [
                         '.game-banner',
-                        '.related-products',
-                        '.js-remodal'
+                        '.related-relateds',
+                        '.js-remodal',
+                        '.product-colors li img',
+                    ],
+                    'replace' => [
+                        'data-variation-url' => 'href',
+                        'data-variation-img' => 'src'
                     ]
                 ]
             ]

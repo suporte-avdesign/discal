@@ -73,21 +73,23 @@
             <div class="col-md-3 col-xs-6">
                 <div class="item-medium">
                     <div class="item-medium-image">
-                        <img alt="Image" src="{{asset('images/banners/mostviewed4.jpg')}}">
-                        <div class="comment-bubble"><a href="#"><span>3</span></a></div>
+                        <img alt="Wilson Atacado" src="{{asset('images/banners/most-viewed/wilsonatacado.png')}}">
+                        <div class="comment-bubble"><a href="#"><span>{{getComment('comments')}}</span></a></div>
                         <div class="image-overlay"></div>
                     </div>
+                <!--
                     <div class="item-medium-content">
-                        <h3><a href="detail.html">Chester Bennington</a></h3>
+                        <h3><a href="detail.html">Titulo Aqui</a></h3>
                         <div class="author-detail">
-                            <p><a href="#"><i class="icon-profile-male"></i> John Doe</a></p>
-                            <p><i class="icon-clock"></i> 12 May</p>
+                            <p><a href="#"><i class="icon-profile-male"></i> {{getComment('name')}}</a></p>
+                            <p><i class="icon-clock"></i> {{getComment('day')}}</p>
                         </div>
                         <div class="post-tag">
-                            <a href="#" class="tag-blue tag">#New</a>
-                            <a href="#" class="tag-green tag">#Health</a>
+                            <a href="#" class="tag-blue tag">#Novo</a>
+                            <a href="#" class="tag-gold tag">#Lançamento</a>
                         </div>
                     </div>
+                    -->
                 </div>
             </div>
         </div>

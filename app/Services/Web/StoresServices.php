@@ -6,7 +6,7 @@
  * Time: 18:04
  */
 
-namespace App\Services;
+namespace App\Services\Web;
 
 use GuzzleHttp\Client;
 use Symfony\Component\DomCrawler\Crawler;
@@ -33,9 +33,9 @@ class StoresServices
         }
 
         if (self::evaluateProducts($crawler, $slug) == 0) {
-            $content['products'] = null;
+            $content['relateds'] = null;
         } else {
-            $content['products'] = self::filterProducts($crawler, $slug);
+            $content['relateds'] = self::filterProducts($crawler, $slug);
         }
 
         return typeJson($content);
@@ -96,7 +96,7 @@ class StoresServices
     private static function evaluateProducts($crawler, $slug)
     {
 
-        $cp = config("stores.{$slug}.products.evaluate");
+        $cp = config("stores.{$slug}.relateds.evaluate");
         $count =  $crawler->evaluate("count($cp)");
 
         return (int)$count[0];
@@ -105,13 +105,13 @@ class StoresServices
 
     private static function filterProducts($crawler, $slug)
     {
-        $total   = config("stores.{$slug}.products.total");
-        $parent  = config("stores.{$slug}.products.parent");
-        $element = config("stores.{$slug}.products.element");
+        $total   = config("stores.{$slug}.relateds.total");
+        $parent  = config("stores.{$slug}.relateds.parent");
+        $element = config("stores.{$slug}.relateds.element");
 
-        $title = config("stores.{$slug}.products.title");
-        $link  = config("stores.{$slug}.products.link");
-        $image = config("stores.{$slug}.products.image");
+        $title = config("stores.{$slug}.relateds.title");
+        $link  = config("stores.{$slug}.relateds.link");
+        $image = config("stores.{$slug}.relateds.image");
 
 
         $products = $crawler->filter($parent)->each(function (Crawler $crawler) use($total, $element, $title, $link, $image) {

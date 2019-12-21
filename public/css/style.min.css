@@ -3768,6 +3768,9 @@ section.ent-news{
     padding: 28px 15px 30px;
 }
 
+
+
+
 .product-categories , .product-categories a{color: #f75656; font-size: 14px;}
 
 
@@ -3785,6 +3788,7 @@ section.ent-news{
 }
 
 .rt-product-meta-wrapper .btn_red{margin-bottom: 0;}
+
 
 .our_store .slick-prev, .our_store .slick-next {
     top: -80px;
@@ -3903,6 +3907,21 @@ input.quantity-input {
 .single-product-summary .product_meta a:hover{color:#eb262a;}
 
 .our_store.related_store{padding-top: 0;}
+
+/** Galery Colors **/
+.related-colors ul{
+    padding: 2px;
+    width: 20%;
+}
+
+.related-colors ul li{
+    padding: 2px;
+}
+
+.related-colors .img-content{
+    padding: 2px;
+    width: 80%;
+}
 
 #store-tab-main .nav-tabs {
     border-color:#f1f1f1;

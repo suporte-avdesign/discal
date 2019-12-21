@@ -28,7 +28,7 @@ return [
             'element' => '.box-banner',
             'height' => 250
         ],
-        'products' => [
+        'relateds' => [
             'url' => 'https://www.clovisatacado.com.br',
             'evaluate' => '//div[@class="prateleira__item"]',
             'parent' => '.prateleira__item',
@@ -61,10 +61,10 @@ return [
             'element' => '.item',
             'height' => 160
         ],
-        'products' => [
+        'relateds' => [
             'url' => 'https://www.danielatacado.com.br/',
             'evaluate' => '//span[@class="product-grid-separate"]',
-            'parent' => '.products-grid',
+            'parent' => '.relateds-grid',
             'total' => 'span[@class="product-grid-separate"]',
             'element' => '.product-grid-separate .item',
             'title' => 'a',
@@ -93,10 +93,10 @@ return [
             'element' => '.item',
             'height' => 160
         ],
-        'products' => [
+        'relateds' => [
             'url' => 'https://www.danielatacado.com.br/',
             'evaluate' => '//span[@class="product-grid-separate"]',
-            'parent' => '.products-grid',
+            'parent' => '.relateds-grid',
             'total' => 'span[@class="product-grid-separate"]',
             'element' => '.product-grid-separate .item',
             'title' => 'a',

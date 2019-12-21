@@ -34,8 +34,9 @@ Route::get('dicas/{slug}/{segment}', 'Web\ClawsDetailsController@index')->name('
 Route::post('dicas/{slug}/{segment}', 'Web\ClawsDetailsController@form')->name('claws-form');
 
 /**
- * Route: Relateds
-Route::get('novidade/{slug}/{segment}', 'Web\ClawsDetailsController@index')->name('details-claws');
-Route::post('novidade/{slug}/{segment}', 'Web\ClawsDetailsController@form')->name('claws-form');
-*/
+ * Route: Products Details
+ */
+Route::get('produto/{slug}/{segment}', 'Web\RelatedDetailsController@index')->name('details-related');
+Route::post('produto/{slug}/{segment}', 'Web\RelatedDetailsController@form')->name('details-related-form');
+
 

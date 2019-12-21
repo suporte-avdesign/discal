@@ -51,13 +51,10 @@ class HomeController extends Controller
     {
         //Slider RelatedStore
         $relateds = typeJson($this->getRelated());
-        $relateds = $relateds[0];
-
         //Últimas notícias
-        $news  = []; //typeJson($this->breakingNews->getNews());
+        $news  = null; //typeJson($this->breakingNews->getNews());
         //Dicas para Loistas
-        $claws = [];//typeJson($this->getClaws());
-
+        $claws = null;//typeJson($this->getClaws());
 
         return view('home.home-1', compact('news', 'claws', 'relateds'));
     }
@@ -91,7 +88,7 @@ class HomeController extends Controller
             $i++;
         }
 
-        return $relateds;
+        return $relateds[0];
 
 
     }

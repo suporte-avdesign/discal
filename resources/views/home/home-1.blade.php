@@ -37,6 +37,7 @@
         top: 2px;
         left: 5px;
         width: 100px;
+        z-index: 999;
     }
 
     .image-overlay-right {
@@ -44,12 +45,14 @@
         top: 2px;
         right: 5px;
         width: 100px;
+        z-index: 999;
     }
     .image-overlay-bottom-right {
         position: absolute;
         bottom: 5px;
         right: 5px;
         width: 100px;
+        z-index: 999;
     }
 
     .image-overlay-bottom-left {
@@ -57,7 +60,22 @@
         bottom: 5px;
         left: 5px;
         width: 100px;
+        z-index: 999;
     }
+
+    .item-medium-comment {
+        padding: 2px;
+        text-align: center;
+        width: 100%;
+        bottom: 0;
+        z-index: 1;
+    }
+    .item-medium-comment p, .item-medium-comment p a{
+        color: #fff;
+    }
+
+
+
 
 
 </style>
