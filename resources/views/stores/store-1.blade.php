@@ -55,6 +55,10 @@
                         <!-- Photos -->
                         @include('stores.photos.photo-1')
 
+                        @include('stores.categories.menu-1')
+
+
+
                         <!-- Youtube -->
                         @include('stores.videos.youtube-1')
 
@@ -70,7 +74,7 @@
         </div>
     </section>
 
-    @include('stores.products.products-1')
+    @include('stores.products.product-1')
 
 
     <div class="map">

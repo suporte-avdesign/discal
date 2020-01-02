@@ -10,11 +10,12 @@
                                     <h2>Distribuidores</h2>
                                 </div>
                             </div>
+
                             <div class="col-md-6 col-xs-12">
                                 <div class="tech-item">
                                     <div class="tech-image list-item-1">
                                         <a href="{{route('store', 'clovisatacado')}}"> <img src="{{asset('images/lojas/clovisatacado.gif')}}" alt="Clovis Atacado"></a>
-                                        <div class="image-overlay-clovisatacado">
+                                        <div class="image-overlay-right">
                                             <img src="{{asset('images/lojas/logos/clovisatacado.png')}}"alt="Clovis Atacado">
                                         </div>
                                     </div>
@@ -28,27 +29,62 @@
                                     </div>
                                 </div>
 
-
-
-                            </div>
-                            <div class="col-md-6 col-xs-12">
                                 <div class="tech-item margin-top-20">
                                     <div class="tech-image list-item-1">
-                                        <img src="{{asset('images/lojas/danielatacado.png')}}" alt="Daniel Atacado">
-                                        <div class="image-overlay-danielatacado">
+                                        <a href="{{route('store', 'danielatacado')}}"><img src="{{asset('images/lojas/danielatacado.png')}}" alt="Daniel Atacado"></a>
+                                        <div class="image-overlay-right">
                                             <img src="{{asset('images/lojas/logos/danielatacado.png')}}"alt="Daniel Atacado">
                                         </div>
                                     </div>
                                     <div class="tech-content">
-                                        <h4><a href="detail.html">No Excuses: Cardio Pump Workout for a Healthy Body</a></h4>
+                                        <h4><a href="detail.html">Compre Calçados Grendene no Atacado</a></h4>
                                         <div class="author-detail">
-                                            <p><a href="{{route('store', 'clovisatacado')}}"><i class="icon-profile-male"></i> {{getComment('name')}}</a></p>
+                                            <p><a href="{{route('store', 'danielatacado')}}"><i class="icon-profile-male"></i> {{getComment('name')}}</a></p>
                                             <p><i class="icon-clock"></i> {{getComment('day')}}</p>
-                                            <p><a href="{{route('store', 'clovisatacado')}}"><i class="icon-chat"></i> {{getComment('comments')}} </a></p>
+                                            <p><a href="{{route('store', 'danielatacado')}}"><i class="icon-chat"></i> {{getComment('comments')}} </a></p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="col-md-6 col-xs-12">
+                                <div class="tech-item margin-top-20">
+                                    <div class="tech-image list-item-1">
+                                        <a href="{{route('store', 'avacy')}}"> <img src="{{asset('images/lojas/avacy.png')}}" alt="Avacy Distribuidora"></a>
+                                        <div class="image-overlay-left">
+                                            <img src="{{asset('images/lojas/logos/avacy.png')}}"alt="Avacy Distribuidora">
+
+                                        </div>
+                                    </div>
+                                    <div class="tech-content">
+                                        <h4><a href="{{route('store', 'avacy')}}">Avacy distribuidora de calçados.</a></h4>
+                                        <div class="author-detail">
+                                            <p><a href="{{route('store', 'avacy')}}"><i class="icon-profile-male"></i> {{getComment('name')}}</a></p>
+                                            <p><i class="icon-clock"></i> {{getComment('day')}}</p>
+                                            <p><a href="{{route('store', 'avacy')}}"><i class="icon-chat"></i> {{getComment('comments')}} </a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tech-item margin-top-20">
+                                    <div class="tech-image list-item-1">
+                                        <a href="{{route('store', 'wilsonatacado')}}"> <img src="{{asset('images/lojas/wilsonatacado.gif')}}" alt="Wilson Atacado"></a>
+                                        <div class="image-overlay-wilsonatacado">
+
+                                        </div>
+                                    </div>
+                                    <div class="tech-content">
+                                        <h4><a href="{{route('store', 'wilsonatacado')}}">A Distribuidora Wilson disponibiliza todos os produtos e lançamentos fabricados pela marca Havaianas </a></h4>
+                                        <div class="author-detail">
+                                            <p><a href="{{route('store', 'wilsonatacado')}}"><i class="icon-profile-male"></i> {{getComment('name')}}</a></p>
+                                            <p><i class="icon-clock"></i> {{getComment('day')}}</p>
+                                            <p><a href="{{route('store', 'wilsonatacado')}}"><i class="icon-chat"></i> {{getComment('comments')}} </a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
 
 
                         </div>

@@ -1,8 +1,9 @@
 @if($configStore->profile == 1)
     <div class="author sidebar-box">
         <div class="author-image-2" style="{{$configStore->bg_logo}}">
-            <img height="100%" src="{{$content->logo}}" alt="Image">
+            <img height="100%" src="{{$content->logo}}" alt="{{$configStore->title}}">
         </div>
+
 
 
         <div class="author-content">

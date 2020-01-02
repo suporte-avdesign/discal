@@ -1934,13 +1934,14 @@ section.buy-now, div.buy-now{
     background-position: center;
     background-attachment: fixed;
     position: relative;
-    padding: 50px 0 60px;
+    padding: 150px 0 60px;
 }
 .buy-now-content{
     position: relative;
     z-index: 1;
     text-align: center;
     width: 80%;
+    height: 100%;
     margin: 0 auto;
 }
 .buy-now h2{
@@ -1949,6 +1950,40 @@ section.buy-now, div.buy-now{
     margin-bottom: 25px;
 }
 .buy-now p{
+    color: #fff;
+    margin-bottom: 35px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+section.buy-now-shopping, div.buy-now-shopping{
+    background: url(../images/bg/territorio-do-calcado.webp) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    padding: 150px 0 60px;
+}
+.buy-now-shopping-content{
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+.buy-now-shopping a img{
+    margin: 0 auto;
+    margin-bottom:2px;
+    flex:0 0 47%;
+    max-width:47%
+}
+.buy-now-shopping h2{
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+.buy-now-shopping p{
     color: #fff;
     margin-bottom: 35px;
     font-size: 18px;
@@ -3422,6 +3457,14 @@ span.win{
     margin-bottom: 0;
     font-size: 15px;
 }
+
+.buy-now-shopping .stock-slider p{
+    color: #000;
+    margin-bottom: 0;
+    font-size: 15px;
+}
+
+
 .stock-slider-item{
     text-align: center;
 }

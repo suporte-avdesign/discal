@@ -10,26 +10,132 @@ namespace App\Services\Web;
 
 use GuzzleHttp\Client;
 use Symfony\Component\DomCrawler\Crawler;
+use GuzzleHttp\Exception\ClientException;
+
+use App\Services\Web\Traits\BreakingNewsTrait;
+
 
 class BreakingNews
 {
+    use BreakingNewsTrait;
+
     /**
      * @return array
      */
-    public function getNews()
+    public function getNews($slug)
     {
-        $client = new Client;
-        $response = $client->get("http://www.abicalcados.com.br/noticias");
-        $html = $response->getBody()->getContents();
-        $crawler = new Crawler($html);
+        $json = typeJson($this->getConfig());
+        $config = $json->$slug;
 
-        $news = $crawler->filter('.c-news-section__list > li')->each(function (Crawler $crawler) {
+        $crawler =  $this->getDomain($config);
+
+        $content['logo'] = $this->getLogo($config, $crawler);
+
+        $content['breaking'] = $this->filterNews($config, $crawler);
+
+        return $content;
+
+    }
+
+
+
+    /**
+     * Retorna o html do domínio especifico
+     *
+     * @param $config
+     * @return null|Crawler
+     */
+    private function getDomain($config)
+    {
+        try {
+            $client = new Client;
+            $response = $client->get($config->domain);
+            $html = $response->getBody()->getContents();
+            $crawler = new Crawler($html);
+
+            return $crawler;
+
+        } catch (ClientException $e) {
+            return null;
+        }
+    }
+
+
+    /**
+     * Retorna o logo da url específica
+     *
+     * @param $config
+     * @param $crawler
+     * @return null|string
+     */
+    private function getLogo($config, $crawler)
+    {
+        $element = implode(' ', $config->logo->element);
+        $count = $crawler->filter($element)->count();
+        if (!$count) {
+            return null;
+        }
+
+        return $config->logo->url . $crawler->filter($element)->attr('src');
+    }
+
+
+    /**
+     * Retorna o html desidratado.
+     *
+     * @param $crawler
+     * @param $menu
+     * @param $slug
+     * @return null|Crawler
+     */
+    private function filterNews($config, $crawler)
+    {
+
+
+        $parent = $config->news->parent;
+
+        $count =  $crawler->filter($parent)->count();
+        if (!$count) {
+            return null;
+        }
+
+        $element = $config->news->element;
+        $count =  $crawler->filter($element)->count();
+        if (!$count) {
+            return null;
+        }
+
+        $news = $crawler->filter($element)->each(function (Crawler $crawler) use($config) {
+
+            try {
+                $title = $crawler->filter($config->news->title)->text();
+            } catch( \InvalidArgumentException $e) {
+                $title = '';
+            }
+
+            try {
+                $image = $crawler->filter($config->news->image)->attr('src');
+            } catch( \InvalidArgumentException $e) {
+                $image = '';
+            }
+
+            try {
+                $link = $crawler->filter($config->news->link)->attr('href');
+            } catch( \InvalidArgumentException $e) {
+                $link = '#';
+            }
+
             return [
-                'link' => $crawler->filter('a')->attr('href'),
-                'text' => $crawler->filter('h2[class="c-news-box__title"]')->text()
+                'title' => $title,
+                'image' => $config->news->url.$image,
+                'link' => $link
             ];
         });
 
+
         return $news;
     }
+
+
+
 }

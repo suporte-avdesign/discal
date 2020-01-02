@@ -9,145 +9,308 @@
 namespace App\Services\Web;
 
 use GuzzleHttp\Client;
+use Illuminate\Support\Str;
 use Symfony\Component\DomCrawler\Crawler;
+use GuzzleHttp\Exception\ClientException;
+
+use App\Services\Web\Traits\StoresTrait;
 
 class StoresServices
 {
+    use StoresTrait;
 
 
+    private $config;
 
-    public static function getStore($slug)
+
+    public function __construct()
     {
-        $url = self::getDomain($slug);
-        $client = new Client;
-        $response = $client->get($url);
-        $html = $response->getBody()->getContents();
-        $crawler = new Crawler($html);
+        $this->config = typeJson($this->getConfig());
+    }
 
-        $content['logo'] = self::getLogo($crawler, $slug);
 
-        if (self::evaluateBanners($crawler, $slug) == 0) {
-            $content['banners'] = null;
+    public function getStore($slug)
+    {
+        $config = $this->config->$slug;
+
+        $crawler = $this->getDomain($config);
+
+        $content['logo'] = $this->getLogo($config, $crawler);
+
+        $content['menu'] = $this->getMenu($config, $crawler);
+
+        $content['banners'] = $this->getBanners($config, $crawler);
+
+        $key = $this->choosePage($config, $content['menu']);
+
+        $url = $content['menu'][$key]['link'];
+
+
+
+        if (!$url) {
+            $content['products'] = null;
         } else {
-            $content['banners'] = self::filterBanners($crawler, $slug);
+            $content['products'] = $this->getProducts($config, $url);
         }
 
-        if (self::evaluateProducts($crawler, $slug) == 0) {
-            $content['relateds'] = null;
-        } else {
-            $content['relateds'] = self::filterProducts($crawler, $slug);
-        }
+
+
 
         return typeJson($content);
     }
 
-
-
-    private static function getDomain($slug)
+    /**
+     * Retorna o html do domínio especifico
+     *
+     * @param $config
+     * @return null|Crawler
+     */
+    private function getDomain($config)
     {
-        return "https://www.{$slug}.com.br";
+        try {
+            $client = new Client;
+            $response = $client->get($config->domain);
+            $html = $response->getBody()->getContents();
+            $crawler = new Crawler($html);
+
+            //$crawler = $this->removeElements($config, $crawler);
+            return $crawler;
+
+        } catch (ClientException $e) {
+            return null;
+        }
     }
 
 
-    private static function getLogo($crawler, $slug)
+    /**
+     * Retorna o logo da url específica
+     *
+     * @param $config
+     * @param $crawler
+     * @return null|string
+     */
+    private function getLogo($config, $crawler)
     {
-        $url = config("stores.{$slug}.logo.url");
-        $element = config("stores.{$slug}.logo.element");
+        $element = implode(' ', $config->logo->element);
+        $count = $crawler->filter($element)->count();
+        if (!$count) {
+            return null;
+        }
 
-        return $url.$crawler->filter($element)->attr('src');
+        return $config->logo->url . $crawler->filter($element)->attr('src');
+    }
+
+    /**
+     * Retorna o menu com os links específicos.
+     *
+     * @param $config
+     * @param $crawler
+     * @return array|null
+     */
+    private function getMenu($config, $crawler)
+    {
+        $parent = $crawler->filter($config->menu->parent)->count();
+        if (!$parent) {
+            return null;
+        }
+        $element = $crawler->filter($config->menu->element)->count();
+        if (!$element) {
+            return null;
+        }
+
+        $menu = $crawler->filter($config->menu->element)->each(function (Crawler $crawler) use ($config) {
+
+            $href = $crawler->filter('a')->count();
+            ($href ? $link = $config->menu->url.$crawler->filter('a')->attr('href') : $link = null);
+
+            $text = $crawler->filter('a')->text();
+            ($text ? $title = $crawler->filter('a')->text() : $text = null);
+
+            return [
+                'link' => $link,
+                'title' => $title,
+            ];
+
+        });
+
+        return uniqueArray($menu, 'title');
     }
 
 
-    private static function evaluateBanners($crawler, $slug)
+    /**
+     * Retorna os banners Mobile/Desktop
+     *
+     * @param $config
+     * @param $crawler
+     * @return array|null
+     */
+    private function getBanners($config, $crawler)
     {
-        $cb = config("stores.{$slug}.banners.evaluate");
-        $count =  $crawler->evaluate("count($cb)");
+        $isMobile = $this->config->isMobile;
+        $mobile = $config->banners->parent->mobile;
+        $desktop = $config->banners->parent->desktop;
 
-        return (int)$count[0];
+        ($isMobile ? $parent = $mobile : $parent = $desktop);
+        $template = $crawler->filter($parent)->count();
+        if (!$template) {
+            return null;
+        }
+
+        $body = $crawler->filter($parent)->outerHtml();
+        $html = new Crawler($body);
+
+
+        $element = implode(' ', $config->banners->element);
+        $parent = $crawler->filter($element)->count();
+        if (!$parent) {
+            return null;
+        }
+        $banners = $html->filter($element)->each(function (Crawler $html) use ($config) {
+
+            $href = $html->filter('a')->count();
+            ($href ? $link = $html->filter('a')->attr('href') : $link = null);
+
+            $src = $config->banners->url . $html->filter('img')->count();
+            ($src ? $image = $config->banners->url . $html->filter('img')->attr('src') : $src = null);
+
+            return [
+                'link' => $link,
+                'image' => $image
+            ];
+
+        });
+
+        return $banners;
     }
 
 
-    private static function filterBanners($crawler, $slug)
+    public function getProducts($config, $url)
     {
-        $url = config("stores.{$slug}.banners.url");
-        $parent  = config("stores.{$slug}.banners.parent");
-        $total   = config("stores.{$slug}.banners.total");
-        $element = config("stores.{$slug}.banners.element");
+        $crawler = $this->urlProduct($url);
 
-        $banners = $crawler->filter($parent)->each(function (Crawler $crawler) use($url, $total, $element) {
 
-            $count = $crawler->evaluate("count($total)");
-            if((int)$count[0] < 1) {
+        $parent = $crawler->filter($config->products->parent)->count();
+        if (!$parent) {
+            return null;
+        }
+
+        $body = $parent = $crawler->filter($config->products->parent)->outerHtml();
+        $html = new Crawler($body);
+
+
+
+        $products = $html->filter($config->products->parent)->each(function (Crawler $node) use ($config) {
+
+            $element = $node->filter($config->products->element)->count();
+            if (!$element) {
                 return null;
             }
 
-            return $crawler->filter($element)->each(function (Crawler $crawler) use($url){
+            return $node->filter($config->products->element)->each(function (Crawler $html) use ($config) {
+
+
                 return [
-                    'link' => $crawler->filter('a')->attr('href'),
-                    'image' => $url.$crawler->filter('img')->attr('src')
+                    'title' => $html->filter($config->products->title)->text(),
+                    'link' => $html->filter($config->products->link)->attr('href'),
+                    'image' => $html->filter($config->products->image)->attr('src'),
+                    'qty' => $config->products->qty_text.$html->filter($config->products->qty)->text(),
+                    'price' => $html->filter($config->products->price)->text()
                 ];
 
             });
+
         });
 
-        return $banners[0];
-    }
-
-    private static function evaluateProducts($crawler, $slug)
-    {
-
-        $cp = config("stores.{$slug}.relateds.evaluate");
-        $count =  $crawler->evaluate("count($cp)");
-
-        return (int)$count[0];
+        return $products[0];
     }
 
 
-    private static function filterProducts($crawler, $slug)
+
+    /**
+     * Retorna o html do domínio especifico
+     *
+     * @param $config
+     * @return null|Crawler
+     */
+    private function urlProduct($url)
     {
-        $total   = config("stores.{$slug}.relateds.total");
-        $parent  = config("stores.{$slug}.relateds.parent");
-        $element = config("stores.{$slug}.relateds.element");
+        try {
+            $client = new Client;
+            $response = $client->get($url);
+            $html = $response->getBody()->getContents();
+            $crawler = new Crawler($html);
 
-        $title = config("stores.{$slug}.relateds.title");
-        $link  = config("stores.{$slug}.relateds.link");
-        $image = config("stores.{$slug}.relateds.image");
+            //$crawler = $this->removeElements($config, $crawler);
+            return $crawler;
 
+        } catch (ClientException $e) {
+            return null;
+        }
+    }
 
-        $products = $crawler->filter($parent)->each(function (Crawler $crawler) use($total, $element, $title, $link, $image) {
-
-            $count = $crawler->evaluate("count($total)");
-            if((int)$count[0] < 1) {
-                return null;
+    /**
+     * Retorna o key aleatório do menu ou a opção da seção.
+     *
+     * @param $menu
+     * @return mixed
+     */
+    public function choosePage($config, $menu)
+    {
+        if ($config->page == 'rand') {
+            return array_rand($menu, 1);
+        } else {
+            foreach ($menu as $key => $choose) {
+                $title =  Str::slug($choose['title']);
+                if ($title == $config->page) {
+                    return $key;
+                }
             }
-
-            return $crawler->filter($element)->each(function (Crawler $crawler) use($title, $link, $image) {
-                return [
-                    'title' => $crawler->filter($title)->attr('title'),
-                    'link' => $crawler->filter($link)->attr('href'),
-                    'image' => $crawler->filter($image)->attr('src')
-                ];
-
-            });
-        });
-
-        return self::mergeProducts($products);
+        }
     }
 
 
-    private static function mergeProducts($products)
+    /**
+     * Remove html element
+     *
+     * @param $crawler
+     * @param $slug
+     * @param $ele
+     * @return html
+     */
+    private function removeElements($config, $crawler)
     {
-        $result = [];
-        foreach ($products as $product) {
-            foreach ($product as $item) {
-                $result[] = $item;
+        $elements = $config->remove;
+        if ($elements) {
+            foreach ($elements as $item) {
+                $ele = $crawler->filter($config->content." {$item}")->count();
+                if ($ele) {
+                    $crawler = $this->removeNodes($crawler, $config->content . " {$item}");
+                }
             }
         }
 
-        return $result;
+        return $crawler;
     }
 
 
+
+    /**
+     * Remove elementos específicos.
+     *
+     * @param $crawler
+     * @param $ele
+     * @return mixed
+     */
+    private function removeNodes($crawler, $element)
+    {
+        $crawler->filter($element)->each(function (Crawler $crawler) {
+            foreach ($crawler as $node) {
+                $node->parentNode->removeChild($node);
+            }
+        });
+
+        return $crawler;
+    }
 
 
 

@@ -5,12 +5,14 @@ namespace App\Http\Controllers\Web;
 use App\Services\Web\BreakingNews;
 use App\Services\Web\ClawsServices;
 use App\Services\Web\RelatedServices;
+use App\Services\Web\ShoppingStoreServices;
 
 use App\Http\Controllers\Controller;
 
 
 class HomeController extends Controller
 {
+    private $configHome;
     /**
      * @var BreakingNews
      */
@@ -23,6 +25,10 @@ class HomeController extends Controller
      * @var RelatedServices
      */
     private $relatedServices;
+    /**
+     * @var ShoppingStoreServices
+     */
+    private $shoppingStoreServices;
 
     /**
      * Create a new controller instance.
@@ -32,12 +38,18 @@ class HomeController extends Controller
     public function __construct(
         RelatedServices $relatedServices,
         ClawsServices $clawsServices,
-        BreakingNews $breakingNews)
+        BreakingNews $breakingNews,
+        ShoppingStoreServices $shoppingStoreServices)
     {
         //$this->middleware('auth');
         $this->breakingNews = $breakingNews;
         $this->clawsServices = $clawsServices;
         $this->relatedServices = $relatedServices;
+        $this->shoppingStoreServices = $shoppingStoreServices;
+        $this->configHome = array(
+            'url_news' => 'abicalcados',
+            'shopping' => 'territoriodocalcado'
+        );
 
 
     }
@@ -49,14 +61,18 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $configHome = typeJson($this->configHome);
+
         //Slider RelatedStore
         $relateds = typeJson($this->getRelated());
         //Últimas notícias
-        $news  = null; //typeJson($this->breakingNews->getNews());
+        $news  = typeJson($this->breakingNews->getNews($configHome->url_news));
         //Dicas para Loistas
-        $claws = null;//typeJson($this->getClaws());
+        $claws = typeJson($this->getClaws());
 
-        return view('home.home-1', compact('news', 'claws', 'relateds'));
+        $shopping = typeJson($this->shoppingStoreServices->getShopping($configHome->shopping));
+
+        return view('home.home-1', compact('news', 'claws', 'relateds', 'shopping'));
     }
 
     /**

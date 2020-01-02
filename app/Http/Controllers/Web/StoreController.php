@@ -10,13 +10,15 @@ class StoreController extends Controller
 {
     private $view = 'stores';
     private $configStore;
-    private $storesService;
+    private $storesServices;
 
     /**
      * StoreController constructor.
      */
-    public function __construct()
+    public function __construct(StoresServices $storesServices)
     {
+        $this->storesServices = $storesServices;
+
         $this->configStore = [
             'video' => 0,             #video viemo (1,0)
             'sound' => 0,             #sound cloud (1,0)
@@ -47,12 +49,13 @@ class StoreController extends Controller
      */
     public function index($slug)
     {
-        if (!in_array($slug, config('stores.slug'))) {
+        $config = typeJson($this->storesServices->getConfig());
+
+        if (!in_array($slug, $config->slug)) {
             return redirect()->route('home');
         }
 
-        $content = StoresServices::getStore($slug);
-
+        $content = $this->storesServices->getStore($slug);
 
         $agent = new \Jenssegers\Agent\Agent;
         ($agent->isMobile() == true ? $sub = 'api' : $sub = 'web');
@@ -60,12 +63,13 @@ class StoreController extends Controller
         (count($content->banners) == 1 ? $this->configStore['photos'] = 1 : $this->configStore['photos'] = count($content->banners));
 
 
-        $this->configStore['title'] = config("stores.{$slug}.title");
-        $this->configStore['address'] = config("stores.{$slug}.address");
-        $this->configStore['description'] = config("stores.{$slug}.description");
-        $this->configStore['banner_height'] = config("stores.{$slug}.banners.height");
-        $this->configStore['bg_logo'] = config("stores.{$slug}.logo.style");
-        $this->configStore['map_marker'] = config("stores.{$slug}.maps.marker");
+        $this->configStore['title'] = $config->$slug->title;
+        $this->configStore['address'] = $config->$slug->address;
+        $this->configStore['description'] = $config->$slug->description;
+        $this->configStore['banner_height'] = $config->$slug->banners->height;
+        $this->configStore['bg_logo'] = $config->$slug->logo->style;
+        $this->configStore['map_marker'] = $config->$slug->maps->marker;
+
 
         $configStore = typeJson($this->configStore);
 

@@ -73,7 +73,7 @@
             <div class="col-md-3 col-xs-6">
                 <div class="item-medium">
                     <div class="item-medium-image">
-                        <img alt="Wilson Atacado" src="{{asset('images/banners/most-viewed/wilsonatacado.png')}}">
+                        <img alt="Daniel Atacado" src="{{asset('images/banners/most-viewed/danielatacado.jpg')}}">
                         <div class="comment-bubble"><a href="#"><span>{{getComment('comments')}}</span></a></div>
                         <div class="image-overlay"></div>
                     </div>

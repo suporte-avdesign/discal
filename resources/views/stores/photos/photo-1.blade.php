@@ -2,7 +2,9 @@
 
     <div class="blog-post-wrap">
         <div class="blog-post-upper">
-            <img src="{{asset('relateds')}}" alt="Image">
+            @foreach($content->banners as $banner)
+            <img src="{{$banner->image}}" alt="Image">
+            @endforeach
         </div>
         <!--
         <div class="blog-post-detail">

@@ -2,35 +2,7 @@
 
 @push('head')
 <style>
-    .image-overlay-clovisatacado {
-        position: absolute;
-        top: 0;
-        right: 30px;
-        width: 160px;
-        height: 58px;
-    }
-    .image-overlay-clovisatacado:before {
-        position: absolute;
-        top: 0;
-        right: 30px;
-        width: 160px;
-        height: 58px;
-    }
 
-    .image-overlay-danielatacado {
-        position: absolute;
-        top: 2px;
-        right: 10px;
-        width: 80px;
-        height: 34px;
-    }
-    .image-overlay-danielatacado:before {
-        position: absolute;
-        top: 2px;
-        right: 10px;
-        width: 80px;
-        height: 34px;
-    }
 
     .image-overlay-left {
         position: absolute;
@@ -91,6 +63,9 @@
     <!-- Breaking News -->
     @include('home.news.breaking-news-1')
 
+    <!-- Buy Now -->
+    @include('home.buy-now.shopping-1')
+
     <!-- Categorias -->
     @include('home.distributors.stores-1')
 
@@ -107,7 +82,7 @@
     @include('home.posts.post-1')
 
     <!-- Banner -->
-    @include('home.banners.banner-1')
+    @include('home.buy-now.info-1')
 
     <!-- Mais Vistos -->
     @include('home.most-viewed.viewed-1')
