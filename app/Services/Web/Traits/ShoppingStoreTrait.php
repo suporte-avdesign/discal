@@ -33,6 +33,9 @@ trait ShoppingStoreTrait
                         'img'
                     ]
                 ],
+                'details' => [
+                    'url' => 'https://territoriodocalcado.com.br/lojas/'
+                ],
                 'api' => [
                     'method' => 'POST',
                     'url' => 'https://dp4f945ns9-dsn.algolia.net/1/indexes/*/queries?',
@@ -54,6 +57,9 @@ trait ShoppingStoreTrait
                         "facets" => '["tags"]',
                         "tagFilters" => '',
                         "facetFilters" => '["tags:Sandálias"]'
+                    ],
+                    'images' => [
+                        'url' => 'https://app.territoriodocalcado.com.br'
                     ]
                 ]
             ]

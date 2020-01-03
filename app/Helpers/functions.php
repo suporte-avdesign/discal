@@ -1,5 +1,26 @@
 <?php
 
+if ( !function_exists('sorteiaNumeros')) {
+    function sorteiaNumeros($max, $total, $order = 0)
+    {
+        $sorteio = array();
+        for ($i=1; $i<$max; $i++) {
+            for ($a=1;;$a++) {
+                $bola = rand(1,$total);
+                if (in_array($bola, $sorteio) === FALSE) break;
+            }
+            $sorteio[$i] = $bola;
+        }
+        if ($order == 1) asort($sorteio);
+        $result = '';
+        foreach($sorteio as $numeros) {
+            $result .= $numeros . ",";
+        }
+
+        return substr($result, 0, -1);
+    }
+}
+
 /**
  * Return the date with string.
  *

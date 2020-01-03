@@ -9,6 +9,7 @@
 namespace App\Services\Web;
 
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Cache;
 use Symfony\Component\DomCrawler\Crawler;
 use GuzzleHttp\Exception\ClientException;
 
@@ -35,12 +36,8 @@ class ShoppingStoreServices
 
         $crawler = $this->getDomain($config);
 
-
         $content['logo'] = $this->getLogo($config, $crawler);
-
-
         $content['stores'] = $this->getStores($config);
-
 
         return $content;
     }
@@ -93,7 +90,12 @@ class ShoppingStoreServices
     }
 
 
-
+    /**
+     * Retorna todas as lojas
+     *
+     * @param $config
+     * @return array
+     */
     private function getStores($config)
     {
         $config->api->raw->page = 0;
@@ -123,14 +125,24 @@ class ShoppingStoreServices
         $results = $contents->results[0];
 
         $items[0] = $results->hits;
+        $imageUrl = $config->api->images->url;
+        $detailsUrl = $config->details->url;
         $pages = $results->nbPages-1;
 
         for ($i = 1; $i <= $pages; $i++) {
             $items[$i] = $this->getPagination($config, $i);
         }
 
-        foreach ($items as $item) {
+
+
+       // $sorteio = array(sorteiaNumeros(12, $results->nbHits, 1));
+
+        foreach ($items as $keys => $item) {
             foreach ($item as $value) {
+                $pathImage = $value->lojaLogo;
+                $value->lojaLogo = "{$imageUrl}{$pathImage}";
+                $pathDetails = $value->fields->lojaUrl;
+                $value->fields->lojaUrl = "{$detailsUrl}{$pathDetails}";
                 $stores[] = $value;
             }
         }
@@ -139,6 +151,13 @@ class ShoppingStoreServices
     }
 
 
+    /**
+     * Retorna todas as páginas
+     *
+     * @param $config
+     * @param $page
+     * @return mixed
+     */
     private function getPagination($config, $page)
     {
         $config->api->raw->page = $page;

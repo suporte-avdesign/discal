@@ -2,12 +2,17 @@
     <div class="container">
 
         <div class="stock-slider">
-            <div class="stock-slider-item">
-                <a href="#"><img src="{{asset('images/lojas/logos/teste.png')}}"></a>
-                <h4>OIL</h4>
-                <p><span class="stock-green">10100.93 </span></p>
-            </div>
-
+            @foreach($shopping->stores as $store)
+                <div class="stock-slider-item">
+                    <a href="#"><img src="{{$store->lojaLogo}}"></a>
+                    <h4>{{$store->nome}}</h4>
+                    <p>
+                        @foreach($store->tags as $tag)
+                            <span class="stock-green">{{$tag}} </span>
+                        @endforeach
+                    </p>
+                </div>
+            @endforeach
         </div>
     </div>
     <div class="buy-now-content">

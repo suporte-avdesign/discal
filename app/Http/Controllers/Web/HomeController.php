@@ -7,11 +7,15 @@ use App\Services\Web\ClawsServices;
 use App\Services\Web\RelatedServices;
 use App\Services\Web\ShoppingStoreServices;
 
+
 use App\Http\Controllers\Controller;
+
+use Illuminate\Cache\Repository as Cache;
 
 
 class HomeController extends Controller
 {
+    private $cache;
     private $configHome;
     /**
      * @var BreakingNews
@@ -36,22 +40,36 @@ class HomeController extends Controller
      * @return void
      */
     public function __construct(
+        Cache $cache,
         RelatedServices $relatedServices,
         ClawsServices $clawsServices,
         BreakingNews $breakingNews,
         ShoppingStoreServices $shoppingStoreServices)
     {
         //$this->middleware('auth');
+        $this->cache = $cache;
         $this->breakingNews = $breakingNews;
         $this->clawsServices = $clawsServices;
         $this->relatedServices = $relatedServices;
         $this->shoppingStoreServices = $shoppingStoreServices;
         $this->configHome = array(
-            'url_news' => 'abicalcados',
-            'shopping' => 'territoriodocalcado'
+            'news' => [
+               'slug' => 'abicalcados',
+                'cache' => 60 * 24 * 7
+            ],
+            'shopping' => [
+                'slug' => 'territoriodocalcado',
+                'cache' => 60 * 24 * 7
+            ],
+            'relateds' => [
+                'slug' => 'grendenekids',
+                'cache' => 60 * 24 * 7
+            ],
+            'claws' => [
+                'slug' => 'doutorvarejo',
+                'cache' => 60 * 24 * 7
+            ]
         );
-
-
     }
 
     /**
@@ -63,49 +81,108 @@ class HomeController extends Controller
     {
         $configHome = typeJson($this->configHome);
 
-        //Slider RelatedStore
-        $relateds = typeJson($this->getRelated());
         //Últimas notícias
-        $news  = typeJson($this->breakingNews->getNews($configHome->url_news));
+        $news  = $this->getBreakingNews($configHome->news);
+
+        //getShopping
+        $shopping = $this->getShopping($configHome->shopping);
+
+        //Slider RelatedStore
+        $relateds = $this->getRelated($configHome->relateds);
+
         //Dicas para Loistas
-        $claws = typeJson($this->getClaws());
+        $claws = $this->getClaws($configHome->claws);
 
-        $shopping = typeJson($this->shoppingStoreServices->getShopping($configHome->shopping));
 
-        return view('home.home-1', compact('news', 'claws', 'relateds', 'shopping'));
+        return view('home.home-1', compact(
+            'news', 'claws', 'relateds', 'shopping')
+        );
+    }
+
+    /**
+     * Últimas notícias
+     *
+     * @param $config
+     * @return mixed
+     */
+    public function getBreakingNews($config)
+    {
+        if (!$this->cache->has('breakingNews')) {
+            $this->cache->put('breakingNews',
+                typeJson($this->breakingNews->getNews($config->slug)),
+                $config->cache);
+        }
+
+        return $this->cache->get('breakingNews');
+    }
+
+    /**
+     * Reorna Lojas Shopping
+     *
+     * @param $config
+     * @return mixed
+     */
+    public function getShopping($config)
+    {
+        if (!$this->cache->has('shopping')) {
+            $this->cache->put('shopping',
+                typeJson($this->shoppingStoreServices->getShopping($config->slug)),
+                $config->cache);
+        }
+
+        return $this->cache->get('shopping');
+    }
+
+
+    /**
+     * Retorna Grendene/kids
+     * @param $config
+     * @return mixed
+     */
+    public function getRelated($config)
+    {
+        if (!$this->cache->has('relateds')) {
+
+            $slugs  = $this->relatedServices->getSlug();
+            $i=0;
+            foreach ($slugs as $slug) {
+                $relateds[] = $this->relatedServices->getRelateds($slug);
+                $i++;
+            }
+            $this->cache->put('relateds', typeJson($relateds[0]),$config->cache);
+        }
+
+        return $this->cache->get('relateds');
+
     }
 
     /**
      * Retorna modulo dicas.
+     *
+     * @param $config
      * @return mixed
      */
-    public function getClaws()
+    public function getClaws($config)
     {
-        $config = typeJson($this->clawsServices->getConfig());
-        $menu = $this->clawsServices->getMenu();
-        $slugs = $this->clawsServices->getSlug();
-        $i=0;
-        foreach ($slugs as $slug) {
-            $item = $menu[$i];
-            $claws_slugs[] = $this->clawsServices->getClaws($slug, $menu[$i], $config->$slug->$item->url);
-            $i++;
+        if (!$this->cache->has('claws')) {
+
+            $server = typeJson($this->clawsServices->getConfig());
+            $menu = $this->clawsServices->getMenu();
+            $slugs = $this->clawsServices->getSlug();
+            $i = 0;
+            foreach ($slugs as $slug) {
+                $item = $menu[$i];
+                $claws[] = $this->clawsServices->getClaws($slug, $menu[$i], $server->$slug->$item->url);
+                $i++;
+            }
+
+            $this->cache->put('claws', typeJson($claws),$config->cache);
         }
 
-        return $claws_slugs;
+        return $this->cache->get('claws');
     }
 
 
-    public function getRelated()
-    {
-        $slugs  = $this->relatedServices->getSlug();
-        $i=0;
-        foreach ($slugs as $slug) {
-            $relateds[] = $this->relatedServices->getRelateds($slug);
-            $i++;
-        }
-
-        return $relateds[0];
 
 
-    }
 }
