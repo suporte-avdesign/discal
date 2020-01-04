@@ -3,9 +3,21 @@
 
         <div class="stock-slider">
             @foreach($shopping->stores as $store)
+                @php
+                    $segment='';
+                    foreach ($store->tags as $seg) {
+                        $segment .= $seg.' ';
+                    }
+                @endphp
                 <div class="stock-slider-item">
-                    <a href="#"><img src="{{$store->lojaLogo}}"></a>
-                    <h4>{{$store->nome}}</h4>
+                    <a href="{{route('details-shopping', ['slug' => $shopping->slug, 'store' => $store->fields->lojaUrl, 'segment' => \Str::slug($segment)])}}">
+                        <img src="{{$store->lojaLogo}}">
+                    </a>
+                    <h4>
+                        <a href="{{route('details-shopping', ['slug' => $shopping->slug, 'store' => $store->fields->lojaUrl, 'segment' => \Str::slug($segment)])}}">
+                        {{$store->nome}}
+                        </a>
+                    </h4>
                     <p>
                         @foreach($store->tags as $tag)
                             <span class="stock-green">{{$tag}} </span>

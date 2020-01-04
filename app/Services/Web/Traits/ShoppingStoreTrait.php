@@ -34,7 +34,15 @@ trait ShoppingStoreTrait
                     ]
                 ],
                 'details' => [
-                    'url' => 'https://territoriodocalcado.com.br/lojas/'
+                    'url' => 'https://territoriodocalcado.com.br',
+                    'segment' => [
+                        'lojas'
+                    ],
+                    'api' => [
+                        'method' => 'GET',
+                        'url' => 'https://territoriodocalcado.com.br/page-data/lojas',
+                        'json' => 'page-data.json'
+                    ]
                 ],
                 'api' => [
                     'method' => 'POST',

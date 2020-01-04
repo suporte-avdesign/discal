@@ -39,4 +39,8 @@ Route::post('dicas/{slug}/{segment}', 'Web\ClawsDetailsController@form')->name('
 Route::get('produto/{slug}/{segment}', 'Web\RelatedDetailsController@index')->name('details-related');
 Route::post('produto/{slug}/{segment}', 'Web\RelatedDetailsController@form')->name('details-related-form');
 
+/**
+ * Route: Shopping Details
+ */
+Route::get('shopping/{slug}/{store}/atacado/{segment}', 'Web\ShoppingDetailsController@index')->name('details-shopping');
 

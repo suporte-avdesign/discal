@@ -23,6 +23,7 @@
 @elseif($configStore->photos >= 2)
 
     <div class="blog-post-wrap">
+
         <div id="home_banner_blog">
             <div class="swiper-container">
                 <div class="swiper-wrapper">

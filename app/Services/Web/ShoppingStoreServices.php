@@ -36,6 +36,7 @@ class ShoppingStoreServices
 
         $crawler = $this->getDomain($config);
 
+        $content['slug'] = $slug;
         $content['logo'] = $this->getLogo($config, $crawler);
         $content['stores'] = $this->getStores($config);
 
@@ -141,8 +142,8 @@ class ShoppingStoreServices
             foreach ($item as $value) {
                 $pathImage = $value->lojaLogo;
                 $value->lojaLogo = "{$imageUrl}{$pathImage}";
-                $pathDetails = $value->fields->lojaUrl;
-                $value->fields->lojaUrl = "{$detailsUrl}{$pathDetails}";
+                //$pathDetails = $value->fields->lojaUrl;
+                //$value->fields->lojaUrl = "{$detailsUrl}{$pathDetails}";
                 $stores[] = $value;
             }
         }
@@ -188,5 +189,40 @@ class ShoppingStoreServices
 
         return $results->hits;
 
+    }
+
+    public function showStore($slug, $store)
+    {
+        $config = $this->config->$slug;
+
+        $json = $this->apiDetails($config, $store);
+        if (!$json) {
+            $content = null;
+        }
+        $url = $config->details->url;
+        $segment = implode('/', $config->details->segment);
+
+
+        $content['pathImg'] = $config->api->images->url;
+        $content['link'] = "{$url}/{$segment}/$store";
+        $content['details'] = $json->result->pageContext;
+
+        return $content;
+    }
+
+    private function apiDetails($config, $store)
+    {
+        $url = "{$config->details->api->url}/{$store}/{$config->details->api->json}";
+        $guzzle = new Client();
+        $response = $guzzle->request($config->details->api->method, $url, [
+            'headers' => [ # Não obrigatório
+                'Accept' => 'application/json',
+                'Content-Type' => 'application/json'
+            ],
+        ]);
+
+        $body = $response->getBody();
+
+        return  json_decode($body->getContents());
     }
 }
