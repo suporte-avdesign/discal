@@ -1,6638 +1,3037 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+
+<!--[if lt IE 7 ]> <html lang="pt" id="top" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="pt" id="top" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="pt" id="top" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="pt" id="top" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="pt" id="top" class="no-js">
+<!--<![endif]-->
 
 <head>
-    <meta charSet="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <style data-href="/styles.f53d4737aff02ab9216e.css">
-        html {
-            box-sizing: border-box;
-            -ms-overflow-style: scrollbar
-        }
-
-        *,
-        :after,
-        :before {
-            box-sizing: inherit
-        }
-
-        .container {
-            width: 100%;
-            padding-right: 15px;
-            padding-left: 15px;
-            margin-right: auto;
-            margin-left: auto
-        }
-
-        @media (min-width:576px) {
-            .container {
-                max-width: 540px
-            }
-        }
-
-        @media (min-width:768px) {
-            .container {
-                max-width: 720px
-            }
-        }
-
-        @media (min-width:992px) {
-            .container {
-                max-width: 960px
-            }
-        }
-
-        @media (min-width:1200px) {
-            .container {
-                max-width: 1140px
-            }
-        }
-
-        .container-fluid {
-            width: 100%;
-            padding-right: 15px;
-            padding-left: 15px;
-            margin-right: auto;
-            margin-left: auto
-        }
-
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-            margin-right: -15px;
-            margin-left: -15px
-        }
-
-        .no-gutters {
-            margin-right: 0;
-            margin-left: 0
-        }
-
-        .no-gutters>.col,
-        .no-gutters>[class*=col-] {
-            padding-right: 0;
-            padding-left: 0
-        }
-
-        .col,
-        .col-1,
-        .col-2,
-        .col-3,
-        .col-4,
-        .col-5,
-        .col-6,
-        .col-7,
-        .col-8,
-        .col-9,
-        .col-10,
-        .col-11,
-        .col-12,
-        .col-auto,
-        .col-lg,
-        .col-lg-1,
-        .col-lg-2,
-        .col-lg-3,
-        .col-lg-4,
-        .col-lg-5,
-        .col-lg-6,
-        .col-lg-7,
-        .col-lg-8,
-        .col-lg-9,
-        .col-lg-10,
-        .col-lg-11,
-        .col-lg-12,
-        .col-lg-auto,
-        .col-md,
-        .col-md-1,
-        .col-md-2,
-        .col-md-3,
-        .col-md-4,
-        .col-md-5,
-        .col-md-6,
-        .col-md-7,
-        .col-md-8,
-        .col-md-9,
-        .col-md-10,
-        .col-md-11,
-        .col-md-12,
-        .col-md-auto,
-        .col-sm,
-        .col-sm-1,
-        .col-sm-2,
-        .col-sm-3,
-        .col-sm-4,
-        .col-sm-5,
-        .col-sm-6,
-        .col-sm-7,
-        .col-sm-8,
-        .col-sm-9,
-        .col-sm-10,
-        .col-sm-11,
-        .col-sm-12,
-        .col-sm-auto,
-        .col-xl,
-        .col-xl-1,
-        .col-xl-2,
-        .col-xl-3,
-        .col-xl-4,
-        .col-xl-5,
-        .col-xl-6,
-        .col-xl-7,
-        .col-xl-8,
-        .col-xl-9,
-        .col-xl-10,
-        .col-xl-11,
-        .col-xl-12,
-        .col-xl-auto {
-            position: relative;
-            width: 100%;
-            padding-right: 15px;
-            padding-left: 15px
-        }
-
-        .col {
-            flex-basis: 0;
-            flex-grow: 1;
-            max-width: 100%
-        }
-
-        .col-auto {
-            flex: 0 0 auto;
-            width: auto;
-            max-width: 100%
-        }
-
-        .col-1 {
-            flex: 0 0 8.333333%;
-            max-width: 8.333333%
-        }
-
-        .col-2 {
-            flex: 0 0 16.666667%;
-            max-width: 16.666667%
-        }
-
-        .col-3 {
-            flex: 0 0 25%;
-            max-width: 25%
-        }
-
-        .col-4 {
-            flex: 0 0 33.333333%;
-            max-width: 33.333333%
-        }
-
-        .col-5 {
-            flex: 0 0 41.666667%;
-            max-width: 41.666667%
-        }
-
-        .col-6 {
-            flex: 0 0 50%;
-            max-width: 50%
-        }
-
-        .col-7 {
-            flex: 0 0 58.333333%;
-            max-width: 58.333333%
-        }
-
-        .col-8 {
-            flex: 0 0 66.666667%;
-            max-width: 66.666667%
-        }
-
-        .col-9 {
-            flex: 0 0 75%;
-            max-width: 75%
-        }
-
-        .col-10 {
-            flex: 0 0 83.333333%;
-            max-width: 83.333333%
-        }
-
-        .col-11 {
-            flex: 0 0 91.666667%;
-            max-width: 91.666667%
-        }
-
-        .col-12 {
-            flex: 0 0 100%;
-            max-width: 100%
-        }
-
-        .order-first {
-            order: -1
-        }
-
-        .order-last {
-            order: 13
-        }
-
-        .order-0 {
-            order: 0
-        }
-
-        .order-1 {
-            order: 1
-        }
-
-        .order-2 {
-            order: 2
-        }
-
-        .order-3 {
-            order: 3
-        }
-
-        .order-4 {
-            order: 4
-        }
-
-        .order-5 {
-            order: 5
-        }
-
-        .order-6 {
-            order: 6
-        }
-
-        .order-7 {
-            order: 7
-        }
-
-        .order-8 {
-            order: 8
-        }
-
-        .order-9 {
-            order: 9
-        }
-
-        .order-10 {
-            order: 10
-        }
-
-        .order-11 {
-            order: 11
-        }
-
-        .order-12 {
-            order: 12
-        }
-
-        .offset-1 {
-            margin-left: 8.333333%
-        }
-
-        .offset-2 {
-            margin-left: 16.666667%
-        }
-
-        .offset-3 {
-            margin-left: 25%
-        }
-
-        .offset-4 {
-            margin-left: 33.333333%
-        }
-
-        .offset-5 {
-            margin-left: 41.666667%
-        }
-
-        .offset-6 {
-            margin-left: 50%
-        }
-
-        .offset-7 {
-            margin-left: 58.333333%
-        }
-
-        .offset-8 {
-            margin-left: 66.666667%
-        }
-
-        .offset-9 {
-            margin-left: 75%
-        }
-
-        .offset-10 {
-            margin-left: 83.333333%
-        }
-
-        .offset-11 {
-            margin-left: 91.666667%
-        }
-
-        @media (min-width:576px) {
-            .col-sm {
-                flex-basis: 0;
-                flex-grow: 1;
-                max-width: 100%
-            }
-            .col-sm-auto {
-                flex: 0 0 auto;
-                width: auto;
-                max-width: 100%
-            }
-            .col-sm-1 {
-                flex: 0 0 8.333333%;
-                max-width: 8.333333%
-            }
-            .col-sm-2 {
-                flex: 0 0 16.666667%;
-                max-width: 16.666667%
-            }
-            .col-sm-3 {
-                flex: 0 0 25%;
-                max-width: 25%
-            }
-            .col-sm-4 {
-                flex: 0 0 33.333333%;
-                max-width: 33.333333%
-            }
-            .col-sm-5 {
-                flex: 0 0 41.666667%;
-                max-width: 41.666667%
-            }
-            .col-sm-6 {
-                flex: 0 0 50%;
-                max-width: 50%
-            }
-            .col-sm-7 {
-                flex: 0 0 58.333333%;
-                max-width: 58.333333%
-            }
-            .col-sm-8 {
-                flex: 0 0 66.666667%;
-                max-width: 66.666667%
-            }
-            .col-sm-9 {
-                flex: 0 0 75%;
-                max-width: 75%
-            }
-            .col-sm-10 {
-                flex: 0 0 83.333333%;
-                max-width: 83.333333%
-            }
-            .col-sm-11 {
-                flex: 0 0 91.666667%;
-                max-width: 91.666667%
-            }
-            .col-sm-12 {
-                flex: 0 0 100%;
-                max-width: 100%
-            }
-            .order-sm-first {
-                order: -1
-            }
-            .order-sm-last {
-                order: 13
-            }
-            .order-sm-0 {
-                order: 0
-            }
-            .order-sm-1 {
-                order: 1
-            }
-            .order-sm-2 {
-                order: 2
-            }
-            .order-sm-3 {
-                order: 3
-            }
-            .order-sm-4 {
-                order: 4
-            }
-            .order-sm-5 {
-                order: 5
-            }
-            .order-sm-6 {
-                order: 6
-            }
-            .order-sm-7 {
-                order: 7
-            }
-            .order-sm-8 {
-                order: 8
-            }
-            .order-sm-9 {
-                order: 9
-            }
-            .order-sm-10 {
-                order: 10
-            }
-            .order-sm-11 {
-                order: 11
-            }
-            .order-sm-12 {
-                order: 12
-            }
-            .offset-sm-0 {
-                margin-left: 0
-            }
-            .offset-sm-1 {
-                margin-left: 8.333333%
-            }
-            .offset-sm-2 {
-                margin-left: 16.666667%
-            }
-            .offset-sm-3 {
-                margin-left: 25%
-            }
-            .offset-sm-4 {
-                margin-left: 33.333333%
-            }
-            .offset-sm-5 {
-                margin-left: 41.666667%
-            }
-            .offset-sm-6 {
-                margin-left: 50%
-            }
-            .offset-sm-7 {
-                margin-left: 58.333333%
-            }
-            .offset-sm-8 {
-                margin-left: 66.666667%
-            }
-            .offset-sm-9 {
-                margin-left: 75%
-            }
-            .offset-sm-10 {
-                margin-left: 83.333333%
-            }
-            .offset-sm-11 {
-                margin-left: 91.666667%
-            }
-        }
-
-        @media (min-width:768px) {
-            .col-md {
-                flex-basis: 0;
-                flex-grow: 1;
-                max-width: 100%
-            }
-            .col-md-auto {
-                flex: 0 0 auto;
-                width: auto;
-                max-width: 100%
-            }
-            .col-md-1 {
-                flex: 0 0 8.333333%;
-                max-width: 8.333333%
-            }
-            .col-md-2 {
-                flex: 0 0 16.666667%;
-                max-width: 16.666667%
-            }
-            .col-md-3 {
-                flex: 0 0 25%;
-                max-width: 25%
-            }
-            .col-md-4 {
-                flex: 0 0 33.333333%;
-                max-width: 33.333333%
-            }
-            .col-md-5 {
-                flex: 0 0 41.666667%;
-                max-width: 41.666667%
-            }
-            .col-md-6 {
-                flex: 0 0 50%;
-                max-width: 50%
-            }
-            .col-md-7 {
-                flex: 0 0 58.333333%;
-                max-width: 58.333333%
-            }
-            .col-md-8 {
-                flex: 0 0 66.666667%;
-                max-width: 66.666667%
-            }
-            .col-md-9 {
-                flex: 0 0 75%;
-                max-width: 75%
-            }
-            .col-md-10 {
-                flex: 0 0 83.333333%;
-                max-width: 83.333333%
-            }
-            .col-md-11 {
-                flex: 0 0 91.666667%;
-                max-width: 91.666667%
-            }
-            .col-md-12 {
-                flex: 0 0 100%;
-                max-width: 100%
-            }
-            .order-md-first {
-                order: -1
-            }
-            .order-md-last {
-                order: 13
-            }
-            .order-md-0 {
-                order: 0
-            }
-            .order-md-1 {
-                order: 1
-            }
-            .order-md-2 {
-                order: 2
-            }
-            .order-md-3 {
-                order: 3
-            }
-            .order-md-4 {
-                order: 4
-            }
-            .order-md-5 {
-                order: 5
-            }
-            .order-md-6 {
-                order: 6
-            }
-            .order-md-7 {
-                order: 7
-            }
-            .order-md-8 {
-                order: 8
-            }
-            .order-md-9 {
-                order: 9
-            }
-            .order-md-10 {
-                order: 10
-            }
-            .order-md-11 {
-                order: 11
-            }
-            .order-md-12 {
-                order: 12
-            }
-            .offset-md-0 {
-                margin-left: 0
-            }
-            .offset-md-1 {
-                margin-left: 8.333333%
-            }
-            .offset-md-2 {
-                margin-left: 16.666667%
-            }
-            .offset-md-3 {
-                margin-left: 25%
-            }
-            .offset-md-4 {
-                margin-left: 33.333333%
-            }
-            .offset-md-5 {
-                margin-left: 41.666667%
-            }
-            .offset-md-6 {
-                margin-left: 50%
-            }
-            .offset-md-7 {
-                margin-left: 58.333333%
-            }
-            .offset-md-8 {
-                margin-left: 66.666667%
-            }
-            .offset-md-9 {
-                margin-left: 75%
-            }
-            .offset-md-10 {
-                margin-left: 83.333333%
-            }
-            .offset-md-11 {
-                margin-left: 91.666667%
-            }
-        }
-
-        @media (min-width:992px) {
-            .col-lg {
-                flex-basis: 0;
-                flex-grow: 1;
-                max-width: 100%
-            }
-            .col-lg-auto {
-                flex: 0 0 auto;
-                width: auto;
-                max-width: 100%
-            }
-            .col-lg-1 {
-                flex: 0 0 8.333333%;
-                max-width: 8.333333%
-            }
-            .col-lg-2 {
-                flex: 0 0 16.666667%;
-                max-width: 16.666667%
-            }
-            .col-lg-3 {
-                flex: 0 0 25%;
-                max-width: 25%
-            }
-            .col-lg-4 {
-                flex: 0 0 33.333333%;
-                max-width: 33.333333%
-            }
-            .col-lg-5 {
-                flex: 0 0 41.666667%;
-                max-width: 41.666667%
-            }
-            .col-lg-6 {
-                flex: 0 0 50%;
-                max-width: 50%
-            }
-            .col-lg-7 {
-                flex: 0 0 58.333333%;
-                max-width: 58.333333%
-            }
-            .col-lg-8 {
-                flex: 0 0 66.666667%;
-                max-width: 66.666667%
-            }
-            .col-lg-9 {
-                flex: 0 0 75%;
-                max-width: 75%
-            }
-            .col-lg-10 {
-                flex: 0 0 83.333333%;
-                max-width: 83.333333%
-            }
-            .col-lg-11 {
-                flex: 0 0 91.666667%;
-                max-width: 91.666667%
-            }
-            .col-lg-12 {
-                flex: 0 0 100%;
-                max-width: 100%
-            }
-            .order-lg-first {
-                order: -1
-            }
-            .order-lg-last {
-                order: 13
-            }
-            .order-lg-0 {
-                order: 0
-            }
-            .order-lg-1 {
-                order: 1
-            }
-            .order-lg-2 {
-                order: 2
-            }
-            .order-lg-3 {
-                order: 3
-            }
-            .order-lg-4 {
-                order: 4
-            }
-            .order-lg-5 {
-                order: 5
-            }
-            .order-lg-6 {
-                order: 6
-            }
-            .order-lg-7 {
-                order: 7
-            }
-            .order-lg-8 {
-                order: 8
-            }
-            .order-lg-9 {
-                order: 9
-            }
-            .order-lg-10 {
-                order: 10
-            }
-            .order-lg-11 {
-                order: 11
-            }
-            .order-lg-12 {
-                order: 12
-            }
-            .offset-lg-0 {
-                margin-left: 0
-            }
-            .offset-lg-1 {
-                margin-left: 8.333333%
-            }
-            .offset-lg-2 {
-                margin-left: 16.666667%
-            }
-            .offset-lg-3 {
-                margin-left: 25%
-            }
-            .offset-lg-4 {
-                margin-left: 33.333333%
-            }
-            .offset-lg-5 {
-                margin-left: 41.666667%
-            }
-            .offset-lg-6 {
-                margin-left: 50%
-            }
-            .offset-lg-7 {
-                margin-left: 58.333333%
-            }
-            .offset-lg-8 {
-                margin-left: 66.666667%
-            }
-            .offset-lg-9 {
-                margin-left: 75%
-            }
-            .offset-lg-10 {
-                margin-left: 83.333333%
-            }
-            .offset-lg-11 {
-                margin-left: 91.666667%
-            }
-        }
-
-        @media (min-width:1200px) {
-            .col-xl {
-                flex-basis: 0;
-                flex-grow: 1;
-                max-width: 100%
-            }
-            .col-xl-auto {
-                flex: 0 0 auto;
-                width: auto;
-                max-width: 100%
-            }
-            .col-xl-1 {
-                flex: 0 0 8.333333%;
-                max-width: 8.333333%
-            }
-            .col-xl-2 {
-                flex: 0 0 16.666667%;
-                max-width: 16.666667%
-            }
-            .col-xl-3 {
-                flex: 0 0 25%;
-                max-width: 25%
-            }
-            .col-xl-4 {
-                flex: 0 0 33.333333%;
-                max-width: 33.333333%
-            }
-            .col-xl-5 {
-                flex: 0 0 41.666667%;
-                max-width: 41.666667%
-            }
-            .col-xl-6 {
-                flex: 0 0 50%;
-                max-width: 50%
-            }
-            .col-xl-7 {
-                flex: 0 0 58.333333%;
-                max-width: 58.333333%
-            }
-            .col-xl-8 {
-                flex: 0 0 66.666667%;
-                max-width: 66.666667%
-            }
-            .col-xl-9 {
-                flex: 0 0 75%;
-                max-width: 75%
-            }
-            .col-xl-10 {
-                flex: 0 0 83.333333%;
-                max-width: 83.333333%
-            }
-            .col-xl-11 {
-                flex: 0 0 91.666667%;
-                max-width: 91.666667%
-            }
-            .col-xl-12 {
-                flex: 0 0 100%;
-                max-width: 100%
-            }
-            .order-xl-first {
-                order: -1
-            }
-            .order-xl-last {
-                order: 13
-            }
-            .order-xl-0 {
-                order: 0
-            }
-            .order-xl-1 {
-                order: 1
-            }
-            .order-xl-2 {
-                order: 2
-            }
-            .order-xl-3 {
-                order: 3
-            }
-            .order-xl-4 {
-                order: 4
-            }
-            .order-xl-5 {
-                order: 5
-            }
-            .order-xl-6 {
-                order: 6
-            }
-            .order-xl-7 {
-                order: 7
-            }
-            .order-xl-8 {
-                order: 8
-            }
-            .order-xl-9 {
-                order: 9
-            }
-            .order-xl-10 {
-                order: 10
-            }
-            .order-xl-11 {
-                order: 11
-            }
-            .order-xl-12 {
-                order: 12
-            }
-            .offset-xl-0 {
-                margin-left: 0
-            }
-            .offset-xl-1 {
-                margin-left: 8.333333%
-            }
-            .offset-xl-2 {
-                margin-left: 16.666667%
-            }
-            .offset-xl-3 {
-                margin-left: 25%
-            }
-            .offset-xl-4 {
-                margin-left: 33.333333%
-            }
-            .offset-xl-5 {
-                margin-left: 41.666667%
-            }
-            .offset-xl-6 {
-                margin-left: 50%
-            }
-            .offset-xl-7 {
-                margin-left: 58.333333%
-            }
-            .offset-xl-8 {
-                margin-left: 66.666667%
-            }
-            .offset-xl-9 {
-                margin-left: 75%
-            }
-            .offset-xl-10 {
-                margin-left: 83.333333%
-            }
-            .offset-xl-11 {
-                margin-left: 91.666667%
-            }
-        }
-
-        .d-none {
-            display: none!important
-        }
-
-        .d-inline {
-            display: inline!important
-        }
-
-        .d-inline-block {
-            display: inline-block!important
-        }
-
-        .d-block {
-            display: block!important
-        }
-
-        .d-table {
-            display: table!important
-        }
-
-        .d-table-row {
-            display: table-row!important
-        }
-
-        .d-table-cell {
-            display: table-cell!important
-        }
-
-        .d-flex {
-            display: flex!important
-        }
-
-        .d-inline-flex {
-            display: inline-flex!important
-        }
-
-        @media (min-width:576px) {
-            .d-sm-none {
-                display: none!important
-            }
-            .d-sm-inline {
-                display: inline!important
-            }
-            .d-sm-inline-block {
-                display: inline-block!important
-            }
-            .d-sm-block {
-                display: block!important
-            }
-            .d-sm-table {
-                display: table!important
-            }
-            .d-sm-table-row {
-                display: table-row!important
-            }
-            .d-sm-table-cell {
-                display: table-cell!important
-            }
-            .d-sm-flex {
-                display: flex!important
-            }
-            .d-sm-inline-flex {
-                display: inline-flex!important
-            }
-        }
-
-        @media (min-width:768px) {
-            .d-md-none {
-                display: none!important
-            }
-            .d-md-inline {
-                display: inline!important
-            }
-            .d-md-inline-block {
-                display: inline-block!important
-            }
-            .d-md-block {
-                display: block!important
-            }
-            .d-md-table {
-                display: table!important
-            }
-            .d-md-table-row {
-                display: table-row!important
-            }
-            .d-md-table-cell {
-                display: table-cell!important
-            }
-            .d-md-flex {
-                display: flex!important
-            }
-            .d-md-inline-flex {
-                display: inline-flex!important
-            }
-        }
-
-        @media (min-width:992px) {
-            .d-lg-none {
-                display: none!important
-            }
-            .d-lg-inline {
-                display: inline!important
-            }
-            .d-lg-inline-block {
-                display: inline-block!important
-            }
-            .d-lg-block {
-                display: block!important
-            }
-            .d-lg-table {
-                display: table!important
-            }
-            .d-lg-table-row {
-                display: table-row!important
-            }
-            .d-lg-table-cell {
-                display: table-cell!important
-            }
-            .d-lg-flex {
-                display: flex!important
-            }
-            .d-lg-inline-flex {
-                display: inline-flex!important
-            }
-        }
-
-        @media (min-width:1200px) {
-            .d-xl-none {
-                display: none!important
-            }
-            .d-xl-inline {
-                display: inline!important
-            }
-            .d-xl-inline-block {
-                display: inline-block!important
-            }
-            .d-xl-block {
-                display: block!important
-            }
-            .d-xl-table {
-                display: table!important
-            }
-            .d-xl-table-row {
-                display: table-row!important
-            }
-            .d-xl-table-cell {
-                display: table-cell!important
-            }
-            .d-xl-flex {
-                display: flex!important
-            }
-            .d-xl-inline-flex {
-                display: inline-flex!important
-            }
-        }
-
-        @media print {
-            .d-print-none {
-                display: none!important
-            }
-            .d-print-inline {
-                display: inline!important
-            }
-            .d-print-inline-block {
-                display: inline-block!important
-            }
-            .d-print-block {
-                display: block!important
-            }
-            .d-print-table {
-                display: table!important
-            }
-            .d-print-table-row {
-                display: table-row!important
-            }
-            .d-print-table-cell {
-                display: table-cell!important
-            }
-            .d-print-flex {
-                display: flex!important
-            }
-            .d-print-inline-flex {
-                display: inline-flex!important
-            }
-        }
-
-        .flex-row {
-            flex-direction: row!important
-        }
-
-        .flex-column {
-            flex-direction: column!important
-        }
-
-        .flex-row-reverse {
-            flex-direction: row-reverse!important
-        }
-
-        .flex-column-reverse {
-            flex-direction: column-reverse!important
-        }
-
-        .flex-wrap {
-            flex-wrap: wrap!important
-        }
-
-        .flex-nowrap {
-            flex-wrap: nowrap!important
-        }
-
-        .flex-wrap-reverse {
-            flex-wrap: wrap-reverse!important
-        }
-
-        .flex-fill {
-            flex: 1 1 auto!important
-        }
-
-        .flex-grow-0 {
-            flex-grow: 0!important
-        }
-
-        .flex-grow-1 {
-            flex-grow: 1!important
-        }
-
-        .flex-shrink-0 {
-            flex-shrink: 0!important
-        }
-
-        .flex-shrink-1 {
-            flex-shrink: 1!important
-        }
-
-        .justify-content-start {
-            justify-content: flex-start!important
-        }
-
-        .justify-content-end {
-            justify-content: flex-end!important
-        }
-
-        .justify-content-center {
-            justify-content: center!important
-        }
-
-        .justify-content-between {
-            justify-content: space-between!important
-        }
-
-        .justify-content-around {
-            justify-content: space-around!important
-        }
-
-        .align-items-start {
-            align-items: flex-start!important
-        }
-
-        .align-items-end {
-            align-items: flex-end!important
-        }
-
-        .align-items-center {
-            align-items: center!important
-        }
-
-        .align-items-baseline {
-            align-items: baseline!important
-        }
-
-        .align-items-stretch {
-            align-items: stretch!important
-        }
-
-        .align-content-start {
-            align-content: flex-start!important
-        }
-
-        .align-content-end {
-            align-content: flex-end!important
-        }
-
-        .align-content-center {
-            align-content: center!important
-        }
-
-        .align-content-between {
-            align-content: space-between!important
-        }
-
-        .align-content-around {
-            align-content: space-around!important
-        }
-
-        .align-content-stretch {
-            align-content: stretch!important
-        }
-
-        .align-self-auto {
-            align-self: auto!important
-        }
-
-        .align-self-start {
-            align-self: flex-start!important
-        }
-
-        .align-self-end {
-            align-self: flex-end!important
-        }
-
-        .align-self-center {
-            align-self: center!important
-        }
-
-        .align-self-baseline {
-            align-self: baseline!important
-        }
-
-        .align-self-stretch {
-            align-self: stretch!important
-        }
-
-        @media (min-width:576px) {
-            .flex-sm-row {
-                flex-direction: row!important
-            }
-            .flex-sm-column {
-                flex-direction: column!important
-            }
-            .flex-sm-row-reverse {
-                flex-direction: row-reverse!important
-            }
-            .flex-sm-column-reverse {
-                flex-direction: column-reverse!important
-            }
-            .flex-sm-wrap {
-                flex-wrap: wrap!important
-            }
-            .flex-sm-nowrap {
-                flex-wrap: nowrap!important
-            }
-            .flex-sm-wrap-reverse {
-                flex-wrap: wrap-reverse!important
-            }
-            .flex-sm-fill {
-                flex: 1 1 auto!important
-            }
-            .flex-sm-grow-0 {
-                flex-grow: 0!important
-            }
-            .flex-sm-grow-1 {
-                flex-grow: 1!important
-            }
-            .flex-sm-shrink-0 {
-                flex-shrink: 0!important
-            }
-            .flex-sm-shrink-1 {
-                flex-shrink: 1!important
-            }
-            .justify-content-sm-start {
-                justify-content: flex-start!important
-            }
-            .justify-content-sm-end {
-                justify-content: flex-end!important
-            }
-            .justify-content-sm-center {
-                justify-content: center!important
-            }
-            .justify-content-sm-between {
-                justify-content: space-between!important
-            }
-            .justify-content-sm-around {
-                justify-content: space-around!important
-            }
-            .align-items-sm-start {
-                align-items: flex-start!important
-            }
-            .align-items-sm-end {
-                align-items: flex-end!important
-            }
-            .align-items-sm-center {
-                align-items: center!important
-            }
-            .align-items-sm-baseline {
-                align-items: baseline!important
-            }
-            .align-items-sm-stretch {
-                align-items: stretch!important
-            }
-            .align-content-sm-start {
-                align-content: flex-start!important
-            }
-            .align-content-sm-end {
-                align-content: flex-end!important
-            }
-            .align-content-sm-center {
-                align-content: center!important
-            }
-            .align-content-sm-between {
-                align-content: space-between!important
-            }
-            .align-content-sm-around {
-                align-content: space-around!important
-            }
-            .align-content-sm-stretch {
-                align-content: stretch!important
-            }
-            .align-self-sm-auto {
-                align-self: auto!important
-            }
-            .align-self-sm-start {
-                align-self: flex-start!important
-            }
-            .align-self-sm-end {
-                align-self: flex-end!important
-            }
-            .align-self-sm-center {
-                align-self: center!important
-            }
-            .align-self-sm-baseline {
-                align-self: baseline!important
-            }
-            .align-self-sm-stretch {
-                align-self: stretch!important
-            }
-        }
-
-        @media (min-width:768px) {
-            .flex-md-row {
-                flex-direction: row!important
-            }
-            .flex-md-column {
-                flex-direction: column!important
-            }
-            .flex-md-row-reverse {
-                flex-direction: row-reverse!important
-            }
-            .flex-md-column-reverse {
-                flex-direction: column-reverse!important
-            }
-            .flex-md-wrap {
-                flex-wrap: wrap!important
-            }
-            .flex-md-nowrap {
-                flex-wrap: nowrap!important
-            }
-            .flex-md-wrap-reverse {
-                flex-wrap: wrap-reverse!important
-            }
-            .flex-md-fill {
-                flex: 1 1 auto!important
-            }
-            .flex-md-grow-0 {
-                flex-grow: 0!important
-            }
-            .flex-md-grow-1 {
-                flex-grow: 1!important
-            }
-            .flex-md-shrink-0 {
-                flex-shrink: 0!important
-            }
-            .flex-md-shrink-1 {
-                flex-shrink: 1!important
-            }
-            .justify-content-md-start {
-                justify-content: flex-start!important
-            }
-            .justify-content-md-end {
-                justify-content: flex-end!important
-            }
-            .justify-content-md-center {
-                justify-content: center!important
-            }
-            .justify-content-md-between {
-                justify-content: space-between!important
-            }
-            .justify-content-md-around {
-                justify-content: space-around!important
-            }
-            .align-items-md-start {
-                align-items: flex-start!important
-            }
-            .align-items-md-end {
-                align-items: flex-end!important
-            }
-            .align-items-md-center {
-                align-items: center!important
-            }
-            .align-items-md-baseline {
-                align-items: baseline!important
-            }
-            .align-items-md-stretch {
-                align-items: stretch!important
-            }
-            .align-content-md-start {
-                align-content: flex-start!important
-            }
-            .align-content-md-end {
-                align-content: flex-end!important
-            }
-            .align-content-md-center {
-                align-content: center!important
-            }
-            .align-content-md-between {
-                align-content: space-between!important
-            }
-            .align-content-md-around {
-                align-content: space-around!important
-            }
-            .align-content-md-stretch {
-                align-content: stretch!important
-            }
-            .align-self-md-auto {
-                align-self: auto!important
-            }
-            .align-self-md-start {
-                align-self: flex-start!important
-            }
-            .align-self-md-end {
-                align-self: flex-end!important
-            }
-            .align-self-md-center {
-                align-self: center!important
-            }
-            .align-self-md-baseline {
-                align-self: baseline!important
-            }
-            .align-self-md-stretch {
-                align-self: stretch!important
-            }
-        }
-
-        @media (min-width:992px) {
-            .flex-lg-row {
-                flex-direction: row!important
-            }
-            .flex-lg-column {
-                flex-direction: column!important
-            }
-            .flex-lg-row-reverse {
-                flex-direction: row-reverse!important
-            }
-            .flex-lg-column-reverse {
-                flex-direction: column-reverse!important
-            }
-            .flex-lg-wrap {
-                flex-wrap: wrap!important
-            }
-            .flex-lg-nowrap {
-                flex-wrap: nowrap!important
-            }
-            .flex-lg-wrap-reverse {
-                flex-wrap: wrap-reverse!important
-            }
-            .flex-lg-fill {
-                flex: 1 1 auto!important
-            }
-            .flex-lg-grow-0 {
-                flex-grow: 0!important
-            }
-            .flex-lg-grow-1 {
-                flex-grow: 1!important
-            }
-            .flex-lg-shrink-0 {
-                flex-shrink: 0!important
-            }
-            .flex-lg-shrink-1 {
-                flex-shrink: 1!important
-            }
-            .justify-content-lg-start {
-                justify-content: flex-start!important
-            }
-            .justify-content-lg-end {
-                justify-content: flex-end!important
-            }
-            .justify-content-lg-center {
-                justify-content: center!important
-            }
-            .justify-content-lg-between {
-                justify-content: space-between!important
-            }
-            .justify-content-lg-around {
-                justify-content: space-around!important
-            }
-            .align-items-lg-start {
-                align-items: flex-start!important
-            }
-            .align-items-lg-end {
-                align-items: flex-end!important
-            }
-            .align-items-lg-center {
-                align-items: center!important
-            }
-            .align-items-lg-baseline {
-                align-items: baseline!important
-            }
-            .align-items-lg-stretch {
-                align-items: stretch!important
-            }
-            .align-content-lg-start {
-                align-content: flex-start!important
-            }
-            .align-content-lg-end {
-                align-content: flex-end!important
-            }
-            .align-content-lg-center {
-                align-content: center!important
-            }
-            .align-content-lg-between {
-                align-content: space-between!important
-            }
-            .align-content-lg-around {
-                align-content: space-around!important
-            }
-            .align-content-lg-stretch {
-                align-content: stretch!important
-            }
-            .align-self-lg-auto {
-                align-self: auto!important
-            }
-            .align-self-lg-start {
-                align-self: flex-start!important
-            }
-            .align-self-lg-end {
-                align-self: flex-end!important
-            }
-            .align-self-lg-center {
-                align-self: center!important
-            }
-            .align-self-lg-baseline {
-                align-self: baseline!important
-            }
-            .align-self-lg-stretch {
-                align-self: stretch!important
-            }
-        }
-
-        @media (min-width:1200px) {
-            .flex-xl-row {
-                flex-direction: row!important
-            }
-            .flex-xl-column {
-                flex-direction: column!important
-            }
-            .flex-xl-row-reverse {
-                flex-direction: row-reverse!important
-            }
-            .flex-xl-column-reverse {
-                flex-direction: column-reverse!important
-            }
-            .flex-xl-wrap {
-                flex-wrap: wrap!important
-            }
-            .flex-xl-nowrap {
-                flex-wrap: nowrap!important
-            }
-            .flex-xl-wrap-reverse {
-                flex-wrap: wrap-reverse!important
-            }
-            .flex-xl-fill {
-                flex: 1 1 auto!important
-            }
-            .flex-xl-grow-0 {
-                flex-grow: 0!important
-            }
-            .flex-xl-grow-1 {
-                flex-grow: 1!important
-            }
-            .flex-xl-shrink-0 {
-                flex-shrink: 0!important
-            }
-            .flex-xl-shrink-1 {
-                flex-shrink: 1!important
-            }
-            .justify-content-xl-start {
-                justify-content: flex-start!important
-            }
-            .justify-content-xl-end {
-                justify-content: flex-end!important
-            }
-            .justify-content-xl-center {
-                justify-content: center!important
-            }
-            .justify-content-xl-between {
-                justify-content: space-between!important
-            }
-            .justify-content-xl-around {
-                justify-content: space-around!important
-            }
-            .align-items-xl-start {
-                align-items: flex-start!important
-            }
-            .align-items-xl-end {
-                align-items: flex-end!important
-            }
-            .align-items-xl-center {
-                align-items: center!important
-            }
-            .align-items-xl-baseline {
-                align-items: baseline!important
-            }
-            .align-items-xl-stretch {
-                align-items: stretch!important
-            }
-            .align-content-xl-start {
-                align-content: flex-start!important
-            }
-            .align-content-xl-end {
-                align-content: flex-end!important
-            }
-            .align-content-xl-center {
-                align-content: center!important
-            }
-            .align-content-xl-between {
-                align-content: space-between!important
-            }
-            .align-content-xl-around {
-                align-content: space-around!important
-            }
-            .align-content-xl-stretch {
-                align-content: stretch!important
-            }
-            .align-self-xl-auto {
-                align-self: auto!important
-            }
-            .align-self-xl-start {
-                align-self: flex-start!important
-            }
-            .align-self-xl-end {
-                align-self: flex-end!important
-            }
-            .align-self-xl-center {
-                align-self: center!important
-            }
-            .align-self-xl-baseline {
-                align-self: baseline!important
-            }
-            .align-self-xl-stretch {
-                align-self: stretch!important
-            }
-        }
-
-        .m-0 {
-            margin: 0!important
-        }
-
-        .mt-0,
-        .my-0 {
-            margin-top: 0!important
-        }
-
-        .mr-0,
-        .mx-0 {
-            margin-right: 0!important
-        }
-
-        .mb-0,
-        .my-0 {
-            margin-bottom: 0!important
-        }
-
-        .ml-0,
-        .mx-0 {
-            margin-left: 0!important
-        }
-
-        .m-1 {
-            margin: .25rem!important
-        }
-
-        .mt-1,
-        .my-1 {
-            margin-top: .25rem!important
-        }
-
-        .mr-1,
-        .mx-1 {
-            margin-right: .25rem!important
-        }
-
-        .mb-1,
-        .my-1 {
-            margin-bottom: .25rem!important
-        }
-
-        .ml-1,
-        .mx-1 {
-            margin-left: .25rem!important
-        }
-
-        .m-2 {
-            margin: .5rem!important
-        }
-
-        .mt-2,
-        .my-2 {
-            margin-top: .5rem!important
-        }
-
-        .mr-2,
-        .mx-2 {
-            margin-right: .5rem!important
-        }
-
-        .mb-2,
-        .my-2 {
-            margin-bottom: .5rem!important
-        }
-
-        .ml-2,
-        .mx-2 {
-            margin-left: .5rem!important
-        }
-
-        .m-3 {
-            margin: 1rem!important
-        }
-
-        .mt-3,
-        .my-3 {
-            margin-top: 1rem!important
-        }
-
-        .mr-3,
-        .mx-3 {
-            margin-right: 1rem!important
-        }
-
-        .mb-3,
-        .my-3 {
-            margin-bottom: 1rem!important
-        }
-
-        .ml-3,
-        .mx-3 {
-            margin-left: 1rem!important
-        }
-
-        .m-4 {
-            margin: 1.5rem!important
-        }
-
-        .mt-4,
-        .my-4 {
-            margin-top: 1.5rem!important
-        }
-
-        .mr-4,
-        .mx-4 {
-            margin-right: 1.5rem!important
-        }
-
-        .mb-4,
-        .my-4 {
-            margin-bottom: 1.5rem!important
-        }
-
-        .ml-4,
-        .mx-4 {
-            margin-left: 1.5rem!important
-        }
-
-        .m-5 {
-            margin: 3rem!important
-        }
-
-        .mt-5,
-        .my-5 {
-            margin-top: 3rem!important
-        }
-
-        .mr-5,
-        .mx-5 {
-            margin-right: 3rem!important
-        }
-
-        .mb-5,
-        .my-5 {
-            margin-bottom: 3rem!important
-        }
-
-        .ml-5,
-        .mx-5 {
-            margin-left: 3rem!important
-        }
-
-        .p-0 {
-            padding: 0!important
-        }
-
-        .pt-0,
-        .py-0 {
-            padding-top: 0!important
-        }
-
-        .pr-0,
-        .px-0 {
-            padding-right: 0!important
-        }
-
-        .pb-0,
-        .py-0 {
-            padding-bottom: 0!important
-        }
-
-        .pl-0,
-        .px-0 {
-            padding-left: 0!important
-        }
-
-        .p-1 {
-            padding: .25rem!important
-        }
-
-        .pt-1,
-        .py-1 {
-            padding-top: .25rem!important
-        }
-
-        .pr-1,
-        .px-1 {
-            padding-right: .25rem!important
-        }
-
-        .pb-1,
-        .py-1 {
-            padding-bottom: .25rem!important
-        }
-
-        .pl-1,
-        .px-1 {
-            padding-left: .25rem!important
-        }
-
-        .p-2 {
-            padding: .5rem!important
-        }
-
-        .pt-2,
-        .py-2 {
-            padding-top: .5rem!important
-        }
-
-        .pr-2,
-        .px-2 {
-            padding-right: .5rem!important
-        }
-
-        .pb-2,
-        .py-2 {
-            padding-bottom: .5rem!important
-        }
-
-        .pl-2,
-        .px-2 {
-            padding-left: .5rem!important
-        }
-
-        .p-3 {
-            padding: 1rem!important
-        }
-
-        .pt-3,
-        .py-3 {
-            padding-top: 1rem!important
-        }
-
-        .pr-3,
-        .px-3 {
-            padding-right: 1rem!important
-        }
-
-        .pb-3,
-        .py-3 {
-            padding-bottom: 1rem!important
-        }
-
-        .pl-3,
-        .px-3 {
-            padding-left: 1rem!important
-        }
-
-        .p-4 {
-            padding: 1.5rem!important
-        }
-
-        .pt-4,
-        .py-4 {
-            padding-top: 1.5rem!important
-        }
-
-        .pr-4,
-        .px-4 {
-            padding-right: 1.5rem!important
-        }
-
-        .pb-4,
-        .py-4 {
-            padding-bottom: 1.5rem!important
-        }
-
-        .pl-4,
-        .px-4 {
-            padding-left: 1.5rem!important
-        }
-
-        .p-5 {
-            padding: 3rem!important
-        }
-
-        .pt-5,
-        .py-5 {
-            padding-top: 3rem!important
-        }
-
-        .pr-5,
-        .px-5 {
-            padding-right: 3rem!important
-        }
-
-        .pb-5,
-        .py-5 {
-            padding-bottom: 3rem!important
-        }
-
-        .pl-5,
-        .px-5 {
-            padding-left: 3rem!important
-        }
-
-        .m-n1 {
-            margin: -.25rem!important
-        }
-
-        .mt-n1,
-        .my-n1 {
-            margin-top: -.25rem!important
-        }
-
-        .mr-n1,
-        .mx-n1 {
-            margin-right: -.25rem!important
-        }
-
-        .mb-n1,
-        .my-n1 {
-            margin-bottom: -.25rem!important
-        }
-
-        .ml-n1,
-        .mx-n1 {
-            margin-left: -.25rem!important
-        }
-
-        .m-n2 {
-            margin: -.5rem!important
-        }
-
-        .mt-n2,
-        .my-n2 {
-            margin-top: -.5rem!important
-        }
-
-        .mr-n2,
-        .mx-n2 {
-            margin-right: -.5rem!important
-        }
-
-        .mb-n2,
-        .my-n2 {
-            margin-bottom: -.5rem!important
-        }
-
-        .ml-n2,
-        .mx-n2 {
-            margin-left: -.5rem!important
-        }
-
-        .m-n3 {
-            margin: -1rem!important
-        }
-
-        .mt-n3,
-        .my-n3 {
-            margin-top: -1rem!important
-        }
-
-        .mr-n3,
-        .mx-n3 {
-            margin-right: -1rem!important
-        }
-
-        .mb-n3,
-        .my-n3 {
-            margin-bottom: -1rem!important
-        }
-
-        .ml-n3,
-        .mx-n3 {
-            margin-left: -1rem!important
-        }
-
-        .m-n4 {
-            margin: -1.5rem!important
-        }
-
-        .mt-n4,
-        .my-n4 {
-            margin-top: -1.5rem!important
-        }
-
-        .mr-n4,
-        .mx-n4 {
-            margin-right: -1.5rem!important
-        }
-
-        .mb-n4,
-        .my-n4 {
-            margin-bottom: -1.5rem!important
-        }
-
-        .ml-n4,
-        .mx-n4 {
-            margin-left: -1.5rem!important
-        }
-
-        .m-n5 {
-            margin: -3rem!important
-        }
-
-        .mt-n5,
-        .my-n5 {
-            margin-top: -3rem!important
-        }
-
-        .mr-n5,
-        .mx-n5 {
-            margin-right: -3rem!important
-        }
-
-        .mb-n5,
-        .my-n5 {
-            margin-bottom: -3rem!important
-        }
-
-        .ml-n5,
-        .mx-n5 {
-            margin-left: -3rem!important
-        }
-
-        .m-auto {
-            margin: auto!important
-        }
-
-        .mt-auto,
-        .my-auto {
-            margin-top: auto!important
-        }
-
-        .mr-auto,
-        .mx-auto {
-            margin-right: auto!important
-        }
-
-        .mb-auto,
-        .my-auto {
-            margin-bottom: auto!important
-        }
-
-        .ml-auto,
-        .mx-auto {
-            margin-left: auto!important
-        }
-
-        @media (min-width:576px) {
-            .m-sm-0 {
-                margin: 0!important
-            }
-            .mt-sm-0,
-            .my-sm-0 {
-                margin-top: 0!important
-            }
-            .mr-sm-0,
-            .mx-sm-0 {
-                margin-right: 0!important
-            }
-            .mb-sm-0,
-            .my-sm-0 {
-                margin-bottom: 0!important
-            }
-            .ml-sm-0,
-            .mx-sm-0 {
-                margin-left: 0!important
-            }
-            .m-sm-1 {
-                margin: .25rem!important
-            }
-            .mt-sm-1,
-            .my-sm-1 {
-                margin-top: .25rem!important
-            }
-            .mr-sm-1,
-            .mx-sm-1 {
-                margin-right: .25rem!important
-            }
-            .mb-sm-1,
-            .my-sm-1 {
-                margin-bottom: .25rem!important
-            }
-            .ml-sm-1,
-            .mx-sm-1 {
-                margin-left: .25rem!important
-            }
-            .m-sm-2 {
-                margin: .5rem!important
-            }
-            .mt-sm-2,
-            .my-sm-2 {
-                margin-top: .5rem!important
-            }
-            .mr-sm-2,
-            .mx-sm-2 {
-                margin-right: .5rem!important
-            }
-            .mb-sm-2,
-            .my-sm-2 {
-                margin-bottom: .5rem!important
-            }
-            .ml-sm-2,
-            .mx-sm-2 {
-                margin-left: .5rem!important
-            }
-            .m-sm-3 {
-                margin: 1rem!important
-            }
-            .mt-sm-3,
-            .my-sm-3 {
-                margin-top: 1rem!important
-            }
-            .mr-sm-3,
-            .mx-sm-3 {
-                margin-right: 1rem!important
-            }
-            .mb-sm-3,
-            .my-sm-3 {
-                margin-bottom: 1rem!important
-            }
-            .ml-sm-3,
-            .mx-sm-3 {
-                margin-left: 1rem!important
-            }
-            .m-sm-4 {
-                margin: 1.5rem!important
-            }
-            .mt-sm-4,
-            .my-sm-4 {
-                margin-top: 1.5rem!important
-            }
-            .mr-sm-4,
-            .mx-sm-4 {
-                margin-right: 1.5rem!important
-            }
-            .mb-sm-4,
-            .my-sm-4 {
-                margin-bottom: 1.5rem!important
-            }
-            .ml-sm-4,
-            .mx-sm-4 {
-                margin-left: 1.5rem!important
-            }
-            .m-sm-5 {
-                margin: 3rem!important
-            }
-            .mt-sm-5,
-            .my-sm-5 {
-                margin-top: 3rem!important
-            }
-            .mr-sm-5,
-            .mx-sm-5 {
-                margin-right: 3rem!important
-            }
-            .mb-sm-5,
-            .my-sm-5 {
-                margin-bottom: 3rem!important
-            }
-            .ml-sm-5,
-            .mx-sm-5 {
-                margin-left: 3rem!important
-            }
-            .p-sm-0 {
-                padding: 0!important
-            }
-            .pt-sm-0,
-            .py-sm-0 {
-                padding-top: 0!important
-            }
-            .pr-sm-0,
-            .px-sm-0 {
-                padding-right: 0!important
-            }
-            .pb-sm-0,
-            .py-sm-0 {
-                padding-bottom: 0!important
-            }
-            .pl-sm-0,
-            .px-sm-0 {
-                padding-left: 0!important
-            }
-            .p-sm-1 {
-                padding: .25rem!important
-            }
-            .pt-sm-1,
-            .py-sm-1 {
-                padding-top: .25rem!important
-            }
-            .pr-sm-1,
-            .px-sm-1 {
-                padding-right: .25rem!important
-            }
-            .pb-sm-1,
-            .py-sm-1 {
-                padding-bottom: .25rem!important
-            }
-            .pl-sm-1,
-            .px-sm-1 {
-                padding-left: .25rem!important
-            }
-            .p-sm-2 {
-                padding: .5rem!important
-            }
-            .pt-sm-2,
-            .py-sm-2 {
-                padding-top: .5rem!important
-            }
-            .pr-sm-2,
-            .px-sm-2 {
-                padding-right: .5rem!important
-            }
-            .pb-sm-2,
-            .py-sm-2 {
-                padding-bottom: .5rem!important
-            }
-            .pl-sm-2,
-            .px-sm-2 {
-                padding-left: .5rem!important
-            }
-            .p-sm-3 {
-                padding: 1rem!important
-            }
-            .pt-sm-3,
-            .py-sm-3 {
-                padding-top: 1rem!important
-            }
-            .pr-sm-3,
-            .px-sm-3 {
-                padding-right: 1rem!important
-            }
-            .pb-sm-3,
-            .py-sm-3 {
-                padding-bottom: 1rem!important
-            }
-            .pl-sm-3,
-            .px-sm-3 {
-                padding-left: 1rem!important
-            }
-            .p-sm-4 {
-                padding: 1.5rem!important
-            }
-            .pt-sm-4,
-            .py-sm-4 {
-                padding-top: 1.5rem!important
-            }
-            .pr-sm-4,
-            .px-sm-4 {
-                padding-right: 1.5rem!important
-            }
-            .pb-sm-4,
-            .py-sm-4 {
-                padding-bottom: 1.5rem!important
-            }
-            .pl-sm-4,
-            .px-sm-4 {
-                padding-left: 1.5rem!important
-            }
-            .p-sm-5 {
-                padding: 3rem!important
-            }
-            .pt-sm-5,
-            .py-sm-5 {
-                padding-top: 3rem!important
-            }
-            .pr-sm-5,
-            .px-sm-5 {
-                padding-right: 3rem!important
-            }
-            .pb-sm-5,
-            .py-sm-5 {
-                padding-bottom: 3rem!important
-            }
-            .pl-sm-5,
-            .px-sm-5 {
-                padding-left: 3rem!important
-            }
-            .m-sm-n1 {
-                margin: -.25rem!important
-            }
-            .mt-sm-n1,
-            .my-sm-n1 {
-                margin-top: -.25rem!important
-            }
-            .mr-sm-n1,
-            .mx-sm-n1 {
-                margin-right: -.25rem!important
-            }
-            .mb-sm-n1,
-            .my-sm-n1 {
-                margin-bottom: -.25rem!important
-            }
-            .ml-sm-n1,
-            .mx-sm-n1 {
-                margin-left: -.25rem!important
-            }
-            .m-sm-n2 {
-                margin: -.5rem!important
-            }
-            .mt-sm-n2,
-            .my-sm-n2 {
-                margin-top: -.5rem!important
-            }
-            .mr-sm-n2,
-            .mx-sm-n2 {
-                margin-right: -.5rem!important
-            }
-            .mb-sm-n2,
-            .my-sm-n2 {
-                margin-bottom: -.5rem!important
-            }
-            .ml-sm-n2,
-            .mx-sm-n2 {
-                margin-left: -.5rem!important
-            }
-            .m-sm-n3 {
-                margin: -1rem!important
-            }
-            .mt-sm-n3,
-            .my-sm-n3 {
-                margin-top: -1rem!important
-            }
-            .mr-sm-n3,
-            .mx-sm-n3 {
-                margin-right: -1rem!important
-            }
-            .mb-sm-n3,
-            .my-sm-n3 {
-                margin-bottom: -1rem!important
-            }
-            .ml-sm-n3,
-            .mx-sm-n3 {
-                margin-left: -1rem!important
-            }
-            .m-sm-n4 {
-                margin: -1.5rem!important
-            }
-            .mt-sm-n4,
-            .my-sm-n4 {
-                margin-top: -1.5rem!important
-            }
-            .mr-sm-n4,
-            .mx-sm-n4 {
-                margin-right: -1.5rem!important
-            }
-            .mb-sm-n4,
-            .my-sm-n4 {
-                margin-bottom: -1.5rem!important
-            }
-            .ml-sm-n4,
-            .mx-sm-n4 {
-                margin-left: -1.5rem!important
-            }
-            .m-sm-n5 {
-                margin: -3rem!important
-            }
-            .mt-sm-n5,
-            .my-sm-n5 {
-                margin-top: -3rem!important
-            }
-            .mr-sm-n5,
-            .mx-sm-n5 {
-                margin-right: -3rem!important
-            }
-            .mb-sm-n5,
-            .my-sm-n5 {
-                margin-bottom: -3rem!important
-            }
-            .ml-sm-n5,
-            .mx-sm-n5 {
-                margin-left: -3rem!important
-            }
-            .m-sm-auto {
-                margin: auto!important
-            }
-            .mt-sm-auto,
-            .my-sm-auto {
-                margin-top: auto!important
-            }
-            .mr-sm-auto,
-            .mx-sm-auto {
-                margin-right: auto!important
-            }
-            .mb-sm-auto,
-            .my-sm-auto {
-                margin-bottom: auto!important
-            }
-            .ml-sm-auto,
-            .mx-sm-auto {
-                margin-left: auto!important
-            }
-        }
-
-        @media (min-width:768px) {
-            .m-md-0 {
-                margin: 0!important
-            }
-            .mt-md-0,
-            .my-md-0 {
-                margin-top: 0!important
-            }
-            .mr-md-0,
-            .mx-md-0 {
-                margin-right: 0!important
-            }
-            .mb-md-0,
-            .my-md-0 {
-                margin-bottom: 0!important
-            }
-            .ml-md-0,
-            .mx-md-0 {
-                margin-left: 0!important
-            }
-            .m-md-1 {
-                margin: .25rem!important
-            }
-            .mt-md-1,
-            .my-md-1 {
-                margin-top: .25rem!important
-            }
-            .mr-md-1,
-            .mx-md-1 {
-                margin-right: .25rem!important
-            }
-            .mb-md-1,
-            .my-md-1 {
-                margin-bottom: .25rem!important
-            }
-            .ml-md-1,
-            .mx-md-1 {
-                margin-left: .25rem!important
-            }
-            .m-md-2 {
-                margin: .5rem!important
-            }
-            .mt-md-2,
-            .my-md-2 {
-                margin-top: .5rem!important
-            }
-            .mr-md-2,
-            .mx-md-2 {
-                margin-right: .5rem!important
-            }
-            .mb-md-2,
-            .my-md-2 {
-                margin-bottom: .5rem!important
-            }
-            .ml-md-2,
-            .mx-md-2 {
-                margin-left: .5rem!important
-            }
-            .m-md-3 {
-                margin: 1rem!important
-            }
-            .mt-md-3,
-            .my-md-3 {
-                margin-top: 1rem!important
-            }
-            .mr-md-3,
-            .mx-md-3 {
-                margin-right: 1rem!important
-            }
-            .mb-md-3,
-            .my-md-3 {
-                margin-bottom: 1rem!important
-            }
-            .ml-md-3,
-            .mx-md-3 {
-                margin-left: 1rem!important
-            }
-            .m-md-4 {
-                margin: 1.5rem!important
-            }
-            .mt-md-4,
-            .my-md-4 {
-                margin-top: 1.5rem!important
-            }
-            .mr-md-4,
-            .mx-md-4 {
-                margin-right: 1.5rem!important
-            }
-            .mb-md-4,
-            .my-md-4 {
-                margin-bottom: 1.5rem!important
-            }
-            .ml-md-4,
-            .mx-md-4 {
-                margin-left: 1.5rem!important
-            }
-            .m-md-5 {
-                margin: 3rem!important
-            }
-            .mt-md-5,
-            .my-md-5 {
-                margin-top: 3rem!important
-            }
-            .mr-md-5,
-            .mx-md-5 {
-                margin-right: 3rem!important
-            }
-            .mb-md-5,
-            .my-md-5 {
-                margin-bottom: 3rem!important
-            }
-            .ml-md-5,
-            .mx-md-5 {
-                margin-left: 3rem!important
-            }
-            .p-md-0 {
-                padding: 0!important
-            }
-            .pt-md-0,
-            .py-md-0 {
-                padding-top: 0!important
-            }
-            .pr-md-0,
-            .px-md-0 {
-                padding-right: 0!important
-            }
-            .pb-md-0,
-            .py-md-0 {
-                padding-bottom: 0!important
-            }
-            .pl-md-0,
-            .px-md-0 {
-                padding-left: 0!important
-            }
-            .p-md-1 {
-                padding: .25rem!important
-            }
-            .pt-md-1,
-            .py-md-1 {
-                padding-top: .25rem!important
-            }
-            .pr-md-1,
-            .px-md-1 {
-                padding-right: .25rem!important
-            }
-            .pb-md-1,
-            .py-md-1 {
-                padding-bottom: .25rem!important
-            }
-            .pl-md-1,
-            .px-md-1 {
-                padding-left: .25rem!important
-            }
-            .p-md-2 {
-                padding: .5rem!important
-            }
-            .pt-md-2,
-            .py-md-2 {
-                padding-top: .5rem!important
-            }
-            .pr-md-2,
-            .px-md-2 {
-                padding-right: .5rem!important
-            }
-            .pb-md-2,
-            .py-md-2 {
-                padding-bottom: .5rem!important
-            }
-            .pl-md-2,
-            .px-md-2 {
-                padding-left: .5rem!important
-            }
-            .p-md-3 {
-                padding: 1rem!important
-            }
-            .pt-md-3,
-            .py-md-3 {
-                padding-top: 1rem!important
-            }
-            .pr-md-3,
-            .px-md-3 {
-                padding-right: 1rem!important
-            }
-            .pb-md-3,
-            .py-md-3 {
-                padding-bottom: 1rem!important
-            }
-            .pl-md-3,
-            .px-md-3 {
-                padding-left: 1rem!important
-            }
-            .p-md-4 {
-                padding: 1.5rem!important
-            }
-            .pt-md-4,
-            .py-md-4 {
-                padding-top: 1.5rem!important
-            }
-            .pr-md-4,
-            .px-md-4 {
-                padding-right: 1.5rem!important
-            }
-            .pb-md-4,
-            .py-md-4 {
-                padding-bottom: 1.5rem!important
-            }
-            .pl-md-4,
-            .px-md-4 {
-                padding-left: 1.5rem!important
-            }
-            .p-md-5 {
-                padding: 3rem!important
-            }
-            .pt-md-5,
-            .py-md-5 {
-                padding-top: 3rem!important
-            }
-            .pr-md-5,
-            .px-md-5 {
-                padding-right: 3rem!important
-            }
-            .pb-md-5,
-            .py-md-5 {
-                padding-bottom: 3rem!important
-            }
-            .pl-md-5,
-            .px-md-5 {
-                padding-left: 3rem!important
-            }
-            .m-md-n1 {
-                margin: -.25rem!important
-            }
-            .mt-md-n1,
-            .my-md-n1 {
-                margin-top: -.25rem!important
-            }
-            .mr-md-n1,
-            .mx-md-n1 {
-                margin-right: -.25rem!important
-            }
-            .mb-md-n1,
-            .my-md-n1 {
-                margin-bottom: -.25rem!important
-            }
-            .ml-md-n1,
-            .mx-md-n1 {
-                margin-left: -.25rem!important
-            }
-            .m-md-n2 {
-                margin: -.5rem!important
-            }
-            .mt-md-n2,
-            .my-md-n2 {
-                margin-top: -.5rem!important
-            }
-            .mr-md-n2,
-            .mx-md-n2 {
-                margin-right: -.5rem!important
-            }
-            .mb-md-n2,
-            .my-md-n2 {
-                margin-bottom: -.5rem!important
-            }
-            .ml-md-n2,
-            .mx-md-n2 {
-                margin-left: -.5rem!important
-            }
-            .m-md-n3 {
-                margin: -1rem!important
-            }
-            .mt-md-n3,
-            .my-md-n3 {
-                margin-top: -1rem!important
-            }
-            .mr-md-n3,
-            .mx-md-n3 {
-                margin-right: -1rem!important
-            }
-            .mb-md-n3,
-            .my-md-n3 {
-                margin-bottom: -1rem!important
-            }
-            .ml-md-n3,
-            .mx-md-n3 {
-                margin-left: -1rem!important
-            }
-            .m-md-n4 {
-                margin: -1.5rem!important
-            }
-            .mt-md-n4,
-            .my-md-n4 {
-                margin-top: -1.5rem!important
-            }
-            .mr-md-n4,
-            .mx-md-n4 {
-                margin-right: -1.5rem!important
-            }
-            .mb-md-n4,
-            .my-md-n4 {
-                margin-bottom: -1.5rem!important
-            }
-            .ml-md-n4,
-            .mx-md-n4 {
-                margin-left: -1.5rem!important
-            }
-            .m-md-n5 {
-                margin: -3rem!important
-            }
-            .mt-md-n5,
-            .my-md-n5 {
-                margin-top: -3rem!important
-            }
-            .mr-md-n5,
-            .mx-md-n5 {
-                margin-right: -3rem!important
-            }
-            .mb-md-n5,
-            .my-md-n5 {
-                margin-bottom: -3rem!important
-            }
-            .ml-md-n5,
-            .mx-md-n5 {
-                margin-left: -3rem!important
-            }
-            .m-md-auto {
-                margin: auto!important
-            }
-            .mt-md-auto,
-            .my-md-auto {
-                margin-top: auto!important
-            }
-            .mr-md-auto,
-            .mx-md-auto {
-                margin-right: auto!important
-            }
-            .mb-md-auto,
-            .my-md-auto {
-                margin-bottom: auto!important
-            }
-            .ml-md-auto,
-            .mx-md-auto {
-                margin-left: auto!important
-            }
-        }
-
-        @media (min-width:992px) {
-            .m-lg-0 {
-                margin: 0!important
-            }
-            .mt-lg-0,
-            .my-lg-0 {
-                margin-top: 0!important
-            }
-            .mr-lg-0,
-            .mx-lg-0 {
-                margin-right: 0!important
-            }
-            .mb-lg-0,
-            .my-lg-0 {
-                margin-bottom: 0!important
-            }
-            .ml-lg-0,
-            .mx-lg-0 {
-                margin-left: 0!important
-            }
-            .m-lg-1 {
-                margin: .25rem!important
-            }
-            .mt-lg-1,
-            .my-lg-1 {
-                margin-top: .25rem!important
-            }
-            .mr-lg-1,
-            .mx-lg-1 {
-                margin-right: .25rem!important
-            }
-            .mb-lg-1,
-            .my-lg-1 {
-                margin-bottom: .25rem!important
-            }
-            .ml-lg-1,
-            .mx-lg-1 {
-                margin-left: .25rem!important
-            }
-            .m-lg-2 {
-                margin: .5rem!important
-            }
-            .mt-lg-2,
-            .my-lg-2 {
-                margin-top: .5rem!important
-            }
-            .mr-lg-2,
-            .mx-lg-2 {
-                margin-right: .5rem!important
-            }
-            .mb-lg-2,
-            .my-lg-2 {
-                margin-bottom: .5rem!important
-            }
-            .ml-lg-2,
-            .mx-lg-2 {
-                margin-left: .5rem!important
-            }
-            .m-lg-3 {
-                margin: 1rem!important
-            }
-            .mt-lg-3,
-            .my-lg-3 {
-                margin-top: 1rem!important
-            }
-            .mr-lg-3,
-            .mx-lg-3 {
-                margin-right: 1rem!important
-            }
-            .mb-lg-3,
-            .my-lg-3 {
-                margin-bottom: 1rem!important
-            }
-            .ml-lg-3,
-            .mx-lg-3 {
-                margin-left: 1rem!important
-            }
-            .m-lg-4 {
-                margin: 1.5rem!important
-            }
-            .mt-lg-4,
-            .my-lg-4 {
-                margin-top: 1.5rem!important
-            }
-            .mr-lg-4,
-            .mx-lg-4 {
-                margin-right: 1.5rem!important
-            }
-            .mb-lg-4,
-            .my-lg-4 {
-                margin-bottom: 1.5rem!important
-            }
-            .ml-lg-4,
-            .mx-lg-4 {
-                margin-left: 1.5rem!important
-            }
-            .m-lg-5 {
-                margin: 3rem!important
-            }
-            .mt-lg-5,
-            .my-lg-5 {
-                margin-top: 3rem!important
-            }
-            .mr-lg-5,
-            .mx-lg-5 {
-                margin-right: 3rem!important
-            }
-            .mb-lg-5,
-            .my-lg-5 {
-                margin-bottom: 3rem!important
-            }
-            .ml-lg-5,
-            .mx-lg-5 {
-                margin-left: 3rem!important
-            }
-            .p-lg-0 {
-                padding: 0!important
-            }
-            .pt-lg-0,
-            .py-lg-0 {
-                padding-top: 0!important
-            }
-            .pr-lg-0,
-            .px-lg-0 {
-                padding-right: 0!important
-            }
-            .pb-lg-0,
-            .py-lg-0 {
-                padding-bottom: 0!important
-            }
-            .pl-lg-0,
-            .px-lg-0 {
-                padding-left: 0!important
-            }
-            .p-lg-1 {
-                padding: .25rem!important
-            }
-            .pt-lg-1,
-            .py-lg-1 {
-                padding-top: .25rem!important
-            }
-            .pr-lg-1,
-            .px-lg-1 {
-                padding-right: .25rem!important
-            }
-            .pb-lg-1,
-            .py-lg-1 {
-                padding-bottom: .25rem!important
-            }
-            .pl-lg-1,
-            .px-lg-1 {
-                padding-left: .25rem!important
-            }
-            .p-lg-2 {
-                padding: .5rem!important
-            }
-            .pt-lg-2,
-            .py-lg-2 {
-                padding-top: .5rem!important
-            }
-            .pr-lg-2,
-            .px-lg-2 {
-                padding-right: .5rem!important
-            }
-            .pb-lg-2,
-            .py-lg-2 {
-                padding-bottom: .5rem!important
-            }
-            .pl-lg-2,
-            .px-lg-2 {
-                padding-left: .5rem!important
-            }
-            .p-lg-3 {
-                padding: 1rem!important
-            }
-            .pt-lg-3,
-            .py-lg-3 {
-                padding-top: 1rem!important
-            }
-            .pr-lg-3,
-            .px-lg-3 {
-                padding-right: 1rem!important
-            }
-            .pb-lg-3,
-            .py-lg-3 {
-                padding-bottom: 1rem!important
-            }
-            .pl-lg-3,
-            .px-lg-3 {
-                padding-left: 1rem!important
-            }
-            .p-lg-4 {
-                padding: 1.5rem!important
-            }
-            .pt-lg-4,
-            .py-lg-4 {
-                padding-top: 1.5rem!important
-            }
-            .pr-lg-4,
-            .px-lg-4 {
-                padding-right: 1.5rem!important
-            }
-            .pb-lg-4,
-            .py-lg-4 {
-                padding-bottom: 1.5rem!important
-            }
-            .pl-lg-4,
-            .px-lg-4 {
-                padding-left: 1.5rem!important
-            }
-            .p-lg-5 {
-                padding: 3rem!important
-            }
-            .pt-lg-5,
-            .py-lg-5 {
-                padding-top: 3rem!important
-            }
-            .pr-lg-5,
-            .px-lg-5 {
-                padding-right: 3rem!important
-            }
-            .pb-lg-5,
-            .py-lg-5 {
-                padding-bottom: 3rem!important
-            }
-            .pl-lg-5,
-            .px-lg-5 {
-                padding-left: 3rem!important
-            }
-            .m-lg-n1 {
-                margin: -.25rem!important
-            }
-            .mt-lg-n1,
-            .my-lg-n1 {
-                margin-top: -.25rem!important
-            }
-            .mr-lg-n1,
-            .mx-lg-n1 {
-                margin-right: -.25rem!important
-            }
-            .mb-lg-n1,
-            .my-lg-n1 {
-                margin-bottom: -.25rem!important
-            }
-            .ml-lg-n1,
-            .mx-lg-n1 {
-                margin-left: -.25rem!important
-            }
-            .m-lg-n2 {
-                margin: -.5rem!important
-            }
-            .mt-lg-n2,
-            .my-lg-n2 {
-                margin-top: -.5rem!important
-            }
-            .mr-lg-n2,
-            .mx-lg-n2 {
-                margin-right: -.5rem!important
-            }
-            .mb-lg-n2,
-            .my-lg-n2 {
-                margin-bottom: -.5rem!important
-            }
-            .ml-lg-n2,
-            .mx-lg-n2 {
-                margin-left: -.5rem!important
-            }
-            .m-lg-n3 {
-                margin: -1rem!important
-            }
-            .mt-lg-n3,
-            .my-lg-n3 {
-                margin-top: -1rem!important
-            }
-            .mr-lg-n3,
-            .mx-lg-n3 {
-                margin-right: -1rem!important
-            }
-            .mb-lg-n3,
-            .my-lg-n3 {
-                margin-bottom: -1rem!important
-            }
-            .ml-lg-n3,
-            .mx-lg-n3 {
-                margin-left: -1rem!important
-            }
-            .m-lg-n4 {
-                margin: -1.5rem!important
-            }
-            .mt-lg-n4,
-            .my-lg-n4 {
-                margin-top: -1.5rem!important
-            }
-            .mr-lg-n4,
-            .mx-lg-n4 {
-                margin-right: -1.5rem!important
-            }
-            .mb-lg-n4,
-            .my-lg-n4 {
-                margin-bottom: -1.5rem!important
-            }
-            .ml-lg-n4,
-            .mx-lg-n4 {
-                margin-left: -1.5rem!important
-            }
-            .m-lg-n5 {
-                margin: -3rem!important
-            }
-            .mt-lg-n5,
-            .my-lg-n5 {
-                margin-top: -3rem!important
-            }
-            .mr-lg-n5,
-            .mx-lg-n5 {
-                margin-right: -3rem!important
-            }
-            .mb-lg-n5,
-            .my-lg-n5 {
-                margin-bottom: -3rem!important
-            }
-            .ml-lg-n5,
-            .mx-lg-n5 {
-                margin-left: -3rem!important
-            }
-            .m-lg-auto {
-                margin: auto!important
-            }
-            .mt-lg-auto,
-            .my-lg-auto {
-                margin-top: auto!important
-            }
-            .mr-lg-auto,
-            .mx-lg-auto {
-                margin-right: auto!important
-            }
-            .mb-lg-auto,
-            .my-lg-auto {
-                margin-bottom: auto!important
-            }
-            .ml-lg-auto,
-            .mx-lg-auto {
-                margin-left: auto!important
-            }
-        }
-
-        @media (min-width:1200px) {
-            .m-xl-0 {
-                margin: 0!important
-            }
-            .mt-xl-0,
-            .my-xl-0 {
-                margin-top: 0!important
-            }
-            .mr-xl-0,
-            .mx-xl-0 {
-                margin-right: 0!important
-            }
-            .mb-xl-0,
-            .my-xl-0 {
-                margin-bottom: 0!important
-            }
-            .ml-xl-0,
-            .mx-xl-0 {
-                margin-left: 0!important
-            }
-            .m-xl-1 {
-                margin: .25rem!important
-            }
-            .mt-xl-1,
-            .my-xl-1 {
-                margin-top: .25rem!important
-            }
-            .mr-xl-1,
-            .mx-xl-1 {
-                margin-right: .25rem!important
-            }
-            .mb-xl-1,
-            .my-xl-1 {
-                margin-bottom: .25rem!important
-            }
-            .ml-xl-1,
-            .mx-xl-1 {
-                margin-left: .25rem!important
-            }
-            .m-xl-2 {
-                margin: .5rem!important
-            }
-            .mt-xl-2,
-            .my-xl-2 {
-                margin-top: .5rem!important
-            }
-            .mr-xl-2,
-            .mx-xl-2 {
-                margin-right: .5rem!important
-            }
-            .mb-xl-2,
-            .my-xl-2 {
-                margin-bottom: .5rem!important
-            }
-            .ml-xl-2,
-            .mx-xl-2 {
-                margin-left: .5rem!important
-            }
-            .m-xl-3 {
-                margin: 1rem!important
-            }
-            .mt-xl-3,
-            .my-xl-3 {
-                margin-top: 1rem!important
-            }
-            .mr-xl-3,
-            .mx-xl-3 {
-                margin-right: 1rem!important
-            }
-            .mb-xl-3,
-            .my-xl-3 {
-                margin-bottom: 1rem!important
-            }
-            .ml-xl-3,
-            .mx-xl-3 {
-                margin-left: 1rem!important
-            }
-            .m-xl-4 {
-                margin: 1.5rem!important
-            }
-            .mt-xl-4,
-            .my-xl-4 {
-                margin-top: 1.5rem!important
-            }
-            .mr-xl-4,
-            .mx-xl-4 {
-                margin-right: 1.5rem!important
-            }
-            .mb-xl-4,
-            .my-xl-4 {
-                margin-bottom: 1.5rem!important
-            }
-            .ml-xl-4,
-            .mx-xl-4 {
-                margin-left: 1.5rem!important
-            }
-            .m-xl-5 {
-                margin: 3rem!important
-            }
-            .mt-xl-5,
-            .my-xl-5 {
-                margin-top: 3rem!important
-            }
-            .mr-xl-5,
-            .mx-xl-5 {
-                margin-right: 3rem!important
-            }
-            .mb-xl-5,
-            .my-xl-5 {
-                margin-bottom: 3rem!important
-            }
-            .ml-xl-5,
-            .mx-xl-5 {
-                margin-left: 3rem!important
-            }
-            .p-xl-0 {
-                padding: 0!important
-            }
-            .pt-xl-0,
-            .py-xl-0 {
-                padding-top: 0!important
-            }
-            .pr-xl-0,
-            .px-xl-0 {
-                padding-right: 0!important
-            }
-            .pb-xl-0,
-            .py-xl-0 {
-                padding-bottom: 0!important
-            }
-            .pl-xl-0,
-            .px-xl-0 {
-                padding-left: 0!important
-            }
-            .p-xl-1 {
-                padding: .25rem!important
-            }
-            .pt-xl-1,
-            .py-xl-1 {
-                padding-top: .25rem!important
-            }
-            .pr-xl-1,
-            .px-xl-1 {
-                padding-right: .25rem!important
-            }
-            .pb-xl-1,
-            .py-xl-1 {
-                padding-bottom: .25rem!important
-            }
-            .pl-xl-1,
-            .px-xl-1 {
-                padding-left: .25rem!important
-            }
-            .p-xl-2 {
-                padding: .5rem!important
-            }
-            .pt-xl-2,
-            .py-xl-2 {
-                padding-top: .5rem!important
-            }
-            .pr-xl-2,
-            .px-xl-2 {
-                padding-right: .5rem!important
-            }
-            .pb-xl-2,
-            .py-xl-2 {
-                padding-bottom: .5rem!important
-            }
-            .pl-xl-2,
-            .px-xl-2 {
-                padding-left: .5rem!important
-            }
-            .p-xl-3 {
-                padding: 1rem!important
-            }
-            .pt-xl-3,
-            .py-xl-3 {
-                padding-top: 1rem!important
-            }
-            .pr-xl-3,
-            .px-xl-3 {
-                padding-right: 1rem!important
-            }
-            .pb-xl-3,
-            .py-xl-3 {
-                padding-bottom: 1rem!important
-            }
-            .pl-xl-3,
-            .px-xl-3 {
-                padding-left: 1rem!important
-            }
-            .p-xl-4 {
-                padding: 1.5rem!important
-            }
-            .pt-xl-4,
-            .py-xl-4 {
-                padding-top: 1.5rem!important
-            }
-            .pr-xl-4,
-            .px-xl-4 {
-                padding-right: 1.5rem!important
-            }
-            .pb-xl-4,
-            .py-xl-4 {
-                padding-bottom: 1.5rem!important
-            }
-            .pl-xl-4,
-            .px-xl-4 {
-                padding-left: 1.5rem!important
-            }
-            .p-xl-5 {
-                padding: 3rem!important
-            }
-            .pt-xl-5,
-            .py-xl-5 {
-                padding-top: 3rem!important
-            }
-            .pr-xl-5,
-            .px-xl-5 {
-                padding-right: 3rem!important
-            }
-            .pb-xl-5,
-            .py-xl-5 {
-                padding-bottom: 3rem!important
-            }
-            .pl-xl-5,
-            .px-xl-5 {
-                padding-left: 3rem!important
-            }
-            .m-xl-n1 {
-                margin: -.25rem!important
-            }
-            .mt-xl-n1,
-            .my-xl-n1 {
-                margin-top: -.25rem!important
-            }
-            .mr-xl-n1,
-            .mx-xl-n1 {
-                margin-right: -.25rem!important
-            }
-            .mb-xl-n1,
-            .my-xl-n1 {
-                margin-bottom: -.25rem!important
-            }
-            .ml-xl-n1,
-            .mx-xl-n1 {
-                margin-left: -.25rem!important
-            }
-            .m-xl-n2 {
-                margin: -.5rem!important
-            }
-            .mt-xl-n2,
-            .my-xl-n2 {
-                margin-top: -.5rem!important
-            }
-            .mr-xl-n2,
-            .mx-xl-n2 {
-                margin-right: -.5rem!important
-            }
-            .mb-xl-n2,
-            .my-xl-n2 {
-                margin-bottom: -.5rem!important
-            }
-            .ml-xl-n2,
-            .mx-xl-n2 {
-                margin-left: -.5rem!important
-            }
-            .m-xl-n3 {
-                margin: -1rem!important
-            }
-            .mt-xl-n3,
-            .my-xl-n3 {
-                margin-top: -1rem!important
-            }
-            .mr-xl-n3,
-            .mx-xl-n3 {
-                margin-right: -1rem!important
-            }
-            .mb-xl-n3,
-            .my-xl-n3 {
-                margin-bottom: -1rem!important
-            }
-            .ml-xl-n3,
-            .mx-xl-n3 {
-                margin-left: -1rem!important
-            }
-            .m-xl-n4 {
-                margin: -1.5rem!important
-            }
-            .mt-xl-n4,
-            .my-xl-n4 {
-                margin-top: -1.5rem!important
-            }
-            .mr-xl-n4,
-            .mx-xl-n4 {
-                margin-right: -1.5rem!important
-            }
-            .mb-xl-n4,
-            .my-xl-n4 {
-                margin-bottom: -1.5rem!important
-            }
-            .ml-xl-n4,
-            .mx-xl-n4 {
-                margin-left: -1.5rem!important
-            }
-            .m-xl-n5 {
-                margin: -3rem!important
-            }
-            .mt-xl-n5,
-            .my-xl-n5 {
-                margin-top: -3rem!important
-            }
-            .mr-xl-n5,
-            .mx-xl-n5 {
-                margin-right: -3rem!important
-            }
-            .mb-xl-n5,
-            .my-xl-n5 {
-                margin-bottom: -3rem!important
-            }
-            .ml-xl-n5,
-            .mx-xl-n5 {
-                margin-left: -3rem!important
-            }
-            .m-xl-auto {
-                margin: auto!important
-            }
-            .mt-xl-auto,
-            .my-xl-auto {
-                margin-top: auto!important
-            }
-            .mr-xl-auto,
-            .mx-xl-auto {
-                margin-right: auto!important
-            }
-            .mb-xl-auto,
-            .my-xl-auto {
-                margin-bottom: auto!important
-            }
-            .ml-xl-auto,
-            .mx-xl-auto {
-                margin-left: auto!important
-            }
-        }
-
-        @font-face {
-            font-family: Raleway;
-            font-style: normal;
-            src: url(/static/raleway-regular-webfont-48f849d8a6422cc26149453b1ff228fb.woff2) format("woff2"), url(/static/raleway-regular-webfont-72db0a71dd0781f452962a0ed0ee76d4.woff) format("woff"), url(/static/raleway-regular-9942588a6c84f959132556d99e83ded6.ttf) format("truetype");
-            font-display: fallback;
-            font-weight: 400
-        }
-
-        @font-face {
-            font-family: Raleway;
-            src: url(/static/raleway-bold-webfont-6ea4c320a3223ada0605b57cd4754d2c.woff2) format("woff2"), url(/static/raleway-bold-webfont-af55290df7c2a5a02518c1324a538437.woff) format("woff"), url(/static/raleway-bold-f49f3d2d9df5013c9bfaab7e3d39ee57.ttf) format("truetype");
-            font-display: fallback;
-            font-weight: 700
-        }
-
-        @font-face {
-            font-family: Raleway;
-            src: url(/static/raleway-extrabold-webfont-5f614adcc104dfe8431a708ee27e9563.woff2) format("woff2"), url(/static/raleway-extrabold-webfont-259faedc5e2b875b82367d63fff8943d.woff) format("woff"), url(/static/raleway-extrabold-be3bf63a30b4523ae221bd4358b13e8f.ttf) format("truetype");
-            font-display: fallback;
-            font-weight: 800
-        }
-
-        body,
-        html {
-            margin: 0;
-            font-size: 12px
-        }
-
-        @media (max-width:1919px) {
-            body,
-            html {
-                font-size: 10px
-            }
-        }
-
-        @media (max-width:1280px) {
-            body,
-            html {
-                font-size: 9px
-            }
-        }
-
-        @media (max-width:992px) {
-            body,
-            html {
-                font-size: 8px
-            }
-        }
-
-        @media (max-width:767px) {
-            body,
-            html {
-                font-size: 7px
-            }
-        }
-
-        .container-990 {
-            width: 100%;
-            padding-right: 15px;
-            padding-left: 15px;
-            margin-right: auto;
-            margin-left: auto
-        }
-
-        @media (min-width:576px) {
-            .container-990 {
-                max-width: 540px
-            }
-        }
-
-        @media (min-width:768px) {
-            .container-990 {
-                max-width: 720px
-            }
-        }
-
-        @media (min-width:992px) {
-            .container-990 {
-                max-width: 990px
-            }
-        }
-
-        .container-1100 {
-            width: 100%;
-            padding-right: 15px;
-            padding-left: 15px;
-            margin-right: auto;
-            margin-left: auto
-        }
-
-        @media (min-width:576px) {
-            .container-1100 {
-                max-width: 540px
-            }
-        }
-
-        @media (min-width:768px) {
-            .container-1100 {
-                max-width: 720px
-            }
-        }
-
-        @media (min-width:992px) {
-            .container-1100 {
-                max-width: 1100px
-            }
-        }
-
-        .container-img {
-            width: 100%;
-            margin-right: auto;
-            margin-left: auto
-        }
-
-        @media (min-width:576px) {
-            .container-img {
-                max-width: 540px
-            }
-        }
-
-        @media (min-width:768px) {
-            .container-img {
-                max-width: 720px
-            }
-        }
-
-        @media (min-width:992px) {
-            .container-img {
-                max-width: 1100px
-            }
-        }
-
-        @media (min-width:992px) {
-            .container {
-                max-width: 990px
-            }
-        }
-
-        @media (min-width:1200px) {
-            .container {
-                max-width: 1250px
-            }
-        }
-
-        * {
-            box-sizing: border-box;
-            font-family: Raleway, sans-serif
-        }
-
-        ul {
-            list-style: none;
-            padding: 0
-        }
-
-        strong {
-            font-weight: 700!important
-        }
-
-        img {
-            max-width: 100%;
-            height: auto
-        }
-
-        a {
-            text-decoration: none
-        }
-
-        a,
-        button {
-            color: inherit
-        }
-
-        button {
-            background-color: transparent;
-            outline: none;
-            border: none;
-            font-size: inherit;
-            cursor: pointer
-        }
-
-        .text-align-center {
-            text-align: center!important
-        }
-
-        .text-align-right {
-            text-align: right!important
-        }
-
-        .margin-top-1rem {
-            margin-top: 1rem!important
-        }
-
-        .margin-top-2rem {
-            margin-top: 2rem!important
-        }
-
-        .margin-top-3rem {
-            margin-top: 3rem!important
-        }
-
-        .margin-top-5rem {
-            margin-top: 5rem!important
-        }
-
-        .margin-top-7rem {
-            margin-top: 7rem!important
-        }
-
-        .margin-top-10rem {
-            margin-top: 10rem!important
-        }
-
-        .margin-bottom-2rem {
-            margin-bottom: 2rem!important
-        }
-
-        .margin-bottom-3rem {
-            margin-bottom: 3rem!important
-        }
-
-        .margin-bottom-4rem {
-            margin-bottom: 4rem!important
-        }
-
-        .margin-bottom-5rem {
-            margin-bottom: 5rem!important
-        }
-
-        .margin-bottom-7rem {
-            margin-bottom: 7rem!important
-        }
-
-        .margin-bottom-8rem {
-            margin-bottom: 8rem!important
-        }
-
-        .margin-bottom-10rem {
-            margin-bottom: 10rem!important
-        }
-
-        .margin-left-3rem {
-            margin-left: 3rem!important
-        }
-
-        .margin-negative-3rem {
-            margin-top: -3rem!important
-        }
-
-        .margin-negative-5rem {
-            margin-top: -5rem!important
-        }
-
-        .margin-negative-8rem {
-            margin-top: -8rem!important
-        }
-
-        .padding-0 {
-            padding: 0!important
-        }
-
-        .section-title {
-            margin-top: 0;
-            margin-bottom: 0;
-            font-weight: 300;
-            letter-spacing: 0
-        }
-
-        .section-title.red {
-            color: #a12626
-        }
-
-        .section-title.gray {
-            color: #3a3a3a
-        }
-
-        .section-title.lightgray {
-            color: #7e7c7c
-        }
-
-        .section-title.dark {
-            color: #232323
-        }
-
-        .section-title.white {
-            color: #f1f1f1
-        }
-
-        .section-title.large {
-            font-size: 3rem;
-            line-height: 5rem
-        }
-
-        .section-title.medium {
-            font-size: 2.5rem;
-            line-height: 4rem
-        }
-
-        .section-title.small {
-            font-size: 3rem;
-            line-height: 4.5rem
-        }
-
-        .section-title.regular {
-            font-weight: 400
-        }
-
-        .section-title.bold {
-            font-weight: 700
-        }
-
-        .section-title.extrabold {
-            font-weight: 800
-        }
-
-        .section-title.uppercase {
-            text-transform: uppercase
-        }
-
-        @media (max-width:1280px) {
-            .section-title.large {
-                font-size: 4.5rem;
-                line-height: 6rem
-            }
-        }
-
-        @media (max-width:992px) {
-            .section-title.large {
-                font-size: 5.5rem;
-                line-height: 6rem
-            }
-        }
-
-        @media (max-width:767px) {
-            .section-title.large {
-                font-size: 4.4rem;
-                line-height: 3rem
-            }
-            .section-title.medium {
-                font-size: 3.5rem;
-                line-height: 4.5rem
-            }
-            .section-title.small {
-                font-size: 2.5rem;
-                line-height: 4rem
-            }
-        }
-
-        .simple-text {
-            margin: 0;
-            font-weight: 300
-        }
-
-        .simple-text.red {
-            color: #a12626
-        }
-
-        .simple-text.gray {
-            color: #3a3a3a
-        }
-
-        .simple-text.lightgray {
-            color: #7e7c7c
-        }
-
-        .simple-text.dark {
-            color: #232323
-        }
-
-        .simple-text.white {
-            color: #f1f1f1
-        }
-
-        .simple-text.regular {
-            font-weight: 400
-        }
-
-        .simple-text.extrabold {
-            font-weight: 800
-        }
-
-        .simple-text.plus {
-            font-size: 4rem;
-            line-height: 5rem
-        }
-
-        .simple-text.large {
-            font-size: 3rem;
-            line-height: 4.6rem
-        }
-
-        .simple-text.medium {
-            font-size: 2.4rem;
-            line-height: 3.8rem
-        }
-
-        .simple-text.small {
-            font-size: 1.8rem;
-            line-height: 2.5rem
-        }
-
-        .simple-text.bold {
-            font-weight: 700
-        }
-
-        .simple-text.uppercase {
-            text-transform: uppercase
-        }
-
-        .simple-text.weight-medium {
-            font-weight: 500
-        }
-
-        .simple-text.weight-semibold {
-            font-weight: 600
-        }
-
-        @media (max-width:1280px) {
-            .simple-text.medium {
-                font-size: 2rem;
-                line-height: 3.4rem
-            }
-        }
-
-        @media (max-width:992px) {
-            .simple-text.plus {
-                font-size: 3.5rem;
-                line-height: 4.5rem
-            }
-            .simple-text.large {
-                font-size: 2.5rem;
-                line-height: 3.8rem
-            }
-            .simple-text.medium {
-                font-size: 2.2rem;
-                line-height: 3.4rem
-            }
-            .simple-text.small {
-                font-size: 1.8rem;
-                line-height: 2.5rem
-            }
-        }
-
-        .button-primary {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 15px 20px;
-            border-radius: 5px;
-            box-shadow: none;
-            background-color: #a12626;
-            font-weight: 700;
-            font-size: 1.8rem;
-            color: #fff;
-            line-height: 1.8rem;
-            letter-spacing: 1px;
-            text-decoration: none;
-            text-align: center;
-            -webkit-transition: all .3s ease;
-            transition: all .3s ease;
-            cursor: pointer;
-            outline: none
-        }
-
-        .button-primary.extra-bold {
-            font-weight: 800
-        }
-
-        .button-primary.dark {
-            background-color: #404040
-        }
-
-        .button-primary.dark:hover {
-            background-color: #535353
-        }
-
-        .button-primary.dark:active {
-            background-color: #1e1e1e
-        }
-
-        .button-primary.white {
-            color: #a12626;
-            background-color: #d3d3d3
-        }
-
-        .button-primary.white:hover {
-            background-color: #f1f1f1
-        }
-
-        .button-primary.white:active {
-            background-color: #bfbfbf
-        }
-
-        .button-primary:hover {
-            background-color: #b83333
-        }
-
-        .button-primary:active {
-            background-color: #750d0d
-        }
-
-        @media (min-width:992px) {
-            .button-primary {
-                padding: 15px 30px
-            }
-        }
-
-        nav.navbar {
-            display: flex;
-            position: -webkit-sticky;
-            position: sticky;
-            top: 0;
-            height: 9rem;
-            padding: 0;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #3a3a3a;
-            box-shadow: 0 5px 19px rgba(0, 0, 0, .15);
-            z-index: 9999
-        }
-
-        nav.navbar .icon {
-            fill: #fff;
-            width: 20px;
-            height: 20px;
-            color: #fff
-        }
-
-        nav.navbar .icon.icon-menu {
-            height: 27px;
-            width: 27px;
-            fill: none;
-            stroke: #fff;
-            stroke-width: 4px
-        }
-
-        nav.navbar .icon.icon-search-mobile {
-            margin-right: 5px
-        }
-
-        nav.navbar .mobile-menu {
-            position: absolute;
-            display: none;
-            flex-flow: column;
-            justify-content: space-between;
-            top: 100%;
-            background-color: #232323;
-            padding: 1rem;
-            text-align: center;
-            border-top: 1px solid hsla(0, 0%, 100%, .2)
-        }
-
-        nav.navbar .mobile-menu .mobile-menu-links {
-            color: #fff;
-            font-size: 2.9rem;
-            max-width: 425px;
-            margin: 1rem auto
-        }
-
-        nav.navbar .mobile-menu .mobile-menu-links li {
-            padding: 1.5rem
-        }
-
-        nav.navbar .nav-items-div {
-            display: none
-        }
-
-        nav.navbar .mobile-menu-button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer
-        }
-
-        nav.navbar .mobile-nav {
-            justify-content: space-between;
-            flex-flow: row-reverse
-        }
-
-        nav.navbar .nav-items {
-            margin-bottom: 0;
-            display: flex;
-            flex-flow: row;
-            justify-content: space-around;
-            color: #fff;
-            font-size: 1.9rem
-        }
-
-        nav.navbar .nav-items li {
-            text-transform: uppercase
-        }
-
-        nav.navbar .nav-items li a:hover {
-            border-bottom: 5px solid #a12626
-        }
-
-        nav.navbar .nav-items li i {
-            font-family: Font Awesome\ 5 Pro!important
-        }
-
-        nav.navbar .nav-items .search-close-btn {
-            z-index: 99
-        }
-
-        nav.navbar .active {
-            font-weight: 700;
-            text-decoration: underline
-        }
-
-        nav.navbar .search-bar {
-            z-index: 9;
-            color: #fff;
-            position: absolute;
-            top: 50%;
-            right: 0;
-            -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-            width: 100%;
-            height: auto;
-            display: none;
-            -webkit-transition: all .5s ease-in-out;
-            transition: all .5s ease-in-out;
-            padding: 1rem 3rem;
-            background-color: #232323;
-            border-radius: 5px
-        }
-
-        nav.navbar .search-bar .custom-select {
-            font-size: 1.6rem;
-            background-color: transparent;
-            border: 1px solid #fff;
-            border-radius: 5px;
-            color: #fff;
-            padding: 1rem;
-            margin-right: 3rem
-        }
-
-        nav.navbar .search-bar .custom-select option {
-            background-color: #232323
-        }
-
-        nav.navbar .search-bar .search-input {
-            font-size: 1.6rem;
-            background-color: transparent;
-            border: none;
-            border-bottom: 1px solid #fff;
-            padding: 1rem;
-            color: #fff;
-            outline: none
-        }
-
-        @media (min-width:992px) {
-            nav.navbar .mobile-menu-button {
-                display: none
-            }
-            nav.navbar .mobile-menu {
-                display: none!important
-            }
-            nav.navbar .nav-items-div {
-                display: block
-            }
-            nav.navbar .mobile-nav {
-                justify-content: space-between;
-                flex-flow: row
-            }
-            nav.navbar .mobile-links {
-                display: none
-            }
-            nav.navbar .active {
-                text-decoration: none;
-                border-bottom: 5px solid #a12626
-            }
-        }
-
-        section.newsletter {
-            background-color: #a12626;
-            text-align: center;
-            position: relative;
-            padding-top: 15rem;
-            padding-bottom: 4rem;
-            margin-top: 15rem
-        }
-
-        section.newsletter h2.section-title.small.white {
-            margin-bottom: 2rem
-        }
-
-        section.newsletter button {
-            text-transform: uppercase
-        }
-
-        section.newsletter form {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap
-        }
-
-        section.newsletter form input[type=text] {
-            padding: 15px 20px;
-            border-radius: 5px;
-            outline: none;
-            border: none;
-            background-color: #ececec;
-            margin: 2rem 0
-        }
-
-        section.newsletter form input[type=text]:focus {
-            outline: none
-        }
-
-        section.newsletter form input[type=text]::-webkit-input-placeholder {
-            text-align: center;
-            color: #232323;
-            opacity: 1
-        }
-
-        section.newsletter form input[type=text]:-ms-input-placeholder {
-            text-align: center;
-            color: #232323;
-            opacity: 1
-        }
-
-        section.newsletter form input[type=text]::-ms-input-placeholder {
-            text-align: center;
-            color: #232323;
-            opacity: 1
-        }
-
-        section.newsletter form input[type=text]::placeholder {
-            text-align: center;
-            color: #232323;
-            opacity: 1
-        }
-
-        section.newsletter .bags-mobile {
-            width: 163px;
-            height: 200px;
-            widows: auto;
-            position: absolute;
-            top: 0;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            z-index: 99
-        }
-
-        section.newsletter .campo-required {
-            margin-top: 20px;
-            color: #fff;
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 10px
-        }
-
-        @media (min-width:992px) {
-            section.newsletter {
-                padding-top: 5rem;
-                margin-top: 5rem
-            }
-            section.newsletter .bags-mobile {
-                width: 224px;
-                height: 270px;
-                top: 15%;
-                left: 88%
-            }
-            section.newsletter h2.section-title.small.white {
-                font-size: 2.5rem;
-                margin-bottom: 0
-            }
-            section.newsletter .form-email {
-                justify-content: center
-            }
-            section.newsletter form {
-                align-items: center;
-                justify-content: space-around
-            }
-            section.newsletter form input[type=text] {
-                padding-left: 15px
-            }
-            section.newsletter form input[type=text]::-webkit-input-placeholder {
-                text-align: left;
-                color: #000;
-                opacity: 1
-            }
-            section.newsletter form input[type=text]:-ms-input-placeholder {
-                text-align: left;
-                color: #000;
-                opacity: 1
-            }
-            section.newsletter form input[type=text]::-ms-input-placeholder {
-                text-align: left;
-                color: #000;
-                opacity: 1
-            }
-            section.newsletter form input[type=text]::placeholder {
-                text-align: left;
-                color: #000;
-                opacity: 1
-            }
-            section.newsletter .campo-required {
-                margin-top: 0;
-                color: #fff;
-                font-size: 1.8rem;
-                font-weight: 700;
-                margin-bottom: 10px
-            }
-        }
-
-        @media (min-width:1200px) {
-            section.newsletter {
-                padding-top: 3rem;
-                padding-bottom: 1rem;
-                margin-top: 10rem
-            }
-            section.newsletter .bags-mobile {
-                height: 343px;
-                width: 280px;
-                top: 20%;
-                left: 88%
-            }
-            section.newsletter .section-title.small {
-                font-size: 3rem;
-                margin-bottom: 2rem
-            }
-            section.newsletter .form-email {
-                justify-content: center
-            }
-            section.newsletter form {
-                align-items: center;
-                justify-content: space-around
-            }
-            section.newsletter form input[type=text] {
-                padding-left: 15px
-            }
-            section.newsletter form input[type=text]::-webkit-input-placeholder {
-                text-align: left;
-                color: #000;
-                opacity: 1
-            }
-            section.newsletter form input[type=text]:-ms-input-placeholder {
-                text-align: left;
-                color: #000;
-                opacity: 1
-            }
-            section.newsletter form input[type=text]::-ms-input-placeholder {
-                text-align: left;
-                color: #000;
-                opacity: 1
-            }
-            section.newsletter form input[type=text]::placeholder {
-                text-align: left;
-                color: #000;
-                opacity: 1
-            }
-        }
-
-        footer.footer {
-            text-align: center;
-            background-color: #f1f1f1;
-            padding-top: 4rem
-        }
-
-        footer.footer .icon {
-            fill: #000;
-            height: 16px;
-            width: 16px;
-            color: #000
-        }
-
-        footer.footer .top-node {
-            margin-top: 5rem;
-            padding: .5rem 0;
-            background-color: #3a3a3a;
-            color: #dbdbdb;
-            display: flex;
-            justify-content: center
-        }
-
-        footer.footer .footer-info h4 {
-            margin-bottom: 2rem
-        }
-
-        footer.footer .footer-info:not(:last-child) {
-            margin-bottom: 1.5rem;
-            padding-bottom: 3rem;
-            border-bottom: 1px solid #a12626
-        }
-
-        footer.footer .social-media {
-            display: flex;
-            justify-content: center;
-            padding-top: 5rem
-        }
-
-        footer.footer .social-media a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 1.7rem;
-            background-color: #a12626;
-            border-radius: 50%;
-            box-shadow: 0 5px 19px rgba(0, 0, 0, .16)
-        }
-
-        footer.footer .social-media a:active {
-            background-color: #b83333
-        }
-
-        footer.footer .social-media a svg {
-            fill: #fff;
-            height: 20px;
-            width: 20px
-        }
-
-        @media (min-width:992px) {
-            footer.footer {
-                padding-top: 3rem
-            }
-            footer.footer .social-media {
-                display: none
-            }
-            footer.footer .footer-info h4 {
-                margin-bottom: 1rem
-            }
-            footer.footer .footer-info:not(:last-child) {
-                margin-bottom: 0;
-                padding-bottom: 0;
-                border-bottom: none;
-                border-right: 1px solid #a12626
-            }
-            footer.footer .top-node {
-                margin-top: 3rem
-            }
-            footer.footer h4 {
-                margin-bottom: 1rem
-            }
-            footer.footer p.simple-text.small {
-                font-size: 16px
-            }
-        }
-
-        @media (min-width:1200px) {
-            footer.footer .top-node {
-                margin-top: 3rem;
-                padding: 0
-            }
-            footer.footer .top-node .simple-text.medium {
-                font-size: 16px
-            }
-        }
-
-        @-webkit-keyframes fadeIn {
-            0% {
-                opacity: 0
-            }
-            to {
-                opacity: 1
-            }
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0
-            }
-            to {
-                opacity: 1
-            }
-        }
-
-        section.social-media {
-            z-index: 999;
-            position: fixed;
-            bottom: 30px;
-            left: 30px;
-            display: flex;
-            flex-flow: column;
-            justify-content: center;
-            align-items: center;
-            display: none
-        }
-
-        section.social-media a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 1.2rem;
-            margin-bottom: 1rem;
-            background-color: #750d0d;
-            border-radius: 50%;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, .16)
-        }
-
-        section.social-media a:hover {
-            background-color: #b83333
-        }
-
-        section.social-media a:active {
-            background-color: #a12626
-        }
-
-        section.social-media .icon {
-            fill: #fff;
-            height: 20px;
-            color: #fff;
-            width: 20px;
-            fill-opacity: 1
-        }
-
-        @media (min-width:992px) {
-            section.social-media {
-                display: flex
-            }
-            section.social-media a {
-                position: relative
-            }
-            section.social-media a .description {
-                display: none;
-                align-items: center;
-                font-size: 14px;
-                width: auto;
-                white-space: nowrap;
-                height: 40px;
-                position: absolute;
-                box-shadow: 0 6px 15px rgba(0, 0, 0, .16);
-                background-color: #fff;
-                left: 30px;
-                z-index: -9;
-                border-radius: 5px;
-                padding: 5px 10px 5px 20px;
-                overflow: hidden;
-                -webkit-animation: fadeIn .3s ease;
-                animation: fadeIn .3s ease
-            }
-            section.social-media a:hover .description {
-                display: flex;
-                opacity: 1
-            }
-        }
-
-        section.pagination-wrapper {
-            display: flex;
-            justify-content: center;
-            max-width: 1000px;
-            margin-right: auto;
-            margin-left: auto
-        }
-
-        section.pagination-wrapper .pagination-link {
-            color: #750d0d;
-            border: 2px solid #750d0d;
-            border-radius: 5px;
-            padding: 7px 10px;
-            -webkit-transition: all .5 ease;
-            transition: all .5 ease
-        }
-
-        section.pagination-wrapper .pagination-link:hover {
-            background-color: #f1f1f1
-        }
-
-        div.back-button-top {
-            padding-bottom: 20px
-        }
-
-        div.back-button-top button {
-            padding: 5px 15px
-        }
-
-        div.back-button-top .icon.icon-pointer {
-            height: 10px;
-            width: 10px;
-            fill: none;
-            stroke: #707070;
-            stroke-width: 2px
-        }
-
-        @media (min-width:992px) {
-            div.back-button-top .icon.icon-pointer {
-                height: 12px;
-                width: 12px;
-                fill: none;
-                stroke: #707070;
-                stroke-width: 2px
-            }
-        }
-
-        section.vitrine {
-            padding-top: 20px;
-            padding-bottom: 2rem
-        }
-
-        section.vitrine .container-1100 {
-            max-width: 425px
-        }
-
-        section.vitrine header {
-            padding-bottom: 5rem
-        }
-
-        section.vitrine header .page-title {
-            justify-content: center;
-            margin-top: 5rem;
-            margin-bottom: 2rem
-        }
-
-        section.vitrine header .simple-text.medium {
-            font-size: 2.1rem
-        }
-
-        section.vitrine header div:last-child {
-            justify-content: center
-        }
-
-        section.vitrine .vitrine-item-wrapper {
-            display: flex;
-            flex-flow: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            min-height: 200px;
-            justify-content: flex-start;
-            padding-bottom: 4rem
-        }
-
-        section.vitrine .vitrine-item-wrapper img {
-            width: 90%;
-            height: auto;
-            margin-bottom: 10px
-        }
-
-        section.vitrine .vitrine-item-wrapper:hover h4 {
-            text-decoration: underline
-        }
-
-        @media (min-width:576px) {
-            section.vitrine .container-1100 {
-                max-width: 576px
-            }
-        }
-
-        @media (min-width:768px) {
-            section.vitrine .container-1100 {
-                max-width: 768px
-            }
-        }
-
-        @media (min-width:992px) {
-            section.vitrine {
-                padding-bottom: 6rem
-            }
-            section.vitrine header .page-title {
-                justify-content: left;
-                margin-top: 5rem;
-                margin-bottom: 0;
-                padding-left: 1.5rem
-            }
-            section.vitrine header .simple-text.medium {
-                font-size: 2.7rem;
-                color: #505050
-            }
-            section.vitrine header div:last-child {
-                display: none
-            }
-        }
-
-        @media (min-width:1200px) {
-            section.vitrine {
-                padding-bottom: 2rem
-            }
-            section.vitrine header .page-title h1 {
-                font-size: 3.2rem
-            }
-            section.vitrine header .simple-text.medium {
-                font-size: 2.5rem;
-                color: #505050
-            }
-            section.vitrine .container-1100 {
-                max-width: 1200px
-            }
-        }
-
-        section.loja-info {
-            margin-top: 20px;
-            padding-bottom: 10rem
-        }
-
-        section.loja-info .slider-content-loja {
-            height: auto;
-            width: 100%;
-            flex: 0 0 70%;
-            max-width: 70%
-        }
-
-        section.loja-info .slider-content-loja .slick-next:before,
-        section.loja-info .slider-content-loja .slick-prev:before {
-            color: #000
-        }
-
-        section.loja-info .tag {
-            border: 2px solid #a12626;
-            padding: 8px 12px;
-            border-radius: 5px;
-            font-size: 1.7rem;
-            background-color: transparent;
-            color: #a12626;
-            margin-right: 10px;
-            margin-bottom: 10px;
-            font-weight: 600
-        }
-
-        section.loja-info .col-5 {
-            padding-right: 0;
-            padding-left: 0
-        }
-
-        section.loja-info .icon {
-            height: 10px;
-            width: 10px
-        }
-
-        section.loja-info .loja-card-wrapper {
-            padding: 30px 0;
-            box-shadow: 0 5px 19px rgba(0, 0, 0, .16);
-            min-height: 300px
-        }
-
-        section.loja-info .simple-text.preco {
-            font-size: 1.9rem
-        }
-
-        section.loja-info .loja-redes-sociais .simple-text.small {
-            font-size: 1.8rem
-        }
-
-        section.loja-info .vitrine-card-wrapper {
-            text-align: center;
-            margin-top: 5rem
-        }
-
-        @media (min-width:992px) {
-            section.loja-info .tag {
-                padding: 10px 14px;
-                font-size: 1.6rem
-            }
-            section.loja-info .simple-text.preco {
-                font-size: 1.6rem
-            }
-            section.loja-info .loja-redes-sociais .simple-text.small {
-                font-size: 1.5rem
-            }
-            section.loja-info .icon {
-                height: 15px;
-                width: 15px
-            }
-            section.loja-info .vitrine-card-wrapper {
-                margin-left: 2rem;
-                text-align: left;
-                margin-top: 0
-            }
-        }
-
-        section.notfound {
-            display: flex;
-            flex-flow: column;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            padding-top: 15rem;
-            padding-bottom: 15rem;
-            text-align: center
-        }
-
-        section.notfound h1 {
-            font-size: 3rem
-        }
-
-        section.notfound p {
-            font-size: 1.8rem;
-            height: 50px
-        }
-
-        section.notfound .links {
-            font-size: 3rem;
-            justify-content: space-around;
-            color: #00f;
-            text-decoration: underline
-        }
-
-        section.como-chegar {
-            padding-top: 20px;
-            padding-bottom: 2rem
-        }
-
-        section.como-chegar .container {
-            padding-left: 20px;
-            padding-right: 20px
-        }
-
-        section.como-chegar header div:not(:first-child) {
-            justify-content: center;
-            text-align: left
-        }
-
-        section.como-chegar header .page-title {
-            justify-content: center;
-            margin-top: 5rem;
-            margin-bottom: 5rem
-        }
-
-        section.como-chegar header .simple-text.medium {
-            font-size: 2.1rem
-        }
-
-        section.como-chegar .center-text {
-            padding: 3rem 0
-        }
-
-        section.como-chegar .center-text .simple-text.small {
-            font-size: 1.9rem;
-            line-height: 2.9rem
-        }
-
-        section.como-chegar iframe {
-            width: 100%;
-            min-height: 240px;
-            margin-bottom: 21px
-        }
-
-        section.como-chegar iframe.col-12 {
-            padding-right: 0;
-            padding-left: 0
-        }
-
-        @media (min-width:768px) {
-            section.como-chegar .center-text .simple-text.small {
-                font-size: 2rem
-            }
-            section.como-chegar iframe {
-                min-height: 320px
-            }
-        }
-
-        @media (min-width:992px) {
-            section.como-chegar header {
-                padding-left: 10rem
-            }
-            section.como-chegar header .page-title {
-                margin-bottom: 2rem
-            }
-            section.como-chegar header .page-title h1 {
-                font-size: 3.2rem
-            }
-            section.como-chegar header div:not(:first-child) {
-                justify-content: left;
-                text-align: left
-            }
-            section.como-chegar header .page-title h1 {
-                padding-left: 1.5rem
-            }
-            section.como-chegar header .simple-text.medium {
-                font-size: 2.1rem
-            }
-            section.como-chegar .center-text .simple-text.small {
-                font-size: 2rem
-            }
-            section.como-chegar iframe {
-                min-height: 390px
-            }
-        }
-
-        @media (min-width:1200px) {
-            section.como-chegar header {
-                padding-left: 0
-            }
-            section.como-chegar header .page-title {
-                margin-bottom: 2rem
-            }
-            section.como-chegar header .page-title h1 {
-                font-size: 3.2rem
-            }
-            section.como-chegar header .simple-text.medium {
-                font-size: 2.5rem;
-                color: #505050
-            }
-            section.como-chegar .center-text .simple-text.small {
-                font-size: 1.8rem
-            }
-        }
-
-        section.contato {
-            padding-top: 20px
-        }
-
-        section.contato .container-1100 {
-            padding-left: 20px;
-            padding-right: 20px
-        }
-
-        section.contato .campo-required {
-            color: #a12626;
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 10px
-        }
-
-        section.contato .icon {
-            fill: #000;
-            height: 20px;
-            width: 20px
-        }
-
-        section.contato .custom-button {
-            text-transform: uppercase
-        }
-
-        section.contato form div:last-child {
-            display: flex;
-            justify-content: center
-        }
-
-        section.contato header .page-title {
-            justify-content: center;
-            margin-top: 2rem;
-            margin-bottom: 6rem
-        }
-
-        section.contato header .simple-text.medium {
-            font-size: 2.1rem
-        }
-
-        section.contato input {
-            color: #232323;
-            padding: 1.4rem;
-            margin-bottom: 2rem;
-            margin-top: 1rem;
-            font-size: 18px
-        }
-
-        section.contato input,
-        section.contato textarea {
-            background-color: #f1f1f1;
-            border: none;
-            border-radius: 5px;
-            outline: none
-        }
-
-        section.contato textarea {
-            padding: 10px;
-            margin-bottom: 4rem;
-            resize: none
-        }
-
-        section.contato .footer {
-            display: none
-        }
-
-        @media (min-width:992px) {
-            section.contato .campo-required {
-                font-size: 1.4rem
-            }
-            section.contato header .page-title {
-                justify-content: left;
-                margin-top: 5rem;
-                margin-bottom: 5rem;
-                padding-left: 1.5rem
-            }
-            section.contato header .page-title h1 {
-                font-size: 3.2rem
-            }
-            section.contato header .simple-text.medium {
-                font-size: 2.7rem;
-                color: #505050
-            }
-            section.contato .footer {
-                text-align: left;
-                background-color: #fff;
-                padding-top: 4rem;
-                display: flex;
-                flex-wrap: wrap-reverse
-            }
-            section.contato .footer .footer-info {
-                text-align: left;
-                margin-bottom: 0;
-                padding-bottom: 0
-            }
-            section.contato .footer .footer-info h4 {
-                margin-bottom: 0
-            }
-            section.contato .footer .footer-info .simple-text.small {
-                line-height: 3rem
-            }
-            section.contato form div:last-child {
-                display: flex;
-                justify-content: flex-end
-            }
-        }
-
-        @media (min-width:1200px) {
-            section.contato header .page-title {
-                margin-bottom: 2rem
-            }
-            section.contato header .page-title h1 {
-                font-size: 3.2rem
-            }
-            section.contato header .simple-text.medium {
-                font-size: 2.5rem;
-                color: #505050
-            }
-            section.contato .top-node {
-                padding: .1rem
-            }
-            section.contato .top-node .simple-text.medium {
-                font-size: 2rem
-            }
-        }
-
-        #footer-contato {
-            padding: .5rem 0;
-            background-color: #3a3a3a;
-            color: #dbdbdb;
-            display: flex;
-            justify-content: center
-        }
-
-        section.excursoes {
-            padding-top: 20px;
-            padding-bottom: 2rem
-        }
-
-        section.excursoes .grupo-wrapper {
-            text-align: center
-        }
-
-        section.excursoes .grupo-wrapper p.simple-text.medium {
-            color: #3a3a3a
-        }
-
-        section.excursoes .button-primary {
-            text-transform: uppercase
-        }
-
-        section.excursoes .container {
-            padding-left: 20px;
-            padding-right: 20px
-        }
-
-        section.excursoes .text-over-img {
-            position: relative;
-            margin-top: 3rem;
-            margin-bottom: 60rem
-        }
-
-        section.excursoes .excursao-over-text {
-            position: absolute;
-            top: 150%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            z-index: 9;
-            padding: 30px 35px;
-            background-color: #fff;
-            box-shadow: 0 5px 19px rgba(0, 0, 0, .15);
-            line-height: 2.7rem;
-            font-size: 1.9rem
-        }
-
-        section.excursoes .excursao-over-subtext {
-            font-size: 1.5rem
-        }
-
-        section.excursoes .ex-img-mobile {
-            height: 100%;
-            width: 100%;
-            display: block
-        }
-
-        section.excursoes .ex-img {
-            display: none;
-            height: 100%;
-            width: 100%
-        }
-
-        section.excursoes header .page-title {
-            justify-content: center;
-            margin-top: 5rem;
-            margin-bottom: 5rem
-        }
-
-        section.excursoes header .simple-text.medium {
-            font-size: 2.1rem
-        }
-
-        @media (min-width:575px) {
-            section.excursoes .text-over-img {
-                position: relative;
-                margin-top: 3rem;
-                margin-bottom: 35rem
-            }
-            section.excursoes .excursao-over-text {
-                top: 100%
-            }
-        }
-
-        @media (min-width:768px) {
-            section.excursoes .text-over-img {
-                position: relative;
-                margin-top: 3rem;
-                margin-bottom: 30rem
-            }
-            section.excursoes .excursao-over-text {
-                top: 100%
-            }
-            section.excursoes .grupo-wrapper {
-                text-align: left
-            }
-            section.excursoes .grupo-wrapper p.simple-text.medium {
-                color: grey
-            }
-            section.excursoes .grupo-wrapper .section-title.medium {
-                font-size: 3.2rem
-            }
-            section.excursoes .grupo-wrapper .simple-text.large {
-                font-size: 2.2rem
-            }
-        }
-
-        @media (min-width:992px) {
-            section.excursoes .grupo-wrapper {
-                text-align: left
-            }
-            section.excursoes .grupo-wrapper .section-title.medium {
-                font-size: 3.2rem
-            }
-            section.excursoes .grupo-wrapper .simple-text.large {
-                font-size: 2.2rem
-            }
-            section.excursoes .ex-img {
-                display: block
-            }
-            section.excursoes .ex-img-mobile {
-                display: none
-            }
-            section.excursoes header {
-                padding-left: 10rem
-            }
-            section.excursoes header .page-title {
-                margin-bottom: 2rem;
-                justify-content: left
-            }
-            section.excursoes header .page-title h1 {
-                padding-left: 1.5rem
-            }
-            section.excursoes header .simple-text.medium {
-                font-size: 2.1rem
-            }
-            section.excursoes .text-over-img {
-                position: relative;
-                margin-top: 3rem;
-                margin-bottom: 30rem
-            }
-            section.excursoes .excursao-over-text {
-                position: absolute;
-                top: 115%
-            }
-        }
-
-        @media (min-width:1200px) {
-            section.excursoes .align-items-center {
-                align-items: flex-start!important
-            }
-            section.excursoes .grupo-wrapper p.simple-text.medium {
-                font-size: 18px
-            }
-            section.excursoes header {
-                padding-left: 0;
-                text-align: left
-            }
-            section.excursoes header .page-title {
-                margin-bottom: 2rem
-            }
-            section.excursoes header .page-title h1 {
-                font-size: 3.2rem
-            }
-            section.excursoes header .simple-text.medium {
-                font-size: 2.5rem;
-                color: #505050
-            }
-            section.excursoes .text-over-img {
-                position: relative;
-                margin-top: 3rem;
-                margin-bottom: 30rem
-            }
-            section.excursoes .excursao-over-text {
-                position: absolute;
-                top: 110%;
-                max-width: 1100px;
-                padding: 50px 90px
-            }
-        }
-
-        .slick-slider {
-            box-sizing: border-box;
-            -webkit-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            -webkit-touch-callout: none;
-            -khtml-user-select: none;
-            touch-action: pan-y;
-            -webkit-tap-highlight-color: transparent
-        }
-
-        .slick-list,
-        .slick-slider {
-            position: relative;
-            display: block
-        }
-
-        .slick-list {
-            overflow: hidden;
-            margin: 0;
-            padding: 0
-        }
-
-        .slick-list:focus {
-            outline: none
-        }
-
-        .slick-list.dragging {
-            cursor: pointer;
-            cursor: hand
-        }
-
-        .slick-slider .slick-list,
-        .slick-slider .slick-track {
-            -webkit-transform: translateZ(0);
-            transform: translateZ(0)
-        }
-
-        .slick-track {
-            position: relative;
-            top: 0;
-            left: 0;
-            display: block;
-            margin-left: auto;
-            margin-right: auto
-        }
-
-        .slick-track:after,
-        .slick-track:before {
-            display: table;
-            content: ""
-        }
-
-        .slick-track:after {
-            clear: both
-        }
-
-        .slick-loading .slick-track {
-            visibility: hidden
-        }
-
-        .slick-slide {
-            display: none;
-            float: left;
-            height: 100%;
-            min-height: 1px
-        }
-
-        [dir=rtl] .slick-slide {
-            float: right
-        }
-
-        .slick-slide img {
-            display: block
-        }
-
-        .slick-slide.slick-loading img {
-            display: none
-        }
-
-        .slick-slide.dragging img {
-            pointer-events: none
-        }
-
-        .slick-initialized .slick-slide {
-            display: block
-        }
-
-        .slick-loading .slick-slide {
-            visibility: hidden
-        }
-
-        .slick-vertical .slick-slide {
-            display: block;
-            height: auto;
-            border: 1px solid transparent
-        }
-
-        .slick-arrow.slick-hidden {
-            display: none
-        }
-
-        .slick-loading .slick-list {
-            background: #fff url(data:image/gif;base64,R0lGODlhIAAgAPUAAP///wAAAPr6+sTExOjo6PDw8NDQ0H5+fpqamvb29ubm5vz8/JKSkoaGhuLi4ri4uKCgoOzs7K6urtzc3D4+PlZWVmBgYHx8fKioqO7u7kpKSmxsbAwMDAAAAM7OzsjIyNjY2CwsLF5eXh4eHkxMTLCwsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH+GkNyZWF0ZWQgd2l0aCBhamF4bG9hZC5pbmZvACH5BAAKAAAAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAIAAgAAAG/0CAcEgkFjgcR3HJJE4SxEGnMygKmkwJxRKdVocFBRRLfFAoj6GUOhQoFAVysULRjNdfQFghLxrODEJ4Qm5ifUUXZwQAgwBvEXIGBkUEZxuMXgAJb1dECWMABAcHDEpDEGcTBQMDBQtvcW0RbwuECKMHELEJF5NFCxm1AAt7cH4NuAOdcsURy0QCD7gYfcWgTQUQB6Zkr66HoeDCSwIF5ucFz3IC7O0CC6zx8YuHhW/3CvLyfPX4+OXozKnDssBdu3G/xIHTpGAgOUPrZimAJCfDPYfDin2TQ+xeBnWbHi37SC4YIYkQhdy7FvLdpwWvjA0JyU/ISyIx4xS6sgfkNS4me2rtVKkgw0JCb8YMZdjwqMQ2nIY8BbcUQNVCP7G4MQq1KRivR7tiDEuEFrggACH5BAAKAAEALAAAAAAgACAAAAb/QIBwSCQmNBpCcckkEgREA4ViKA6azM8BEZ1Wh6LOBls0HA5fgJQ6HHQ6InKRcWhA1d5hqMMpyIkOZw9Ca18Qbwd/RRhnfoUABRwdI3IESkQFZxB4bAdvV0YJQwkDAx9+bWcECQYGCQ5vFEQCEQoKC0ILHqUDBncCGA5LBiHCAAsFtgqoQwS8Aw64f8m2EXdFCxO8INPKomQCBgPMWAvL0n/ff+jYAu7vAuxy8O/myvfX8/f7/Arq+v0W0HMnr9zAeE0KJlQkJIGCfE0E+PtDq9qfDMogDkGmrIBCbNQUZIDosNq1kUsEZJBW0dY/b0ZsLViQIMFMW+RKKgjFzp4fNokPIdki+Y8JNVxA79jKwHAI0G9JGw5tCqDWTiFRhVhtmhVA16cMJTJ1OnVIMo1cy1KVI5NhEAAh+QQACgACACwAAAAAIAAgAAAG/0CAcEgkChqNQnHJJCYWRMfh4CgamkzFwBOdVocNCgNbJAwGhKGUOjRQKA1y8XOGAtZfgIWiSciJBWcTQnhCD28Qf0UgZwJ3XgAJGhQVcgKORmdXhRBvV0QMY0ILCgoRmIRnCQIODgIEbxtEJSMdHZ8AGaUKBXYLIEpFExZpAG62HRRFArsKfn8FIsgjiUwJu8FkJLYcB9lMCwUKqFgGHSJ5cnZ/uEULl/CX63/x8KTNu+RkzPj9zc/0/Cl4V0/APDIE6x0csrBJwybX9DFhBhCLgAilIvzRVUriKHGlev0JtyuDvmsZUZlcIiCDnYu7KsZ0UmrBggRP7n1DqcDJEzciOgHwcwTyZEUmIKEMFVIqgyIjpZ4tjdTxqRCMPYVMBYDV6tavUZ8yczpkKwBxHsVWtaqo5tMgACH5BAAKAAMALAAAAAAgACAAAAb/QIBwSCQuBgNBcck0FgvIQtHRZCYUGSJ0IB2WDo9qUaBQKIXbLsBxOJTExUh5mB4iDo0zXEhWJNBRQgZtA3tPZQsAdQINBwxwAnpCC2VSdQNtVEQSEkOUChGSVwoLCwUFpm0QRAMVFBQTQxllCqh0kkIECF0TG68UG2O0foYJDb8VYVa0alUXrxoQf1WmZnsTFA0EhgCJhrFMC5Hjkd57W0jpDsPDuFUDHfHyHRzstNN78PPxHOLk5dwcpBuoaYk5OAfhXHG3hAy+KgLkgNozqwzDbgWYJQyXsUwGXKNA6fnYMIO3iPeIpBwyqlSCBKUqEQk5E6YRmX2UdAT5kEnHKkQ5hXjkNqTPtKAARl1sIrGoxSFNuSEFMNWoVCxEpiqyRlQY165wEHELAgAh+QQACgAEACwAAAAAIAAgAAAG/0CAcEgsKhSLonJJTBIFR0GxwFwmFJlnlAgaTKpFqEIqFJMBhcEABC5GjkPz0KN2tsvHBH4sJKgdd1NHSXILah9tAmdCC0dUcg5qVEQfiIxHEYtXSACKnWoGXAwHBwRDGUcKBXYFi0IJHmQEEKQHEGGpCnp3AiW1DKFWqZNgGKQNA65FCwV8bQQHJcRtds9MC4rZitVgCQbf4AYEubnKTAYU6eoUGuSpu3fo6+ka2NrbgQAE4eCmS9xVAOW7Yq7IgA4Hpi0R8EZBhDshOnTgcOtfM0cAlTigILFDiAFFNjk8k0GZgAxOBozouIHIOyKbFixIkECmIyIHOEiEWbPJTTQ5FxcVOMCgzUVCWwAcyZJvzy45ADYVZNIwTlIAVfNB7XRVDLxEWLQ4E9JsKq+rTdsMyhcEACH5BAAKAAUALAAAAAAgACAAAAb/QIBwSCwqFIuicklMEgVHQVHKVCYUmWeUWFAkqtOtEKqgAsgFcDFyHJLNmbZa6x2Lyd8595h8C48RagJmQgtHaX5XZUYKQ4YKEYSKfVKPaUMZHwMDeQBxh04ABYSFGU4JBpsDBmFHdXMLIKofBEyKCpdgspsOoUsLXaRLCQMgwky+YJ1FC4POg8lVAg7U1Q5drtnHSw4H3t8HDdnZy2Dd4N4Nzc/QeqLW1bnM7rXuV9tEBhQQ5UoCbJDmWKBAQcMDZNhwRVNCYANBChZYEbkVCZOwASEcCDFQ4SEDIq6WTVqQIMECBx06iCACQQPBiSabHDqzRUTKARMhSFCDrc+WNQIcOoRw5+ZIHj8ADqSEQBQAwKKLhIzowEEeGKQ0owIYkPKjHihZoBKi0KFE01b4zg7h4y4IACH5BAAKAAYALAAAAAAgACAAAAb/QIBwSCwqFIuicklMEgVHQVHKVCYUmWeUWFAkqtOtEKqgAsgFcDFyHJLNmbZa6x2Lyd8595h8C48RagJmQgtHaX5XZUUJeQCGChGEin1SkGlubEhDcYdOAAWEhRlOC12HYUd1eqeRokOKCphgrY5MpotqhgWfunqPt4PCg71gpgXIyWSqqq9MBQPR0tHMzM5L0NPSC8PCxVUCyeLX38+/AFfXRA4HA+pjmoFqCAcHDQa3rbxzBRD1BwgcMFIlidMrAxYICHHA4N8DIqpsUWJ3wAEBChQaEBnQoB6RRr0uARjQocMAAA0w4nMz4IOaU0lImkSngYKFc3ZWyTwJAALGK4fnNA3ZOaQCBQ22wPgRQlSIAYwSfkHJMrQkTyEbKFzFydQq15ccOAjUEwQAIfkEAAoABwAsAAAAACAAIAAABv9AgHBILCoUi6JySUwSBUdBUcpUJhSZZ5RYUCSq060QqqACyAVwMXIcks2ZtlrrHYvJ3zn3mHwLjxFqAmZCC0dpfldlRQl5AIYKEYSKfVKQaW5sSENxh04ABYSFGU4LXYdhR3V6p5GiQ4oKmGCtjkymi2qGBZ+6eo+3g8KDvYLDxKrJuXNkys6qr0zNygvHxL/V1sVD29K/AFfRRQUDDt1PmoFqHgPtBLetvMwG7QMes0KxkkIFIQNKDhBgKvCh3gQiqmxt6NDBAAEIEAgUOHCgBBEH9Yg06uWAIQUABihQMACgBEUHTRwoUEOBIcqQI880OIDgm5ABDA8IgUkSwAAyij1/jejAARPPIQwONBCnBAJDCEOOCnFA8cOvEh1CEJEqBMIBEDaLcA3LJIEGDe/0BAEAIfkEAAoACAAsAAAAACAAIAAABv9AgHBILCoUi6JySUwSBUdBUcpUJhSZZ5RYUCSq060QqqACyAVwMXIcks2ZtlrrHYvJ3zn3mHwLjxFqAmZCC0dpfldlRQl5AIYKEYSKfVKQaW5sSENxh04ABYSFGU4LXYdhR3V6p5GiQ4oKmGCtjkymi2qGBZ+6eo+3g8KDvYLDxKrJuXNkys6qr0zNygvHxL/V1sVDDti/BQccA8yrYBAjHR0jc53LRQYU6R0UBnO4RxmiG/IjJUIJFuoVKeCBigBN5QCk43BgFgMKFCYUGDAgFEUQRGIRYbCh2xACEDcAcHDgQDcQFGf9s7VkA0QCI0t2W0DRw68h8ChAEELSJE8xijBvVqCgIU9PjwA+UNzG5AHEB9xkDpk4QMGvARQsEDlKxMCALDeLcA0rqEEDlWCCAAAh+QQACgAJACwAAAAAIAAgAAAG/0CAcEgsKhSLonJJTBIFR0FRylQmFJlnlFhQJKrTrRCqoALIBXAxchySzZm2Wusdi8nfOfeYfAuPEWoCZkILR2l+V2VFCXkAhgoRhIp9UpBpbmxIQ3GHTgAFhIUZTgtdh2FHdXqnkaJDigqYYK2OTKaLaoYFn7p6j0wOA8PEAw6/Z4PKUhwdzs8dEL9kqqrN0M7SetTVCsLFw8d6C8vKvUQEv+dVCRAaBnNQtkwPFRQUFXOduUoTG/cUNkyYg+tIBlEMAFYYMAaBuCekxmhaJeSeBgiOHhw4QECAAwcCLhGJRUQCg3RDCmyUVmBYmlOiGqmBsPGlyz9YkAlxsJEhqCubABS9AsPgQAMqLQfM0oTMwEZ4QpLOwvMLxAEEXIBG5aczqtaut4YNXRIEACH5BAAKAAoALAAAAAAgACAAAAb/QIBwSCwqFIuicklMEgVHQVHKVCYUmWeUWFAkqtOtEKqgAsgFcDFyHJLNmbZa6x2Lyd8595h8C48RahAQRQtHaX5XZUUJeQAGHR0jA0SKfVKGCmlubEhCBSGRHSQOQwVmQwsZTgtdh0UQHKIHm2quChGophuiJHO3jkwOFB2UaoYFTnMGegDKRQQG0tMGBM1nAtnaABoU3t8UD81kR+UK3eDe4nrk5grR1NLWegva9s9czfhVAgMNpWqgBGNigMGBAwzmxBGjhACEgwcgzAPTqlwGXQ8gMgAhZIGHWm5WjelUZ8jBBgPMTBgwIMGCRgsygVSkgMiHByD7DWDmx5WuMkZqDLCU4gfAq2sACrAEWFSRLjUfWDopCqDTNQIsJ1LF0yzDAA90UHV5eo0qUjB8mgUBACH5BAAKAAsALAAAAAAgACAAAAb/QIBwSCwqFIuickk0FIiCo6A4ZSoZnRBUSiwoEtYipNOBDKOKKgD9DBNHHU4brc4c3cUBeSOk949geEQUZA5rXABHEW4PD0UOZBSHaQAJiEMJgQATFBQVBkQHZKACUwtHbX0RR0mVFp0UFwRCBSQDSgsZrQteqEUPGrAQmmG9ChFqRAkMsBd4xsRLBBsUoG6nBa14E4IA2kUFDuLjDql4peilAA0H7e4H1udH8/Ps7+3xbmj0qOTj5mEWpEP3DUq3glYWOBgAcEmUaNI+DBjwAY+dS0USGJg4wABEXMYyJNvE8UOGISKVCNClah4xjg60WUKyINOCUwrMzVRARMGENWQ4n/jpNTKTm15J/CTK2e0MoD+UKmHEs4onVDVVmyqdpAbNR4cKTjqNSots07EjzzJh1S0IADsAAAAAAAAAAAA=) 50% no-repeat
-        }
-
-        @font-face {
-            font-family: slick;
-            font-weight: 400;
-            font-style: normal;
-            src: url(data:application/vnd.ms-fontobject;base64,AAgAAGQHAAABAAIAAAAAAAIABQkAAAAAAAABAJABAAAAAExQAQAAgCAAAAAAAAAAAAAAAAEAAAAAAAAATxDE8AAAAAAAAAAAAAAAAAAAAAAAAAoAcwBsAGkAYwBrAAAADgBSAGUAZwB1AGwAYQByAAAAFgBWAGUAcgBzAGkAbwBuACAAMQAuADAAAAAKAHMAbABpAGMAawAAAAAAAAEAAAANAIAAAwBQRkZUTW3RyK8AAAdIAAAAHEdERUYANAAGAAAHKAAAACBPUy8yT/b9sgAAAVgAAABWY21hcCIPRb0AAAHIAAABYmdhc3D//wADAAAHIAAAAAhnbHlmP5u2YAAAAzwAAAIsaGVhZAABMfsAAADcAAAANmhoZWED5QIFAAABFAAAACRobXR4BkoASgAAAbAAAAAWbG9jYQD2AaIAAAMsAAAAEG1heHAASwBHAAABOAAAACBuYW1lBSeBwgAABWgAAAFucG9zdC+zMgMAAAbYAAAARQABAAAAAQAA8MQQT18PPPUACwIAAAAAAM9xeH8AAAAAz3F4fwAlACUB2wHbAAAACAACAAAAAAAAAAEAAAHbAAAALgIAAAAAAAHbAAEAAAAAAAAAAAAAAAAAAAAEAAEAAAAHAEQAAgAAAAAAAgAAAAEAAQAAAEAAAAAAAAAAAQIAAZAABQAIAUwBZgAAAEcBTAFmAAAA9QAZAIQAAAIABQkAAAAAAACAAAABAAAAIAAAAAAAAAAAUGZFZABAAGEhkgHg/+AALgHb/9sAAAABAAAAAAAAAgAAAAAAAAACAAAAAgAAJQAlACUAJQAAAAAAAwAAAAMAAAAcAAEAAAAAAFwAAwABAAAAHAAEAEAAAAAMAAgAAgAEAAAAYSAiIZAhkv//AAAAAABhICIhkCGS//8AAP+l3+PedN5xAAEAAAAAAAAAAAAAAAAAAAEGAAABAAAAAAAAAAECAAAAAgAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGAIwAsAEWAAIAJQAlAdsB2wAYACwAAD8BNjQvASYjIg8BBhUUHwEHBhUUHwEWMzI2FAcGBwYiJyYnJjQ3Njc2MhcWF/GCBgaCBQcIBR0GBldXBgYdBQgH7x0eMjB8MDIeHR0eMjB8MDIecYIGDgaCBQUeBQcJBFhYBAkHBR4F0nwwMh4dHR4yMHwwMh4dHR4yAAAAAgAlACUB2wHbABgALAAAJTc2NTQvATc2NTQvASYjIg8BBhQfARYzMjYUBwYHBiInJicmNDc2NzYyFxYXASgdBgZXVwYGHQUIBwWCBgaCBQcIuB0eMjB8MDIeHR0eMjB8MDIecR4FBwkEWFgECQcFHgUFggYOBoIF0nwwMh4dHR4yMHwwMh4dHR4yAAABACUAJQHbAdsAEwAAABQHBgcGIicmJyY0NzY3NjIXFhcB2x0eMjB8MDIeHR0eMjB8MDIeAT58MDIeHR0eMjB8MDIeHR0eMgABACUAJQHbAdsAQwAAARUUBisBIicmPwEmIyIHBgcGBwYUFxYXFhcWMzI3Njc2MzIfARYVFAcGBwYjIicmJyYnJjQ3Njc2NzYzMhcWFzc2FxYB2woIgAsGBQkoKjodHBwSFAwLCwwUEhwcHSIeIBMGAQQDJwMCISspNC8mLBobFBERFBsaLCYvKicpHSUIDAsBt4AICgsLCScnCwwUEhwcOhwcEhQMCw8OHAMDJwMDAgQnFBQRFBsaLCZeJiwaGxQRDxEcJQgEBgAAAAAAAAwAlgABAAAAAAABAAUADAABAAAAAAACAAcAIgABAAAAAAADACEAbgABAAAAAAAEAAUAnAABAAAAAAAFAAsAugABAAAAAAAGAAUA0gADAAEECQABAAoAAAADAAEECQACAA4AEgADAAEECQADAEIAKgADAAEECQAEAAoAkAADAAEECQAFABYAogADAAEECQAGAAoAxgBzAGwAaQBjAGsAAHNsaWNrAABSAGUAZwB1AGwAYQByAABSZWd1bGFyAABGAG8AbgB0AEYAbwByAGcAZQAgADIALgAwACAAOgAgAHMAbABpAGMAawAgADoAIAAxADQALQA0AC0AMgAwADEANAAARm9udEZvcmdlIDIuMCA6IHNsaWNrIDogMTQtNC0yMDE0AABzAGwAaQBjAGsAAHNsaWNrAABWAGUAcgBzAGkAbwBuACAAMQAuADAAAFZlcnNpb24gMS4wAABzAGwAaQBjAGsAAHNsaWNrAAAAAAIAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAABwAAAAEAAgECAQMAhwBECmFycm93cmlnaHQJYXJyb3dsZWZ0AAAAAAAAAf//AAIAAQAAAA4AAAAYAAAAAAACAAEAAwAGAAEABAAAAAIAAAAAAAEAAAAAzu7XsAAAAADPcXh/AAAAAM9xeH8=);
-            src: url(data:application/vnd.ms-fontobject;base64,AAgAAGQHAAABAAIAAAAAAAIABQkAAAAAAAABAJABAAAAAExQAQAAgCAAAAAAAAAAAAAAAAEAAAAAAAAATxDE8AAAAAAAAAAAAAAAAAAAAAAAAAoAcwBsAGkAYwBrAAAADgBSAGUAZwB1AGwAYQByAAAAFgBWAGUAcgBzAGkAbwBuACAAMQAuADAAAAAKAHMAbABpAGMAawAAAAAAAAEAAAANAIAAAwBQRkZUTW3RyK8AAAdIAAAAHEdERUYANAAGAAAHKAAAACBPUy8yT/b9sgAAAVgAAABWY21hcCIPRb0AAAHIAAABYmdhc3D//wADAAAHIAAAAAhnbHlmP5u2YAAAAzwAAAIsaGVhZAABMfsAAADcAAAANmhoZWED5QIFAAABFAAAACRobXR4BkoASgAAAbAAAAAWbG9jYQD2AaIAAAMsAAAAEG1heHAASwBHAAABOAAAACBuYW1lBSeBwgAABWgAAAFucG9zdC+zMgMAAAbYAAAARQABAAAAAQAA8MQQT18PPPUACwIAAAAAAM9xeH8AAAAAz3F4fwAlACUB2wHbAAAACAACAAAAAAAAAAEAAAHbAAAALgIAAAAAAAHbAAEAAAAAAAAAAAAAAAAAAAAEAAEAAAAHAEQAAgAAAAAAAgAAAAEAAQAAAEAAAAAAAAAAAQIAAZAABQAIAUwBZgAAAEcBTAFmAAAA9QAZAIQAAAIABQkAAAAAAACAAAABAAAAIAAAAAAAAAAAUGZFZABAAGEhkgHg/+AALgHb/9sAAAABAAAAAAAAAgAAAAAAAAACAAAAAgAAJQAlACUAJQAAAAAAAwAAAAMAAAAcAAEAAAAAAFwAAwABAAAAHAAEAEAAAAAMAAgAAgAEAAAAYSAiIZAhkv//AAAAAABhICIhkCGS//8AAP+l3+PedN5xAAEAAAAAAAAAAAAAAAAAAAEGAAABAAAAAAAAAAECAAAAAgAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGAIwAsAEWAAIAJQAlAdsB2wAYACwAAD8BNjQvASYjIg8BBhUUHwEHBhUUHwEWMzI2FAcGBwYiJyYnJjQ3Njc2MhcWF/GCBgaCBQcIBR0GBldXBgYdBQgH7x0eMjB8MDIeHR0eMjB8MDIecYIGDgaCBQUeBQcJBFhYBAkHBR4F0nwwMh4dHR4yMHwwMh4dHR4yAAAAAgAlACUB2wHbABgALAAAJTc2NTQvATc2NTQvASYjIg8BBhQfARYzMjYUBwYHBiInJicmNDc2NzYyFxYXASgdBgZXVwYGHQUIBwWCBgaCBQcIuB0eMjB8MDIeHR0eMjB8MDIecR4FBwkEWFgECQcFHgUFggYOBoIF0nwwMh4dHR4yMHwwMh4dHR4yAAABACUAJQHbAdsAEwAAABQHBgcGIicmJyY0NzY3NjIXFhcB2x0eMjB8MDIeHR0eMjB8MDIeAT58MDIeHR0eMjB8MDIeHR0eMgABACUAJQHbAdsAQwAAARUUBisBIicmPwEmIyIHBgcGBwYUFxYXFhcWMzI3Njc2MzIfARYVFAcGBwYjIicmJyYnJjQ3Njc2NzYzMhcWFzc2FxYB2woIgAsGBQkoKjodHBwSFAwLCwwUEhwcHSIeIBMGAQQDJwMCISspNC8mLBobFBERFBsaLCYvKicpHSUIDAsBt4AICgsLCScnCwwUEhwcOhwcEhQMCw8OHAMDJwMDAgQnFBQRFBsaLCZeJiwaGxQRDxEcJQgEBgAAAAAAAAwAlgABAAAAAAABAAUADAABAAAAAAACAAcAIgABAAAAAAADACEAbgABAAAAAAAEAAUAnAABAAAAAAAFAAsAugABAAAAAAAGAAUA0gADAAEECQABAAoAAAADAAEECQACAA4AEgADAAEECQADAEIAKgADAAEECQAEAAoAkAADAAEECQAFABYAogADAAEECQAGAAoAxgBzAGwAaQBjAGsAAHNsaWNrAABSAGUAZwB1AGwAYQByAABSZWd1bGFyAABGAG8AbgB0AEYAbwByAGcAZQAgADIALgAwACAAOgAgAHMAbABpAGMAawAgADoAIAAxADQALQA0AC0AMgAwADEANAAARm9udEZvcmdlIDIuMCA6IHNsaWNrIDogMTQtNC0yMDE0AABzAGwAaQBjAGsAAHNsaWNrAABWAGUAcgBzAGkAbwBuACAAMQAuADAAAFZlcnNpb24gMS4wAABzAGwAaQBjAGsAAHNsaWNrAAAAAAIAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAABwAAAAEAAgECAQMAhwBECmFycm93cmlnaHQJYXJyb3dsZWZ0AAAAAAAAAf//AAIAAQAAAA4AAAAYAAAAAAACAAEAAwAGAAEABAAAAAIAAAAAAAEAAAAAzu7XsAAAAADPcXh/AAAAAM9xeH8=?#iefix) format("embedded-opentype"), url(data:font/woff;base64,d09GRk9UVE8AAAVkAAsAAAAAB1wAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABDRkYgAAABCAAAAi4AAAKbH/pWDkZGVE0AAAM4AAAAGgAAABxt0civR0RFRgAAA1QAAAAcAAAAIAAyAARPUy8yAAADcAAAAFIAAABgUBj/rmNtYXAAAAPEAAAAUAAAAWIiC0SwaGVhZAAABBQAAAAuAAAANgABMftoaGVhAAAERAAAABwAAAAkA+UCA2htdHgAAARgAAAADgAAAA4ESgBKbWF4cAAABHAAAAAGAAAABgAFUABuYW1lAAAEeAAAANwAAAFuBSeBwnBvc3QAAAVUAAAAEAAAACAAAwABeJw9ks9vEkEUx2cpWyeUoFYgNkHi2Wt7N3rVm3cTs3UVLC4LxIWEQvi1P3i7O1tYLJDAmlgKGEhQrsajf0j7J3jYTXrQWUrMJG+++b55n5e8NwwKBhHDMLv5kxT3ATEBxKBn3qOAl9zxHgb1MAPhHQgHkyF08Gr/L8B/Eb6zWnmCJ7AJVLubQOheArXvJ1A4EXi6j4I+Zg9F0QFKvsnlBCmXeve+sFEnb/nCptdtQ4QYhVFRAT1HrF8UQK/RL/SbmUbclsvGVFXRZKDHUE38cc4qpkbAAsuwiImvro+ufcfaOIQ6szlrmjRJDaKZKnbjN3GWKIbiIzRFUfCffuxxKOL+3LDlDVvx2TdxN84qZEsnhNBa6pgm2dAsnzbLsETdsmRFxUeHV4e+I2/ptN8TyqV8T3Dt29t7EYOuajVIw2y1Wy3M86w0zg/Fz2IvawmQAUHOVrPVfLkoScVynsqsTG0MGUs4z55nh3mnOJa+li+rl9WpPIcFfDubDeaDC+fLBdYN3QADzLauGfj4B6sZmq6CCpqmtSvF0qlUl2qf5AJIUCSlTqlb7lUG+LRfGzZGzZEyBgccMu6MuqPecNDvD4Y9Kjtj4gD+DsvKVMTcMdtqtZtmkzQstQvYje7Syep0PDSAhSOeHYXYWThEF//A/0YvYV1fSQtpKU5STtrhbQ444OtpKSWJIg3pOg8cBs7maTY1EZf07aq+hjWs7IWzdCYTGhb2CtZ47x+Uhx28AAB4nGNgYGBkAIJz765vANHnCyvqYTQAWnkHswAAeJxjYGRgYOADYgkGEGBiYARCFjAG8RgABHYAN3icY2BmYmCcwMDKwMHow5jGwMDgDqW/MkgytDAwMDGwcjKAQQMDAyOQUmCAgoA01xQGB4ZExUmMD/4/YNBjvP3/NgNEDQPjbbBKBQZGADfLDgsAAHicY2BgYGaAYBkGRgYQiAHyGMF8FgYHIM3DwMHABGQzMCQqKClOUJz0/z9YHRLv/+L7D+8V3cuHmgAHjGwM6ELUByxUMIOZCmbgAAA5LQ8XeJxjYGRgYABiO68w73h+m68M3EwMIHC+sKIeTqsyqDLeZrwN5HIwgKUB/aYJUgAAeJxjYGRgYLzNwMCgx8QAAkA2IwMqYAIAMGIB7QIAAAACAAAlACUAJQAlAAAAAFAAAAUAAHicbY49asNAEIU/2ZJDfkiRIvXapUFCEqpcptABUrg3ZhEiQoKVfY9UqVLlGDlADpAT5e16IUWysMz3hjfzBrjjjQT/EjKpCy+4YhN5yZoxcirPe+SMWz4jr6S+5UzSa3VuwpTnBfc8RF7yxDZyKs9r5IxHPiKv1P9iZqDnyAvMQ39UecbScVb/gJO03Xk4CFom3XYK1clhMdQUlKo7/d9NF13RkIdfy+MV7TSe2sl11tRFaXYmJKpWTd7kdVnJ8veevZKc+n3I93t9Jnvr5n4aTVWU/0z9AI2qMkV4nGNgZkAGjAxoAAAAjgAF) format("woff"), url(data:font/ttf;base64,AAEAAAANAIAAAwBQRkZUTW3RyK8AAAdIAAAAHEdERUYANAAGAAAHKAAAACBPUy8yT/b9sgAAAVgAAABWY21hcCIPRb0AAAHIAAABYmdhc3D//wADAAAHIAAAAAhnbHlmP5u2YAAAAzwAAAIsaGVhZAABMfsAAADcAAAANmhoZWED5QIFAAABFAAAACRobXR4BkoASgAAAbAAAAAWbG9jYQD2AaIAAAMsAAAAEG1heHAASwBHAAABOAAAACBuYW1lBSeBwgAABWgAAAFucG9zdC+zMgMAAAbYAAAARQABAAAAAQAA8MQQT18PPPUACwIAAAAAAM9xeH8AAAAAz3F4fwAlACUB2wHbAAAACAACAAAAAAAAAAEAAAHbAAAALgIAAAAAAAHbAAEAAAAAAAAAAAAAAAAAAAAEAAEAAAAHAEQAAgAAAAAAAgAAAAEAAQAAAEAAAAAAAAAAAQIAAZAABQAIAUwBZgAAAEcBTAFmAAAA9QAZAIQAAAIABQkAAAAAAACAAAABAAAAIAAAAAAAAAAAUGZFZABAAGEhkgHg/+AALgHb/9sAAAABAAAAAAAAAgAAAAAAAAACAAAAAgAAJQAlACUAJQAAAAAAAwAAAAMAAAAcAAEAAAAAAFwAAwABAAAAHAAEAEAAAAAMAAgAAgAEAAAAYSAiIZAhkv//AAAAAABhICIhkCGS//8AAP+l3+PedN5xAAEAAAAAAAAAAAAAAAAAAAEGAAABAAAAAAAAAAECAAAAAgAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGAIwAsAEWAAIAJQAlAdsB2wAYACwAAD8BNjQvASYjIg8BBhUUHwEHBhUUHwEWMzI2FAcGBwYiJyYnJjQ3Njc2MhcWF/GCBgaCBQcIBR0GBldXBgYdBQgH7x0eMjB8MDIeHR0eMjB8MDIecYIGDgaCBQUeBQcJBFhYBAkHBR4F0nwwMh4dHR4yMHwwMh4dHR4yAAAAAgAlACUB2wHbABgALAAAJTc2NTQvATc2NTQvASYjIg8BBhQfARYzMjYUBwYHBiInJicmNDc2NzYyFxYXASgdBgZXVwYGHQUIBwWCBgaCBQcIuB0eMjB8MDIeHR0eMjB8MDIecR4FBwkEWFgECQcFHgUFggYOBoIF0nwwMh4dHR4yMHwwMh4dHR4yAAABACUAJQHbAdsAEwAAABQHBgcGIicmJyY0NzY3NjIXFhcB2x0eMjB8MDIeHR0eMjB8MDIeAT58MDIeHR0eMjB8MDIeHR0eMgABACUAJQHbAdsAQwAAARUUBisBIicmPwEmIyIHBgcGBwYUFxYXFhcWMzI3Njc2MzIfARYVFAcGBwYjIicmJyYnJjQ3Njc2NzYzMhcWFzc2FxYB2woIgAsGBQkoKjodHBwSFAwLCwwUEhwcHSIeIBMGAQQDJwMCISspNC8mLBobFBERFBsaLCYvKicpHSUIDAsBt4AICgsLCScnCwwUEhwcOhwcEhQMCw8OHAMDJwMDAgQnFBQRFBsaLCZeJiwaGxQRDxEcJQgEBgAAAAAAAAwAlgABAAAAAAABAAUADAABAAAAAAACAAcAIgABAAAAAAADACEAbgABAAAAAAAEAAUAnAABAAAAAAAFAAsAugABAAAAAAAGAAUA0gADAAEECQABAAoAAAADAAEECQACAA4AEgADAAEECQADAEIAKgADAAEECQAEAAoAkAADAAEECQAFABYAogADAAEECQAGAAoAxgBzAGwAaQBjAGsAAHNsaWNrAABSAGUAZwB1AGwAYQByAABSZWd1bGFyAABGAG8AbgB0AEYAbwByAGcAZQAgADIALgAwACAAOgAgAHMAbABpAGMAawAgADoAIAAxADQALQA0AC0AMgAwADEANAAARm9udEZvcmdlIDIuMCA6IHNsaWNrIDogMTQtNC0yMDE0AABzAGwAaQBjAGsAAHNsaWNrAABWAGUAcgBzAGkAbwBuACAAMQAuADAAAFZlcnNpb24gMS4wAABzAGwAaQBjAGsAAHNsaWNrAAAAAAIAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAABwAAAAEAAgECAQMAhwBECmFycm93cmlnaHQJYXJyb3dsZWZ0AAAAAAAAAf//AAIAAQAAAA4AAAAYAAAAAAACAAEAAwAGAAEABAAAAAIAAAAAAAEAAAAAzu7XsAAAAADPcXh/AAAAAM9xeH8=) format("truetype"), url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxtZXRhZGF0YT5HZW5lcmF0ZWQgYnkgRm9udGFzdGljLm1lPC9tZXRhZGF0YT48ZGVmcz48Zm9udCBpZD0ic2xpY2siIGhvcml6LWFkdi14PSI1MTIiPjxmb250LWZhY2UgZm9udC1mYW1pbHk9InNsaWNrIiB1bml0cy1wZXItZW09IjUxMiIgYXNjZW50PSI0ODAiIGRlc2NlbnQ9Ii0zMiIvPjxtaXNzaW5nLWdseXBoIGhvcml6LWFkdi14PSI1MTIiLz48Z2x5cGggdW5pY29kZT0i4oaSIiBkPSJNMjQxIDExM2wxMzAgMTMwYzQgNCA2IDggNiAxMyAwIDUtMiA5LTYgMTNsLTEzMCAxMzBjLTMgMy03IDUtMTIgNS01IDAtMTAtMi0xMy01bC0yOS0zMGMtNC0zLTYtNy02LTEyIDAtNSAyLTEwIDYtMTNsODctODgtODctODhjLTQtMy02LTgtNi0xMyAwLTUgMi05IDYtMTJsMjktMzBjMy0zIDgtNSAxMy01IDUgMCA5IDIgMTIgNXogbTIzNCAxNDNjMC00MC05LTc3LTI5LTExMC0yMC0zNC00Ni02MC04MC04MC0zMy0yMC03MC0yOS0xMTAtMjktNDAgMC03NyA5LTExMCAyOS0zNCAyMC02MCA0Ni04MCA4MC0yMCAzMy0yOSA3MC0yOSAxMTAgMCA0MCA5IDc3IDI5IDExMCAyMCAzNCA0NiA2MCA4MCA4MCAzMyAyMCA3MCAyOSAxMTAgMjkgNDAgMCA3Ny05IDExMC0yOSAzNC0yMCA2MC00NiA4MC04MCAyMC0zMyAyOS03MCAyOS0xMTB6Ii8+PGdseXBoIHVuaWNvZGU9IuKGkCIgZD0iTTI5NiAxMTNsMjkgMzBjNCAzIDYgNyA2IDEyIDAgNS0yIDEwLTYgMTNsLTg3IDg4IDg3IDg4YzQgMyA2IDggNiAxMyAwIDUtMiA5LTYgMTJsLTI5IDMwYy0zIDMtOCA1LTEzIDUtNSAwLTktMi0xMi01bC0xMzAtMTMwYy00LTQtNi04LTYtMTMgMC01IDItOSA2LTEzbDEzMC0xMzBjMy0zIDctNSAxMi01IDUgMCAxMCAyIDEzIDV6IG0xNzkgMTQzYzAtNDAtOS03Ny0yOS0xMTAtMjAtMzQtNDYtNjAtODAtODAtMzMtMjAtNzAtMjktMTEwLTI5LTQwIDAtNzcgOS0xMTAgMjktMzQgMjAtNjAgNDYtODAgODAtMjAgMzMtMjkgNzAtMjkgMTEwIDAgNDAgOSA3NyAyOSAxMTAgMjAgMzQgNDYgNjAgODAgODAgMzMgMjAgNzAgMjkgMTEwIDI5IDQwIDAgNzctOSAxMTAtMjkgMzQtMjAgNjAtNDYgODAtODAgMjAtMzMgMjktNzAgMjktMTEweiIvPjxnbHlwaCB1bmljb2RlPSLigKIiIGQ9Ik00NzUgMjU2YzAtNDAtOS03Ny0yOS0xMTAtMjAtMzQtNDYtNjAtODAtODAtMzMtMjAtNzAtMjktMTEwLTI5LTQwIDAtNzcgOS0xMTAgMjktMzQgMjAtNjAgNDYtODAgODAtMjAgMzMtMjkgNzAtMjkgMTEwIDAgNDAgOSA3NyAyOSAxMTAgMjAgMzQgNDYgNjAgODAgODAgMzMgMjAgNzAgMjkgMTEwIDI5IDQwIDAgNzctOSAxMTAtMjkgMzQtMjAgNjAtNDYgODAtODAgMjAtMzMgMjktNzAgMjktMTEweiIvPjxnbHlwaCB1bmljb2RlPSJhIiBkPSJNNDc1IDQzOWwwLTEyOGMwLTUtMS05LTUtMTMtNC00LTgtNS0xMy01bC0xMjggMGMtOCAwLTEzIDMtMTcgMTEtMyA3LTIgMTQgNCAyMGw0MCAzOWMtMjggMjYtNjIgMzktMTAwIDM5LTIwIDAtMzktNC01Ny0xMS0xOC04LTMzLTE4LTQ2LTMyLTE0LTEzLTI0LTI4LTMyLTQ2LTctMTgtMTEtMzctMTEtNTcgMC0yMCA0LTM5IDExLTU3IDgtMTggMTgtMzMgMzItNDYgMTMtMTQgMjgtMjQgNDYtMzIgMTgtNyAzNy0xMSA1Ny0xMSAyMyAwIDQ0IDUgNjQgMTUgMjAgOSAzOCAyMyA1MSA0MiAyIDEgNCAzIDcgMyAzIDAgNS0xIDctM2wzOS0zOWMyLTIgMy0zIDMtNiAwLTItMS00LTItNi0yMS0yNS00Ni00NS03Ni01OS0yOS0xNC02MC0yMC05My0yMC0zMCAwLTU4IDUtODUgMTctMjcgMTItNTEgMjctNzAgNDctMjAgMTktMzUgNDMtNDcgNzAtMTIgMjctMTcgNTUtMTcgODUgMCAzMCA1IDU4IDE3IDg1IDEyIDI3IDI3IDUxIDQ3IDcwIDE5IDIwIDQzIDM1IDcwIDQ3IDI3IDEyIDU1IDE3IDg1IDE3IDI4IDAgNTUtNSA4MS0xNSAyNi0xMSA1MC0yNiA3MC00NWwzNyAzN2M2IDYgMTIgNyAyMCA0IDgtNCAxMS05IDExLTE3eiIvPjwvZm9udD48L2RlZnM+PC9zdmc+) format("svg")
-        }
-
-        .slick-next,
-        .slick-prev {
-            font-size: 0;
-            line-height: 0;
-            position: absolute;
-            top: 50%;
-            display: block;
-            width: 20px;
-            height: 20px;
-            padding: 0;
-            -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-            cursor: pointer;
-            border: none
-        }
-
-        .slick-next,
-        .slick-next:focus,
-        .slick-next:hover,
-        .slick-prev,
-        .slick-prev:focus,
-        .slick-prev:hover {
-            color: transparent;
-            outline: none;
-            background: transparent
-        }
-
-        .slick-next:focus:before,
-        .slick-next:hover:before,
-        .slick-prev:focus:before,
-        .slick-prev:hover:before {
-            opacity: 1
-        }
-
-        .slick-next.slick-disabled:before,
-        .slick-prev.slick-disabled:before {
-            opacity: .25
-        }
-
-        .slick-next:before,
-        .slick-prev:before {
-            font-family: slick;
-            font-size: 20px;
-            line-height: 1;
-            opacity: .75;
-            color: #fff;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale
-        }
-
-        .slick-prev {
-            left: -25px
-        }
-
-        [dir=rtl] .slick-prev {
-            right: -25px;
-            left: auto
-        }
-
-        .slick-prev:before {
-            content: "\2190"
-        }
-
-        [dir=rtl] .slick-prev:before {
-            content: "\2192"
-        }
-
-        .slick-next {
-            right: -25px
-        }
-
-        [dir=rtl] .slick-next {
-            right: auto;
-            left: -25px
-        }
-
-        .slick-next:before {
-            content: "\2192"
-        }
-
-        [dir=rtl] .slick-next:before {
-            content: "\2190"
-        }
-
-        .slick-dotted.slick-slider {
-            margin-bottom: 30px
-        }
-
-        .slick-dots {
-            position: absolute;
-            bottom: -25px;
-            display: block;
-            width: 100%;
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            text-align: center
-        }
-
-        .slick-dots li {
-            position: relative;
-            display: inline-block;
-            margin: 0 5px;
-            padding: 0
-        }
-
-        .slick-dots li,
-        .slick-dots li button {
-            width: 20px;
-            height: 20px;
-            cursor: pointer
-        }
-
-        .slick-dots li button {
-            font-size: 0;
-            line-height: 0;
-            display: block;
-            padding: 5px;
-            color: transparent;
-            border: 0;
-            outline: none;
-            background: transparent
-        }
-
-        .slick-dots li button:focus,
-        .slick-dots li button:hover {
-            outline: none
-        }
-
-        .slick-dots li button:focus:before,
-        .slick-dots li button:hover:before {
-            opacity: 1
-        }
-
-        .slick-dots li button:before {
-            font-family: slick;
-            font-size: 6px;
-            line-height: 20px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 20px;
-            height: 20px;
-            content: "\2022";
-            text-align: center;
-            opacity: .25;
-            color: #000;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale
-        }
-
-        .slick-dots li.slick-active button:before {
-            opacity: .75;
-            color: #000
-        }
-
-        header.home {
-            position: relative
-        }
-
-        header.home .container-1100 {
-            padding-right: 20px;
-            padding-left: 20px
-        }
-
-        header.home .home-banner-slider {
-            padding-bottom: 4rem
-        }
-
-        header.home .home-banner-slider .slick-next:before,
-        header.home .home-banner-slider .slick-prev:before {
-            display: none;
-            visibility: hidden;
-            opacity: 0;
-            height: 0;
-            width: 0;
-            margin: 0;
-            padding: 0
-        }
-
-        header.home .home-banner-slider .slick-active aside {
-            background-color: #404040!important
-        }
-
-        header.home .banner {
-            display: none
-        }
-
-        header.home .article-card {
-            position: relative;
-            margin-bottom: 3rem
-        }
-
-        header.home .article-card img {
-            -webkit-filter: contrast(50%) brightness(60%);
-            filter: contrast(50%) brightness(60%)
-        }
-
-        header.home .article-card h2 {
-            position: absolute;
-            top: 3rem;
-            left: 3rem
-        }
-
-        header.home .article-card .custom-button {
-            font-size: 14px;
-            font-weight: 800;
-            text-transform: uppercase;
-            position: absolute;
-            top: 45%;
-            left: 3rem
-        }
-
-        header.home .button-primary {
-            font-size: 14px
-        }
-
-        header.home .slider-container {
-            padding: 3rem;
-            box-shadow: 0 5px 19px rgba(0, 0, 0, .15);
-            text-align: center
-        }
-
-        header.home .slider-container .slider-content {
-            height: 270px
-        }
-
-        header.home .slider-container .slider-content .slick-next:before,
-        header.home .slider-container .slider-content .slick-prev:before {
-            color: #000;
-            font-size: 25px
-        }
-
-        header.home .slider-container .slider-content .slider-card-home {
-            min-height: 280px!important;
-            display: flex!important;
-            flex-flow: column;
-            justify-content: flex-start;
-            align-items: center
-        }
-
-        header.home .slider-container .slider-content img {
-            max-width: 185px;
-            height: auto;
-            margin-bottom: 30px
-        }
-
-        header.home .slider-container .custom-button {
-            text-transform: uppercase;
-            font-weight: 800
-        }
-
-        header.home .container {
-            padding-right: 0;
-            padding-left: 0
-        }
-
-        @media (min-width:575px) {
-            header.home .slider-container .slider-content .slick-next:before,
-            header.home .slider-container .slider-content .slick-prev:before {
-                font-size: 30px
-            }
-            header.home .banner-mobile {
-                display: none
-            }
-            header.home .home-banner-slider {
-                padding-bottom: 8rem
-            }
-            header.home .home-banner-slider .banner {
-                display: block;
-                max-height: calc(100vh - 9rem)
-            }
-            header.home .home-banner-slider .banner img {
-                max-height: calc(100vh - 9rem)!important
-            }
-        }
-
-        @media (min-width:992px) {
-            header.home .article-card:hover {
-                background-color: red
-            }
-            header.home .article-card:hover img {
-                opacity: .8
-            }
-            header.home .article-card .section-title.small {
-                font-size: 2.5rem;
-                line-height: 4rem
-            }
-            header.home .slider-container h1.section-title.small.red {
-                font-size: 25px
-            }
-            header.home .slider-container .slider-content .slider-card-home {
-                min-height: 310px!important
-            }
-            header.home .slider-container .slider-content .slider-card-home p.simple-text.medium {
-                font-size: 1.7rem
-            }
-        }
-
-        section.lojas {
-            overflow: hidden;
-            padding-bottom: 2rem
-        }
-
-        section.lojas .container-1100 {
-            max-width: 425px
-        }
-
-        section.lojas header {
-            padding-bottom: 5rem
-        }
-
-        section.lojas header .page-title {
-            display: flex;
-            justify-content: center;
-            margin-top: 5rem;
-            margin-bottom: 2rem
-        }
-
-        section.lojas header .simple-text.medium {
-            font-size: 2.1rem
-        }
-
-        section.lojas .filtro-loja-desktop {
-            display: none
-        }
-
-        section.lojas .filter-mobile {
-            position: relative;
-            background-color: #f1f1f1;
-            padding: 15px 20px;
-            margin-bottom: 15px
-        }
-
-        section.lojas .filter-mobile input {
-            outline: none;
-            border: 1px solid #3a3a3a;
-            border-radius: 5px;
-            padding-left: 10px;
-            background-color: transparent;
-            font-size: 2rem
-        }
-
-        section.lojas .filter-mobile input::-webkit-input-placeholder {
-            color: #3a3a3a;
-            opacity: 1
-        }
-
-        section.lojas .filter-mobile input:-ms-input-placeholder {
-            color: #3a3a3a;
-            opacity: 1
-        }
-
-        section.lojas .filter-mobile input::-ms-input-placeholder {
-            color: #3a3a3a;
-            opacity: 1
-        }
-
-        section.lojas .filter-mobile input::placeholder {
-            color: #3a3a3a;
-            opacity: 1
-        }
-
-        section.lojas .custom-button {
-            border: 2px solid #a12626;
-            background-color: transparent;
-            text-transform: uppercase
-        }
-
-        section.lojas .loja-item-wrapper {
-            display: flex;
-            flex-flow: column;
-            align-items: center;
-            text-align: center;
-            min-height: 190px;
-            justify-content: flex-start;
-            margin: 0;
-            padding: 1.5rem
-        }
-
-        section.lojas .loja-item-wrapper img {
-            width: 95px;
-            height: auto;
-            margin-bottom: 20px
-        }
-
-        section.lojas .loja-item-wrapper .simple-text.small {
-            font-size: 2.4rem
-        }
-
-        section.lojas .loja-item-wrapper:hover h4 {
-            text-decoration: underline
-        }
-
-        section.lojas .ais-InstantSearch__root {
-            height: auto;
-            width: 100%
-        }
-
-        section.lojas .ais-SearchBox,
-        section.lojas .ais-SearchBox-form {
-            width: 100%;
-            margin-right: 1.5rem;
-            height: 100%
-        }
-
-        section.lojas .ais-SearchBox-input {
-            display: flex;
-            outline: none;
-            border: 1px solid #3a3a3a;
-            padding: 15px;
-            padding-left: 35px!important;
-            border-radius: 5px;
-            background-color: transparent;
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            width: 100%!important
-        }
-
-        section.lojas .ais-SearchBox-input::-webkit-input-placeholder {
-            color: #3a3a3a;
-            opacity: 1
-        }
-
-        section.lojas .ais-SearchBox-input:-ms-input-placeholder {
-            color: #3a3a3a;
-            opacity: 1
-        }
-
-        section.lojas .ais-SearchBox-input::-ms-input-placeholder {
-            color: #3a3a3a;
-            opacity: 1
-        }
-
-        section.lojas .ais-SearchBox-input::placeholder {
-            color: #3a3a3a;
-            opacity: 1
-        }
-
-        section.lojas .ais-SearchBox-reset,
-        section.lojas .ais-SearchBox-submit {
-            display: none
-        }
-
-        section.lojas .ais-Hits {
-            width: 100%
-        }
-
-        section.lojas .ais-Hits-list {
-            margin-top: 0;
-            margin-bottom: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center
-        }
-
-        section.lojas .ais-Hits-item {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 15px;
-            flex: 0 0 47%;
-            max-width: 47%
-        }
-
-        section.lojas .ais-Pagination-list {
-            display: flex;
-            justify-content: space-around;
-            text-align: center
-        }
-
-        section.lojas .ais-Pagination-list .ais-Pagination-link {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 2.5rem;
-            width: 0;
-            height: 0;
-            padding: 2.5rem;
-            border: 2px solid #a12626;
-            border-radius: 5px
-        }
-
-        section.lojas .pagination-wrapper {
-            margin-left: auto;
-            margin-right: auto
-        }
-
-        section.lojas .refinementList-mobile {
-            margin-left: 100vw;
-            -webkit-transition: all .3s ease;
-            transition: all .3s ease;
-            position: fixed;
-            width: 100vw;
-            height: calc(100vh - 9rem);
-            margin-top: 9rem;
-            top: 0;
-            left: 0;
-            z-index: 999;
-            background-color: #f1f1f1
-        }
-
-        section.lojas .refinementList-mobile .custom-button-filtro {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-            min-width: 40vw
-        }
-
-        section.lojas .refinementList-mobile.refinementList-mobile-opened {
-            margin-left: 0
-        }
-
-        section.lojas .refinementList-mobile .ais-RefinementList-item {
-            margin-left: 1rem;
-            margin-bottom: 2.5rem
-        }
-
-        section.lojas .refinementList-mobile .ais-RefinementList-item.ais-RefinementList-item--selected .ais-RefinementList-label:before {
-            border: none;
-            content: "\2713";
-            text-align: right;
-            background-color: #a12626;
-            color: #fff;
-            padding-top: 5px
-        }
-
-        section.lojas .refinementList-mobile .ais-RefinementList {
-            margin-bottom: auto;
-            margin-left: 5%;
-            margin-top: 5%
-        }
-
-        section.lojas .refinementList-mobile .ais-RefinementList-label {
-            cursor: pointer
-        }
-
-        section.lojas .refinementList-mobile .ais-RefinementList-label:before {
-            border: 2px solid rgba(0, 0, 0, .54);
-            content: "\A0";
-            display: inline-block;
-            font: 16px/1rem sans-serif;
-            height: 16px;
-            margin: 0 1.5rem 0 0;
-            padding: 0;
-            vertical-align: text-bottom;
-            width: 16px;
-            border-radius: 2px
-        }
-
-        section.lojas .refinementList-mobile .ais-RefinementList-label .ais-RefinementList-labelText {
-            font-size: 2rem;
-            margin-right: 5px;
-            color: #232323
-        }
-
-        section.lojas .refinementList-mobile .ais-RefinementList-label .ais-RefinementList-count {
-            font-size: 12px
-        }
-
-        section.lojas .refinementList-mobile input[type=checkbox] {
-            display: none
-        }
-
-        section.lojas .search-box-wrapper-mobile {
-            position: relative
-        }
-
-        section.lojas .search-box-wrapper-mobile .icon-search-mobile {
-            width: 20px;
-            height: 20px;
-            position: absolute;
-            top: 15px;
-            left: 25px;
-            fill: #404040
-        }
-
-        @media (min-width:576px) {
-            section.lojas .container-1100 {
-                max-width: 576px
-            }
-        }
-
-        @media (min-width:768px) {
-            section.lojas .container-1100 {
-                max-width: 768px
-            }
-            section.lojas .ais-Hits-item {
-                flex: 0 0 43%;
-                max-width: 43%
-            }
-        }
-
-        @media (min-width:992px) {
-            section.lojas {
-                padding-top: 20px;
-                padding-bottom: 6rem
-            }
-            section.lojas .search-box-wrapper {
-                position: relative
-            }
-            section.lojas .search-box-wrapper .icon {
-                width: 20px;
-                height: 20px;
-                position: absolute;
-                top: 18px;
-                left: 15px;
-                fill: #404040
-            }
-            section.lojas .loja-item-wrapper {
-                padding-top: 0
-            }
-            section.lojas .loja-item-wrapper .simple-text.small {
-                font-size: 1.8rem
-            }
-            section.lojas .refinementList-mobile {
-                display: none
-            }
-            section.lojas .filtro-loja-desktop {
-                display: flex;
-                flex-flow: column;
-                box-shadow: 0 5px 19px rgba(0, 0, 0, .16);
-                padding: 30px 25px;
-                height: auto;
-                margin-bottom: auto
-            }
-            section.lojas .filtro-loja-desktop .row {
-                margin-right: 0;
-                margin-left: 0
-            }
-            section.lojas .filtro-loja-desktop .ais-RefinementList-item {
-                margin-left: 1rem;
-                margin-bottom: 1rem
-            }
-            section.lojas .filtro-loja-desktop .ais-RefinementList-item.ais-RefinementList-item--selected .ais-RefinementList-label:before {
-                border: none;
-                content: "\2713";
-                text-align: right;
-                background-color: #a12626;
-                color: #fff
-            }
-            section.lojas .filtro-loja-desktop .ais-RefinementList-label {
-                cursor: pointer
-            }
-            section.lojas .filtro-loja-desktop .ais-RefinementList-label:before {
-                border: 2px solid rgba(0, 0, 0, .54);
-                content: "\A0";
-                display: inline-block;
-                font: 16px/1em sans-serif;
-                height: 16px;
-                margin: 0 1.5rem 0 0;
-                padding: 0;
-                vertical-align: text-bottom;
-                width: 16px;
-                border-radius: 2px
-            }
-            section.lojas .filtro-loja-desktop .ais-RefinementList-label .ais-RefinementList-labelText {
-                font-size: 2rem;
-                margin-right: 5px;
-                color: #232323
-            }
-            section.lojas .filtro-loja-desktop .ais-RefinementList-label .ais-RefinementList-count {
-                font-size: 12px
-            }
-            section.lojas .filtro-loja-desktop input[type=checkbox] {
-                display: none
-            }
-            section.lojas header .page-title {
-                justify-content: flex-start;
-                margin-top: 5rem;
-                margin-bottom: 0;
-                padding-left: 7rem
-            }
-            section.lojas header .simple-text.medium {
-                font-size: 2.7rem;
-                color: #505050
-            }
-            section.lojas .container-1100 {
-                max-width: 992px
-            }
-            section.lojas .filter-mobile {
-                display: none
-            }
-            section.lojas .ais-Hits-list {
-                justify-content: flex-start
-            }
-            section.lojas .ais-SearchBox,
-            section.lojas .ais-SearchBox-form {
-                width: 100%;
-                margin-right: 0
-            }
-            section.lojas .ais-SearchBox-input {
-                display: flex;
-                outline: none;
-                border: 1px solid #3a3a3a;
-                padding: 15px 15px 15px 45px;
-                border-radius: 5px;
-                background-color: transparent;
-                font-size: 2rem;
-                margin-bottom: 1.5rem;
-                width: 100%!important
-            }
-            section.lojas .ais-SearchBox-input::-webkit-input-placeholder {
-                color: #3a3a3a;
-                opacity: 1
-            }
-            section.lojas .ais-SearchBox-input:-ms-input-placeholder {
-                color: #3a3a3a;
-                opacity: 1
-            }
-            section.lojas .ais-SearchBox-input::-ms-input-placeholder {
-                color: #3a3a3a;
-                opacity: 1
-            }
-            section.lojas .ais-SearchBox-input::placeholder {
-                color: #3a3a3a;
-                opacity: 1
-            }
-            section.lojas .ais-Pagination-list .ais-Pagination-link {
-                font-size: 2rem;
-                padding: 2rem
-            }
-        }
-
-        @media (min-width:1200px) {
-            section.lojas {
-                padding-bottom: 2rem
-            }
-            section.lojas .loja-item-wrapper {
-                padding: 0 3.5rem 3.5rem
-            }
-            section.lojas .loja-item-wrapper img {
-                width: 120px
-            }
-            section.lojas .loja-item-wrapper .simple-text.small {
-                font-size: 1.8rem
-            }
-            section.lojas .ais-InstantSearch__root {
-                height: auto;
-                width: 100%
-            }
-            section.lojas .ais-SearchBox-reset,
-            section.lojas .ais-SearchBox-submit {
-                display: none
-            }
-            section.lojas .ais-Hits {
-                width: 100%
-            }
-            section.lojas .ais-Hits-list {
-                margin-top: 0;
-                margin-bottom: 0;
-                display: flex;
-                flex-wrap: wrap
-            }
-            section.lojas .ais-Hits-item {
-                flex: 0 0 33%;
-                max-width: 33%
-            }
-            section.lojas header .page-title {
-                margin-top: 2rem
-            }
-            section.lojas header .page-title h1 {
-                font-size: 3.2rem
-            }
-            section.lojas header .simple-text.medium {
-                font-size: 2.5rem;
-                color: #505050
-            }
-            section.lojas .filtro-loja-desktop h5 {
-                text-transform: uppercase
-            }
-            section.lojas .container-1100 {
-                max-width: 1200px
-            }
-        }
-
-        section.lojas .ais-Pagination-item--selected .ais-Pagination-link--selected {
-            background-color: #a12626;
-            color: #fff
-        }
-
-        section.lojas .ais-Pagination-item--disabled {
-            background-color: #a12626;
-            border-radius: 5px;
-            color: #fff;
-            cursor: not-allowed
-        }
-
-        section.shopping {
-            padding-top: 20px;
-            padding-bottom: 2rem
-        }
-
-        section.shopping .container {
-            padding-left: 20px;
-            padding-right: 20px
-        }
-
-        section.shopping .video-institucional {
-            padding-top: 3rem
-        }
-
-        section.shopping .video-institucional iframe {
-            width: 100%;
-            min-height: 250px
-        }
-
-        section.shopping header .page-title {
-            justify-content: center;
-            margin-top: 5rem;
-            margin-bottom: 5rem
-        }
-
-        section.shopping header .simple-text.medium {
-            font-size: 2.1rem
-        }
-
-        section.shopping .center-text {
-            padding: 3rem 0
-        }
-
-        section.shopping .center-text .simple-text.small {
-            font-size: 1.9rem;
-            line-height: 2.9rem
-        }
-
-        @media (min-width:768px) {
-            section.shopping .video-institucional iframe {
-                min-height: 450px
-            }
-            section.shopping .center-text .simple-text.small {
-                font-size: 2rem
-            }
-        }
-
-        @media (min-width:992px) {
-            section.shopping header .page-title {
-                justify-content: left;
-                margin-top: 5rem;
-                margin-bottom: 5rem;
-                padding-left: 1.5rem
-            }
-            section.shopping header .simple-text.medium {
-                font-size: 2.7rem;
-                color: #505050
-            }
-            section.shopping .video-institucional iframe {
-                min-height: 550px
-            }
-            section.shopping .center-text .simple-text.small {
-                font-size: 2rem
-            }
-        }
-
-        @media (min-width:1200px) {
-            section.shopping header .page-title {
-                margin-bottom: 2rem
-            }
-            section.shopping header .page-title h1 {
-                font-size: 3.2rem
-            }
-            section.shopping header .simple-text.medium {
-                font-size: 2.5rem;
-                color: #505050
-            }
-            section.shopping .video-institucional iframe {
-                min-height: 615px
-            }
-            section.shopping .center-text .simple-text.small {
-                font-size: 1.8rem
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Pé com Pé - Qualidade em Calçados</title>
+    <meta name="description" content="Á Pé com Pé tem mais de 35 anos no mercado de calçados infantis, levando conforto e qualidade as nossas crianças." />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="INDEX,FOLLOW" />
+    <link rel="icon" href="https://pecompe.com.br/media/favicon/default/_favicon---pecompe.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="https://pecompe.com.br/media/favicon/default/_favicon---pecompe.png" type="image/x-icon" />
+    <!--[if lt IE 7]>
+    <script type="text/javascript">
+        //<![CDATA[
+    var BLANK_URL = 'https://pecompe.com.br/js/blank.html';
+    var BLANK_IMG = 'https://pecompe.com.br/js/spacer.gif';
+//]]>
+</script>
+<![endif]-->
+    <link rel="stylesheet" type="text/css" href="https://pecompe.com.br/skin/frontend/pecompe/default/css/swatches.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="https://pecompe.com.br/skin/frontend/pecompe/default/css/bootstrap.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="https://pecompe.com.br/skin/frontend/pecompe/default/css/font-awesome.min.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="https://pecompe.com.br/skin/frontend/pecompe/default/css/owl.carousel.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="https://pecompe.com.br/skin/frontend/pecompe/default/css/owl.theme.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="https://pecompe.com.br/skin/frontend/pecompe/default/css/owl.transitions.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="https://pecompe.com.br/skin/frontend/base/default/css/responsivebannerslider/default.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="https://pecompe.com.br/skin/frontend/base/default/css/magestore/fblogin.css" media="all" />
+    <script type="text/javascript" src="https://pecompe.com.br/js/prototype/prototype.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/js/lib/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/js/lib/jquery/noconflict.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/js/lib/ccard.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/js/lib/jquery.circle-diagram.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/js/prototype/validation.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/js/scriptaculous/builder.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/js/scriptaculous/effects.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/js/scriptaculous/dragdrop.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/js/scriptaculous/controls.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/js/scriptaculous/slider.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/js/varien/js.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/js/varien/form.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/js/mage/translate.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/js/mage/cookies.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/js/cjm/colorselectorplus/listswitch.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/js/responsivebannerslider/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/js/responsivebannerslider/jquery.easing.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/js/responsivebannerslider/froogaloop.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/js/responsivebannerslider/jquery.fitvid.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/skin/frontend/pecompe/default/js/lib/modernizr.custom.min.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/skin/frontend/pecompe/default/js/lib/selectivizr.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/skin/frontend/pecompe/default/js/lib/matchMedia.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/skin/frontend/pecompe/default/js/lib/matchMedia.addListener.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/skin/frontend/pecompe/default/js/lib/enquire.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/skin/frontend/pecompe/default/js/app.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/skin/frontend/pecompe/default/js/lib/jquery.cycle2.min.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/skin/frontend/pecompe/default/js/lib/jquery.cycle2.swipe.min.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/skin/frontend/pecompe/default/js/slideshow.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/skin/frontend/pecompe/default/js/lib/imagesloaded.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/skin/frontend/pecompe/default/js/minicart.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/skin/frontend/pecompe/default/js/owl.carousel.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/skin/frontend/pecompe/default/js/noconflict.js"></script>
+    <script type="text/javascript" src="https://pecompe.com.br/skin/frontend/base/default/js/oficinamagento_cep.js"></script>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:300,400,500,700,600" />
+    <!--[if  (lte IE 8) & (!IEMobile)]>
+    <link rel="stylesheet" type="text/css" href="https://pecompe.com.br/skin/frontend/pecompe/default/css/styles-ie8.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="https://pecompe.com.br/skin/frontend/pecompe/default/css/madisonisland-ie8.css" media="all" />
+    <![endif]-->
+    <!--[if (gte IE 9) | (IEMobile)]><!-->
+    <link rel="stylesheet" type="text/css" href="https://pecompe.com.br/skin/frontend/pecompe/default/css/styles.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="https://pecompe.com.br/skin/frontend/pecompe/default/css/madisonisland.css" media="all" />
+    <!--<![endif]-->
+
+    <script type="text/javascript">
+        //<![CDATA[
+        Mage.Cookies.path = '/';
+        Mage.Cookies.domain = '.pecompe.com.br';
+        //]]>
+    </script>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
+    <script type="text/javascript">
+        //<![CDATA[
+        optionalZipCountries = ["BR"];
+        //]]>
+    </script>
+    <!-- BEGIN GOOGLE ANALYTICS CODE -->
+    <script type="text/javascript">
+        //<![CDATA[
+        var _gaq = _gaq || [];
+
+        _gaq.push(['_setAccount', 'UA-89797523-1']);
+
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+
+        //]]>
+    </script>
+    <!-- END GOOGLE ANALYTICS CODE -->
+    <!-- Facebook Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window,
+            document, 'script', '//connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', '130414967501013');
+        fbq('track', "PageView");
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=130414967501013&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
+    <!-- Facebook Ads Extension for Magento -->
+    <!-- Facebook Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window,
+            document, 'script', '//connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '130414967501013', {}, {
+            agent: 'exmagento-1.9.2.4-2.6.0'
+        });
+        fbq('track', 'PageView', {
+            source: 'magento',
+            version: "1.9.2.4",
+            pluginVersion: "2.6.0"
+        });
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=130414967501013&ev=PageView&noscript=1&a=exmagento-1.9.2.4-2.6.0" /></noscript>
+    <!-- End Facebook Pixel Code -->
+    <script type="text/javascript">
+        //<![CDATA[
+        var Translator = new Translate({
+            "HTML tags are not allowed": "Tags HTML n\u00e3o s\u00e3o permitidas",
+            "Please select an option.": "Selecione uma op\u00e7\u00e3o.",
+            "This is a required field.": "Este \u00e9 um campo obrigat\u00f3rio",
+            "Please enter a valid number in this field.": "Informe um n\u00famero v\u00e1lido.",
+            "The value is not within the specified range.": "O valor n\u00e3o est\u00e1 dentro do limite especificado.",
+            "Please use numbers only in this field. Please avoid spaces or other characters such as dots or commas.": "Utilize apenas n\u00fameros. Evite espa\u00e7os ou outros caracteres como pontos ou v\u00edrgulas.",
+            "Please use letters only (a-z or A-Z) in this field.": "Utilize apenas letras (a-z ou A-Z).",
+            "Please use only letters (a-z), numbers (0-9) or underscore(_) in this field, first character should be a letter.": "Utilize apenas letras (a-z), n\u00fameros (0-9) ou underline(_), primeiro car\u00e1cter precisa ser uma letra.",
+            "Please use only letters (a-z or A-Z) or numbers (0-9) only in this field. No spaces or other characters are allowed.": "Utilize apenas letras (a-z ou A-Z) ou n\u00fameros (0-9). Espa\u00e7os ou outros caracteres n\u00e3o ser\u00e3o permitidos.",
+            "Please use only letters (a-z or A-Z) or numbers (0-9) or spaces and # only in this field.": "Utilize apenas letras (a-z ou A-Z) ou n\u00fameros (0-9) ou espa\u00e7os e #.",
+            "Please enter a valid phone number. For example (123) 456-7890 or 123-456-7890.": "Informe um n\u00famero de telefone v\u00e1lido. Por exemplo, (123) 456-7890 ou 123-456-7890.",
+            "Please enter a valid fax number. For example (123) 456-7890 or 123-456-7890.": "Informe um n\u00famero de celular v\u00e1lido. Por exemplo, (123) 456-7890 ou 123-456-7890.",
+            "Please enter a valid date.": "Informe uma data v\u00e1lida.",
+            "The From Date value should be less than or equal to the To Date value.": "A Data de In\u00e9cio deve ser menor ou igual \u00e0 Data Final.",
+            "Please enter a valid email address. For example johndoe@domain.com.": "Informe um endere\u00e7o de email v\u00e1lido. Por exemplo, johndoe@domain.com.",
+            "Please use only visible characters and spaces.": "Utilize apenas caracteres vis\u00edveis e espa\u00e7os.",
+            "Please enter 6 or more characters. Leading or trailing spaces will be ignored.": "Informe 6 ou mais caracteres. Espa\u00e7os a direita ou a esquerda ser\u00e3o ignorados.",
+            "Please enter 7 or more characters. Password should contain both numeric and alphabetic characters.": "Informe 7 ou mais caracteres. Senha precisa conter ambos caracteres, n\u00fameros e letras.",
+            "Please make sure your passwords match.": "Verifique se as senhas conferem.",
+            "Please enter a valid URL. Protocol is required (http:\/\/, https:\/\/ or ftp:\/\/)": "Informe uma URL v\u00e1lida. Protocolo obrigat\u00f3rio (http:\/\/, https:\/\/ ou ftp:\/\/)",
+            "Please enter a valid URL. For example http:\/\/www.example.com or www.example.com": "Informe uma URL v\u00e1lida. Por exemplo, http:\/\/www.example.com ou www.example.com",
+            "Please enter a valid URL Key. For example \"example-page\", \"example-page.html\" or \"anotherlevel\/example-page\".": "Informe uma URL v\u00e1lida. Por exemplo, \"exemplo-pagina\", \"exemplo-pagina.html\" ou \"umacategoria\/exemplo-pagina\".",
+            "Please enter a valid XML-identifier. For example something_1, block5, id-4.": "Informe um identificador XML v\u00e1lido. Por exemplo, algumacoisa_1, block5, id-4.",
+            "Please enter a valid social security number. For example 123-45-6789.": "Informe um CPF v\u00e1lido. Por exemplo, 123.455.678-9.",
+            "Please enter a valid zip code. For example 90602 or 90602-1234.": "Informe um CEP v\u00e1lido. Por exemplo, 90602 ou 90602-1234.",
+            "Please enter a valid zip code.": "Informe um CEP v\u00e1lido.",
+            "Please use this date format: dd\/mm\/yyyy. For example 17\/03\/2006 for the 17th of March, 2006.": "Utilize este formato de data: dd\/mm\/yyyy. Por exemplo, 17\/03\/2006 para informar 17th de Mar\u00e7o, 2006.",
+            "Please enter a valid $ amount. For example $100.00.": "Informe um valor $ . Por exemplo, $100.00.",
+            "Please select one of the above options.": "Selecione uma das op\u00e7\u00f5es abaixo.",
+            "Please select one of the options.": "SELECIONE O TAMANHO DESEJADO.",
+            "Please select State\/Province.": "Selecione Estado...",
+            "Please enter a number greater than 0 in this field.": "Informe um n\u00famero maior que zero.",
+            "Please enter a number 0 or greater in this field.": "Informe um n\u00famero igual ou maior que zero.",
+            "Please enter a valid credit card number.": "Informe um n\u00famero de cart\u00e3o de cr\u00e9dito v\u00e1lido.",
+            "Credit card number does not match credit card type.": "N\u00famero do cart\u00e3o de cr\u00e9dito n\u00e3o condiz com tipo de cart\u00e3o.",
+            "Card type does not match credit card number.": "Tipo de cart\u00e3o n\u00e3o condiz com n\u00famero do cart\u00e3o de cr\u00e9dito.",
+            "Incorrect credit card expiration date.": "Data de expira\u00e7\u00e3o do cart\u00e3o n\u00e3o \u00e9 v\u00e1lido.",
+            "Please enter a valid credit card verification number.": "Informe um n\u00famero de verifica\u00e7\u00e3o de cart\u00e3o de cr\u00e9dito v\u00e1lido.",
+            "Please input a valid CSS-length. For example 100px or 77pt or 20em or .5ex or 50%.": "Informe um tamanho v\u00e1lido de CSS no campo. Por exemplo, 100px ou 77pt ou 20em ou .5ex ou 50%.",
+            "Text length does not satisfy specified text range.": "Tamanho do texto n\u00e3o satisfaz o espa\u00e7o de texto especificado.",
+            "Please enter a number lower than 100.": "Informe um n\u00famero menor que 100.",
+            "Please select a file": "Selecione um arquivo",
+            "Please enter issue number or start date for switch\/solo card type.": "Informe um n\u00famero de seguran\u00e7a ou data de validade para o tipo de cart\u00e3o switch\/solo.",
+            "Please wait, loading...": "Carregando...",
+            "This date is a required value.": "A data \u00e9 um valor obrigat\u00f3rio.",
+            "Please enter a valid day (1-%d).": "Informe um dia v\u00e1lido (1-%d).",
+            "Please enter a valid month (1-12).": "Informe um m\u00eas v\u00e1lido (1-12).",
+            "Please enter a valid year (1900-%d).": "Informe um ano v\u00e1lido (1900-%d).",
+            "Please enter a valid full date": "Informe uma data completa",
+            "Please enter a valid date between %s and %s": "Informe uma data v\u00e1lida entre %s e %s",
+            "Please enter a valid date equal to or greater than %s": "Informe uma data v\u00e1lida igual ou maior que %s",
+            "Please enter a valid date less than or equal to %s": "Informe uma data v\u00e1lida menor ou igual a %s",
+            "Complete": "Completo",
+            "Add Products": "Criar Produtos",
+            "Please choose to register or to checkout as a guest": "Criar conta ou continuar como visitante",
+            "Your order cannot be completed at this time as there is no shipping methods available for it. Please make necessary changes in your shipping address.": "Seu pedido n\u00e3o pode ser finalizado no momento pois n\u00e3o h\u00e1 formas de entrega dispon\u00edveis para ele. Talvez seja necess\u00e1rio alterar seu endere\u00e7o de entrega.",
+            "Please specify shipping method.": "Informe um meio de entrega.",
+            "Your order cannot be completed at this time as there is no payment methods available for it.": "Seu pedido n\u00e3o pode ser finalizado neste momento pois n\u00e3o h\u00e1 formas de pagamento dispon\u00edveis para ele.",
+            "Please specify payment method.": "Informe uma forma de pagamento.",
+            "Add to Cart": "Comprar",
+            "In Stock": "Em Estoque",
+            "Out of Stock": "Sem Estoque",
+            "The taxvat is invalid": "O CPF ou CNPJ informado \u00e9 inv\u00e1lido",
+            "Check the values to pass on each card": "Confira os valores a passar em cada cart\u00e3o",
+            "Expiration date of the incorrect card": "Data de expira\u00e7\u00e3o do Cart\u00e3o incorreta",
+            "Total amount with interest: USD{%%%}": "<b>Valor total c\/ juros: <\/b>R${%%%}"
+        });
+        //]]>
+    </script>
+    <link rel="preconnect" href="https://in.hotjar.com
+br">
+    <link rel="preconnect" href="https://widget.whatshelp.io">
+    <link rel="preconnect" href="https://static.whatshelp.io">
+    <link rel="preconnect" href="https://vars.hotjar.com">
+    <link rel="preconnect" href="https://script.hotjar.com">
+    <link rel="preconnect" href="https://ssl.google-analytics.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google.com">
+    <link rel="preconnect" href="https://connect.facebook.net">
+    <link rel="preconnect" href="https://www.google.com.br">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="preconnect" href="https://www.facebook.com">
+
+    <meta name="google-site-verification" content="ka3BvFe0C2X7qWciZ0D2qiJrVqpVCrpC_NxTUWyX4A8" />
+
+    <style>
+        . wh-widget-send-button-get-button {
+            display: none !important;
+        }
+
+        label.star-depoimentos:before {
+            color: #FFC107;
+        }
+
+        .logo {
+            width: 100% !important;
+        }
+
+        .widget.widget-new-products ul.products-grid.slides li {
+            margin-right: 6px;
+            min-height: 394px !important;
+        }
+
+        .widget.widget-new-products .products-grid .actions {
+            top: 141px;
+        }
+
+        .nav-primary a {
+            font-size: 12px;
+        }
+
+        @media only screen and (max-width:680px) {
+            div#bnrSlider-4 {
+                /*display:none;*/
+            }
+        }
+
+        @media only screen and (max-width:768px) {
+            .top-account {
+                margin: 0;
+            }
+            .fb_dialog.fb_dialog_mobile.fb_customer_chat_bubble_animated_no_badge.fb_customer_chat_bubble_pop_in {
+                right: 10px !important;
+            }
+            .fb_customer_chat_bounce_in_v2 {
+                margin-right: -10px;
             }
         }
     </style>
-    <meta name="generator" content="Gatsby 2.18.6" />
-    <title data-react-helmet="true">Home | Territorio do calçado</title>
-    <link data-react-helmet="true" rel="preload" href="/static/raleway-regular-webfont-48f849d8a6422cc26149453b1ff228fb.woff2" as="font" type="font/woff2" crossorigin="crossorigin" />
-    <link data-react-helmet="true" rel="preload" href="/static/raleway-bold-webfont-6ea4c320a3223ada0605b57cd4754d2c.woff2" as="font" type="font/woff2" crossorigin="crossorigin" />
-    <link data-react-helmet="true" rel="preload" href="/static/raleway-extrabold-webfont-5f614adcc104dfe8431a708ee27e9563.woff2" as="font" type="font/woff2" crossorigin="crossorigin" />
-    <meta data-react-helmet="true" name="description" content="O maior shopping de calçados femininos da américa Latina." />
-    <meta data-react-helmet="true" property="og:title" content="Home" />
-    <meta data-react-helmet="true" property="og:description" content="O maior shopping de calçados femininos da américa Latina." />
-    <meta data-react-helmet="true" property="og:type" content="website" />
-    <meta data-react-helmet="true" name="twitter:card" content="summary" />
-    <meta data-react-helmet="true" name="twitter:creator" />
-    <meta data-react-helmet="true" name="twitter:title" content="Home" />
-    <meta data-react-helmet="true" name="twitter:description" content="O maior shopping de calçados femininos da américa Latina." />
-    <link rel="icon" href="/icons/icon-48x48.png?v=c674d5155a8b28e17f9c07358a8d7ef3" />
-    <link rel="manifest" href="/manifest.webmanifest" />
-    <meta name="theme-color" content="#A12626" />
-    <link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=c674d5155a8b28e17f9c07358a8d7ef3" />
-    <link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=c674d5155a8b28e17f9c07358a8d7ef3" />
-    <link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=c674d5155a8b28e17f9c07358a8d7ef3" />
-    <link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=c674d5155a8b28e17f9c07358a8d7ef3" />
-    <link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=c674d5155a8b28e17f9c07358a8d7ef3" />
-    <link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=c674d5155a8b28e17f9c07358a8d7ef3" />
-    <link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=c674d5155a8b28e17f9c07358a8d7ef3" />
-    <link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=c674d5155a8b28e17f9c07358a8d7ef3" />
-    <link as="script" rel="preload" href="/styles-de63317853eaa805ddd7.js" />
-    <link as="script" rel="preload" href="/component---src-pages-index-js-be42583328184726b814.js" />
-    <link as="script" rel="preload" href="/commons-d9e2f6f8f4672f3bde03.js" />
-    <link as="script" rel="preload" href="/app-65668cc4ceaafffd6f64.js" />
-    <link as="script" rel="preload" href="/webpack-runtime-23e45fb3c3d989edb2e5.js" />
-    <link as="fetch" rel="preload" href="/page-data/index/page-data.json" crossorigin="anonymous" />
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KF86VZX');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Hotjar Tracking Code for www.pecompe.com.br -->
+    <script>
+        (function(h, o, t, j, a, r) {
+            h.hj = h.hj || function() {
+                    (h.hj.q = h.hj.q || []).push(arguments)
+                };
+            h._hjSettings = {
+                hjid: 1042577,
+                hjsv: 6
+            };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script');
+            r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+
+    <script type="text/javascript">
+        (function() {
+            var options = {
+                facebook: "346747245349669", // Facebook page ID
+                whatsapp: "+55 (18) 99607-6551", // WhatsApp number
+                call_to_action: "Envie nos uma mensagem!", // Call to action
+                button_color: "#129BF4", // Color of button
+                position: "right", // Position may be 'right' or 'left'
+                order: "whatsapp,facebook", // Order of buttons
+            };
+            var proto = document.location.protocol,
+                host = "whatshelp.io",
+                url = proto + "//static." + host;
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function() {
+                WhWidgetSendButton.init(host, proto, options);
+            };
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+        })();
+    </script>
+    <meta name="google-site-verification" content="-DQsnnxypYbRlSZQY6kpjrJPFj7JX5tJPY7firL0qx4" />
+
+    <!-- Protocolo Open Graph- SEO -->
+
+    <meta property="og:title" content="Pé com Pé - Calçados Infantis" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pecompe.com.br/" />
+    <meta property="og:image" content="https://pecompe.com.br/skin/frontend/pecompe/default/images/logoperfil-pcp.png" />
+    <meta property="og:description" content="Á Pé com Pé tem mais de 35 anos no mercado de calçados infantis, levando conforto e qualidade as nossas crianças." />
+
+    <!-- SCHEMA.ORG - SEO -->
+
+    <script type="application/ld+json">
+        { "@context": "https://schema.org", "@type": "NGO", "name": "Pé com Pé", "alternateName": "Pé com Pé Calçados", "url": "https://pecompe.com.br/", "logo": "https://pecompe.com.br/skin/frontend/pecompe/default/images/logoperfil-pcp.png", "image": "https://pecompe.com.br/skin/frontend/pecompe/default/images/logoperfil-pcp.png", "sameAs": [ "https://www.facebook.com/pecompe.calc.infantis/", "https://www.instagram.com/pecompeoficial/", "https://www.youtube.com/user/videospecompe" ], "address": { "@type": "PostalAddress", "addressLocality": "São Paulo, Brasil", "postalCode": "16203-041", "streetAddress": "Rua Manoel Cottas de Azevedo, 71, Jardim Klayton, Birigui" }, "email": "loja@pecompe.com.br", "telephone": "(18) 3643 5500" }
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '417796098875212');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=417796098875212&ev=PageView&noscript=1" ; /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <style>
+        input#search {
+            width: 80%;
+        }
+
+        button.button {
+            margin-top: -5px;
+            margin-left: -4px;
+            height: 40px;
+        }
+
+        .product-image,
+        .product-image img {
+            width: 250px;
+            min-height: auto !important;
+            margin-right: 20px;
+        }
+
+        .col2-left-layout .col-main #products-list > li p.rating-links {
+            display: none;
+        }
+
+        .col2-left-layout .col-main #products-list > li {
+            min-height: 538px;
+        }
+
+        .product-view .add-to-cart-buttons .button {
+            border: 0px solid #4CAF50;
+            color: #fff;
+            background: #4CAF50;
+        }
+
+        .product-view .add-to-cart-buttons .button:hover {
+            border: 0px solid #3a823d;
+            color: #fff;
+            background: #3a823d;
+        }
+
+        li.level0.nav-6.parent {
+            display: none;
+        }
+
+        .promo-product.a164 {
+            display: none;
+        }
+
+        .promo-product.a163 {
+            display: none;
+        }
+
+        @media only screen and (max-width:768px) {
+            button.button.btn-cart {
+                height: auto;
+                border: 0;
+                color: #fff;
+                background: #28a22d;
+                margin-top: 10px;
+            }
+        }
+
+        .widget-title h2 {
+            text-align: center;
+            color: #2682dd !important;
+        }
+
+        .widget-title {
+            margin: 0 !important;
+        }
+
+        .widget-title:before {
+            position: relative;
+            top: 36px;
+            content: "";
+            display: block;
+            border-top: 3px solid #2682dd;
+            height: 4px;
+        }
+        /* SELO OUTLET */
+
+        .category-outlet #products-list > li:before {
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 60px;
+            background: url(https://makevendas.com.br/sites/images/selo50.png)no-repeat;
+            top: 5px;
+            right: 5px;
+            background-size: contain;
+            z-index: 999999999;
+        }
+
+        .category-outlet .product-img-box:before {
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 60px;
+            background: url(https://makevendas.com.br/sites/images/selo50.png)no-repeat;
+            top: 30px;
+            right: 30px;
+            background-size: contain;
+            z-index: 999999999;
+        }
+
+        .category-brinquedos #products-list > li:before {
+            display: none;
+        }
+
+        .category-brinquedos .product-img-box:before {
+            display: none;
+        }
+
+        .carousel-items.category-outlet #products-list li:before {
+            background: url(https://makevendas.com.br/sites/images/selo50.png)no-repeat !important;
+            background-size: contain !important;
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 60px;
+            top: 5px;
+            right: 5px;
+            z-index: 999999999;
+        }
+
+        #products-list > li.no-selo:before {
+            display: none;
+        }
+
+        .col2-left-layout .col-main #products-list > li {
+            min-height: 560px;
+        }
+
+        .products-list .product-shop .product-name {
+            min-height: 60px;
+        }
+
+        .tabela-medidas img {
+            width: 60%;
+            margin-left: 20%;
+        }
+        /* SELO 30% OFF */
+
+        #products-list > li:before {
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 60px;
+            background: url(https://makevendas.com.br/sites/images/selo30.png)no-repeat;
+            top: 5px;
+            right: 5px;
+            background-size: contain;
+            z-index: 999999999;
+        }
+
+        .product-img-box:before {
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 60px;
+            background: url(https://makevendas.com.br/sites/images/selo30.png)no-repeat;
+            top: 30px;
+            right: 30px;
+            background-size: contain;
+            z-index: 999999999;
+        }
+
+        .carousel-items #products-list li:before {
+            background: url(https://makevendas.com.br/sites/images/selo30.png)no-repeat !important;
+            background-size: contain !important;
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 60px;
+            top: 5px;
+            right: 5px;
+            z-index: 999999999;
+        }
+
+        .category-volta-as-aulas #products-list > li:before {
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 60px;
+            background: url(https://makevendas.com.br/sites/images/pecompe/selo35.png)no-repeat;
+            top: 5px;
+            right: 5px;
+            background-size: contain;
+            z-index: 999999999;
+        }
+
+        @media only screen and (max-width:768px) {
+            .tabela-medidas img {
+                width: 100%;
+                margin-left: 0%;
+            }
+        }
+
+        p.descript-post {
+            height: auto;
+        }
+
+        .blog-feed1 .item-post p.title-post,
+        .blog-feed2 .item-post p.title-post {
+            text-align: center;
+            font-weight: 600 !important;
+            font-size: 16px;
+        }
+    </style>
+
+    <script>
+        jQuery(document).ready(function() {
+
+            //selo vr oculos
+            jQuery('.product-image[title="Óculos de Realidade Virtual - Pé com Pé"]').parent().addClass("no-selo");
+
+            jQuery(".tabela-medidas img").attr("src", "https://pecompe.com.br/media/wysiwyg/tabela_tam.jpg");
+
+        });
+    </script>
+
+    <meta name="google-site-verification" content="3Q-qO_DGPoZCOpbH3b2QGmm2GTCrzUiLZ4Wyzgl-uXA" />
 </head>
 
-<body>
-<noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript>
-<div id="___gatsby">
-    <div style="outline:none" tabindex="-1" role="group" id="gatsby-focus-wrapper">
-        <section class="social-media">
-            <a href="mailto:contato@territoriodocalcado.com.br" aria-label="E-mail">
-                <div class="description">envie
-                    <br/> um e-mail</div>
-                <svg class="icon">
-                    <use xlink:href="/static/sprite-18f1a9f5d7d21329e1ea0a127d8287a2.svg#icon-envelope"></use>
-                </svg>
-            </a>
-            <a href="https://web.whatsapp.com/send?phone=5514996310461&amp;text=Contato%20Site%20Territ%C3%B3rio.%20Ol%C3%A1%20tudo%20bem?%20Meu%20nome%20%C3%A9" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp">
-                <div class="description">nos contate
-                    <br/> pelo whatsapp</div>
-                <svg class="icon">
-                    <use xlink:href="/static/sprite-18f1a9f5d7d21329e1ea0a127d8287a2.svg#icon-whatsapp"></use>
-                </svg>
-            </a>
-            <a href="https://www.facebook.com/shoppingterritorio/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <div class="description">curta nossa
-                    <br/> página no facebook</div>
-                <svg class="icon">
-                    <use xlink:href="/static/sprite-18f1a9f5d7d21329e1ea0a127d8287a2.svg#icon-facebook"></use>
-                </svg>
-            </a>
-            <a href="https://www.instagram.com/shoppingterritorio/?hl=pt-br" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <div class="description">nos siga
-                    <br/> no instagram</div>
-                <svg class="icon">
-                    <use xlink:href="/static/sprite-18f1a9f5d7d21329e1ea0a127d8287a2.svg#icon-instagram"></use>
-                </svg>
-            </a>
-        </section>
-        <nav class="navbar">
-            <div class="container">
-                <div class="row mobile-nav">
-                    <div class="col-5 col-sm-3 col-md-3 col-lg-2 col-xl-2">
-                        <a aria-current="page" class="" href="/">
-                            <div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden;max-width:148px;max-height:62px">
-                                <div style="width:100%;padding-bottom:41.89189189189189%"></div>
+<body class=" cms-index-index cms-home">
+<div class="wrapper">
+    <noscript>
+        <div class="global-site-notice noscript">
+            <div class="notice-inner">
+                <p>
+                    <strong>JavaScript seems to be disabled in your browser.</strong>
+                    <br /> Você precisa habilitar o Javascript no seu navegador para aproveitar as funcionalidades do site. </p>
+            </div>
+        </div>
+    </noscript>
+    <div class="page">
 
-                                <img src="data:image/svg+xml,%3csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20width=&#x27;400&#x27;%20height=&#x27;168&#x27;%3e%3cpath%20d=&#x27;M370%2028c-9%201-19%205-24%209l-2%202%202%206%202%207c0%205%202%204%2010-4%209-9%2020-14%2030-15l7-1-4-2c-4-2-16-3-21-2m-38%2024l-10%2015c0%202-14%2021-19%2025-22%2022-47%2026-80%2014-15-6-12-1%208%2012l26%2013c21%207%2036%204%2051-11a114%20114%200%200021-29l1-2%201-3c3-2%205-8%205-19%200-16-1-19-4-15m40%203c-10%207-19%2023-24%2045-4%2017-5%2019-3%2020%202%202%206-1%207-4%2012-22%2027-41%2040-50%205-3%206-4%203-7-7-7-17-9-23-4m-19%2069l-1%206c0%207-1%209-3%206l-2-4-2-4v9c1%202%201%203-1%205l-2%202-1-2-2-7c-1-5-3-6-4-2a323%20323%200%2001-1%205l-1-1-2-4c-2-3-4-2-4%202l-4%208-1-5-1-5-1%209%201%209%201-1%202-1%203-2c2-3%204-4%207-2%204%201%2011%201%2012-1%202-3%203-2%203%200%201%203%203%202%203-2l2-9c1-5%200-11-1-9m13%201c-2%201-2%202-1%205%200%203-1%204-4%201v-3c3-1%202-3%200-3-5%200-6%207%200%209%204%203%204%204-1%204l-3%202%206%201h7v-4l2-4c3-1%203-7%200-8h-6&#x27;%20fill=&#x27;%23d3d3d3&#x27;%20fill-rule=&#x27;evenodd&#x27;/%3e%3c/svg%3e" alt="" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms" />
-                                <noscript>
-                                    <picture>
-                                        <source type='image/webp' srcset="/static/f2f9202e1e9fceae1dbded8f7de01734/e3ca0/territorio-logo.webp 38w,
-/static/f2f9202e1e9fceae1dbded8f7de01734/613e9/territorio-logo.webp 74w,
-/static/f2f9202e1e9fceae1dbded8f7de01734/eb749/territorio-logo.webp 148w" sizes="(max-width: 148px) 100vw, 148px" />
-                                        <source srcset="/static/f2f9202e1e9fceae1dbded8f7de01734/3c68d/territorio-logo.png 38w,
-/static/f2f9202e1e9fceae1dbded8f7de01734/e1c90/territorio-logo.png 74w,
-/static/f2f9202e1e9fceae1dbded8f7de01734/a6a9b/territorio-logo.png 148w" sizes="(max-width: 148px) 100vw, 148px" />
-                                        <img loading="lazy" sizes="(max-width: 148px) 100vw, 148px" srcset="/static/f2f9202e1e9fceae1dbded8f7de01734/3c68d/territorio-logo.png 38w,
-/static/f2f9202e1e9fceae1dbded8f7de01734/e1c90/territorio-logo.png 74w,
-/static/f2f9202e1e9fceae1dbded8f7de01734/a6a9b/territorio-logo.png 148w" src="/static/f2f9202e1e9fceae1dbded8f7de01734/a6a9b/territorio-logo.png" alt="" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center" />
-                                    </picture>
-                                </noscript>
-                            </div>
-                        </a>
+        <div class="header-language-background">
+            <div class="header-language-container">
+                <div class="store-language-container">
+                </div>
+
+                <div class="contact-top"><a style="color: #569cc7" href="https://pecompe.com.br/customer/account/login/"> ÁREA DO LOJISTA </a> | TELEVENDAS: (18)3643-5500 | WHATSAPP: (18)99607-6551 | (18) 99626-9755 </div>
+                <div class="top-account">
+                    <a href="https://pecompe.com.br/customer/account/"><i class="fa fa-list-ul"></i><span>Meus Pedidos</span></a>
+                    <a href="https://pecompe.com.br/customer/account/" data-target-element="#header-account" class="">
+
+                        <span class=""><i class="fa fa-user"></i>Minha Conta</span></a>
+
+                    <a href="/contacts"><i class="fa fa-paper-plane-o"></i><span>Fale Conosco</span></a>
+
+                    <div class="sociais-top">
+                        <a href="https://www.facebook.com/pecompe.calc.infantis/" target="_blank"> <i class="fa fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/user/videospecompe" target="_blank"> <i class="fa fa-youtube-square"></i></a>
+                        <a href="https://www.instagram.com/pecompeoficial" target="_blank"> <i class="fa fa-instagram"></i></a>
                     </div>
-                    <div class="col-10 col-md-9 col-lg-10 col-xl-10 nav-items-div">
-                        <ul class="nav-items">
-                            <li><a aria-current="page" class="active" href="/">Home</a></li>
-                            <li><a href="/vitrine">Vitrine</a></li>
-                            <li><a href="/lojas">Lojas</a></li>
-                            <li><a href="/shopping">O Shopping</a></li>
-                            <li><a href="/como-chegar">Como chegar</a></li>
-                            <li><a href="/contato">Contato</a></li>
+
+                </div>
+
+                <p class="welcome-msg"> </p>
+            </div>
+        </div>
+
+        <header id="header" class="page-header">
+            <div class="page-header-container">
+                <a class="logo" href="https://pecompe.com.br/">
+                    <img src="https://pecompe.com.br/skin/frontend/pecompe/default/images/logoperfil-pcp.png" alt="Pé com Pé" class="large" />
+                    <img src="https://pecompe.com.br/skin/frontend/pecompe/default/images/logoperfil-pcp.png" alt="Pé com Pé" class="small" />
+                </a>
+
+                <div class="store-language-container"></div>
+
+                <!-- Skip Links -->
+
+                <div class="skip-links">
+                    <a href="#header-nav" class="skip-link skip-nav">
+                        <span class="icon"></span>
+                        <span class="label">Menu</span>
+                    </a>
+
+                    <a href="#header-search" class="skip-link skip-search">
+                        <span class="icon"></span>
+                        <span class="label">Buscar</span>
+                    </a>
+
+                    <div class="account-cart-wrapper">
+                        <a href="https://pecompe.com.br/customer/account/" data-target-element="#header-account" class="skip-link skip-account">
+                            <span class="icon"></span>
+                            <span class="label">Account</span>
+                        </a>
+
+                        <!-- Cart -->
+
+                        <div class="header-minicart">
+
+                            <a href="https://pecompe.com.br/checkout/cart/" data-target-element="#header-cart" class="skip-link skip-cart  no-count">
+                                <span class="icon"></span>
+                                <span class="label">Cart</span>
+                                <span class="count">0</span>
+                            </a>
+
+                            <div id="header-cart" class="block block-cart skip-content">
+
+                                <div id="minicart-error-message" class="minicart-message"></div>
+                                <div id="minicart-success-message" class="minicart-message"></div>
+
+                                <div class="minicart-wrapper">
+
+                                    <p class="block-subtitle">
+                                        Últimos Adicionados <a class="close skip-link-close" href="#" title="Fechar">&times;</a>
+                                    </p>
+
+                                    <p class="empty">Nenhum produto no carrinho.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Navigation -->
+
+                <div id="header-nav" class="skip-content">
+
+                    <nav id="nav">
+                        <ol class="nav-primary">
+                            <li class="level0 nav-1 first parent"><a href="https://pecompe.com.br/masha-e-o-urso.html" class="level0 has-children">Masha e o Urso</a>
+                                <ul class="level0">
+                                    <li class="level1 view-all"><a class="level1" href="https://pecompe.com.br/masha-e-o-urso.html">Ver Todos Masha e o Urso</a></li>
+                                    <li class="level1 nav-1-1 first"><a href="https://pecompe.com.br/masha-e-o-urso/meninos.html" class="level1 ">Meninos</a></li>
+                                    <li class="level1 nav-1-2 last"><a href="https://pecompe.com.br/masha-e-o-urso/meninas.html" class="level1 ">Meninas</a></li>
+                                </ul>
+                            </li>
+                            <li class="level0 nav-2 parent"><a href="https://pecompe.com.br/meninos-110.html" class="level0 has-children">Meninos</a>
+                                <ul class="level0">
+                                    <li class="level1 view-all"><a class="level1" href="https://pecompe.com.br/meninos-110.html">Ver Todos Meninos</a></li>
+                                    <li class="level1 nav-2-1 first"><a href="https://pecompe.com.br/meninos-110/lancamentos.html" class="level1 ">Lançamentos</a></li>
+                                    <li class="level1 nav-2-2"><a href="https://pecompe.com.br/meninos-110/chinelos-papetes.html" class="level1 ">Chinelos/Papetes</a></li>
+                                    <li class="level1 nav-2-3"><a href="https://pecompe.com.br/meninos-110/tenis-casual.html" class="level1 ">Tênis Casual</a></li>
+                                    <li class="level1 nav-2-4"><a href="https://pecompe.com.br/meninos-110/tenis-esportivo.html" class="level1 ">Tênis Esportivo</a></li>
+                                    <li class="level1 nav-2-5 last"><a href="https://pecompe.com.br/meninos-110/babuche.html" class="level1 ">Babuche</a></li>
+                                </ul>
+                            </li>
+                            <li class="level0 nav-3 parent"><a href="https://pecompe.com.br/meninas.html" class="level0 has-children">Meninas</a>
+                                <ul class="level0">
+                                    <li class="level1 view-all"><a class="level1" href="https://pecompe.com.br/meninas.html">Ver Todos Meninas</a></li>
+                                    <li class="level1 nav-3-1 first"><a href="https://pecompe.com.br/meninas/lancamentos.html" class="level1 ">Lançamentos</a></li>
+                                    <li class="level1 nav-3-2"><a href="https://pecompe.com.br/meninas/botas.html" class="level1 ">Botas</a></li>
+                                    <li class="level1 nav-3-3"><a href="https://pecompe.com.br/meninas/sandalia-rasteirinha.html" class="level1 ">Sandália/ Rasteirinha</a></li>
+                                    <li class="level1 nav-3-4"><a href="https://pecompe.com.br/meninas/papete.html" class="level1 ">Papete</a></li>
+                                    <li class="level1 nav-3-5"><a href="https://pecompe.com.br/meninas/tenis-casual-21.html" class="level1 ">Tênis Casual</a></li>
+                                    <li class="level1 nav-3-6"><a href="https://pecompe.com.br/meninas/tenis-esportivo.html" class="level1 ">Tênis Esportivo</a></li>
+                                    <li class="level1 nav-3-7"><a href="https://pecompe.com.br/meninas/sapatilhas.html" class="level1 ">Sapatilhas</a></li>
+                                    <li class="level1 nav-3-8 last"><a href="https://pecompe.com.br/meninas/babuche.html" class="level1 ">Babuche</a></li>
+                                </ul>
+                            </li>
+                            <li class="level0 nav-4 parent"><a href="https://pecompe.com.br/mundo-pe.html" class="level0 has-children">Mundo Pé</a>
+                                <ul class="level0">
+                                    <li class="level1 view-all"><a class="level1" href="https://pecompe.com.br/mundo-pe.html">Ver Todos Mundo Pé</a></li>
+                                    <li class="level1 nav-4-1 first"><a href="https://pecompe.com.br/mundo-pe/led.html" class="level1 ">LED</a></li>
+                                    <li class="level1 nav-4-2"><a href="https://pecompe.com.br/mundo-pe/vr.html" class="level1 ">VR</a></li>
+                                    <li class="level1 nav-4-3"><a href="https://pecompe.com.br/mundo-pe/helicoptero.html" class="level1 ">Helicóptero</a></li>
+                                    <li class="level1 nav-4-4"><a href="https://pecompe.com.br/mundo-pe/quadriciclo.html" class="level1 ">Quadriciclo</a></li>
+                                    <li class="level1 nav-4-5 last"><a href="https://pecompe.com.br/mundo-pe/caminhao.html" class="level1 ">Caminhão</a></li>
+                                </ul>
+                            </li>
+                            <li class="level0 nav-5"><a href="https://pecompe.com.br/outlet-4.html" class="level0 ">OUTLET</a></li>
+                            <li class="level0 nav-6 active parent"><a href="https://pecompe.com.br/outlet.html" class="level0 has-children">OFERTAS</a>
+                                <ul class="level0">
+                                    <li class="level1 view-all"><a class="level1" href="https://pecompe.com.br/outlet.html">Ver Todos OFERTAS</a></li>
+                                    <li class="level1 nav-6-1 first"><a href="https://pecompe.com.br/outlet/kit-2-pares-r-99-90.html" class="level1 ">Kit 2 pares R$99,90</a></li>
+                                    <li class="level1 nav-6-2 active last"><a href="https://pecompe.com.br/outlet/kit-3-pares-r-129-99.html" class="level1 ">Kit 3 pares R$129,99</a></li>
+                                </ul>
+                            </li>
+                            <li class="level0 nav-7"><a href="https://pecompe.com.br/brinquedos.html" class="level0 ">Brinquedos</a></li>
+                            <li class="level0 nav-8"><a href="https://pecompe.com.br/volta-as-aulas-2.html" class="level0 ">Volta às Aulas</a></li>
+                            <li class="level0 nav-9 last"><a href="https://pecompe.com.br/blog-1.html" class="level0 ">Blog</a></li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <!-- Search -->
+
+                <div id="header-search" class="skip-content">
+                    <form id="search_mini_form" action="https://pecompe.com.br/catalogsearch/result/" method="get">
+                        <div class="form-search">
+                            <label for="search">Buscar:</label>
+                            <input id="search" type="text" name="q" value="" class="input-text" maxlength="128" />
+                            <button type="submit" title="Buscar" class="button"><span><span>Buscar</span></span>
+                            </button>
+                            <div id="search_autocomplete" class="search-autocomplete"></div>
+                            <script type="text/javascript">
+                                //<![CDATA[
+                                var searchForm = new Varien.searchForm('search_mini_form', 'search', 'Procurar no site...');
+                                searchForm.initAutocomplete('https://pecompe.com.br/catalogsearch/ajax/suggest/', 'search_autocomplete');
+                                //]]>
+                            </script>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Account -->
+
+                <div id="header-account" class="skip-content">
+                    <div class="links">
+                        <ul>
+                            <li class="first"><a href="https://pecompe.com.br/customer/account/" title="Minha Conta">Minha Conta</a></li>
+                            <li><a href="https://pecompe.com.br/wishlist/" title="Meus Favoritos">Meus Favoritos</a></li>
+                            <li><a href="https://pecompe.com.br/checkout/cart/" title="Carrinho" class="top-link-cart">Carrinho</a></li>
+                            <li><a href="https://pecompe.com.br/checkout/" title="Fechar Pedido" class="top-link-checkout">Fechar Pedido</a></li>
+                            <li><a href="https://pecompe.com.br/customer/account/create/" title="Cadastrar">Cadastrar</a></li>
+                            <li class=" last"><a href="https://pecompe.com.br/customer/account/login/referer/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8_X19fU0lEPVU,/" title="Entrar">Entrar</a></li>
                         </ul>
-                        <div id="search-bar" class="search-bar">
-                            <div class="row">
-                                <form class="col-12" action="/">
-                                    <select class="custom-select col-3">
-                                        <option>Nome da loja</option>
-                                        <option value="1">Acessórios</option>
-                                        <option value="2">Anabelas</option>
-                                        <option value="3">Bolsas</option>
-                                        <option value="4">Calçados masculinos</option>
-                                        <option value="5">Infantil</option>
-                                        <option value="6">Rasteiras</option>
-                                        <option value="7">Roupas</option>
-                                        <option value="8">Sandálias</option>
-                                        <option value="9">Sapatilhas</option>
-                                        <option value="10">Scarpins</option>
-                                        <option value="11">Tênis</option>
-                                    </select>
-                                    <input type="text" class="col-8 search-input" placeholder="Buscar..." name="q" id="search-input" />
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-2 mobile-menu-button">
-                        <svg class="icon icon-menu">
-                            <use xlink:href="/static/sprite-18f1a9f5d7d21329e1ea0a127d8287a2.svg#icon-menu"></use>
-                        </svg>
                     </div>
                 </div>
             </div>
-            <div class="mobile-menu col-12">
-                <ul class="mobile-menu-links">
-                    <li><a aria-current="page" class="active" href="/">Home</a></li>
-                    <li><a href="/vitrine">Vitrine</a></li>
-                    <li><a href="/lojas">Lojas</a></li>
-                    <li><a href="/shopping">O Shopping</a></li>
-                    <li><a href="/como-chegar">Como Chegar</a></li>
-                    <li><a href="/contato">Contato</a></li>
-                </ul>
-            </div>
-        </nav>
-        <main>
-            <header class="home">
-                <section class="home-banner-slider">
-                    <div class="slick-slider banner slick-initialized" dir="ltr">
-                        <div class="slick-arrow slick-prev" style="display:block;position:absolute;top:50%;left:3%;z-index:9">
-                            <svg style="fill:none;stroke:#404040;stroke-width:5px;transform:rotate(180deg);width:30px;height:30px">
-                                <use xlink:href="/static/sprite-18f1a9f5d7d21329e1ea0a127d8287a2.svg#icon-arrow-slider"></use>
-                            </svg>
-                        </div>
-                        <div class="slick-list">
-                            <div class="slick-track" style="width:700%;left:-200%">
-                                <div data-index="-1" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:14.285714285714286%"></div>
-                                <div data-index="0" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline:none;width:14.285714285714286%"></div>
-                                <div data-index="1" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline:none;width:14.285714285714286%">
-                                    <div>
-                                        <div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden;width:100%;display:inline-block">
-                                            <div style="width:100%;padding-bottom:42.760416666666664%"></div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAAAsTAAALEwEAmpwYAAACMElEQVQozwElAtr9APq2Yfy5Yf/EcP3Ddv/MhPHMlN29ivjLjfjKjPjKi/DEhu6/guu/g+vAhOzBg+y9fuy5de2wYO2pTOueNwD3tGDooF/cmG6siXecemO9kYGlenDs1rqAfG/HsZT83LDuzaHqyKDryqXqyaXpyKPoxJnowornsGbookUA769jxYhdjzxAkFJUpkE80jwuyj4wwUE8gmJiXmRkuaua7d3D5raj456Q5KCR5qWV5aSS572d5LCA56xgAO+uZfG1cLeCarg0MsYTCbQoGoYcEYcCAKU/OGRhYGdmY9jQwvLIuuWeluqyqeijnOilnOSViea4m+i4fgD0s2b3vHnnxJ+tMiq8JRpjBgJoDghICwVxIBeOdnO1tK798uLvzcHstavy08nww73vv7jruq7t2MDouowA9LNn/cJ/oIl0qzkv40YzgA8IfhIKbQ8KjSke6svD+/fq+O7c8cu966yh8ci87LSr7bOr6q2h8Na678CLAPm6cseYY5d/Y7luXN1EM9tCLcIyIbMrHKxNRcFtZuuQhvDUu/HLs+mllOzArumwoeipmumtmu/Mpu+3eQD6u25wVTUaFxRJQjm4emaaPTGKLCOqalnQkoLHXl7fgG/v0KPux5ztxJ/syKbsxaTqwKHtvpftt4Dtql4A97pu+7lrvpFbt5Nk/dSb3rqL2LSE8c2W9M2Z666C57GB8cSC8cOD8MWG7sOJ7sSN78GJ7rh06Khd7KRPHlxTThwczPMAAAAASUVORK5CYII=" alt="banner-home" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms" />
-                                            <noscript>
-                                                <picture>
-                                                    <source srcset="/static/834b34fa719eb7e5f0b1584a8bd1877f/59beb/banner-home.png 200w,
-/static/834b34fa719eb7e5f0b1584a8bd1877f/c0bbd/banner-home.png 400w,
-/static/834b34fa719eb7e5f0b1584a8bd1877f/a54c6/banner-home.png 800w,
-/static/834b34fa719eb7e5f0b1584a8bd1877f/9911c/banner-home.png 1200w,
-/static/834b34fa719eb7e5f0b1584a8bd1877f/c8bd7/banner-home.png 1600w,
-/static/834b34fa719eb7e5f0b1584a8bd1877f/3897f/banner-home.png 1920w" sizes="(max-width: 800px) 100vw, 800px" /><img loading="lazy" sizes="(max-width: 800px) 100vw, 800px" srcset="/static/834b34fa719eb7e5f0b1584a8bd1877f/59beb/banner-home.png 200w,
-/static/834b34fa719eb7e5f0b1584a8bd1877f/c0bbd/banner-home.png 400w,
-/static/834b34fa719eb7e5f0b1584a8bd1877f/a54c6/banner-home.png 800w,
-/static/834b34fa719eb7e5f0b1584a8bd1877f/9911c/banner-home.png 1200w,
-/static/834b34fa719eb7e5f0b1584a8bd1877f/c8bd7/banner-home.png 1600w,
-/static/834b34fa719eb7e5f0b1584a8bd1877f/3897f/banner-home.png 1920w" src="/static/834b34fa719eb7e5f0b1584a8bd1877f/a54c6/banner-home.png" alt="banner-home" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center" /></picture>
-                                            </noscript>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div data-index="2" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline:none;width:14.285714285714286%"></div>
-                                <div data-index="3" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:14.285714285714286%"></div>
-                                <div data-index="4" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:14.285714285714286%">
-                                    <div>
-                                        <div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden;width:100%;display:inline-block">
-                                            <div style="width:100%;padding-bottom:42.760416666666664%"></div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAAAsTAAALEwEAmpwYAAACMElEQVQozwElAtr9APq2Yfy5Yf/EcP3Ddv/MhPHMlN29ivjLjfjKjPjKi/DEhu6/guu/g+vAhOzBg+y9fuy5de2wYO2pTOueNwD3tGDooF/cmG6siXecemO9kYGlenDs1rqAfG/HsZT83LDuzaHqyKDryqXqyaXpyKPoxJnowornsGbookUA769jxYhdjzxAkFJUpkE80jwuyj4wwUE8gmJiXmRkuaua7d3D5raj456Q5KCR5qWV5aSS572d5LCA56xgAO+uZfG1cLeCarg0MsYTCbQoGoYcEYcCAKU/OGRhYGdmY9jQwvLIuuWeluqyqeijnOilnOSViea4m+i4fgD0s2b3vHnnxJ+tMiq8JRpjBgJoDghICwVxIBeOdnO1tK798uLvzcHstavy08nww73vv7jruq7t2MDouowA9LNn/cJ/oIl0qzkv40YzgA8IfhIKbQ8KjSke6svD+/fq+O7c8cu966yh8ci87LSr7bOr6q2h8Na678CLAPm6cseYY5d/Y7luXN1EM9tCLcIyIbMrHKxNRcFtZuuQhvDUu/HLs+mllOzArumwoeipmumtmu/Mpu+3eQD6u25wVTUaFxRJQjm4emaaPTGKLCOqalnQkoLHXl7fgG/v0KPux5ztxJ/syKbsxaTqwKHtvpftt4Dtql4A97pu+7lrvpFbt5Nk/dSb3rqL2LSE8c2W9M2Z666C57GB8cSC8cOD8MWG7sOJ7sSN78GJ7rh06Khd7KRPHlxTThwczPMAAAAASUVORK5CYII=" alt="banner-home" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms" />
-                                            <noscript>
-                                                <picture>
-                                                    <source srcset="/static/834b34fa719eb7e5f0b1584a8bd1877f/59beb/banner-home.png 200w,
-/static/834b34fa719eb7e5f0b1584a8bd1877f/c0bbd/banner-home.png 400w,
-/static/834b34fa719eb7e5f0b1584a8bd1877f/a54c6/banner-home.png 800w,
-/static/834b34fa719eb7e5f0b1584a8bd1877f/9911c/banner-home.png 1200w,
-/static/834b34fa719eb7e5f0b1584a8bd1877f/c8bd7/banner-home.png 1600w,
-/static/834b34fa719eb7e5f0b1584a8bd1877f/3897f/banner-home.png 1920w" sizes="(max-width: 800px) 100vw, 800px" /><img loading="lazy" sizes="(max-width: 800px) 100vw, 800px" srcset="/static/834b34fa719eb7e5f0b1584a8bd1877f/59beb/banner-home.png 200w,
-/static/834b34fa719eb7e5f0b1584a8bd1877f/c0bbd/banner-home.png 400w,
-/static/834b34fa719eb7e5f0b1584a8bd1877f/a54c6/banner-home.png 800w,
-/static/834b34fa719eb7e5f0b1584a8bd1877f/9911c/banner-home.png 1200w,
-/static/834b34fa719eb7e5f0b1584a8bd1877f/c8bd7/banner-home.png 1600w,
-/static/834b34fa719eb7e5f0b1584a8bd1877f/3897f/banner-home.png 1920w" src="/static/834b34fa719eb7e5f0b1584a8bd1877f/a54c6/banner-home.png" alt="banner-home" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center" /></picture>
-                                            </noscript>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div data-index="5" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:14.285714285714286%"></div>
+        </header>
+
+        <div class="main-container col1-layout">
+            <div class="main">
+                <div class="col-main">
+                    <link rel="stylesheet" type="text/css" href="https://pecompe.com.br/skin/frontend/base/default/css/responsivebannerslider/group-4.css" media="all" />
+                    <div id="bnrSlider-4" class="cwsSlider basSlider defaultTheme">
+                        <div class="slider loading">
+                            <div id="rwdSlider-4" class="cwsRwdSlider navArwInside alwaysNavArw noPaging pagerBelow">
+                                <ul class="slides">
+
+                                    <li>
+                                        <a href="https://pecompe.com.br/volta-as-aulas-2.html" title="https://pecompe.com.br/volta-as-aulas-2.html" target=""><img class="cwslazy" src="https://pecompe.com.br/media/responsivebannerslider/PecomPeBannerSiteVOLTAASAULAS122019_1577970625.jpg" alt="" /></a>
+                                    </li>
+
+                                    <li><img class="cwslazy" src="https://pecompe.com.br/media/responsivebannerslider/primavera2019_1568319454.jpg" alt="" /></li>
+
+                                    <li>
+                                        <a href="https://pecompe.com.br/buscar-tamanho.html?idade=50" title="https://pecompe.com.br/buscar-tamanho.html?idade=50" target=""><img class="cwslazy" src="https://pecompe.com.br/media/responsivebannerslider/PecomPeBannerSiteNENEM230919_1575288886.jpg" alt="" /></a>
+                                    </li>
+
+                                </ul>
                             </div>
                         </div>
-                        <div class="slick-arrow slick-next" style="display:block;position:absolute;top:50%;right:3%">
-                            <svg style="fill:none;stroke:#404040;stroke-width:5px;width:30px;height:30px">
-                                <use xlink:href="/static/sprite-18f1a9f5d7d21329e1ea0a127d8287a2.svg#icon-arrow-slider"></use>
-                            </svg>
-                        </div>
-                        <div style="padding:0px;margin:0px;height:0px" class="slick-dots">
-                            <ul style="margin:0px">
-                                <li class="">
-                                    <aside style="width:12px;height:12px;background-color:#fff;border-radius:50%;box-shadow:0px 3px 6px #00000029;margin-top:-70px"></aside>
-                                </li>
-                                <li class="slick-active">
-                                    <aside style="width:12px;height:12px;background-color:#fff;border-radius:50%;box-shadow:0px 3px 6px #00000029;margin-top:-70px"></aside>
-                                </li>
-                                <li class="">
-                                    <aside style="width:12px;height:12px;background-color:#fff;border-radius:50%;box-shadow:0px 3px 6px #00000029;margin-top:-70px"></aside>
-                                </li>
-                            </ul>
-                        </div>
+
                     </div>
-                    <div class="slick-slider banner-mobile slick-initialized" dir="ltr">
-                        <div class="slick-list">
-                            <div class="slick-track" style="width:700%;left:-200%">
-                                <div data-index="-1" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:14.285714285714286%"></div>
-                                <div data-index="0" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline:none;width:14.285714285714286%"></div>
-                                <div data-index="1" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline:none;width:14.285714285714286%">
-                                    <div>
-                                        <div class="banner-mobile container-img gatsby-image-wrapper" style="position:relative;overflow:hidden;width:100%;display:inline-block">
-                                            <div style="width:100%;padding-bottom:155.85106382978722%"></div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAfCAIAAABoLHqZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAHUElEQVQ4y02VaVRTBx7FXzstpTruaM+MPbZ20TNax8449bh1nA6nLTqWKmpRociWkAUhSEACskQWqWBRRB1HARmRNQmEkPUlISEkQAJBBUS0I8rYjh4gyXt5efvLm8y3+Z/74Z577v/D79MFUPWpgCqNAgWESRJQpRKGDFQtDKiEmDLZ35041/m9T57o7Uz0KtL8Sh6u5lI6AW3MZPrEtJEH4PpMTC8iDOmYIQs3iVGtyKtM98q5uFboU6T6ulORHp5Hxl3o4kM9PEzNocEMBkxn9BzGkgkwhlQK5GPaUziYTer5tDmLHSqhBwoIjeAVWHa/LQdScOY7+bAijdZyaYOQ0gtp4ynGkkWbhQCmzyR0/KA5mzBnwMbC6Y7S1twDHblR7EilrP5azP7oJ3IxY8rquyZsPHv0F2UmY+CRxgzGmEYbEoGALndOnmEXHXyYevCfKScb8osPb/gkYfdOa4mw8a87734b5TqX8UpR+kNJzhdfRyclJk21CtihbNJymrZmAIxFPNfOqToUeW7Hnyu2b2/IEdenJJiTj419ufvxto3e1CMD27eY92w35p3mcTnxCUmZad8/7eSzzpygIw+g+vNou5QcqlCJUpq372o78m3H+rXaVYsffrahf/O6vl2b6iIW1QMA+JvVFqkkicuNjT0RFRXVVBqPmkUAZc3DLIWUvbxdEFPDTdZ9sdsGAMObPnBtWnt13fIf168pe39l3eqlpQBg3Le3PF9y/PC+PO7BmP17nyn4AD1wFrMUUa4a9nHrLw6ZasOHD9a82fXhb6uWhYl//drZ5W/nrQw/tOKt+GVh+WuX1/FS90R+2XqBExwsYmxigDDlUI5S2n2Vne0Zv32hIOxXzl2fjO7YwgGA2PA3hBFLo8Pe2PPm60dXLU5b8bZMlFJXnnkm7QjlrAwOFwOUrZB2XmQnm5T10vPck3XvrZnYtelZ9OdlrwN/ew2oWPpW/pKwuOWLst+NKF+7cuBSCQvZgpONtOsCMywFSPs51n0JundH1vBDdW66bt/un/+yFU2IUq9bdWvt0vp1y6WrFhWGmN9Z1vGnjfeqpfhgZ3BGwT6+wY5WAvRINfvw1hNrw1R/a2tNvowfN/H5loUDO2ajd05Hbh3bu1n16XumbR9pP/tIfmhf88njquRjaJnE+/d8evQiwLqrnS35f9y6OT468gw/rq1KMizNkb0f8SIucvyrbabfr7fv/F3Lx++AiTHWIonmxJFpPvcFJ/m+8Dt8qBJg79U0lKasXrEsPDx8TUQEAABXLl+6LUrP+/jd3IjFmUvCeBFLCqMiJ2zWqeKCxu+++UkomCnJRodr2YkrAGUvZSYbfOOKuoqcTzdv/ObA/pl//cSyrNvlVDQ1tt+6aQENPp8vlKAz03MtDU+lEhcn3gNeZN1VAN5fSDpr2Gdq1jvOwi9YNhgMMixFsAzD/t8xJM7SGIO/Il+N0rNqdqqJcVYAqElCuS5Tj2T0z0Ms9ZKh4FAVf/r0ZX29FwTn2tvmOjp8ej0NQyxLBAP/Ds6P0Y+76NFaZrgMwKxF/3NTLdQTDay5i0+NBtzDgbER2D4AmU2ww+4fdEBmI+JyBEYGEEt3wN6Bu5tIZzU5UASg5jzcXkaP3yQfdM5dlfr7VX6rbqH1jk/bC/eZfHpNyHhVioXWpvnmG572696WanS4Hh88T9nPAgFDLmorp0Zq6an24Nxw0DPpt/QEnFZ0wk17X8FWI/boATY1hgyZkUFd0DdBPQfxe424vZy0F4WexbjtHOWsIu83UNOqEDliUyKDoN9hIl9MI8PWkGCrFjbIA6N66nk/MSnDR2+Qg+WkLQ/AwayAqQAbqCBcdeRDBTVrh/QdiAP02/Tk7KTfrvcP6GGbxiNvgM1t5AyIj98l3VfpoVLCKgZQwynMkEnZyyhXLTnRTj23wWYl4jCjY3ZydgICuxCnCRkywGYZrL5JPlLg7lvEUBXlKKLtEgADhbiWh/dJMHsldb+JfKKHLd3IoBEZsZLP7sPmbsSuDYyavMp6WHMNn7iLOy9j/SWE+TTRJwJQdRKu45P9hZhFSjh+DIw1Q9p/+A1tsLWXmLkHm+Swsc3XW+9pqfIbLmHOWsRchFsKCFCA6ZKBQE8iouZj+tMBXTZqPY9aq30tJVBPnU/XQj51Qb0Nvu5an+z83E3xfKPIbz2HmM4E9OmYNgVVxQH/aTw433Yc7eX4VQLCUoDqCqA7Wf6uMkhzBXN3etoqPB3Fvva8hdasuesJqCGLNmUwBg7TG0voU4CXd2I97bGoRggpUuFuXkAnRsD8gKkYG6hEbReR/guwqRgBJZA2y68VPGs+8fBWzPj1r2ca9xOaeACSH/O0xcJdCaFBg7t4oZVD1elQVwhJhGhyF5Q5PmU6pBR4FamkKuEsZ/+JJG7SoaOiyD94FDEA1BkDy4/Ntx4PKE/6ZXGQLBHpDvGkYVoB1MX1yHh+JQeSJ/g6jxFdR2+f+Up6KuZq5uHGjL1wT+x/AcBks7OpMqc1AAAAAElFTkSuQmCC" alt="banner-home-mobile" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms" />
-                                            <noscript>
-                                                <picture>
-                                                    <source srcset="/static/ad3525388d753854db2a6993a6c8c9df/59beb/banner-home-mobile.png 200w,
-/static/ad3525388d753854db2a6993a6c8c9df/eb4ad/banner-home-mobile.png 376w" sizes="(max-width: 376px) 100vw, 376px" /><img loading="lazy" sizes="(max-width: 376px) 100vw, 376px" srcset="/static/ad3525388d753854db2a6993a6c8c9df/59beb/banner-home-mobile.png 200w,
-/static/ad3525388d753854db2a6993a6c8c9df/eb4ad/banner-home-mobile.png 376w" src="/static/ad3525388d753854db2a6993a6c8c9df/eb4ad/banner-home-mobile.png" alt="banner-home-mobile" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center" /></picture>
-                                            </noscript>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div data-index="2" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline:none;width:14.285714285714286%"></div>
-                                <div data-index="3" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:14.285714285714286%"></div>
-                                <div data-index="4" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:14.285714285714286%">
-                                    <div>
-                                        <div class="banner-mobile container-img gatsby-image-wrapper" style="position:relative;overflow:hidden;width:100%;display:inline-block">
-                                            <div style="width:100%;padding-bottom:155.85106382978722%"></div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAfCAIAAABoLHqZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAHUElEQVQ4y02VaVRTBx7FXzstpTruaM+MPbZ20TNax8449bh1nA6nLTqWKmpRociWkAUhSEACskQWqWBRRB1HARmRNQmEkPUlISEkQAJBBUS0I8rYjh4gyXt5efvLm8y3+Z/74Z577v/D79MFUPWpgCqNAgWESRJQpRKGDFQtDKiEmDLZ35041/m9T57o7Uz0KtL8Sh6u5lI6AW3MZPrEtJEH4PpMTC8iDOmYIQs3iVGtyKtM98q5uFboU6T6ulORHp5Hxl3o4kM9PEzNocEMBkxn9BzGkgkwhlQK5GPaUziYTer5tDmLHSqhBwoIjeAVWHa/LQdScOY7+bAijdZyaYOQ0gtp4ynGkkWbhQCmzyR0/KA5mzBnwMbC6Y7S1twDHblR7EilrP5azP7oJ3IxY8rquyZsPHv0F2UmY+CRxgzGmEYbEoGALndOnmEXHXyYevCfKScb8osPb/gkYfdOa4mw8a87734b5TqX8UpR+kNJzhdfRyclJk21CtihbNJymrZmAIxFPNfOqToUeW7Hnyu2b2/IEdenJJiTj419ufvxto3e1CMD27eY92w35p3mcTnxCUmZad8/7eSzzpygIw+g+vNou5QcqlCJUpq372o78m3H+rXaVYsffrahf/O6vl2b6iIW1QMA+JvVFqkkicuNjT0RFRXVVBqPmkUAZc3DLIWUvbxdEFPDTdZ9sdsGAMObPnBtWnt13fIf168pe39l3eqlpQBg3Le3PF9y/PC+PO7BmP17nyn4AD1wFrMUUa4a9nHrLw6ZasOHD9a82fXhb6uWhYl//drZ5W/nrQw/tOKt+GVh+WuX1/FS90R+2XqBExwsYmxigDDlUI5S2n2Vne0Zv32hIOxXzl2fjO7YwgGA2PA3hBFLo8Pe2PPm60dXLU5b8bZMlFJXnnkm7QjlrAwOFwOUrZB2XmQnm5T10vPck3XvrZnYtelZ9OdlrwN/ew2oWPpW/pKwuOWLst+NKF+7cuBSCQvZgpONtOsCMywFSPs51n0JundH1vBDdW66bt/un/+yFU2IUq9bdWvt0vp1y6WrFhWGmN9Z1vGnjfeqpfhgZ3BGwT6+wY5WAvRINfvw1hNrw1R/a2tNvowfN/H5loUDO2ajd05Hbh3bu1n16XumbR9pP/tIfmhf88njquRjaJnE+/d8evQiwLqrnS35f9y6OT468gw/rq1KMizNkb0f8SIucvyrbabfr7fv/F3Lx++AiTHWIonmxJFpPvcFJ/m+8Dt8qBJg79U0lKasXrEsPDx8TUQEAABXLl+6LUrP+/jd3IjFmUvCeBFLCqMiJ2zWqeKCxu+++UkomCnJRodr2YkrAGUvZSYbfOOKuoqcTzdv/ObA/pl//cSyrNvlVDQ1tt+6aQENPp8vlKAz03MtDU+lEhcn3gNeZN1VAN5fSDpr2Gdq1jvOwi9YNhgMMixFsAzD/t8xJM7SGIO/Il+N0rNqdqqJcVYAqElCuS5Tj2T0z0Ms9ZKh4FAVf/r0ZX29FwTn2tvmOjp8ej0NQyxLBAP/Ds6P0Y+76NFaZrgMwKxF/3NTLdQTDay5i0+NBtzDgbER2D4AmU2ww+4fdEBmI+JyBEYGEEt3wN6Bu5tIZzU5UASg5jzcXkaP3yQfdM5dlfr7VX6rbqH1jk/bC/eZfHpNyHhVioXWpvnmG572696WanS4Hh88T9nPAgFDLmorp0Zq6an24Nxw0DPpt/QEnFZ0wk17X8FWI/boATY1hgyZkUFd0DdBPQfxe424vZy0F4WexbjtHOWsIu83UNOqEDliUyKDoN9hIl9MI8PWkGCrFjbIA6N66nk/MSnDR2+Qg+WkLQ/AwayAqQAbqCBcdeRDBTVrh/QdiAP02/Tk7KTfrvcP6GGbxiNvgM1t5AyIj98l3VfpoVLCKgZQwynMkEnZyyhXLTnRTj23wWYl4jCjY3ZydgICuxCnCRkywGYZrL5JPlLg7lvEUBXlKKLtEgADhbiWh/dJMHsldb+JfKKHLd3IoBEZsZLP7sPmbsSuDYyavMp6WHMNn7iLOy9j/SWE+TTRJwJQdRKu45P9hZhFSjh+DIw1Q9p/+A1tsLWXmLkHm+Swsc3XW+9pqfIbLmHOWsRchFsKCFCA6ZKBQE8iouZj+tMBXTZqPY9aq30tJVBPnU/XQj51Qb0Nvu5an+z83E3xfKPIbz2HmM4E9OmYNgVVxQH/aTw433Yc7eX4VQLCUoDqCqA7Wf6uMkhzBXN3etoqPB3Fvva8hdasuesJqCGLNmUwBg7TG0voU4CXd2I97bGoRggpUuFuXkAnRsD8gKkYG6hEbReR/guwqRgBJZA2y68VPGs+8fBWzPj1r2ca9xOaeACSH/O0xcJdCaFBg7t4oZVD1elQVwhJhGhyF5Q5PmU6pBR4FamkKuEsZ/+JJG7SoaOiyD94FDEA1BkDy4/Ntx4PKE/6ZXGQLBHpDvGkYVoB1MX1yHh+JQeSJ/g6jxFdR2+f+Up6KuZq5uHGjL1wT+x/AcBks7OpMqc1AAAAAElFTkSuQmCC" alt="banner-home-mobile" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms" />
-                                            <noscript>
-                                                <picture>
-                                                    <source srcset="/static/ad3525388d753854db2a6993a6c8c9df/59beb/banner-home-mobile.png 200w,
-/static/ad3525388d753854db2a6993a6c8c9df/eb4ad/banner-home-mobile.png 376w" sizes="(max-width: 376px) 100vw, 376px" /><img loading="lazy" sizes="(max-width: 376px) 100vw, 376px" srcset="/static/ad3525388d753854db2a6993a6c8c9df/59beb/banner-home-mobile.png 200w,
-/static/ad3525388d753854db2a6993a6c8c9df/eb4ad/banner-home-mobile.png 376w" src="/static/ad3525388d753854db2a6993a6c8c9df/eb4ad/banner-home-mobile.png" alt="banner-home-mobile" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center" /></picture>
-                                            </noscript>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div data-index="5" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:14.285714285714286%"></div>
+
+                    <script type="text/javascript">
+                        function getGridSize() {
+                            return (window.innerWidth < 600) ? 2 :
+                                (window.innerWidth < 900) ? 3 : 4;
+                        }
+
+                        jQuery(window).load(function() {
+
+                            jQuery('#rwdSlider-4').fitVids().flexslider({
+
+                                directionNav: true,
+                                controlNav: false,
+                                slideshow: true,
+                                animationLoop: true,
+                                pauseOnAction: false,
+                                pauseOnHover: true,
+                                animation: "slide",
+                                animationSpeed: 600,
+                                direction: "horizontal",
+                                slideshowSpeed: 3000,
+                                randomize: false,
+                                smoothHeight: false,
+
+                                start: function(slider) {
+                                    jQuery('.slider').removeClass('loading');
+
+                                },
+
+                                navarrow: "alwaysNavArw",
+                                navstyle: "angle",
+                                showpage: "noPaging",
+                                pagestyle: "circular",
+                                pagepos: "pagerBelow",
+
+                            });
+
+                        });
+                    </script>
+                    <div class="std">
+                        <div class="banners-age row">
+                            <div class="col-md-4">
+                                <a href="/buscar-tamanho.html?idade=51"><img alt="" src="https://pecompe.com.br/media/wysiwyg/b1-min.png" /></a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="/buscar-tamanho.html?idade=50"><img alt="" src="https://pecompe.com.br/media/wysiwyg/b2-min.png" /></a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="/buscar-tamanho.html?idade=49"><img alt="" src="https://pecompe.com.br/media/wysiwyg/bb3-min.png" /></a>
                             </div>
                         </div>
-                    </div>
-                </section>
-                <div class="container-1100">
-                    <div class="row flex-wrap justify-content-around">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-                            <article class="article-card">
-                                <div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden">
-                                    <div style="width:100%;padding-bottom:76.66034155597723%"></div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsSAAALEgHS3X78AAAC6ElEQVQ4yzWT1ysAYBTFvyjekCTxQJK9957Ze++ZvbNHGRkPlKSUZD6QhGT8fUe/Wx5u37z3nnPuvc7Dw0M+Pj4KCAhQenq6ZmZmNDk5qenpaSUkJCgyMtLuq6ur1d7ervz8fHl7e8vPz08tLS06ODjQw8ODnp6ezNzOzo7KysoUFBRkHzMyMtTR0aGhoSE1NzcrNjZWmZmZamtr0+zsrKKjo+Xv728+Kysren5+1uvrq35/f/Xz8yP39fWlu7s7HR0dqbe3V6GhoUpKSjJ0jY2NqqiosKCFhYUaGBiwgCAD7fn5ub6/v/Xx8WErsRwbsgCXTFdXVzo+PjZUiYmJqqmp0cjIiEpLS43+wsKC+vv7VVRUpL29Pb29venm5kbv7+/m725vb/X5+an9/X2Vl5fr8vJSZ2dnhnJtbc2cpqamDFFXV5cuLi7sDk2Xl5f1+Pho5/v7e11fX8ttbGzo9PTUsjvnjCqU2Pf09BjS4OBgxcXFGUqCbG5uqq+vzww5WOfm5kxzt7i4qMPDQ4WFhVkQaGZnZ8vT01NNTU2WICUlReHh4ZqfnzdpQFxcXKzu7m6TBBkmJiZMc7e7u6uXlxeNj4/Ly8vLqhwTE2MVx5FCgYD3k5MT05g9aJEFZkg1Ojpq/9zS0pKJ3NDQoMDAQA0ODtqeNiIY5+HhYY2NjRkTugHkOTk5qqqqshZDa9qP1aENFautrTW9EJ5zSEiIZa6rq7M3UBcUFBgS7iorK40i/9fX1822trbkOjs7TYuSkhIlJyebU3x8vBUC/UCCDGiMvlSXP6mpqZYYNkwWxdre3pajHZgCPkVFRZlzWlqaIWLkCEgCX19fM+7y8vIsICCgz1Sh9+rqqhwZoJCbm2utQQAMBxypIlWmAzAKgXb8Z4paW1tNa3Rm/h2XVIzMoCIQCHH8d6Jl/gPSUmhLUigz0/X19da7jKZjRv9pRUREGG3mFSMoKJGBM29QRCYSY1lZWZaYOOj7ByARRVldmxtDAAAAAElFTkSuQmCC" alt="card-lojas" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms" />
-                                    <noscript>
-                                        <picture>
-                                            <source type='image/webp' srcset="/static/2554f13afe65706e86982ae5922852dd/61e93/card-lojas.webp 200w,
-/static/2554f13afe65706e86982ae5922852dd/1f5c5/card-lojas.webp 400w,
-/static/2554f13afe65706e86982ae5922852dd/2abcf/card-lojas.webp 527w" sizes="(max-width: 527px) 100vw, 527px" />
-                                            <source srcset="/static/2554f13afe65706e86982ae5922852dd/59beb/card-lojas.png 200w,
-/static/2554f13afe65706e86982ae5922852dd/c0bbd/card-lojas.png 400w,
-/static/2554f13afe65706e86982ae5922852dd/3a723/card-lojas.png 527w" sizes="(max-width: 527px) 100vw, 527px" /><img loading="lazy" sizes="(max-width: 527px) 100vw, 527px" srcset="/static/2554f13afe65706e86982ae5922852dd/59beb/card-lojas.png 200w,
-/static/2554f13afe65706e86982ae5922852dd/c0bbd/card-lojas.png 400w,
-/static/2554f13afe65706e86982ae5922852dd/3a723/card-lojas.png 527w" src="/static/2554f13afe65706e86982ae5922852dd/3a723/card-lojas.png" alt="card-lojas" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center" /></picture>
-                                    </noscript>
-                                </div>
-                                <h2 class="section-title small white extrabold">O maior shopping de calçados <br/> <!-- -->femininos de toda a América <br/> Latina. São mais de 200 lojas!</h2><a class="button-primary white custom-button" href="/lojas">Ver lojas</a></article>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-                            <article class="article-card">
-                                <div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden">
-                                    <div style="width:100%;padding-bottom:76.76190476190476%"></div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsSAAALEgHS3X78AAACvElEQVQ4yzWUWStHURTF76cRMs8yT8lM5ilzhD8yk5mQZE6hiJAMSbx78MGWfqvuw+6ee+4+a6+99jo3mJ+fV0dHh3p6evT19aWPjw89Pz87bm9vVVlZqaSkJEdiYqIjOTnZz7q6OvX392tpaUn7+/tqbm5W0NbWppaWFvX19enh4UGbm5va2NjQ0dGROjs7fRiw+Ph45ebmOnp7e3V4eKj393e9vr5qcXFRRUVFzg3W1tZ8uKamRoWFhcrMzFR6eroKCgqcAFBqaqrKy8s1MTEhOrq8vNTFxYXm5uY0MjJilvX19cYIzs7O9Pf3p0gkYqZEbW2tmQBUXV2t5eVl3d3dua2BgQE1Njaqq6tLx8fH3kemq6srvwew4mVoaEgNDQ3WAT1DIJjs7e05VlZWtLq66lzAf35+dH9/79a/v7/19vamABYzMzNqb283GPoMDg5qZ2dH29vbmpyc1Pn5ufVdX183O2Sh9cfHRwOPjo66yPT0tILW1lZrgahTU1OucnBw4MGQiEawWFhYELlIkpeXp9nZWRejAPqVlpaquLhYwfDwsPVD0N3dXX1+fro6rcESMJhRFAZbW1t2Arnj4+MGvLm5MVtsFuAzNrOzs80IMKaGjlVVVZ4sLE9OTiwHzAEkQoYUvr6+dk6Qk5Oj/Px8ey0hIcGWOT09VUVFha3D5F5eXqwzuYDS+tjYmBkzPL5hbmuIwFlZWXZ+TEyME7BEXFyc2f3+/vrWhMalKN7s7u62hdhHDjrjGaSlpdlvJLMuKSlxwAYJnp6efBPogO8AYC+irKxMKSkpvhCsPRTA2AwPwDbcgwGacUtgTA5DaWpqshwUhW1sbKyio6PdYYBmLGiFthk/lkBXBoaW5ERFRVk7xIcNhTMyMgwadui7zL3EOiEgm7QFW1hyIPzbcO/RCXbhHsWYA+Cs/wEQkHoPPRy/pwAAAABJRU5ErkJggg==" alt="card-excursoes" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms" />
-                                    <noscript>
-                                        <picture>
-                                            <source type='image/webp' srcset="/static/c8d6ffc37d7585b0fcd9e2d0e4f7ccd8/61e93/card-excursoes.webp 200w,
-/static/c8d6ffc37d7585b0fcd9e2d0e4f7ccd8/1f5c5/card-excursoes.webp 400w,
-/static/c8d6ffc37d7585b0fcd9e2d0e4f7ccd8/f5db0/card-excursoes.webp 525w" sizes="(max-width: 525px) 100vw, 525px" />
-                                            <source srcset="/static/c8d6ffc37d7585b0fcd9e2d0e4f7ccd8/59beb/card-excursoes.png 200w,
-/static/c8d6ffc37d7585b0fcd9e2d0e4f7ccd8/c0bbd/card-excursoes.png 400w,
-/static/c8d6ffc37d7585b0fcd9e2d0e4f7ccd8/d1ae2/card-excursoes.png 525w" sizes="(max-width: 525px) 100vw, 525px" /><img loading="lazy" sizes="(max-width: 525px) 100vw, 525px" srcset="/static/c8d6ffc37d7585b0fcd9e2d0e4f7ccd8/59beb/card-excursoes.png 200w,
-/static/c8d6ffc37d7585b0fcd9e2d0e4f7ccd8/c0bbd/card-excursoes.png 400w,
-/static/c8d6ffc37d7585b0fcd9e2d0e4f7ccd8/d1ae2/card-excursoes.png 525w" src="/static/c8d6ffc37d7585b0fcd9e2d0e4f7ccd8/d1ae2/card-excursoes.png" alt="card-excursoes" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center" /></picture>
-                                    </noscript>
-                                </div>
-                                <h2 class="section-title small white extrabold">Excursões exclusivas <br/> São Paulo e ABC - Jaú <br/></h2><a class="button-primary white custom-button" href="/excursoes">Saber mais</a></article>
-                        </div>
-                    </div>
-                    <div class="slider-container">
-                        <div class="row margin-bottom-3rem">
-                            <div class="col-12">
-                                <h1 class="section-title red small extrabold">Os melhores calçados com os menores preços!</h1></div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col-11">
-                                <div class="slick-slider slider-content slick-initialized" dir="ltr">
-                                    <button type="button" data-role="none" class="slick-arrow slick-prev" style="display:block">
-                                        <!-- -->Previous</button>
-                                    <div class="slick-list">
-                                        <div class="slick-track" style="width:700%;left:-100%">
-                                            <div data-index="-3" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:4.761904761904762%"></div>
-                                            <div data-index="-2" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:4.761904761904762%"></div>
-                                            <div data-index="-1" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:4.761904761904762%"></div>
-                                            <div data-index="0" class="slick-slide slick-active slick-current" tabindex="-1" aria-hidden="false" style="outline:none;width:4.761904761904762%">
-                                                <div>
-                                                    <div class="slider-card-home" tabindex="-1" style="width:100%;display:inline-block"><img src="https://app.territoriodocalcado.com.br/build/images/product/j/T/x/jTxGDwXWpCoBsjI.jpeg" alt="produto Sandália Vicenza" />
-                                                        <h3 class="simple-text gray small bold">Sandália Vicenza</h3>
-                                                        <p class="simple-text red small bold">Anabanana</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div data-index="1" class="slick-slide slick-active" tabindex="-1" aria-hidden="false" style="outline:none;width:4.761904761904762%">
-                                                <div>
-                                                    <div class="slider-card-home" tabindex="-1" style="width:100%;display:inline-block"><img src="https://app.territoriodocalcado.com.br/build/images/product/P/B/j/PBjlequBNcmuyPD.jpeg" alt="produto null" />
-                                                        <h3 class="simple-text gray small bold"></h3>
-                                                        <p class="simple-text red small bold">Anabanana</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div data-index="2" class="slick-slide slick-active" tabindex="-1" aria-hidden="false" style="outline:none;width:4.761904761904762%">
-                                                <div>
-                                                    <div class="slider-card-home" tabindex="-1" style="width:100%;display:inline-block"><img src="https://app.territoriodocalcado.com.br/build/images/product/v/E/o/vEoCV0r4SNMAcE9.jpeg" alt="produto null" />
-                                                        <h3 class="simple-text gray small bold"></h3>
-                                                        <p class="simple-text red small bold">Anabanana</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div data-index="3" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline:none;width:4.761904761904762%"></div>
-                                            <div data-index="4" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline:none;width:4.761904761904762%"></div>
-                                            <div data-index="5" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline:none;width:4.761904761904762%"></div>
-                                            <div data-index="6" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline:none;width:4.761904761904762%"></div>
-                                            <div data-index="7" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline:none;width:4.761904761904762%"></div>
-                                            <div data-index="8" class="slick-slide" tabindex="-1" aria-hidden="true" style="outline:none;width:4.761904761904762%"></div>
-                                            <div data-index="9" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:4.761904761904762%">
-                                                <div>
-                                                    <div class="slider-card-home" tabindex="-1" style="width:100%;display:inline-block"><img src="https://app.territoriodocalcado.com.br/build/images/product/j/T/x/jTxGDwXWpCoBsjI.jpeg" alt="produto Sandália Vicenza" />
-                                                        <h3 class="simple-text gray small bold">Sandália Vicenza</h3>
-                                                        <p class="simple-text red small bold">Anabanana</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div data-index="10" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:4.761904761904762%">
-                                                <div>
-                                                    <div class="slider-card-home" tabindex="-1" style="width:100%;display:inline-block"><img src="https://app.territoriodocalcado.com.br/build/images/product/P/B/j/PBjlequBNcmuyPD.jpeg" alt="produto null" />
-                                                        <h3 class="simple-text gray small bold"></h3>
-                                                        <p class="simple-text red small bold">Anabanana</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div data-index="11" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:4.761904761904762%">
-                                                <div>
-                                                    <div class="slider-card-home" tabindex="-1" style="width:100%;display:inline-block"><img src="https://app.territoriodocalcado.com.br/build/images/product/v/E/o/vEoCV0r4SNMAcE9.jpeg" alt="produto null" />
-                                                        <h3 class="simple-text gray small bold"></h3>
-                                                        <p class="simple-text red small bold">Anabanana</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div data-index="12" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:4.761904761904762%"></div>
-                                            <div data-index="13" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:4.761904761904762%"></div>
-                                            <div data-index="14" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:4.761904761904762%"></div>
-                                            <div data-index="15" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:4.761904761904762%"></div>
-                                            <div data-index="16" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:4.761904761904762%"></div>
-                                            <div data-index="17" tabindex="-1" class="slick-slide slick-cloned" aria-hidden="true" style="width:4.761904761904762%"></div>
-                                        </div>
-                                    </div>
-                                    <button type="button" data-role="none" class="slick-arrow slick-next" style="display:block">
-                                        <!-- -->Next</button>
-                                </div>
+                        <div class="widget widget-new-products">
+                            <div class="widget-title">
+                                <h2>Lan&ccedil;amentos</h2>
                             </div>
                         </div>
-                        <div class="row margin-top-3rem">
-                            <div class="col-12 d-flex justify-content-center"><a class="button-primary custom-button" href="/vitrine">Ver vitrine</a></div>
+                        <div class="carousel-items lancamentos">
+                            <div class="category-products">
+                                <div class="toolbar">
+                                    <div class="sorter">
+                                        <p class="view-mode">
+                                            <label>Visualizar como</label>
+                                            <strong title="Lista" class="list">Lista</strong>
+                                            <a href="https://pecompe.com.br/?mode=grid" title="Tabela" class="grid">Tabela</a>
+                                        </p>
+
+                                        <div class="sort-by">
+                                            <label>Ordenado por:</label>
+                                            <select onchange="setLocation(this.value)" title="Ordenado por:">
+                                                <option value="https://pecompe.com.br/?dir=asc&amp;order=position" selected="selected">
+                                                    Relevância </option>
+                                                <option value="https://pecompe.com.br/?dir=asc&amp;order=name">
+                                                    Nome </option>
+                                                <option value="https://pecompe.com.br/?dir=asc&amp;order=price">
+                                                    Preço </option>
+                                                <option value="https://pecompe.com.br/?dir=asc&amp;order=navegar">
+                                                    Navegar Em </option>
+                                                <option value="https://pecompe.com.br/?dir=asc&amp;order=idade">
+                                                    idade </option>
+                                            </select>
+                                            <a href="https://pecompe.com.br/?dir=desc&amp;order=position" class="sort-by-switcher sort-by-switcher--asc" title="Direção Descendente">Direção Descendente</a>
+                                        </div>
+                                    </div>
+                                    <div class="pager">
+                                        <div class="count-container">
+                                            <p class="amount amount--has-pages">
+                                                1-12 de 27 </p>
+
+                                            <div class="limiter">
+                                                <label>Exibir</label>
+                                                <select onchange="setLocation(this.value)" title="Results per page">
+                                                    <option value="https://pecompe.com.br/?limit=4">
+                                                        4 </option>
+                                                    <option value="https://pecompe.com.br/?limit=8">
+                                                        8 </option>
+                                                    <option value="https://pecompe.com.br/?limit=12" selected="selected">
+                                                        12 </option>
+                                                    <option value="https://pecompe.com.br/?limit=16">
+                                                        16 </option>
+                                                    <option value="https://pecompe.com.br/?limit=24">
+                                                        24 </option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <ol class="products-list" id="products-list">
+
+                                    <li class="item" id="the-4147">
+                                        <a href="https://pecompe.com.br/lancamentos/papete-calce-facil-masha-e-o-urso-n-21-ao-27.html" title="Papete Calce Fácil Masha e o Urso - Nº21 ao 27" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/1/2/123008-396a.jpg" width="135" height="135" alt="Papete Calce Fácil Masha e o Urso - Nº21 ao 27" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/lancamentos/papete-calce-facil-masha-e-o-urso-n-21-ao-27.html" title="Papete Calce Fácil Masha e o Urso - Nº21 ao 27">Papete Calce Fácil Masha e o Urso - Nº21 ao 27</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-4147">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-4147" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'4147','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/1/2/123008-396a.jpg','92');" id="a92-40-4147" class="swatch-category" style="background-color:#cc527c; width:20px; height:20px;" title="Pink"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-4147">
+                                            <span class="price">R$79,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$26,63</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$9,61</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/lancamentos/papete-calce-facil-masha-e-o-urso-n-21-ao-27.html', 'the-4147')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    A Papete Masha e o Urso é confortável, divertida e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece.
+                                                    <a href="https://pecompe.com.br/lancamentos/papete-calce-facil-masha-e-o-urso-n-21-ao-27.html" title="Papete Calce Fácil Masha e o Urso - Nº21 ao 27" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/4147/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/4147/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item" id="the-5395">
+                                        <a href="https://pecompe.com.br/lancamentos/chinelo-summer-masculino-preto-n-19-20-ao-23-24.html" title="Chinelo Summer Masculino Preto - Nº 19/20 ao 23/24" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/8/6/86013-050a.jpg" width="135" height="135" alt="Chinelo Summer Masculino Preto - Nº 19/20 ao 23/24" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/lancamentos/chinelo-summer-masculino-preto-n-19-20-ao-23-24.html" title="Chinelo Summer Masculino Preto - Nº 19/20 ao 23/24">Chinelo Summer Masculino Preto - Nº 19/20 ao 23/24</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-5395">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-5395" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'5395','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/8/6/86013-050a.jpg','92');" id="a92-20-5395" class="swatch-category" style="background-color:#000; width:20px; height:20px;" title="Preto"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-5395">
+                                            <span class="price">R$39,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$13,30</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$4,80</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/lancamentos/chinelo-summer-masculino-preto-n-19-20-ao-23-24.html', 'the-5395')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    O Chinelo Summer Guty Pé com Pé é confortável, divertido e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece. <a href="https://pecompe.com.br/lancamentos/chinelo-summer-masculino-preto-n-19-20-ao-23-24.html" title="Chinelo Summer Masculino Preto - Nº 19/20 ao 23/24" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/5395/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/5395/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item" id="the-5414">
+                                        <a href="https://pecompe.com.br/lancamentos/babuche-pe-com-pe-pezinho-skatista-n-25-26-ao-29-30.html" title="Babuche Pé com Pé Pézinho Skatista - Nº 25/26 ao 29/30" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/5/5/55594-1456a.jpg" width="135" height="135" alt="Babuche Pé com Pé Pézinho Skatista - Nº 25/26 ao 29/30" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/lancamentos/babuche-pe-com-pe-pezinho-skatista-n-25-26-ao-29-30.html" title="Babuche Pé com Pé Pézinho Skatista - Nº 25/26 ao 29/30">Babuche Pé com Pé Pézinho Skatista - Nº 25/26 ao 29/30</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-5414">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-5414" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'5414','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/5/5/55594-1456a.jpg','92');" id="a92-23-5414" class="swatch-category" style="background-color:#3f51b5; width:20px; height:20px;" title="Azul"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-5414">
+                                            <span class="price">R$49,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$16,63</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$6,00</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/lancamentos/babuche-pe-com-pe-pezinho-skatista-n-25-26-ao-29-30.html', 'the-5414')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    O Babuche Pé com Pé é confortável, divertido e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece. <a href="https://pecompe.com.br/lancamentos/babuche-pe-com-pe-pezinho-skatista-n-25-26-ao-29-30.html" title="Babuche Pé com Pé Pézinho Skatista - Nº 25/26 ao 29/30" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/5414/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/5414/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item" id="the-5426">
+                                        <a href="https://pecompe.com.br/lancamentos/sandalia-sunny-masha-flor-brinde-varinha-magica-n-21-ao-28.html" title="Sandália Sunny Masha Flor - Brinde Varinha Mágica - Nº 21 ao 28" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/1/8/180004-053a.jpg" width="135" height="135" alt="Sandália Sunny Masha Flor - Brinde Varinha Mágica - Nº 21 ao 28" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/lancamentos/sandalia-sunny-masha-flor-brinde-varinha-magica-n-21-ao-28.html" title="Sandália Sunny Masha Flor - Brinde Varinha Mágica - Nº 21 ao 28">Sandália Sunny Masha Flor - Brinde Varinha Mágica - Nº 21 ao 28</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-5426">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-5426" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'5426','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/1/8/180004-053a.jpg','92');" id="a92-40-5426" class="swatch-category" style="background-color:#cc527c; width:20px; height:20px;" title="Pink"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-5426">
+                                            <span class="price">R$59,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$19,97</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$7,21</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/lancamentos/sandalia-sunny-masha-flor-brinde-varinha-magica-n-21-ao-28.html', 'the-5426')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    A Sandália Sunny Masha e o Urso é confortável, divertido e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece. <a href="https://pecompe.com.br/lancamentos/sandalia-sunny-masha-flor-brinde-varinha-magica-n-21-ao-28.html" title="Sandália Sunny Masha Flor - Brinde Varinha Mágica - Nº 21 ao 28" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/5426/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/5426/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item" id="the-5431">
+                                        <a href="https://pecompe.com.br/lancamentos/papete-divers-o-brinde-helicoptero-n-25-ao-32.html" title="Papete Diversão - Brinde Helicóptero - Nº 25 ao 32" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/6/2/62002-050a.jpg" width="135" height="135" alt="Papete Diversão - Brinde Helicóptero - Nº 25 ao 32" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/lancamentos/papete-divers-o-brinde-helicoptero-n-25-ao-32.html" title="Papete Diversão - Brinde Helicóptero - Nº 25 ao 32">Papete Diversão - Brinde Helicóptero - Nº 25 ao 32</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-5431">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-5431" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'5431','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/6/2/62002-050a.jpg','92');" id="a92-20-5431" class="swatch-category" style="background-color:#000; width:20px; height:20px;" title="Preto"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-5431">
+                                            <span class="price">R$79,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$26,63</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$9,61</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/lancamentos/papete-divers-o-brinde-helicoptero-n-25-ao-32.html', 'the-5431')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    A Papete Plus Diversão e o Urso é confortável, divertido e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece. <a href="https://pecompe.com.br/lancamentos/papete-divers-o-brinde-helicoptero-n-25-ao-32.html" title="Papete Diversão - Brinde Helicóptero - Nº 25 ao 32" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/5431/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/5431/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item" id="the-5440">
+                                        <a href="https://pecompe.com.br/lancamentos/papete-divers-o-brinde-caminh-o-n-25-ao-32.html" title="Papete Diversão Preto com Vermelho - Brinde Caminhão - Nº 25 ao 32" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/7/7/77014-050a.jpg" width="135" height="135" alt="Papete Diversão Preto com Vermelho - Brinde Caminhão - Nº 25 ao 32" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/lancamentos/papete-divers-o-brinde-caminh-o-n-25-ao-32.html" title="Papete Diversão Preto com Vermelho - Brinde Caminhão - Nº 25 ao 32">Papete Diversão Preto com Vermelho - Brinde Caminhão - Nº 25 ao 32</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-5440">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-5440" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'5440','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/7/7/77014-050a.jpg','92');" id="a92-20-5440" class="swatch-category" style="background-color:#000; width:20px; height:20px;" title="Preto"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-5440">
+                                            <span class="price">R$99,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$33,30</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$12,02</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/lancamentos/papete-divers-o-brinde-caminh-o-n-25-ao-32.html', 'the-5440')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    Super Papete Turbo da Pé com Pé, além de super confortável, macia e flexível, vem com um Caminhão e um Game exclusivo para a família se divertir!! Ela é confortável, divertida e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece. <a href="https://pecompe.com.br/lancamentos/papete-divers-o-brinde-caminh-o-n-25-ao-32.html" title="Papete Diversão Preto com Vermelho - Brinde Caminhão - Nº 25 ao 32" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/5440/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/5440/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item" id="the-5447">
+                                        <a href="https://pecompe.com.br/lancamentos/papete-divers-o-preto-com-amarelo-brinde-caminh-o-n-25-ao-32.html" title="Papete Diversão Preto com Amarelo - Brinde Caminhão - Nº 25 ao 32" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/7/7/77015-730a.jpg" width="135" height="135" alt="Papete Diversão Preto com Amarelo - Brinde Caminhão - Nº 25 ao 32" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/lancamentos/papete-divers-o-preto-com-amarelo-brinde-caminh-o-n-25-ao-32.html" title="Papete Diversão Preto com Amarelo - Brinde Caminhão - Nº 25 ao 32">Papete Diversão Preto com Amarelo - Brinde Caminhão - Nº 25 ao 32</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-5447">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-5447" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'5447','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/7/7/77015-730a.jpg','92');" id="a92-20-5447" class="swatch-category" style="background-color:#000; width:20px; height:20px;" title="Preto"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-5447">
+                                            <span class="price">R$99,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$33,30</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$12,02</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/lancamentos/papete-divers-o-preto-com-amarelo-brinde-caminh-o-n-25-ao-32.html', 'the-5447')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    Super Papete Turbo da Pé com Pé, além de super confortável, macia e flexível, vem com um Caminhão e um Game exclusivo para a família se divertir!! Ela é confortável, divertida e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece. <a href="https://pecompe.com.br/lancamentos/papete-divers-o-preto-com-amarelo-brinde-caminh-o-n-25-ao-32.html" title="Papete Diversão Preto com Amarelo - Brinde Caminhão - Nº 25 ao 32" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/5447/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/5447/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item" id="the-5454">
+                                        <a href="https://pecompe.com.br/lancamentos/papete-plus-divers-o-n-28-ao-35.html" title="Papete Plus Caramelo - Nº 28 ao 35" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/3/5/35142-366a.jpg" width="135" height="135" alt="Papete Plus Caramelo - Nº 28 ao 35" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/lancamentos/papete-plus-divers-o-n-28-ao-35.html" title="Papete Plus Caramelo - Nº 28 ao 35">Papete Plus Caramelo - Nº 28 ao 35</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-5454">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-5454" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'5454','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/3/5/35142-366a.jpg','92');" id="a92-106-5454" class="swatch-category" style="background-color:#8b5742; width:20px; height:20px;" title="Caramelo"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-5454">
+                                            <span class="price">R$79,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$26,63</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$9,61</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/lancamentos/papete-plus-divers-o-n-28-ao-35.html', 'the-5454')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    A Papete Plus é confortável, divertida e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece. <a href="https://pecompe.com.br/lancamentos/papete-plus-divers-o-n-28-ao-35.html" title="Papete Plus Caramelo - Nº 28 ao 35" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/5454/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/5454/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item" id="the-5463">
+                                        <a href="https://pecompe.com.br/lancamentos/papete-plus-azul-marinho-com-fivela-n-28-ao-35.html" title="Papete Plus Azul Marinho com Fivela - Nº 28 ao 35" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/3/5/35143-034a.jpg" width="135" height="135" alt="Papete Plus Azul Marinho com Fivela - Nº 28 ao 35" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/lancamentos/papete-plus-azul-marinho-com-fivela-n-28-ao-35.html" title="Papete Plus Azul Marinho com Fivela - Nº 28 ao 35">Papete Plus Azul Marinho com Fivela - Nº 28 ao 35</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-5463">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-5463" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'5463','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/3/5/35143-034a.jpg','92');" id="a92-83-5463" class="swatch-category" style="background-color:#120a8f; width:20px; height:20px;" title="Azul Marinho"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-5463">
+                                            <span class="price">R$79,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$26,63</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$9,61</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/lancamentos/papete-plus-azul-marinho-com-fivela-n-28-ao-35.html', 'the-5463')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    A Papete Plus é confortável, divertida e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece. <a href="https://pecompe.com.br/lancamentos/papete-plus-azul-marinho-com-fivela-n-28-ao-35.html" title="Papete Plus Azul Marinho com Fivela - Nº 28 ao 35" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/5463/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/5463/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item" id="the-5472">
+                                        <a href="https://pecompe.com.br/lancamentos/sandalia-cristal-pe-com-pe-dourada-com-tiras-n-28-ao-34.html" title="Sandália Cristal Pé com Pé Dourada com tiras - N° 28 ao 34" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/2/1/21059-470a.jpg" width="135" height="135" alt="Sandália Cristal Pé com Pé Dourada com tiras - N° 28 ao 34" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/lancamentos/sandalia-cristal-pe-com-pe-dourada-com-tiras-n-28-ao-34.html" title="Sandália Cristal Pé com Pé Dourada com tiras - N° 28 ao 34">Sandália Cristal Pé com Pé Dourada com tiras - N° 28 ao 34</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-5472">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-5472" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'5472','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/2/1/21059-470a.jpg','92');" id="a92-44-5472" class="swatch-category" style="background-color:#e8d14f; width:20px; height:20px;" title="Dourada"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-5472">
+                                            <span class="price">R$69,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$23,30</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$8,41</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/lancamentos/sandalia-cristal-pe-com-pe-dourada-com-tiras-n-28-ao-34.html', 'the-5472')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    A Sandália Cristal é confortável, divertido e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece. <a href="https://pecompe.com.br/lancamentos/sandalia-cristal-pe-com-pe-dourada-com-tiras-n-28-ao-34.html" title="Sandália Cristal Pé com Pé Dourada com tiras - N° 28 ao 34" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/5472/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/5472/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item" id="the-5480">
+                                        <a href="https://pecompe.com.br/lancamentos/sandalia-cristal-pe-com-pe-preta-com-laco-n-28-ao-35.html" title="Sandália Cristal Pé com Pé Preta com Laço - N° 28 ao 35" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/2/1/21066-050a.jpg" width="135" height="135" alt="Sandália Cristal Pé com Pé Preta com Laço - N° 28 ao 35" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/lancamentos/sandalia-cristal-pe-com-pe-preta-com-laco-n-28-ao-35.html" title="Sandália Cristal Pé com Pé Preta com Laço - N° 28 ao 35">Sandália Cristal Pé com Pé Preta com Laço - N° 28 ao 35</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-5480">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-5480" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'5480','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/2/1/21066-050a.jpg','92');" id="a92-20-5480" class="swatch-category" style="background-color:#000; width:20px; height:20px;" title="Preto"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-5480">
+                                            <span class="price">R$69,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$23,30</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$8,41</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/lancamentos/sandalia-cristal-pe-com-pe-preta-com-laco-n-28-ao-35.html', 'the-5480')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    A Sandália Cristal é confortável, divertido e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece. <a href="https://pecompe.com.br/lancamentos/sandalia-cristal-pe-com-pe-preta-com-laco-n-28-ao-35.html" title="Sandália Cristal Pé com Pé Preta com Laço - N° 28 ao 35" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/5480/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/5480/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item last" id="the-5505">
+                                        <a href="https://pecompe.com.br/lancamentos/sandalia-infantil-pe-com-pe-nenem-multicolor-n-15-ao-20.html" title="Sandália Infantil Pé com Pé Neném Multicolor - Nº 15 ao 20" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/1/1/11169-147a.jpg" width="135" height="135" alt="Sandália Infantil Pé com Pé Neném Multicolor - Nº 15 ao 20" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/lancamentos/sandalia-infantil-pe-com-pe-nenem-multicolor-n-15-ao-20.html" title="Sandália Infantil Pé com Pé Neném Multicolor - Nº 15 ao 20">Sandália Infantil Pé com Pé Neném Multicolor - Nº 15 ao 20</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-5505">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-5505" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'5505','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/1/1/11169-147a.jpg','92');" id="a92-44-5505" class="swatch-category" style="background-color:#e8d14f; width:20px; height:20px;" title="Dourada"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-5505">
+                                            <span class="price">R$64,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$21,63</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$7,81</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/lancamentos/sandalia-infantil-pe-com-pe-nenem-multicolor-n-15-ao-20.html', 'the-5505')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    A Sandália Neném é confortável, divertida e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece. <a href="https://pecompe.com.br/lancamentos/sandalia-infantil-pe-com-pe-nenem-multicolor-n-15-ao-20.html" title="Sandália Infantil Pé com Pé Neném Multicolor - Nº 15 ao 20" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/5505/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/5505/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ol>
+                                <script type="text/javascript">
+                                    decorateList('products-list', 'none-recursive')
+                                </script>
+
+                                <div class="toolbar-bottom">
+                                    <div class="toolbar">
+                                        <div class="sorter">
+                                            <p class="view-mode">
+                                                <label>Visualizar como</label>
+                                                <strong title="Lista" class="list">Lista</strong>
+                                                <a href="https://pecompe.com.br/?mode=grid" title="Tabela" class="grid">Tabela</a>
+                                            </p>
+
+                                            <div class="sort-by">
+                                                <label>Ordenado por:</label>
+                                                <select onchange="setLocation(this.value)" title="Ordenado por:">
+                                                    <option value="https://pecompe.com.br/?dir=asc&amp;order=position" selected="selected">
+                                                        Relevância </option>
+                                                    <option value="https://pecompe.com.br/?dir=asc&amp;order=name">
+                                                        Nome </option>
+                                                    <option value="https://pecompe.com.br/?dir=asc&amp;order=price">
+                                                        Preço </option>
+                                                    <option value="https://pecompe.com.br/?dir=asc&amp;order=navegar">
+                                                        Navegar Em </option>
+                                                    <option value="https://pecompe.com.br/?dir=asc&amp;order=idade">
+                                                        idade </option>
+                                                </select>
+                                                <a href="https://pecompe.com.br/?dir=desc&amp;order=position" class="sort-by-switcher sort-by-switcher--asc" title="Direção Descendente">Direção Descendente</a>
+                                            </div>
+                                        </div>
+                                        <div class="pager">
+                                            <div class="count-container">
+                                                <p class="amount amount--has-pages">
+                                                    1-12 de 27 </p>
+
+                                                <div class="limiter">
+                                                    <label>Exibir</label>
+                                                    <select onchange="setLocation(this.value)" title="Results per page">
+                                                        <option value="https://pecompe.com.br/?limit=4">
+                                                            4 </option>
+                                                        <option value="https://pecompe.com.br/?limit=8">
+                                                            8 </option>
+                                                        <option value="https://pecompe.com.br/?limit=12" selected="selected">
+                                                            12 </option>
+                                                        <option value="https://pecompe.com.br/?limit=16">
+                                                            16 </option>
+                                                        <option value="https://pecompe.com.br/?limit=24">
+                                                            24 </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                jQuery('.swatch-category-container .swatch-category').each(function() {
+                                    jQuery(this).click();
+                                });
+                            </script>
                         </div>
-                    </div>
-                </div>
-            </header>
-        </main>
-        <section class="newsletter">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-8 d-flex flex-column">
-                        <h2 class="section-title white extrabold small">Quer receber novidades e ofertas no seu e-mail?</h2>
-                        <p class="simple-text small white regular">Assine nossa Newsletter</p>
-                    </div>
-                </div>
-                <div class="row flex-wrap margin-top-rem form-email">
-                    <div class="col-12 col-lg-8">
-                        <form>
-                            <input type="text" placeholder="Insira seu e-mail" class="col-11 col-lg-8" name="emailNewsletter" aria-label="Insira seu e-mail" value="" />
-                            <button class="col-5 col-lg-3 button-primary dark" type="submit">Cadastrar</button>
-                        </form>
-                    </div>
-                </div>
-                <div>
-                    <div class="bags-mobile gatsby-image-wrapper" style="position:absolute;overflow:hidden">
-                        <div style="width:100%;padding-bottom:122.5%"></div><img src="data:image/svg+xml,%3csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20width=&#x27;400&#x27;%20height=&#x27;490&#x27;%3e%3cpath%20d=&#x27;M190%2035l-5%209c-3%208-3%208-12%209-7%201-8%202-9%209%200%204-12%2025-22%2040l-7%2013-7%2015c-4%208-5%2019-2%2024%204%204%205%201%205-13%201-12%201-13%205-23l7-14a1090%201090%200%200019-28c2%200%201%2043-2%2045l-12%203c-11%202-13%203-13%205s1%202%204%203a341%20341%200%200129%206c8%201%208%200%208%208%201%2012%207%2025%2010%2022%201-1%201-3-2-12-3-10-4-16-3-16l6%201a2081%202081%200%200085%2016%2010445%2010445%200%2001-3%20201h28a1337%201337%200%200149-12c1-1%200-8-3-20l-3-19a2835%202835%200%2000-39-210l-10%201h-10c-1-2-3-2-13%201-17%203-14%204-25-14a218%20218%200%2000-27-37c-12-15-11-15-18-15-5%200-7%200-8%202m0%201l-3%209-3%207%202%204%202%207%203%208c3%206%2010%2025%2012%2034%202%207%205%208%205%202l-4-25c-2-5-5-16-5-23l-2-9-2-9c0-6-2-8-5-5m12%204c4%208%207%2014%209%2027%204%2018%2012%2039%2014%2040%203%201%2023-4%2024-6%200-2-15-27-21-35-18-23-24-31-26-31h-2l2%205m-5%202l2%2010a402%20402%200%200011%2051v7h5c7-2%207%200%201-18l-6-24c-3-14-9-28-11-29-2%200-2%200-2%203m-25%2016c-6%207-7%2021-7%2059%200%203%202%203%209%202l2-1V98l2-29c2-9%202-9%201-11-3-3-4-3-7%200m10%207c-4%2010-6%2044-3%2045%201%201%201%201%204-14s4-27%202-30c-1-2-3-3-3-1m7%2011l-1%203-3%2020-2%2017%2018-4c2-1-1-11-6-25-4-11-5-13-6-11m60%2095a4542%204542%200%2001-11%20121l2-4%201-3%201-2%201-4%201-5%201-8a499%20499%200%20016-43%20530%20530%200%20015-40c-1-7-6-15-7-12&#x27;%20fill=&#x27;%23d3d3d3&#x27;%20fill-rule=&#x27;evenodd&#x27;/%3e%3c/svg%3e" alt="sacolas de compras" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms" />
-                        <noscript>
-                            <picture>
-                                <source type='image/webp' srcset="/static/9bbfeef9d5ca13b4b524bbaf4eb29e96/61e93/shopping-bags.webp 200w,
-/static/9bbfeef9d5ca13b4b524bbaf4eb29e96/98c70/shopping-bags.webp 280w" sizes="(max-width: 280px) 100vw, 280px" />
-                                <source srcset="/static/9bbfeef9d5ca13b4b524bbaf4eb29e96/59beb/shopping-bags.png 200w,
-/static/9bbfeef9d5ca13b4b524bbaf4eb29e96/6bc94/shopping-bags.png 280w" sizes="(max-width: 280px) 100vw, 280px" /><img loading="lazy" sizes="(max-width: 280px) 100vw, 280px" srcset="/static/9bbfeef9d5ca13b4b524bbaf4eb29e96/59beb/shopping-bags.png 200w,
-/static/9bbfeef9d5ca13b4b524bbaf4eb29e96/6bc94/shopping-bags.png 280w" src="/static/9bbfeef9d5ca13b4b524bbaf4eb29e96/6bc94/shopping-bags.png" alt="sacolas de compras" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center" /></picture>
-                        </noscript>
+                        <div class="widget-title">
+                            <h2>Outlet</h2>
+                        </div>
+                        <div class="carousel-items category-outlet">
+                            <div class="category-products">
+                                <div class="toolbar">
+                                    <div class="sorter">
+                                        <p class="view-mode">
+                                            <label>Visualizar como</label>
+                                            <strong title="Lista" class="list">Lista</strong>
+                                            <a href="https://pecompe.com.br/?mode=grid" title="Tabela" class="grid">Tabela</a>
+                                        </p>
+
+                                        <div class="sort-by">
+                                            <label>Ordenado por:</label>
+                                            <select onchange="setLocation(this.value)" title="Ordenado por:">
+                                                <option value="https://pecompe.com.br/?dir=asc&amp;order=position" selected="selected">
+                                                    Relevância </option>
+                                                <option value="https://pecompe.com.br/?dir=asc&amp;order=name">
+                                                    Nome </option>
+                                                <option value="https://pecompe.com.br/?dir=asc&amp;order=price">
+                                                    Preço </option>
+                                                <option value="https://pecompe.com.br/?dir=asc&amp;order=navegar">
+                                                    Navegar Em </option>
+                                                <option value="https://pecompe.com.br/?dir=asc&amp;order=idade">
+                                                    idade </option>
+                                            </select>
+                                            <a href="https://pecompe.com.br/?dir=desc&amp;order=position" class="sort-by-switcher sort-by-switcher--asc" title="Direção Descendente">Direção Descendente</a>
+                                        </div>
+                                    </div>
+                                    <div class="pager">
+                                        <div class="count-container">
+                                            <p class="amount amount--has-pages">
+                                                1-12 de 68 </p>
+
+                                            <div class="limiter">
+                                                <label>Exibir</label>
+                                                <select onchange="setLocation(this.value)" title="Results per page">
+                                                    <option value="https://pecompe.com.br/?limit=4">
+                                                        4 </option>
+                                                    <option value="https://pecompe.com.br/?limit=8">
+                                                        8 </option>
+                                                    <option value="https://pecompe.com.br/?limit=12" selected="selected">
+                                                        12 </option>
+                                                    <option value="https://pecompe.com.br/?limit=16">
+                                                        16 </option>
+                                                    <option value="https://pecompe.com.br/?limit=24">
+                                                        24 </option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <ol class="products-list" id="products-list">
+
+                                    <li class="item" id="the-1931">
+                                        <a href="https://pecompe.com.br/outlet-4/bambino-feminino-prata.html" title="Sapatilha Bambino Feminino Prata - Nº 1 ao 4" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/9/0/9073_2.jpg" width="135" height="135" alt="Sapatilha Bambino Feminino Prata - Nº 1 ao 4" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/outlet-4/bambino-feminino-prata.html" title="Sapatilha Bambino Feminino Prata - Nº 1 ao 4">Sapatilha Bambino Feminino Prata - Nº 1 ao 4</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-1931">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-1931" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'1931','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/9/0/9073_2.jpg','92');" id="a92-39-1931" class="swatch-category" style="background-color:#c0c0c0; width:20px; height:20px;" title="Prata"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-1931">
+                                            <span class="price">R$39,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$13,30</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$4,80</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/outlet-4/bambino-feminino-prata.html', 'the-1931')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    O Bambino Feminino é confortável, divertido e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece. <a href="https://pecompe.com.br/outlet-4/bambino-feminino-prata.html" title="Sapatilha Bambino Feminino Prata - Nº 1 ao 4" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/1931/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/1931/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item" id="the-2771">
+                                        <a href="https://pecompe.com.br/outlet-4/tenis-nenem-masculino-bege-com-velcro-n-15-ao-20.html" title="Tênis Neném Masculino com Velcro - Nº 15 ao 20" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/1/3/13634-101a.jpg" width="135" height="135" alt="Tênis Neném Masculino com Velcro - Nº 15 ao 20" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a163"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/outlet-4/tenis-nenem-masculino-bege-com-velcro-n-15-ao-20.html" title="Tênis Neném Masculino com Velcro - Nº 15 ao 20">Tênis Neném Masculino com Velcro - Nº 15 ao 20</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-2771">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-2771" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'2771','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/1/3/13634-101a.jpg','92');" id="a92-106-2771" class="swatch-category" style="background-color:#8b5742; width:20px; height:20px;" title="Caramelo"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-2771">
+                                            <span class="price">R$74,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$24,97</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$9,01</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/outlet-4/tenis-nenem-masculino-bege-com-velcro-n-15-ao-20.html', 'the-2771')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    O Tênis Neném Pé com Pé é confortável, divertido e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece. <a href="https://pecompe.com.br/outlet-4/tenis-nenem-masculino-bege-com-velcro-n-15-ao-20.html" title="Tênis Neném Masculino com Velcro - Nº 15 ao 20" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/2771/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/2771/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item" id="the-2778">
+                                        <a href="https://pecompe.com.br/outlet-4/tenis-nenem-masculino-azul-jeans-n-15-ao-20.html" title="Tênis Neném Masculino Azul Jeans - N º 15 ao 20" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/1/3/13636-721a.jpg" width="135" height="135" alt="Tênis Neném Masculino Azul Jeans - N º 15 ao 20" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a163"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/outlet-4/tenis-nenem-masculino-azul-jeans-n-15-ao-20.html" title="Tênis Neném Masculino Azul Jeans - N º 15 ao 20">Tênis Neném Masculino Azul Jeans - N º 15 ao 20</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-2778">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-2778" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'2778','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/1/3/13636-721a.jpg','92');" id="a92-105-2778" class="swatch-category" style="background-color:#57679e; width:20px; height:20px;" title="Azul Jeans"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-2778">
+                                            <span class="price">R$74,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$24,97</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$9,01</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/outlet-4/tenis-nenem-masculino-azul-jeans-n-15-ao-20.html', 'the-2778')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    O Tênis Neném Pé com Pé é confortável, divertido e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece. <a href="https://pecompe.com.br/outlet-4/tenis-nenem-masculino-azul-jeans-n-15-ao-20.html" title="Tênis Neném Masculino Azul Jeans - N º 15 ao 20" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/2778/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/2778/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item" id="the-2822">
+                                        <a href="https://pecompe.com.br/outlet-4/papete-flex-masha-lilas.html" title="Papete Flex Masha Lilás - Nº 21 ao  28" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/1/5/153001087.jpg" width="135" height="135" alt="Papete Flex Masha Lilás - Nº 21 ao  28" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/outlet-4/papete-flex-masha-lilas.html" title="Papete Flex Masha Lilás - Nº 21 ao  28">Papete Flex Masha Lilás - Nº 21 ao  28</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-2822">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-2822" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'2822','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/1/5/153001087.jpg','92');" id="a92-52-2822" class="swatch-category" style="background-color:#800080; width:20px; height:20px;" title="Roxo"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-2822">
+                                            <span class="price">R$59,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$19,97</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$7,21</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/outlet-4/papete-flex-masha-lilas.html', 'the-2822')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    A Papete Flex Masha Lilás é confortável, divertido e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece. <a href="https://pecompe.com.br/outlet-4/papete-flex-masha-lilas.html" title="Papete Flex Masha Lilás - Nº 21 ao  28" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/2822/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/2822/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item" id="the-2827">
+                                        <a href="https://pecompe.com.br/outlet-4/chinelo-divers-o-unicornio-brinde-mecha-de-led-n-28-ao-35.html" title="Chinelo Diversão Unicórnio -  Brinde Mecha de Led - Nº 28 ao 35" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/7/8/78003-001.jpg" width="135" height="135" alt="Chinelo Diversão Unicórnio -  Brinde Mecha de Led - Nº 28 ao 35" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/outlet-4/chinelo-divers-o-unicornio-brinde-mecha-de-led-n-28-ao-35.html" title="Chinelo Diversão Unicórnio -  Brinde Mecha de Led - Nº 28 ao 35">Chinelo Diversão Unicórnio -  Brinde Mecha de Led - Nº 28 ao 35</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-2827">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-2827" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'2827','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/7/8/78003-001.jpg','92');" id="a92-40-2827" class="swatch-category" style="background-color:#cc527c; width:20px; height:20px;" title="Pink"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-2827">
+                                            <span class="price">R$59,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$19,97</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$7,21</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/outlet-4/chinelo-divers-o-unicornio-brinde-mecha-de-led-n-28-ao-35.html', 'the-2827')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    O Chinelo Summer Diversão Pé com Pé é confortável, divertido e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece. <a href="https://pecompe.com.br/outlet-4/chinelo-divers-o-unicornio-brinde-mecha-de-led-n-28-ao-35.html" title="Chinelo Diversão Unicórnio -  Brinde Mecha de Led - Nº 28 ao 35" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/2827/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/2827/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item" id="the-2942">
+                                        <a href="https://pecompe.com.br/outlet-4/tenis-feminino-fashion-branco-e-preto-n-28-ao-35.html" title="Tênis Feminino Fashion Branco e Preto - Nº 28 ao 35" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/b/r/branco_1.jpg" width="135" height="135" alt="Tênis Feminino Fashion Branco e Preto - Nº 28 ao 35" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a163"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/outlet-4/tenis-feminino-fashion-branco-e-preto-n-28-ao-35.html" title="Tênis Feminino Fashion Branco e Preto - Nº 28 ao 35">Tênis Feminino Fashion Branco e Preto - Nº 28 ao 35</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-2942">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-2942" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'2942','','92');" id="a92-22-2942" class="swatch-category" style="background-color:#fff; width:20px; height:20px;" title="Branco"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-2942">
+                                            <span class="price">R$99,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$33,30</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$12,02</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/outlet-4/tenis-feminino-fashion-branco-e-preto-n-28-ao-35.html', 'the-2942')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    O Tênis Pé com Pé é confortável, divertido e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece. <a href="https://pecompe.com.br/outlet-4/tenis-feminino-fashion-branco-e-preto-n-28-ao-35.html" title="Tênis Feminino Fashion Branco e Preto - Nº 28 ao 35" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/2942/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/2942/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item" id="the-2561">
+                                        <a href="https://pecompe.com.br/outlet-4/sapatilha-bambino-oncinha-n-1-ao-4.html" title="Sapatilha Bambino Oncinha - Nº 1 ao 4" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/0/9/09082-683a.jpg" width="135" height="135" alt="Sapatilha Bambino Oncinha - Nº 1 ao 4" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/outlet-4/sapatilha-bambino-oncinha-n-1-ao-4.html" title="Sapatilha Bambino Oncinha - Nº 1 ao 4">Sapatilha Bambino Oncinha - Nº 1 ao 4</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-2561">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-2561" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'2561','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/0/9/09082-683a.jpg','92');" id="a92-69-2561" class="swatch-category" style="background-color:#f5f5dc; width:20px; height:20px;" title="Bege"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-2561">
+                                            <span class="price">R$39,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$13,30</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$4,80</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/outlet-4/sapatilha-bambino-oncinha-n-1-ao-4.html', 'the-2561')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    <p dir="ltr"><span id="docs-internal-guid-e6e3dfdd-219c-5296-e9ce-43514dddce85"><strong>Nome:</strong><span> </span><span>Sapato Bambino</span></span>
+                                                    </p>
+                                                    <p dir="ltr"><span id="docs-internal-guid-e6e3dfdd-219c-5296-e9ce-43514dddce85"><span><strong>Material:</strong>&nbsp;Camur&ccedil;a Estampa On&ccedil;a</span></span>
+                                                    </p>
+                                                    <p dir="ltr"><span id="docs-internal-guid-e6e3dfdd-219c-5296-e9ce-43514dddce85"><strong>Detalhes:&nbsp;</strong>La&ccedil;o<br /></span></p>
+                                                    <p dir="ltr"><span id="docs-internal-guid-e6e3dfdd-219c-5296-e9ce-43514dddce85"><strong>Solado:</strong>&nbsp;P.U. com aplica&ccedil;&atilde;o de emborrachado</span></p>
+                                                    <p dir="ltr"><span id="docs-internal-guid-e6e3dfdd-219c-5296-e9ce-43514dddce85"><strong>Garantia do Fabricante:</strong><span> Contra defeito de fabrica&ccedil;&atilde;o </span></span>
+                                                    </p>
+                                                    <p dir="ltr"><strong>Cor:&nbsp;</strong>Estampa On&ccedil;a</p> <a href="https://pecompe.com.br/outlet-4/sapatilha-bambino-oncinha-n-1-ao-4.html" title="Sapatilha Bambino Oncinha - Nº 1 ao 4" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/2561/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/2561/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item" id="the-2556">
+                                        <a href="https://pecompe.com.br/outlet-4/tenis-bambino-branco-n-1-ao-4.html" title="Tênis Bambino Branco - Nº 1 ao 4" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/9/0/9064001_1.jpg" width="135" height="135" alt="Tênis Bambino Branco - Nº 1 ao 4" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/outlet-4/tenis-bambino-branco-n-1-ao-4.html" title="Tênis Bambino Branco - Nº 1 ao 4">Tênis Bambino Branco - Nº 1 ao 4</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-2556">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-2556" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'2556','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/9/0/9064001_1.jpg','92');" id="a92-22-2556" class="swatch-category" style="background-color:#fff; width:20px; height:20px;" title="Branco"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-2556">
+                                            <span class="price">R$39,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$13,30</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$4,80</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/outlet-4/tenis-bambino-branco-n-1-ao-4.html', 'the-2556')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    <p dir="ltr"><span id="docs-internal-guid-e6e3dfdd-219c-5296-e9ce-43514dddce85"><strong>Nome:</strong><span> </span><span>Sapato Bambino</span></span>
+                                                    </p>
+                                                    <p dir="ltr"><span id="docs-internal-guid-e6e3dfdd-219c-5296-e9ce-43514dddce85"><span><strong>Material:</strong>&nbsp;P.U.</span></span>
+                                                    </p>
+                                                    <p dir="ltr"><span id="docs-internal-guid-e6e3dfdd-219c-5296-e9ce-43514dddce85"><strong>Detalhes:&nbsp;</strong>Bordado/ Ilh&oacute;s Colorido<br /></span></p>
+                                                    <p dir="ltr"><span id="docs-internal-guid-e6e3dfdd-219c-5296-e9ce-43514dddce85"><strong>Solado:</strong>&nbsp;P.U. com aplica&ccedil;&atilde;o de emborrachado</span></p>
+                                                    <p dir="ltr"><span id="docs-internal-guid-e6e3dfdd-219c-5296-e9ce-43514dddce85"><strong>Garantia do Fabricante:</strong><span> Contra defeito de fabrica&ccedil;&atilde;o </span></span>
+                                                    </p>
+                                                    <p dir="ltr"><strong>Cor:&nbsp;</strong>Branco</p> <a href="https://pecompe.com.br/outlet-4/tenis-bambino-branco-n-1-ao-4.html" title="Tênis Bambino Branco - Nº 1 ao 4" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/2556/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/2556/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item" id="the-2552">
+                                        <a href="https://pecompe.com.br/outlet-4/tenis-bambino-azul-e-vermelhor-n-1-ao-4.html" title="Tênis Bambino Azul e Vermelho - Nº 1 ao 4" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/0/9/09062-016a.jpg" width="135" height="135" alt="Tênis Bambino Azul e Vermelho - Nº 1 ao 4" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/outlet-4/tenis-bambino-azul-e-vermelhor-n-1-ao-4.html" title="Tênis Bambino Azul e Vermelho - Nº 1 ao 4">Tênis Bambino Azul e Vermelho - Nº 1 ao 4</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-2552">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-2552" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'2552','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/0/9/09062-016a.jpg','92');" id="a92-23-2552" class="swatch-category" style="background-color:#3f51b5; width:20px; height:20px;" title="Azul"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-2552">
+                                            <span class="price">R$39,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$13,30</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$4,80</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/outlet-4/tenis-bambino-azul-e-vermelhor-n-1-ao-4.html', 'the-2552')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    <p dir="ltr"><span id="docs-internal-guid-e6e3dfdd-219c-5296-e9ce-43514dddce85"><strong>Nome:</strong><span> </span><span>Sapato Bambino</span></span>
+                                                    </p>
+                                                    <p dir="ltr"><span id="docs-internal-guid-e6e3dfdd-219c-5296-e9ce-43514dddce85"><span><strong>Material:</strong>&nbsp;P.U.</span></span>
+                                                    </p>
+                                                    <p dir="ltr"><span id="docs-internal-guid-e6e3dfdd-219c-5296-e9ce-43514dddce85"><strong>Detalhes:&nbsp;</strong>Desenho Mascote a Laser<br /></span></p>
+                                                    <p dir="ltr"><span id="docs-internal-guid-e6e3dfdd-219c-5296-e9ce-43514dddce85"><strong>Solado:</strong>&nbsp;P.U. com aplica&ccedil;&atilde;o de emborrachado</span></p>
+                                                    <p dir="ltr"><span id="docs-internal-guid-e6e3dfdd-219c-5296-e9ce-43514dddce85"><strong>Garantia do Fabricante:</strong><span> Contra defeito de fabrica&ccedil;&atilde;o </span></span>
+                                                    </p>
+                                                    <p dir="ltr"><strong>Cor:&nbsp;</strong>Azul/ Vermelho</p> <a href="https://pecompe.com.br/outlet-4/tenis-bambino-azul-e-vermelhor-n-1-ao-4.html" title="Tênis Bambino Azul e Vermelho - Nº 1 ao 4" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/2552/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/2552/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item" id="the-1944">
+                                        <a href="https://pecompe.com.br/outlet-4/tenis-feminino-gloss.html" title="Tênis Feminino Gloss Prata com Branco - Nº 28 ao 35" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/5/1/51056_2.jpg" width="135" height="135" alt="Tênis Feminino Gloss Prata com Branco - Nº 28 ao 35" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a164"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/outlet-4/tenis-feminino-gloss.html" title="Tênis Feminino Gloss Prata com Branco - Nº 28 ao 35">Tênis Feminino Gloss Prata com Branco - Nº 28 ao 35</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-1944">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-1944" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'1944','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/5/1/51056_2.jpg','92');" id="a92-39-1944" class="swatch-category" style="background-color:#c0c0c0; width:20px; height:20px;" title="Prata"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-1944">
+                                            <span class="price">R$89,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$29,97</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$10,82</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/outlet-4/tenis-feminino-gloss.html', 'the-1944')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    O Tênis Pé com Pé é confortável, divertido e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece. <a href="https://pecompe.com.br/outlet-4/tenis-feminino-gloss.html" title="Tênis Feminino Gloss Prata com Branco - Nº 28 ao 35" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/1944/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/1944/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item" id="the-1973">
+                                        <a href="https://pecompe.com.br/outlet-4/bota-preta-laco.html" title="Bota Preta Laço - Nº 21 ao 27" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/3/0/30074-050a.jpg" width="135" height="135" alt="Bota Preta Laço - Nº 21 ao 27" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a163"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/outlet-4/bota-preta-laco.html" title="Bota Preta Laço - Nº 21 ao 27">Bota Preta Laço - Nº 21 ao 27</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-1973">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-1973" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'1973','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/3/0/30074-050a.jpg','92');" id="a92-20-1973" class="swatch-category" style="background-color:#000; width:20px; height:20px;" title="Preto"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-1973">
+                                            <span class="price">R$109,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$36,63</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$13,22</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/outlet-4/bota-preta-laco.html', 'the-1973')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    A Bota Laço é confortável, divertido e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece. <a href="https://pecompe.com.br/outlet-4/bota-preta-laco.html" title="Bota Preta Laço - Nº 21 ao 27" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/1973/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/1973/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item last" id="the-1984">
+                                        <a href="https://pecompe.com.br/outlet-4/sapatilha-turquesa.html" title="Sapatilha Turquesa - Nº 21 ao 27" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/2/9/29198_01.jpg" width="135" height="135" alt="Sapatilha Turquesa - Nº 21 ao 27" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a164"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/outlet-4/sapatilha-turquesa.html" title="Sapatilha Turquesa - Nº 21 ao 27">Sapatilha Turquesa - Nº 21 ao 27</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-1984">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-1984" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'1984','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/2/9/29198_01.jpg','92');" id="a92-41-1984" class="swatch-category" style="background-color:#ADEAEA; width:20px; height:20px;" title="Turquesa"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-1984">
+                                            <span class="price">R$59,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$19,97</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$7,21</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/outlet-4/sapatilha-turquesa.html', 'the-1984')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    A Sapatilha Turquesa é confortável, divertido e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece. <a href="https://pecompe.com.br/outlet-4/sapatilha-turquesa.html" title="Sapatilha Turquesa - Nº 21 ao 27" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/1984/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/1984/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ol>
+                                <script type="text/javascript">
+                                    decorateList('products-list', 'none-recursive')
+                                </script>
+
+                                <div class="toolbar-bottom">
+                                    <div class="toolbar">
+                                        <div class="sorter">
+                                            <p class="view-mode">
+                                                <label>Visualizar como</label>
+                                                <strong title="Lista" class="list">Lista</strong>
+                                                <a href="https://pecompe.com.br/?mode=grid" title="Tabela" class="grid">Tabela</a>
+                                            </p>
+
+                                            <div class="sort-by">
+                                                <label>Ordenado por:</label>
+                                                <select onchange="setLocation(this.value)" title="Ordenado por:">
+                                                    <option value="https://pecompe.com.br/?dir=asc&amp;order=position" selected="selected">
+                                                        Relevância </option>
+                                                    <option value="https://pecompe.com.br/?dir=asc&amp;order=name">
+                                                        Nome </option>
+                                                    <option value="https://pecompe.com.br/?dir=asc&amp;order=price">
+                                                        Preço </option>
+                                                    <option value="https://pecompe.com.br/?dir=asc&amp;order=navegar">
+                                                        Navegar Em </option>
+                                                    <option value="https://pecompe.com.br/?dir=asc&amp;order=idade">
+                                                        idade </option>
+                                                </select>
+                                                <a href="https://pecompe.com.br/?dir=desc&amp;order=position" class="sort-by-switcher sort-by-switcher--asc" title="Direção Descendente">Direção Descendente</a>
+                                            </div>
+                                        </div>
+                                        <div class="pager">
+                                            <div class="count-container">
+                                                <p class="amount amount--has-pages">
+                                                    1-12 de 68 </p>
+
+                                                <div class="limiter">
+                                                    <label>Exibir</label>
+                                                    <select onchange="setLocation(this.value)" title="Results per page">
+                                                        <option value="https://pecompe.com.br/?limit=4">
+                                                            4 </option>
+                                                        <option value="https://pecompe.com.br/?limit=8">
+                                                            8 </option>
+                                                        <option value="https://pecompe.com.br/?limit=12" selected="selected">
+                                                            12 </option>
+                                                        <option value="https://pecompe.com.br/?limit=16">
+                                                            16 </option>
+                                                        <option value="https://pecompe.com.br/?limit=24">
+                                                            24 </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                jQuery('.swatch-category-container .swatch-category').each(function() {
+                                    jQuery(this).click();
+                                });
+                            </script>
+                        </div>
+                        <div class="widget-title">
+                            <h2>Volta as Aulas</h2>
+                        </div>
+                        <div class="carousel-items volta-as-aulas">
+                            <div class="category-products">
+                                <div class="toolbar">
+                                    <div class="sorter">
+                                        <p class="view-mode">
+                                            <label>Visualizar como</label>
+                                            <strong title="Lista" class="list">Lista</strong>
+                                            <a href="https://pecompe.com.br/?mode=grid" title="Tabela" class="grid">Tabela</a>
+                                        </p>
+
+                                        <div class="sort-by">
+                                            <label>Ordenado por:</label>
+                                            <select onchange="setLocation(this.value)" title="Ordenado por:">
+                                                <option value="https://pecompe.com.br/?dir=asc&amp;order=position" selected="selected">
+                                                    Relevância </option>
+                                                <option value="https://pecompe.com.br/?dir=asc&amp;order=name">
+                                                    Nome </option>
+                                                <option value="https://pecompe.com.br/?dir=asc&amp;order=price">
+                                                    Preço </option>
+                                                <option value="https://pecompe.com.br/?dir=asc&amp;order=navegar">
+                                                    Navegar Em </option>
+                                                <option value="https://pecompe.com.br/?dir=asc&amp;order=idade">
+                                                    idade </option>
+                                            </select>
+                                            <a href="https://pecompe.com.br/?dir=desc&amp;order=position" class="sort-by-switcher sort-by-switcher--asc" title="Direção Descendente">Direção Descendente</a>
+                                        </div>
+                                    </div>
+                                    <div class="pager">
+                                        <div class="count-container">
+                                            <p class="amount amount--has-pages">
+                                                1-12 de 52 </p>
+
+                                            <div class="limiter">
+                                                <label>Exibir</label>
+                                                <select onchange="setLocation(this.value)" title="Results per page">
+                                                    <option value="https://pecompe.com.br/?limit=4">
+                                                        4 </option>
+                                                    <option value="https://pecompe.com.br/?limit=8">
+                                                        8 </option>
+                                                    <option value="https://pecompe.com.br/?limit=12" selected="selected">
+                                                        12 </option>
+                                                    <option value="https://pecompe.com.br/?limit=16">
+                                                        16 </option>
+                                                    <option value="https://pecompe.com.br/?limit=24">
+                                                        24 </option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <ol class="products-list" id="products-list">
+
+                                    <li class="item" id="the-5372">
+                                        <a href="https://pecompe.com.br/volta-as-aulas-2/sapatenis-masculino-azul-com-bege-n-28-ao-35.html" title="Sapatênis Masculino Azul com Bege - N º 28 ao 35" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/5/2/52090-334a.jpg" width="135" height="135" alt="Sapatênis Masculino Azul com Bege - N º 28 ao 35" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/volta-as-aulas-2/sapatenis-masculino-azul-com-bege-n-28-ao-35.html" title="Sapatênis Masculino Azul com Bege - N º 28 ao 35">Sapatênis Masculino Azul com Bege - N º 28 ao 35</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-5372">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-5372" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'5372','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/5/2/52090-334a.jpg','92');" id="a92-23-5372" class="swatch-category" style="background-color:#3f51b5; width:20px; height:20px;" title="Azul"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-5372">
+                                            <span class="price">R$109,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$36,63</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$13,22</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/volta-as-aulas-2/sapatenis-masculino-azul-com-bege-n-28-ao-35.html', 'the-5372')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    O Casual Kids Pé com Pé é confortável, divertido e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece.
+
+                                                    <a href="https://pecompe.com.br/volta-as-aulas-2/sapatenis-masculino-azul-com-bege-n-28-ao-35.html" title="Sapatênis Masculino Azul com Bege - N º 28 ao 35" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/5372/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/5372/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item" id="the-4696">
+                                        <a href="https://pecompe.com.br/volta-as-aulas-2/tenis-runner-masculino-azul-com-preto-n-22-ao-27.html" title="Tênis Runner Masculino Azul com Preto - Nº 21 ao 27" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/1/5/15065-094a_1.jpg" width="135" height="135" alt="Tênis Runner Masculino Azul com Preto - Nº 21 ao 27" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/volta-as-aulas-2/tenis-runner-masculino-azul-com-preto-n-22-ao-27.html" title="Tênis Runner Masculino Azul com Preto - Nº 21 ao 27">Tênis Runner Masculino Azul com Preto - Nº 21 ao 27</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-4696">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-4696" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'4696','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/1/5/15065-094a_1.jpg','92');" id="a92-23-4696" class="swatch-category" style="background-color:#3f51b5; width:20px; height:20px;" title="Azul"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-4696">
+                                            <span class="price">R$89,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$29,97</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$10,82</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/volta-as-aulas-2/tenis-runner-masculino-azul-com-preto-n-22-ao-27.html', 'the-4696')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    O Tênis Runner Pé com Pé é confortável, divertido e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece. <a href="https://pecompe.com.br/volta-as-aulas-2/tenis-runner-masculino-azul-com-preto-n-22-ao-27.html" title="Tênis Runner Masculino Azul com Preto - Nº 21 ao 27" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/4696/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/4696/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item" id="the-4674">
+                                        <a href="https://pecompe.com.br/volta-as-aulas-2/tenis-runner-masculino-velcro-azul-com-preto-n-28-ao-35.html" title="Tênis Runner Masculino Velcro Azul com Preto - Nº 28 ao 35" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/7/1/71029-094a.jpg" width="135" height="135" alt="Tênis Runner Masculino Velcro Azul com Preto - Nº 28 ao 35" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/volta-as-aulas-2/tenis-runner-masculino-velcro-azul-com-preto-n-28-ao-35.html" title="Tênis Runner Masculino Velcro Azul com Preto - Nº 28 ao 35">Tênis Runner Masculino Velcro Azul com Preto - Nº 28 ao 35</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-4674">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-4674" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'4674','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/7/1/71029-094a.jpg','92');" id="a92-20-4674" class="swatch-category" style="background-color:#000; width:20px; height:20px;" title="Preto"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-4674">
+                                            <span class="price">R$99,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$33,30</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$12,02</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/volta-as-aulas-2/tenis-runner-masculino-velcro-azul-com-preto-n-28-ao-35.html', 'the-4674')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    O Tênis Runner Calce Fácil é confortável, divertido e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece. <a href="https://pecompe.com.br/volta-as-aulas-2/tenis-runner-masculino-velcro-azul-com-preto-n-28-ao-35.html" title="Tênis Runner Masculino Velcro Azul com Preto - Nº 28 ao 35" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/4674/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/4674/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item" id="the-4665">
+                                        <a href="https://pecompe.com.br/volta-as-aulas-2/tenis-runner-feminino-azul-com-rosa-n-28-ao-35.html" title="Tênis Runner Feminino Azul com Rosa - Nº 28 ao 35" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/7/1/71019-497a.jpg" width="135" height="135" alt="Tênis Runner Feminino Azul com Rosa - Nº 28 ao 35" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/volta-as-aulas-2/tenis-runner-feminino-azul-com-rosa-n-28-ao-35.html" title="Tênis Runner Feminino Azul com Rosa - Nº 28 ao 35">Tênis Runner Feminino Azul com Rosa - Nº 28 ao 35</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-4665">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-4665" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'4665','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/7/1/71019-497a.jpg','92');" id="a92-23-4665" class="swatch-category" style="background-color:#3f51b5; width:20px; height:20px;" title="Azul"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-4665">
+                                            <span class="price">R$99,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$33,30</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$12,02</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/volta-as-aulas-2/tenis-runner-feminino-azul-com-rosa-n-28-ao-35.html', 'the-4665')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    O Tênis Runner Calce Fácil é confortável, divertido e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece. <a href="https://pecompe.com.br/volta-as-aulas-2/tenis-runner-feminino-azul-com-rosa-n-28-ao-35.html" title="Tênis Runner Feminino Azul com Rosa - Nº 28 ao 35" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/4665/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/4665/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item" id="the-4656">
+                                        <a href="https://pecompe.com.br/volta-as-aulas-2/tenis-runner-masculino-velcro-azul-com-verde-n-28-ao-35.html" title="Tênis Runner Masculino Velcro Azul com Verde  - Nº 28 ao 35" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/7/1/71022-034a.jpg" width="135" height="135" alt="Tênis Runner Masculino Velcro Azul com Verde  - Nº 28 ao 35" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/volta-as-aulas-2/tenis-runner-masculino-velcro-azul-com-verde-n-28-ao-35.html" title="Tênis Runner Masculino Velcro Azul com Verde  - Nº 28 ao 35">Tênis Runner Masculino Velcro Azul com Verde  - Nº 28 ao 35</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-4656">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-4656" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'4656','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/7/1/71022-034a.jpg','92');" id="a92-23-4656" class="swatch-category" style="background-color:#3f51b5; width:20px; height:20px;" title="Azul"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-4656">
+                                            <span class="price">R$99,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$33,30</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$12,02</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/volta-as-aulas-2/tenis-runner-masculino-velcro-azul-com-verde-n-28-ao-35.html', 'the-4656')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    O Tênis Runner Calce Fácil é confortável, divertido e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece. <a href="https://pecompe.com.br/volta-as-aulas-2/tenis-runner-masculino-velcro-azul-com-verde-n-28-ao-35.html" title="Tênis Runner Masculino Velcro Azul com Verde  - Nº 28 ao 35" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/4656/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/4656/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item" id="the-4567">
+                                        <a href="https://pecompe.com.br/volta-as-aulas-2/tenis-basic-preto-com-elastico-n-25-ao-32.html" title="Tênis Basic Preto com Elástico - Nº 25 ao 32" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/4/5/45053a.jpg" width="135" height="135" alt="Tênis Basic Preto com Elástico - Nº 25 ao 32" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a163"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/volta-as-aulas-2/tenis-basic-preto-com-elastico-n-25-ao-32.html" title="Tênis Basic Preto com Elástico - Nº 25 ao 32">Tênis Basic Preto com Elástico - Nº 25 ao 32</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-4567">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-4567" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'4567','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/4/5/45053a.jpg','92');" id="a92-20-4567" class="swatch-category" style="background-color:#000; width:20px; height:20px;" title="Preto"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-4567">
+                                            <span class="price">R$79,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$26,63</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$9,61</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/volta-as-aulas-2/tenis-basic-preto-com-elastico-n-25-ao-32.html', 'the-4567')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    Nome: Tênis Basic Kids Material: Laminado Sintético/ Nylon Detalhe: Elástico Solado: TR Monocolor Antiderrapante Garantia do Fabricante: Contra defeito de fabricação Origem: Brasil <a href="https://pecompe.com.br/volta-as-aulas-2/tenis-basic-preto-com-elastico-n-25-ao-32.html" title="Tênis Basic Preto com Elástico - Nº 25 ao 32" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/4567/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/4567/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item" id="the-4524">
+                                        <a href="https://pecompe.com.br/volta-as-aulas-2/tenis-runner-feminino-calce-facil-preto-n-21-ao-27.html" title="Tênis Runner Feminino Calce Fácil Preto  - Nº 21 ao 27" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/1/5/15079-480a.jpg" width="135" height="135" alt="Tênis Runner Feminino Calce Fácil Preto  - Nº 21 ao 27" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/volta-as-aulas-2/tenis-runner-feminino-calce-facil-preto-n-21-ao-27.html" title="Tênis Runner Feminino Calce Fácil Preto  - Nº 21 ao 27">Tênis Runner Feminino Calce Fácil Preto  - Nº 21 ao 27</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-4524">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-4524" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'4524','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/1/5/15079-480a.jpg','92');" id="a92-20-4524" class="swatch-category" style="background-color:#000; width:20px; height:20px;" title="Preto"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-4524">
+                                            <span class="price">R$79,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$26,63</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$9,61</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/volta-as-aulas-2/tenis-runner-feminino-calce-facil-preto-n-21-ao-27.html', 'the-4524')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    O Tênis Runner Calce Fácil é confortável, divertido e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece. <a href="https://pecompe.com.br/volta-as-aulas-2/tenis-runner-feminino-calce-facil-preto-n-21-ao-27.html" title="Tênis Runner Feminino Calce Fácil Preto  - Nº 21 ao 27" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/4524/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/4524/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item" id="the-4517">
+                                        <a href="https://pecompe.com.br/volta-as-aulas-2/tenis-runner-feminino-pink-e-preto-n-22-ao-27.html" title="Tênis Runner Feminino Pink e Preto - Nº 22 ao 27" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/1/5/15077-480a.jpg" width="135" height="135" alt="Tênis Runner Feminino Pink e Preto - Nº 22 ao 27" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/volta-as-aulas-2/tenis-runner-feminino-pink-e-preto-n-22-ao-27.html" title="Tênis Runner Feminino Pink e Preto - Nº 22 ao 27">Tênis Runner Feminino Pink e Preto - Nº 22 ao 27</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-4517">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-4517" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'4517','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/1/5/15077-480a.jpg','92');" id="a92-40-4517" class="swatch-category" style="background-color:#cc527c; width:20px; height:20px;" title="Pink"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-4517">
+                                            <span class="price">R$79,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$26,63</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$9,61</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/volta-as-aulas-2/tenis-runner-feminino-pink-e-preto-n-22-ao-27.html', 'the-4517')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    O Tênis Runner Pé com Pé é confortável, divertido e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece. <a href="https://pecompe.com.br/volta-as-aulas-2/tenis-runner-feminino-pink-e-preto-n-22-ao-27.html" title="Tênis Runner Feminino Pink e Preto - Nº 22 ao 27" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/4517/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/4517/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item" id="the-4440">
+                                        <a href="https://pecompe.com.br/volta-as-aulas-2/tenis-runner-masculino-azul-e-preto-n-22-ao-27.html" title="Tênis Runner Masculino Azul e Preto - Nº 22 ao 27" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/1/5/15077-094a.jpg" width="135" height="135" alt="Tênis Runner Masculino Azul e Preto - Nº 22 ao 27" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/volta-as-aulas-2/tenis-runner-masculino-azul-e-preto-n-22-ao-27.html" title="Tênis Runner Masculino Azul e Preto - Nº 22 ao 27">Tênis Runner Masculino Azul e Preto - Nº 22 ao 27</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-4440">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-4440" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'4440','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/1/5/15077-094a.jpg','92');" id="a92-23-4440" class="swatch-category" style="background-color:#3f51b5; width:20px; height:20px;" title="Azul"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-4440">
+                                            <span class="price">R$79,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$26,63</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$9,61</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/volta-as-aulas-2/tenis-runner-masculino-azul-e-preto-n-22-ao-27.html', 'the-4440')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    O Tênis Runner Pé com Pé é confortável, divertido e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece. <a href="https://pecompe.com.br/volta-as-aulas-2/tenis-runner-masculino-azul-e-preto-n-22-ao-27.html" title="Tênis Runner Masculino Azul e Preto - Nº 22 ao 27" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/4440/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/4440/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item" id="the-4433">
+                                        <a href="https://pecompe.com.br/volta-as-aulas-2/tenis-runner-masculino-azul-com-elastico-n-22-ao-27.html" title="Tênis Runner Masculino Azul com Elástico - Nº 22 ao 27" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/1/5/15075-785a.jpg" width="135" height="135" alt="Tênis Runner Masculino Azul com Elástico - Nº 22 ao 27" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/volta-as-aulas-2/tenis-runner-masculino-azul-com-elastico-n-22-ao-27.html" title="Tênis Runner Masculino Azul com Elástico - Nº 22 ao 27">Tênis Runner Masculino Azul com Elástico - Nº 22 ao 27</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-4433">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-4433" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'4433','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/1/5/15075-785a.jpg','92');" id="a92-23-4433" class="swatch-category" style="background-color:#3f51b5; width:20px; height:20px;" title="Azul"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-4433">
+                                            <span class="price">R$79,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$26,63</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$9,61</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/volta-as-aulas-2/tenis-runner-masculino-azul-com-elastico-n-22-ao-27.html', 'the-4433')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    O Tênis Runner Pé com Pé é confortável, divertido e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece. <a href="https://pecompe.com.br/volta-as-aulas-2/tenis-runner-masculino-azul-com-elastico-n-22-ao-27.html" title="Tênis Runner Masculino Azul com Elástico - Nº 22 ao 27" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/4433/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/4433/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item" id="the-4426">
+                                        <a href="https://pecompe.com.br/volta-as-aulas-2/tenis-runner-feminino-pink-com-elastico-n-22-ao-27.html" title="Tênis Runner Feminino Pink com Elástico - Nº 22 ao 27" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/1/5/15075-481a.jpg" width="135" height="135" alt="Tênis Runner Feminino Pink com Elástico - Nº 22 ao 27" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/volta-as-aulas-2/tenis-runner-feminino-pink-com-elastico-n-22-ao-27.html" title="Tênis Runner Feminino Pink com Elástico - Nº 22 ao 27">Tênis Runner Feminino Pink com Elástico - Nº 22 ao 27</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-4426">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-4426" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'4426','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/1/5/15075-481a.jpg','92');" id="a92-40-4426" class="swatch-category" style="background-color:#cc527c; width:20px; height:20px;" title="Pink"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-4426">
+                                            <span class="price">R$79,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$26,63</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$9,61</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/volta-as-aulas-2/tenis-runner-feminino-pink-com-elastico-n-22-ao-27.html', 'the-4426')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    O Tênis Runner Pé com Pé é confortável, divertido e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece. <a href="https://pecompe.com.br/volta-as-aulas-2/tenis-runner-feminino-pink-com-elastico-n-22-ao-27.html" title="Tênis Runner Feminino Pink com Elástico - Nº 22 ao 27" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/4426/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/4426/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="item last" id="the-4418">
+                                        <a href="https://pecompe.com.br/volta-as-aulas-2/tenis-runner-feminino-preto-e-cinza-n-21-ao-27.html" title="Tênis Runner Feminino Preto e Cinza - Nº 21 ao 27" class="product-image"><img src="https://pecompe.com.br/media/catalog/product/cache/1/small_image/135x/9df78eab33525d08d6e5fb8d27136e95/1/5/15072-389a.jpg" width="135" height="135" alt="Tênis Runner Feminino Preto e Cinza - Nº 21 ao 27" /></a>
+                                        <div class="product-shop">
+                                            <div class="f-fix">
+                                                <div class="promo-product a"></div>
+                                                <h2 class="product-name"><a href="https://pecompe.com.br/volta-as-aulas-2/tenis-runner-feminino-preto-e-cinza-n-21-ao-27.html" title="Tênis Runner Feminino Preto e Cinza - Nº 21 ao 27">Tênis Runner Feminino Preto e Cinza - Nº 21 ao 27</a></h2>
+                                                <span class="swatchLabel-category">Cor:</span>
+                                                <p class="float-clearer"></p>
+                                                <div class="swatch-category-container color" style="clear:both;" id="ul-attribute92-4418">
+                                                    <form>
+                                                        <input type="hidden" id="hidden-the-4418" value="color" />
+                                                    </form>
+                                                    <div onclick="listSwitcher(this,'4418','https://pecompe.com.br/media/catalog/product/cache/1/base/259x259/9df78eab33525d08d6e5fb8d27136e95/1/5/15072-389a.jpg','92');" id="a92-20-4418" class="swatch-category" style="background-color:#000; width:20px; height:20px;" title="Preto"></div>
+                                                </div>
+                                                <p class="float-clearer"></p>
+
+                                                <div class="price-box">
+                                                        <span class="regular-price" id="product-price-4418">
+                                            <span class="price">R$79,90</span> </span>
+
+                                                </div>
+
+                                                <div class="parcela"><span class="price">3x</span> de <span class="price">R$26,63</span> sem juros
+                                                    <br/> ou <span class="price">12</span> de <span class="price">R$9,61</span></div>
+                                                <p>
+                                                    <button type="button" title="COMPRAR AGORA" class="button btn-cart" onclick="setLocationConfig('https://pecompe.com.br/volta-as-aulas-2/tenis-runner-feminino-preto-e-cinza-n-21-ao-27.html', 'the-4418')"><span><span>COMPRAR AGORA</span></span>
+                                                    </button>
+                                                </p>
+                                                <div class="desc std">
+                                                    O Tênis Runner Pé com Pé é confortável, divertido e de fácil calce para toda criança. A Pé com Pé é sucesso em todo o Brasil com seus calçados divertidos e confortáveis. Sempre buscando a melhor qualidade, conforto e segurança que toda criança merece. Com a missão de desenvolver produtos infantis que façam prevalecer esses atributos para manter vivo o encanto de ser criança. A Pé com Pé atua no mercado infantil com serviços de qualidade e que superam as expectativas dos clientes. A Pé com Pé é conforto + diversão! E toda criança merece. <a href="https://pecompe.com.br/volta-as-aulas-2/tenis-runner-feminino-preto-e-cinza-n-21-ao-27.html" title="Tênis Runner Feminino Preto e Cinza - Nº 21 ao 27" class="link-learn">Detalhes</a>
+                                                </div>
+                                                <ul class="add-to-links">
+                                                    <li><a href="https://pecompe.com.br/wishlist/index/add/product/4418/form_key/vz7F4b29vSMqLHo7/" class="link-wishlist">Adicionar aos Favoritos</a></li>
+                                                    <li><span class="separator">|</span> <a href="https://pecompe.com.br/catalog/product_compare/add/product/4418/uenc/aHR0cHM6Ly9wZWNvbXBlLmNvbS5ici8,/form_key/vz7F4b29vSMqLHo7/" class="link-compare">Comparar Produto</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ol>
+                                <script type="text/javascript">
+                                    decorateList('products-list', 'none-recursive')
+                                </script>
+
+                                <div class="toolbar-bottom">
+                                    <div class="toolbar">
+                                        <div class="sorter">
+                                            <p class="view-mode">
+                                                <label>Visualizar como</label>
+                                                <strong title="Lista" class="list">Lista</strong>
+                                                <a href="https://pecompe.com.br/?mode=grid" title="Tabela" class="grid">Tabela</a>
+                                            </p>
+
+                                            <div class="sort-by">
+                                                <label>Ordenado por:</label>
+                                                <select onchange="setLocation(this.value)" title="Ordenado por:">
+                                                    <option value="https://pecompe.com.br/?dir=asc&amp;order=position" selected="selected">
+                                                        Relevância </option>
+                                                    <option value="https://pecompe.com.br/?dir=asc&amp;order=name">
+                                                        Nome </option>
+                                                    <option value="https://pecompe.com.br/?dir=asc&amp;order=price">
+                                                        Preço </option>
+                                                    <option value="https://pecompe.com.br/?dir=asc&amp;order=navegar">
+                                                        Navegar Em </option>
+                                                    <option value="https://pecompe.com.br/?dir=asc&amp;order=idade">
+                                                        idade </option>
+                                                </select>
+                                                <a href="https://pecompe.com.br/?dir=desc&amp;order=position" class="sort-by-switcher sort-by-switcher--asc" title="Direção Descendente">Direção Descendente</a>
+                                            </div>
+                                        </div>
+                                        <div class="pager">
+                                            <div class="count-container">
+                                                <p class="amount amount--has-pages">
+                                                    1-12 de 52 </p>
+
+                                                <div class="limiter">
+                                                    <label>Exibir</label>
+                                                    <select onchange="setLocation(this.value)" title="Results per page">
+                                                        <option value="https://pecompe.com.br/?limit=4">
+                                                            4 </option>
+                                                        <option value="https://pecompe.com.br/?limit=8">
+                                                            8 </option>
+                                                        <option value="https://pecompe.com.br/?limit=12" selected="selected">
+                                                            12 </option>
+                                                        <option value="https://pecompe.com.br/?limit=16">
+                                                            16 </option>
+                                                        <option value="https://pecompe.com.br/?limit=24">
+                                                            24 </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                jQuery('.swatch-category-container .swatch-category').each(function() {
+                                    jQuery(this).click();
+                                });
+                            </script>
+                        </div>
+                        <div class="row blog-feed2">&nbsp;</div>
                     </div>
                 </div>
             </div>
-        </section>
-        <footer class="footer">
-            <div class="container">
-                <div class="row flex-wrap justify-content-around">
-                    <div class="col-9 col-lg-4 footer-info">
-                        <div class="row flex-column align-items-center">
-                            <h4 class="simple-text dark bold small"><svg class="icon"><use xlink:href="/static/sprite-18f1a9f5d7d21329e1ea0a127d8287a2.svg#icon-location"></use></svg> <!-- -->Localização</h4>
-                            <p class="simple-text dark small">Av. Totó Pacheco, 1647 –
-                                <br/> 2º Zona Industrial – Jaú/SP</p>
-                        </div>
-                    </div>
-                    <div class="col-9 col-lg-4 footer-info">
-                        <div class="row flex-column align-items-center">
-                            <h4 class="simple-text dark bold small"><svg class="icon"><use xlink:href="/static/sprite-18f1a9f5d7d21329e1ea0a127d8287a2.svg#icon-time"></use></svg> <!-- -->Funcionamento</h4>
-                            <p class="simple-text dark small">Segunda a Sexta: das 8h às 20h
-                                <br/>Sábados: das 9h às 19h
-                                <br/>Domingos e feriados: das 10h às 18h</p>
-                        </div>
-                    </div>
-                    <div class="col-9 col-lg-4 footer-info ">
-                        <div class="row flex-column align-items-center">
-                            <h4 class="simple-text dark bold small"><svg class="icon"><use xlink:href="/static/sprite-18f1a9f5d7d21329e1ea0a127d8287a2.svg#icon-chat"></use></svg> <!-- -->Contato:</h4>
-                            <p class="simple-text dark small">contato@territoriodocalcado.com.br
-                                <br/>
-                                <br/>(14) 3621-9339</p>
-                        </div>
-                    </div>
+        </div>
+        <div class="footer-before-container">
+            <div class="tamanhos-pe">
+                <div class="medidas">
+                    <p>Escolha pelo tamanho do pézinho
+                    </>
+                    <ul>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=54'>1</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=55'>2</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=56'>3</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=57'>4</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=58'>14</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=66'>15</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=59'>16</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=60'>17</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=65'>18</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=61'>19/20</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=62'>19</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=135'>20</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=64'>21/22</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=19'>21</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=18'>22</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=63'>23/24</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=17'>23</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=16'>24</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=67'>25/26</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=15'>25</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=14'>26</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=13'>27/28</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=12'>27</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=11'>28</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=48'>29</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=148'>29/30</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=47'>30</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=46'>31</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=45'>32</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=115'>33</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=120'>34</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                        <li class='grade'><a href='buscar-tamanho.html?tamanho=119'>35</a><img src='https://pecompe.com.br/media/wysiwyg/icon-pe.png'></li>
+                    </ul>
+                </div><img id='banner-tamanho' src='https://pecompe.com.br/media/wysiwyg/banner-promocao.png'></div>
+        </div>
+    </div>
+    <div class="footer-container">
+        <div class="footer">
+            <div class="footer-collum">
+                <img alt="" src="https://pecompe.com.br/media/wysiwyg/logo-rodape.png" />
+                <div class="col-md-5">
+                    <div class="titulo-rodape">Formas de Pagamento</div>
+                    <div class="titulo-rodape"><img alt="Bandeiras dos cart&otilde;es" src="https://pecompe.com.br/media/wysiwyg/bandeiras_1-min.png" /></div>
+                    <div id="subtilte" style="margin-left: 20px;">Parcelamos em at&eacute; 10x</div>
+                    <div class="titulo-rodape">Pagamento Seguro</div>
+                    <div class="titulo-rodape"><img title="Selos" alt="Selos" src="https://pecompe.com.br/media/wysiwyg/selos-min.png" /></div>
                 </div>
-                <div class="row social-media">
-                    <div class="col-9 d-flex justify-content-between align-items-center">
-                        <a href="mailto:contato@territoriodocalcado.com.br" aria-label="E-mail">
-                            <svg class="icon">
-                                <use xlink:href="/static/sprite-18f1a9f5d7d21329e1ea0a127d8287a2.svg#icon-envelope"></use>
-                            </svg>
-                        </a>
-                        <a href="https://web.whatsapp.com/send?phone=5514996310461&amp;text=Contato%20Site%20Territ%C3%B3rio.%20Ol%C3%A1%20tudo%20bem?%20Meu%20nome%20%C3%A9" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp">
-                            <svg class="icon">
-                                <use xlink:href="/static/sprite-18f1a9f5d7d21329e1ea0a127d8287a2.svg#icon-whatsapp"></use>
-                            </svg>
-                        </a>
-                        <a href="https://www.facebook.com/shoppingterritorio/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                            <svg class="icon">
-                                <use xlink:href="/static/sprite-18f1a9f5d7d21329e1ea0a127d8287a2.svg#icon-facebook"></use>
-                            </svg>
-                        </a>
-                        <a href="https://www.instagram.com/shoppingterritorio/?hl=pt-br" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                            <svg class="icon">
-                                <use xlink:href="/static/sprite-18f1a9f5d7d21329e1ea0a127d8287a2.svg#icon-instagram"></use>
-                            </svg>
-                        </a>
-                    </div>
+                <div class="col-md-5">
+                    <div class="titulo-rodape">Atendimento</div>
+                    <p>LOJA VIRTUAL</p>
+                    <p>De segunda &agrave; sexta&nbsp;das 8h00 &agrave;s 13h00 e das 14h30 &agrave;s 17h30 - exceto feriados</p>
+                    <p>TELEFONE: (18) 3643-5500</p>
+                    <p>WHATSAPP: (18) 99607-6551<span>&nbsp;| (18) 99626-9755</span></p>
+                    <div class="top-account">&nbsp;</div>
+                </div>
+                <div class="col-md-2 sociais-rodape">
+                    <a href="https://www.facebook.com/pecompe.calc.infantis/" target="_blank"><img src="https://pecompe.com.br/media/wysiwyg/facebook-rodape.png"></a>
+                    <a href="https://www.instagram.com/pecompeoficial" target="_blank"><img src="https://pecompe.com.br/media/wysiwyg/instagram-rodape.png"></a>
+
                 </div>
             </div>
-            <div class="top-node">
-                <h5 class="simple-text white medium regular"><a href="https://topnode.com.br/" target="_blank" rel="noopener noreferrer">made with love by top(node)</a></h5></div>
-        </footer>
+        </div>
+    </div>
+    <div class="pages-footer">
+        <a href="https://pecompe.com.br/contacts">Fale Conosco</a>
+        <a href="https://pecompe.com.br/sobre">A Pé com Pé</a>
+        <a href="https://pecompe.com.br/certificacoes">Certificações</a>
+        <a href="https://pecompe.com.br/servicos">Serviços</a>
+        <a href="https://pecompe.com.br/politica-de-troca-devolucao">Política de Troca e Devolução</a>
+        <a href="https://pecompe.com.br/customer/account/login/">Área do Lojista</a>
+        <a href="https://pecompe.com.br/tabela">Tabela de Referência de Numeração</a>
+        <a href="https://pecompe.com.br/politica-de-entrega-frete">Política de Entrega e Frete</a>
+    </div>
+
+    <div class="copy"> <address class="copyright">2019 - Pé com Pé - Todos os direitos reservados | Rua Manoel Cottas Azevedo, 71 - Jardim Klayton, Birigui - SP, 16203-041, Brasil | 55.541.130/0001-23 </address></div>
+
+</div>
+</div>
+<script>
+    jQuery('tr.first.last.odd label').click(function() {
+        var index = jQuery('tr.first.last.odd label').index(this);
+        jQuery('tr.first.last.odd label').removeClass('star-depoimentos')
+        for (i = 0; i <= index; i++) {
+            jQuery('tr.first.last.odd label').eq(i).addClass('star-depoimentos');
+
+        }
+    });
+</script>
+
+<script>
+    //NAO REMOVER
+
+    //ajuste accordion
+    jQuery('h2.accordion').click(function() {
+        jQuery(this).parent().find('div.accordion').slideToggle("slow");
+    });
+
+    //ajuste menu
+    jQuery(".nav-primary li.level0 > a").each(function() {
+        if (jQuery(this).text() == "Blog") {
+            console.log("find");
+            jQuery(this).addClass("has-children pezinho");
+        }
+    });
+
+    //ajuste galeria produto
+    jQuery("ul#ul-moreviews li a").click(function() {
+        jQuery("ul#ul-moreviews li a").removeClass("ativo");
+        jQuery(this).addClass("ativo");
+    });
+
+    $(function() {
+        $('.wh-widget-send-button-get-button').remove()
+    });
+</script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KF86VZX" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<script type="text/javascript">
+    //carousell products
+    jQuery(".carousel-items #products-list").owlCarousel({
+        //autoPlay: 6000, //Set AutoPlay to 3 seconds
+        items: 4,
+        itemsDesktop: [1199, 3],
+        itemsDesktopSmall: [979, 3],
+        navigation: true,
+        navigationText: ["", ""]
+    });
+
+    //get posts blog
+    jQuery.get("https://pecompe.com.br/blog/feed/", function(data) {
+        var $XML = jQuery(data);
+        var countLines = 0;
+        $XML.find("item").each(function() {
+            countLines++;
+            var $this = jQuery(this),
+                item = {
+                    title: $this.find("title").text(),
+                    link: $this.find("link").text(),
+                    description: $this.find("description").text(),
+                    pubDate: $this.find("pubDate").text(),
+                    author: $this.find("author").text()
+                };
+            var build_post = "";
+            build_post += "<div class='item-post'>";
+            build_post += "   <p class='title-post'>" + item.title + "</p>";
+            build_post += "   <p class='descript-post'>" + item.description + "</p>";
+            build_post += "   <a class='read-more' href='" + item.link + "' target='_blank'>Saiba mais</a>";
+            build_post += "</div>";
+            if (countLines <= 3) {
+                jQuery('.blog-feed1').append(build_post);
+            }
+            if (countLines > 3 && countLines <= 6) {
+                jQuery('.blog-feed2').append(build_post);
+            }
+            //etc...
+        });
+    });
+
+    setTimeout(function() {
+        jQuery(".item-post").each(function() {
+            var getImage = jQuery(this).find(".descript-post img");
+            jQuery(this).find(".descript-post img").remove();
+            jQuery(this).prepend(getImage);
+        });
+    }, 1000);
+</script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+<script>
+    jQuery(document).ready(function() {
+        if (jQuery.cookie('modal_shown') == null) {
+            jQuery.cookie('modal_shown', 'yes', {
+                expires: 1,
+                path: '/'
+            });
+            setTimeout(function() {
+                jQuery('#modalComunicado').modal('show');
+            }, 3000);
+        }
+    });
+</script>
+
+<!-- Modal COMUNICADO FIM DE ANO -->
+<div id="modalComunicado" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h2>COMUNICADO</h2>
+
+                <p>Atenção papais e mamães, não deixem para comprar os presentes de Natal na última hora pois as compras realizadas em nossa loja virtual entre os dias <b class="orange">18 de dezembro</b> e <b class="orange">05 de janeiro</b> serão entregues a partir do dia <b class="green">06 de janeiro</b>.</p>
+
+                <p>Fiquem atentos aos prazos de entrega e boas festas :)</p>
+            </div>
+        </div>
     </div>
 </div>
-<script id="gatsby-script-loader">
-    /*<![CDATA[*/
-    window.pagePath = "/"; /*]]>*/
-</script>
-<script id="gatsby-chunk-mapping">
-    /*<![CDATA[*/
-    window.___chunkMapping = {
-        "app": ["/app-65668cc4ceaafffd6f64.js"],
-        "component---src-templates-produtos-js": ["/component---src-templates-produtos-js-b6e0f10e15e50dfc83e7.js"],
-        "component---src-templates-loja-detail-js": ["/component---src-templates-loja-detail-js-94c1ee9c55067b848089.js"],
-        "component---src-pages-404-js": ["/component---src-pages-404-js-2ab3d6aac467c474dcd0.js"],
-        "component---src-pages-como-chegar-js": ["/component---src-pages-como-chegar-js-2fda6f9582ed6cdf4d6e.js"],
-        "component---src-pages-contato-js": ["/component---src-pages-contato-js-1e4044d670b956ef3289.js"],
-        "component---src-pages-excursoes-js": ["/component---src-pages-excursoes-js-d9a440d40f114617065d.js"],
-        "component---src-pages-index-js": ["/component---src-pages-index-js-be42583328184726b814.js"],
-        "component---src-pages-lojas-js": ["/component---src-pages-lojas-js-0faf08805ec813b65d52.js"],
-        "component---src-pages-shopping-js": ["/component---src-pages-shopping-js-b13a197917af0b3e01e9.js"]
-    }; /*]]>*/
-</script>
-<script src="/webpack-runtime-23e45fb3c3d989edb2e5.js" async=""></script>
-<script src="/app-65668cc4ceaafffd6f64.js" async=""></script>
-<script src="/commons-d9e2f6f8f4672f3bde03.js" async=""></script>
-<script src="/component---src-pages-index-js-be42583328184726b814.js" async=""></script>
-<script src="/styles-de63317853eaa805ddd7.js" async=""></script>
+
+<style>
+    .modal-header {
+        border-bottom: 0;
+    }
+
+    .modal-body {
+        text-align: center;
+        padding: 30px;
+        padding-top: 0;
+        padding-bottom: 100px;
+        overflow: hidden;
+    }
+
+    .modal-content:before {
+        content: "";
+        width: 130px;
+        height: 130px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url(https://makevendas.com.br/sites/images/pecompe/topo.png)no-repeat;
+        background-size: cover;
+    }
+
+    .modal-content:after {
+        content: "";
+        width: 170px;
+        height: 110px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: url(https://makevendas.com.br/sites/images/pecompe/rodape.png)no-repeat;
+        background-size: cover;
+    }
+
+    .modal-body:before {
+        content: "";
+        width: 150px;
+        height: 50px;
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        margin-left: -75px;
+        background: url(https://makevendas.com.br/sites/images/pecompe/logo.png)no-repeat;
+        background-size: contain;
+    }
+
+    .modal-content {
+        border-radius: 0;
+    }
+
+    .modal-content h2,
+    .modal-content p {
+        z-index: 999999999999999999999;
+        width: 70%;
+        margin-left: 15%;
+    }
+
+    .modal-content h2 {
+        color: #00a7ff;
+        font-size: 30px;
+        font-weight: 600;
+        text-decoration: underline;
+    }
+
+    .modal-content p {
+        color: #00a7ff;
+        font-size: 22px;
+    }
+
+    .modal-header .close {
+        font-size: 30px;
+    }
+
+    .modal-content p b {
+        font-weight: bold;
+    }
+
+    .modal-content p b.orange {
+        color: #fe712b;
+    }
+
+    .modal-content p b.green {
+        color: #0a807a;
+    }
+
+    .modal {
+        z-index: 9999999999999 !important;
+    }
+
+    .modal-content {
+        position: inherit;
+        float: inherit;
+        left: inherit;
+        top: inherit;
+        margin: inherit;
+        padding: inherit;
+        background-color: #fff;
+        box-shadow: inherit;
+        border: inherit;
+    }
+
+    @media only screen and (max-width:768px) {
+        .modal-body {
+            padding-top: 20px;
+        }
+        .modal-content h2,
+        .modal-content p {
+            width: 100%;
+            margin-left: 0;
+        }
+        .modal-content h2 {
+            font-size: 22px;
+        }
+        .modal-content p {
+            font-size: 20px;
+        }
+        .modal-content:before {
+            width: 90px;
+            height: 90px;
+        }
+        .modal-content:after {
+            width: 130px;
+            height: 50px;
+        }
+        .modal-body:before {
+            bottom: 45px;
+        }
+    }
+</style>
 </body>
 
 </html>

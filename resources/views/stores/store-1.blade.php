@@ -78,7 +78,7 @@
 
 
     <div class="map">
-        <div id="mapid" style="height: {{config('stores.map.height')}}px; width: {{config('stores.map.width')}}%;"></div>
+        <div id="mapid" style="height: 450px; width: 100%;"></div>
     </div>
 
 
@@ -99,6 +99,7 @@
         }).addTo(storeMap);
         L.marker([{{$configStore->map_marker}}]).addTo(storeMap)
             .bindPopup("<b>{{$configStore->title}}</b><br/>{{$configStore->address}}").openPopup();
+
         var popup = L.popup();
         function onMapClick(e) {
             popup

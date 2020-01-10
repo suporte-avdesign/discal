@@ -63,6 +63,10 @@
     <!-- Breaking News -->
     @include('home.news.breaking-news-1')
 
+    <!-- Cities -->
+    @include('home.cities.birigui-1')
+
+
     <!-- Buy Now -->
     @include('home.buy-now.shopping-1')
 
@@ -71,6 +75,7 @@
 
     <!-- Related First -->
     @include('home.related.grendene-kids');
+
 
     <!-- Top Trending -->
     @include('home.trends.trend-1')

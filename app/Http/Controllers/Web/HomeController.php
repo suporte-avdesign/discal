@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Web;
 
 use App\Services\Web\BreakingNews;
+use App\Services\Web\CityServices;
 use App\Services\Web\ClawsServices;
 use App\Services\Web\RelatedServices;
 use App\Services\Web\ShoppingStoreServices;
@@ -21,6 +22,11 @@ class HomeController extends Controller
      * @var BreakingNews
      */
     private $breakingNews;
+    /**
+     * @var CityServices
+     */
+    private $cityServices;
+
     /**
      * @var ClawsServices
      */
@@ -41,14 +47,16 @@ class HomeController extends Controller
      */
     public function __construct(
         Cache $cache,
-        RelatedServices $relatedServices,
-        ClawsServices $clawsServices,
         BreakingNews $breakingNews,
+        CityServices $cityServices,
+        ClawsServices $clawsServices,
+        RelatedServices $relatedServices,
         ShoppingStoreServices $shoppingStoreServices)
     {
         //$this->middleware('auth');
         $this->cache = $cache;
         $this->breakingNews = $breakingNews;
+        $this->cityServices = $cityServices;
         $this->clawsServices = $clawsServices;
         $this->relatedServices = $relatedServices;
         $this->shoppingStoreServices = $shoppingStoreServices;
@@ -57,18 +65,22 @@ class HomeController extends Controller
                'slug' => 'abicalcados',
                 'cache' => 60 * 24 * 7
             ],
-            'shopping' => [
-                'slug' => 'territoriodocalcado',
+            'city' => [
+                'slug' => 'birigui',
+                'cache' => 60 * 24 * 7
+            ],
+            'claws' => [
+                'slug' => 'doutorvarejo',
                 'cache' => 60 * 24 * 7
             ],
             'relateds' => [
                 'slug' => 'grendenekids',
                 'cache' => 60 * 24 * 7
             ],
-            'claws' => [
-                'slug' => 'doutorvarejo',
+            'shopping' => [
+                'slug' => 'territoriodocalcado',
                 'cache' => 60 * 24 * 7
-            ]
+            ],
         );
     }
 
@@ -81,11 +93,17 @@ class HomeController extends Controller
     {
         $configHome = typeJson($this->configHome);
 
+        //Lojas Cidade
+        $banners= [];
+        $city = $this->getCity($configHome->city);
+
         //Últimas notícias
         $news  = $this->getBreakingNews($configHome->news);
 
+
         //getShopping
         $shopping = $this->getShopping($configHome->shopping);
+
 
         //Slider RelatedStore
         $relateds = $this->getRelated($configHome->relateds);
@@ -95,9 +113,10 @@ class HomeController extends Controller
 
 
         return view('home.home-1', compact(
-            'news', 'claws', 'relateds', 'shopping')
+            'news', 'city', 'claws', 'relateds', 'shopping')
         );
     }
+
 
     /**
      * Últimas notícias
@@ -108,13 +127,52 @@ class HomeController extends Controller
     public function getBreakingNews($config)
     {
         if (!$this->cache->has('breakingNews')) {
-            $this->cache->put('breakingNews',
-                typeJson($this->breakingNews->getNews($config->slug)),
-                $config->cache);
+            $content = typeJson($this->breakingNews->getNews($config->slug));
+            if (!$content) {
+                return null;
+            }
+            $this->cache->put('breakingNews', $content, $config->cache);
         }
 
         return $this->cache->get('breakingNews');
     }
+
+
+    /**
+     * Retorna as lojas da cidade especifica.
+     *
+     * @param $config
+     * @return mixed
+     */
+    public function getCity($config)
+    {
+
+        $content = typeJson($this->cityServices->getCity($config->slug));
+        if (!$content) {
+            return null;
+        }
+
+        $i = 0;
+        $content->banners = null;
+        foreach ($content->stores as $store) {
+            if ($store->banners) {
+                $banners[$i]['alt'] = $store->name;
+                $banners[$i]['logo'] = $store->logo;
+                $rand  = rand(1, count($store->banners));
+                foreach ($store->banners as $key => $src) {
+                    if ($key == $rand-1)
+                     $banners[$i]['src'] = $src;
+                }
+                $i++;
+            }
+        }
+
+        $content->banners = typeJson($banners);
+
+        return $content;
+
+    }
+
 
     /**
      * Reorna Lojas Shopping
@@ -125,9 +183,12 @@ class HomeController extends Controller
     public function getShopping($config)
     {
         if (!$this->cache->has('shopping')) {
-            $this->cache->put('shopping',
-                typeJson($this->shoppingStoreServices->getShopping($config->slug)),
-                $config->cache);
+            $content = typeJson($this->shoppingStoreServices->getShopping($config->slug));
+            if (!$content) {
+                return null;
+            }
+
+            $this->cache->put('shopping', $content, $config->cache);
         }
 
         return $this->cache->get('shopping');
@@ -149,7 +210,12 @@ class HomeController extends Controller
                 $relateds[] = $this->relatedServices->getRelateds($slug);
                 $i++;
             }
-            $this->cache->put('relateds', typeJson($relateds[0]),$config->cache);
+            $content = typeJson($relateds[0]);
+            if (!$content) {
+                return null;
+            }
+
+            $this->cache->put('relateds', $content, $config->cache);
         }
 
         return $this->cache->get('relateds');
@@ -176,7 +242,13 @@ class HomeController extends Controller
                 $i++;
             }
 
-            $this->cache->put('claws', typeJson($claws),$config->cache);
+            $content = typeJson($claws);
+            if (!$content) {
+                return null;
+            }
+
+
+            $this->cache->put('claws', $content, $config->cache);
         }
 
         return $this->cache->get('claws');

@@ -9,7 +9,6 @@
 namespace App\Services\Web;
 
 use GuzzleHttp\Client;
-use Illuminate\Support\Facades\Cache;
 use Symfony\Component\DomCrawler\Crawler;
 use GuzzleHttp\Exception\ClientException;
 

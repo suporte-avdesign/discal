@@ -1,5 +1,55 @@
 <?php
+/**
+ * Verifica se existe o arquivo em um servidor.
+ *
+ */
 
+if ( !function_exists('storeBanner'))
+{
+    function storeBanner($stores) {
+        foreach ($stores as $store) {
+            if ($store->banners)  {
+                foreach ($store->banners as $key => $value) {
+                    $banners[$key]['alt'] = $store->name;
+                    $banners[$key]['src'] = $value;
+                }
+            }
+        }
+
+        $count = count($banners);
+        $rand = rand(1, $count);
+        foreach ($banners as $key => $banner) {
+            if ($key == $rand) {
+                return $banner;
+            }
+        }
+    }
+}
+
+/**
+ * Verifica se file existe no servidor remoto
+ */
+if ( !function_exists('remoteFileExist'))
+{
+    function remoteFileExist($url) {
+        $remoteFile = str_replace(' ', '%20', $url);
+        $ch = curl_init($remoteFile);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_NOBODY, true);
+        curl_exec($ch);
+        $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+        if($httpcode>=200 && $httpcode<300){
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
+/**
+ * Sorteia numeros.
+ */
 if ( !function_exists('sorteiaNumeros')) {
     function sorteiaNumeros($max, $total, $order = 0)
     {

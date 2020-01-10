@@ -225,6 +225,7 @@ label {
 }
 a.tag {
     color: #fff;
+    margin-bottom: 8px;
     background: transparent;
     padding: 5px 10px;
     font-size: 13px;

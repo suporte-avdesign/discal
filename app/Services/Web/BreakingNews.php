@@ -9,8 +9,11 @@
 namespace App\Services\Web;
 
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Log;
 use Symfony\Component\DomCrawler\Crawler;
 use GuzzleHttp\Exception\ClientException;
+use GuzzleHttp\Exception\ConnectException;
+use GuzzleHttp\Exception\RequestException;
 
 use App\Services\Web\Traits\BreakingNewsTrait;
 
@@ -28,6 +31,9 @@ class BreakingNews
         $config = $json->$slug;
 
         $crawler =  $this->getDomain($config);
+        if (!$crawler) {
+            return null;
+        }
 
         $content['logo'] = $this->getLogo($config, $crawler);
 
@@ -55,9 +61,26 @@ class BreakingNews
 
             return $crawler;
 
+        } catch (ConnectException $e) {
+            Log::Warning('guzzle_connect_exception', [
+                'url' => $config->domain,
+                'message' => $e->getMessage()
+            ]);
+        } catch (RequestException $e) {
+            Log::Warning('guzzle_connection_timeout', [
+                'url' => $config->domain,
+                'message' => $e->getMessage()
+            ]);
+
         } catch (ClientException $e) {
-            return null;
+            Log::Warning('guzzle_client_exception', [
+                'url' => $config->domain,
+                'message' => $e->getMessage()
+            ]);
         }
+
+        return null;
+
     }
 
 

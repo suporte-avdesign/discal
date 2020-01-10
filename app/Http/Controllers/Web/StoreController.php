@@ -73,6 +73,7 @@ class StoreController extends Controller
 
         $configStore = typeJson($this->configStore);
 
+
         return view("{$this->view}.store-1", compact(
                 'sub', 'content', 'configStore')
         );
