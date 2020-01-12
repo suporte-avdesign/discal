@@ -14,18 +14,22 @@
                 <div class="col-sm-6">
                     <div class="item-large">
                         <div class="item-large-image">
-                            <img alt="Calçados Birigui -São Paulo - Brasil" src="{{asset('images/fabricas/birigui/logo.jpg')}}">
+                            <a href="{{route('details-city', ['slug' => $city->slug])}}">
+                                <img alt="Calçados Birigui -São Paulo - Brasil" src="{{asset('images/fabricas/birigui/logo.jpg')}}">
+                            </a>
+                        </div>
+                        <div class="item-large-image">
                             @foreach($city->banners as $citybanners)
-                                @php
-                                    $rand = rand(0,2);
-                                @endphp
-                                @if($loop->index == 1)
-                                    <img alt="{{$citybanners->alt}}" src="{{$citybanners->src}}">
+                                @if($loop->index == 0)
+                                    <a href="{{route('details-city-store', ['slug' => $city->slug, 'store' => $citybanners->store])}}">
+                                        <img alt="{{$citybanners->alt}}" src="{{$citybanners->src}}">
+                                    </a>
+                                    <div class="image-overlay-right">
+                                        <img alt="{{$citybanners->alt}}" src="{{$citybanners->logo}}">
+                                    </div>
                                 @endif
                             @endforeach
-                            <div class="image-overlay"></div>
                         </div>
-                        <div class="image-overlay"></div>
                         <!--
                         <div class="item-large-content">
                             <h3><a href="detail.html">Titulo</a></h3>
@@ -49,15 +53,17 @@
                         @if($loop->index <= 2)
                             <div class="item-small">
                                 <div class="item-small-image">
-                                    <img alt="Image" src="{{$citystores->logo}}">
+                                    <a href="{{route('details-city-store', ['slug' => $city->slug, 'store' => $citystores->slug])}}">
+                                        <img alt="{{$citystores->name}}" src="{{$citystores->logo}}">
+                                    </a>
                                     <div class="image-overlay"></div>
                                 </div>
                                 <div class="item-small-content">
-                                    <h4><a href="detail.html">{{$citystores->title}}</a></h4>
+                                    <h4><a href="{{route('details-city-store', ['slug' => $city->slug, 'store' => $citystores->slug])}}">{{$citystores->title}}</a></h4>
                                     <div class="author-detail">
-                                        <p><a href="#"><i class="icon-profile-male"></i> {{getComment('name')}}</a></p>
+                                        <p><a href="{{route('details-city-store', ['slug' => $city->slug, 'store' => $citystores->slug])}}?comment"><i class="icon-profile-male"></i> {{getComment('name')}}</a></p>
                                         <p><i class="icon-clock"></i> {{getComment('day')}}</p>
-                                        <p><a href="#"><i class="icon-chat"></i> {{getComment('comments')}}</a></p>
+                                        <p><a href="{{route('details-city-store', ['slug' => $city->slug, 'store' => $citystores->slug])}}?comment"><i class="icon-chat"></i> {{getComment('comments')}}</a></p>
                                     </div>
                                     <div class="post-tag">
                                         @foreach($citystores->tags as $tags)
@@ -77,15 +83,19 @@
                         @if($loop->index >= 3)
                             <div class="item-small">
                                 <div class="item-small-image">
-                                    <img alt="Image" src="{{$citystores->logo}}">
+                                    <a href="{{route('details-city-store', ['slug' => $city->slug, 'store' => $citystores->slug])}}">
+                                        <img alt="{{$citystores->name}}" src="{{$citystores->logo}}">
+                                    </a>
                                     <div class="image-overlay"></div>
                                 </div>
                                 <div class="item-small-content">
-                                    <h4><a href="detail.html">{{$citystores->title}}</a></h4>
+                                    <h4>
+                                        <a href="{{route('details-city-store', ['slug' => $city->slug, 'store' => $citystores->slug])}}">{{$citystores->title}}</a>
+                                    </h4>
                                     <div class="author-detail">
-                                        <p><a href="#"><i class="icon-profile-male"></i> {{getComment('name')}}</a></p>
+                                        <p><a href="{{route('details-city-store', ['slug' => $city->slug, 'store' => $citystores->slug])}}?comment"><i class="icon-profile-male"></i> {{getComment('name')}}</a></p>
                                         <p><i class="icon-clock"></i> {{getComment('day')}}</p>
-                                        <p><a href="#"><i class="icon-chat"></i> {{getComment('comments')}}</a></p>
+                                        <p><a href="{{route('details-city-store', ['slug' => $city->slug, 'store' => $citystores->slug])}}?comment"><i class="icon-chat"></i> {{getComment('comments')}}</a></p>
                                     </div>
                                     <div class="post-tag">
                                         @foreach($citystores->tags as $tags)
@@ -100,19 +110,29 @@
                 <div class="col-sm-6">
                     <div class="item-large item-margin">
                         <div class="item-large-image">
+
                             @foreach($city->banners as $citybanners)
                                 @if($loop->index == 1)
-                                    <img alt="{{$citybanners->alt}}" src="{{$citybanners->src}}">
-                                @endif
-                            @endforeach
-                            @foreach($city->banners as $citybanners)
-                                @if($loop->index == 3)
-                                    <img alt="{{$citybanners->alt}}" src="{{$citybanners->src}}">
-                                @endif
-                            @endforeach
-                            
+                                    <a href="{{route('details-city-store', ['slug' => $city->slug, 'store' => $citybanners->store])}}">
+                                        <img alt="{{$citybanners->alt}}" src="{{$citybanners->src}}">
+                                    </a>
+                                    <div class="image-overlay-bottom-right">
+                                        <img alt="{{$citybanners->alt}}" src="{{$citybanners->logo}}">
+                                    </div>
                         </div>
-                        <div class="image-overlay"></div>
+                                @endif
+                        <div class="item-large-image">
+                                @if($loop->index == 2)
+                                    <a href="{{route('details-city-store', ['slug' => $city->slug, 'store' => $citybanners->store])}}">
+                                        <img alt="{{$citybanners->alt}}" src="{{$citybanners->src}}">
+                                    </a>
+                                    <div class="image-overlay-right">
+                                        <img alt="{{$citybanners->alt}}" src="{{$citybanners->logo}}">
+                                    </div>
+                                @endif
+                            @endforeach
+                        </div>
+
                         <!--
                         <div class="item-large-content">
                             <h3><a href="detail.html">Titulo</a></h3>

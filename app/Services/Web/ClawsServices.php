@@ -374,7 +374,9 @@ class ClawsServices
     }
 
 
-
+    /**  SEM USU
+     * @param $crawler
+     */
     private function createHtml($crawler)
     {
         //é assim que você começa get domDocument

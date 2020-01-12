@@ -16,6 +16,7 @@ use GuzzleHttp\Exception\ConnectException;
 use GuzzleHttp\Exception\RequestException;
 
 use App\Services\Web\Traits\CityTrait;
+use Illuminate\Support\Facades\Cache;
 
 class CityServices
 {
@@ -37,14 +38,13 @@ class CityServices
             foreach ($value as $item) {
                 $store = $config->$item;
                 $crawler = $this->getDomains($store, 'page');
+                $data[$item]['slug'] = $store->slug;
                 $data[$item]['name'] = $this->getName($store, $crawler);
                 $data[$item]['logo'] = $this->getLogo($store, $crawler);
                 $data[$item]['title'] = $this->getTitle($store, $crawler);
                 $data[$item]['description'] = $this->getDescription($store, $crawler);
                 $data[$item]['tags'] = $this->getTags($store, $crawler);
                 $data[$item]['banners'] = $this->getBanners($store, 'banners', $crawler);
-
-                //$data[$item]['products'] = $this->getProducts($store, 'products');
             }
         }
 
@@ -52,6 +52,39 @@ class CityServices
 
         //dd($content);
         return $content;
+    }
+
+    public function getDetails($slug, $store)
+    {
+        $config = typeJson($this->config->$slug);
+        $store = $config->$store;
+
+
+        $crawler = $this->getDomains($store, 'details');
+        $content['logo'] = $this->getLogo($store, $crawler);
+
+
+
+        $content['menu'] = $this->getMenu($store, $crawler);
+
+        $cache = Cache::get('city');
+        $content['banners'] = [];
+        if ($cache) {
+            foreach ($cache->stores as $value) {
+                if ($value->slug == $store->slug) {
+                    $content['banners'] = $value->banners;
+                }
+            }
+
+        }
+
+        $content['category'] = $this->getCategory($store, $content['menu']);
+
+
+        $content['products'] = $this->getProducts($store, $crawler);
+
+
+        dd($content);
     }
 
     private function getBanners($store, $type, $crawler)
@@ -111,7 +144,8 @@ class CityServices
                     $code  = $this->filterCode($store->products->code, $node);
                     $price  = $this->filterPrice($store->products->price, $node);
                     $description = $this->filterDescription($store->products->description, $node);
-                    ($store->products->name == 'alt' ? $name = $alt : $name = $this->filterName($store->products->name, $node));
+                    ($store->products->name == 'alt' ? $name = $alt : $name = $this->filterName($store, $store->products->name, $node));
+
                     return [
                         'name' => $name,
                         'href' => $href,
@@ -124,9 +158,44 @@ class CityServices
 
                 });
 
+
                 return $products;
             }
         }
+    }
+
+    private function getCategory($store, $menu)
+    {
+        if (!$menu) {
+            return $menu;
+        }
+        $details = $store->details;
+        (!$details->url ?  $url = $store->domain :  $url = $details->url);
+        if (!$details->segment) {
+            if ($store->segment) {
+                $segment = implode('/', $store->segment);
+            } else {
+                $segment = $store->domain;
+            }
+
+        } else {
+            $segment = implode('/', $details->segment);
+        }
+        $href = str_replace('/', '', "{$url}/{$segment}");
+        $links = typeJson($menu);
+        $category = null;
+        foreach ($links as $value) {
+            $link = str_replace('/', '', "{$value->href}");
+
+            if ($link == $href) {
+                $category = $value->name;
+            }
+
+        }
+
+
+        return $category;
+
     }
 
     /**
@@ -169,11 +238,20 @@ class CityServices
 
     private function getUrl($store, $url)
     {
-        if ($url == 'products') {
-            $url = $store->products;
-            if ($store->products->segment) {
-                $segment = implode('/', $store->products->segment);
-                $url = "{$store->products->url}/{$segment}";
+
+        if ($url == 'details') {
+            if (!$store->details) {
+                return null;
+            }
+            if ($store->details->url) {
+                $url = $store->details->url;
+            } else {
+                $url = $store->domain;
+            }
+
+            if ($store->details->segment) {
+                $segment = implode('/', $store->details->segment);
+                $url = "{$url}/{$segment}";
             }
         } elseif ($url == 'banners') {
             if ($store->banners->segment) {
@@ -190,6 +268,39 @@ class CityServices
 
          return $url;
     }
+
+
+    /**
+     * Retorno o menu da loja específica
+     *
+     * @param $store
+     * @param $crawler
+     * @return null|string
+     */
+    private function getMenu($store, $crawler)
+    {
+        if (!$store->details) {
+            return null;
+        }
+        if (!$store->details->menu) {
+            return null;
+        }
+        $element = implode(' ', $store->details->menu->element);
+        $count = $crawler->filter($element)->count();
+        if (!$count) {
+            return null;
+        }
+
+        $menu = $crawler->filter($element)->each(function (Crawler $node) use ($store) {
+            return [
+                'href' => $this->filterHref($store->details->menu->href, $node),
+                'name' => $this->filterName($store, $store->details->menu->text, $node)
+            ];
+        });
+
+        return $menu;
+    }
+
 
     /**
      * Retorno o logo da loja específica
@@ -242,6 +353,7 @@ class CityServices
 
     private function setParent($parent, $crawler)
     {
+
         $count = $crawler->filter($parent)->count();
         if (!$count) {
             return false;
@@ -279,6 +391,9 @@ class CityServices
         } elseif ('href') {
             $ele = $node->filter('a')->count();
             ($ele ? $src = $url . $node->filter('a')->attr('href') : $src = null);
+        } else {
+            $ele = $node->filter($src)->count();
+            ($ele ? $src = $url . $node->filter($src)->attr('src') : $src = null);
         }
 
         return $src;
@@ -296,25 +411,32 @@ class CityServices
 
     }
 
-    private function filterName($name, $node)
+    private function filterName($store, $name, $node)
     {
         if (!$name) {
             return $name;
+        } elseif ($name == 'h4') {
+            $ele = $node->filter('h4')->text();
+            ($ele ? $name = $ele : $name = null);
         } elseif ($name == 'alt') {
             $ele = $node->filter('img')->attr('alt');
-            ($ele ? $name = $node->filter('img')->attr('alt') : $name = null);
+            ($ele ? $name = $ele : $name = null);
         } elseif ($name == 'title') {
             $ele = $node->filter('a')->attr('title');
-            ($ele ? $name = $node->filter('a')->attr('title') : $name = null);
+            ($ele ? $name = $ele : $name = null);
 
         } elseif ($name == 'a') {
             $ele = $node->filter('a')->count();
-            ($ele ? $name = $node->filter('a')->text() : $name = null);
+            ($ele ? $name = $node->filter($name)->text() : $name = null);
         } else {
             if (is_array($name)) {
                 $name = $node->filter($name[0])->attr($name[1]);
             } else {
-                $name = $node->filter($name)->text();
+
+                $html = $node->filter($name)->html();
+                $html = str_replace('<br>', ' ', $html);
+
+                $name = $html;
             }
         }
 
@@ -379,6 +501,7 @@ class CityServices
 
         return $description;
     }
+
 
 
 }

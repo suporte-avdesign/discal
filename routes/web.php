@@ -44,3 +44,8 @@ Route::post('produto/{slug}/{segment}', 'Web\RelatedDetailsController@form')->na
  */
 Route::get('shopping/{slug}/{store}/atacado/{segment}', 'Web\ShoppingDetailsController@index')->name('details-shopping');
 
+/**
+ * Route: City Details
+ */
+Route::get('fabricas/{slug}', 'Web\CityDetailsController@index')->name('details-city');
+Route::get('fabricas/{slug}/{store}', 'Web\CityDetailsController@store')->name('details-city-store');

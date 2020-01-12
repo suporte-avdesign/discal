@@ -28,7 +28,7 @@ trait CityTrait
                         'nossa-historia'
                     ],
                     'name' => 'Dok Calçados',
-                    'slug' => 'dock-calcados',
+                    'slug' => 'dokcalcados',
                     'title' => '',
                     'description' => '',
                     'logo' => [
@@ -40,7 +40,21 @@ trait CityTrait
                             'img'
                         ]
                     ],
-                    'products' => null,
+                    'products' => [
+                        'url' => '',
+                        'segment' => [
+                            'produtos'
+                        ],
+                        'parent' => '.qodef-page-content-holder',
+                        'element' => '.qodef-eh-item-content',
+                        'href' => null,
+                        'name' => null,
+                        'src' => 'img',
+                        'alt' => null,
+                        'code' => null,
+                        'price' => null,
+                        'description' => '.wpb_text_column .wpb_wrapper'
+                    ],
                     'tags' => [
                         'Abotinados',
                         'Sandálias',
@@ -63,10 +77,18 @@ trait CityTrait
                         ]
                     ],
                     'details' => [
-                        'url' => 'http://plugt.com.br',
+                        'url' => '',
                         'segment' => [
-                            'wp',
-                            'produtos'
+                            'feminino'
+                        ],
+                        'menu' => [
+                            'element' => [
+                                '.sub_menu',
+                                '.menu-item-object-page',
+                                'a',
+                            ],
+                            'href' => 'href',
+                            'text' => 'a'
                         ]
                     ]
                 ],
@@ -77,7 +99,7 @@ trait CityTrait
                         'produtos'
                     ],
                     'name' => 'Grugui Calçados Infantis',
-                    'slug' => 'grugui-calcados-infantis',
+                    'slug' => 'grugui',
                     'title' => 'A empresa oferece uma linha completa de calçados infantil, infanto-juvenil, juvenil e modinha.',
                     'description' => '',
                     'logo' => [
@@ -91,7 +113,11 @@ trait CityTrait
                     ],
                     'products' => [
                         'url' => '',
-                        'segment' => '',
+                        'segment' => [
+                            'produtos',
+                            'categoria',
+                            '48'
+                        ],
                         'parent' => '.produtos-list',
                         'element' => '.thumbnail',
                         'href' => null,
@@ -100,21 +126,37 @@ trait CityTrait
                         'alt' => 'alt',
                         'code' => '.thumbnail',
                         'price' => null,
-                        'description' => [
-                            '.thumbnail',
-                            'data-original-title'
-                        ]
+                        'description' => null
                     ],
                     'tags' => [
                         'Bebê',
                         'Infantil',
                         'Juvenil'
                     ],
-                    'banners' => null,
+                    'banners' => [
+                        'url' => null,
+                        'segment' => null,
+                        'parent' => '',
+                        'element' => '',
+                        'images' => [
+                            'http://grugui.com.br/assets/images/template/bg-header-b.jpg'
+                        ]
+                    ],
                     'details' => [
-                        'url' => 'http://grugui.com.br',
+                        'url' => '',
                         'segment' => [
-                            'produtos'
+                            'produtos',
+                            'categoria',
+                            '48'
+                        ],
+                        'menu' => [
+                            'element' => [
+                                '.categorias',
+                                '.nav',
+                                'li',
+                            ],
+                            'href' => 'href',
+                            'text' => 'title'
                         ]
                     ]
                 ],
@@ -124,7 +166,7 @@ trait CityTrait
                     'domain' => 'https://pecompe.com.br',
                     'segment' => null,
                     'name' => 'Pé com Pé Calçados Infantis',
-                    'slug' => 'pe-com-pe',
+                    'slug' => 'pecompe',
                     'title' => 'Pé com Pé foi marcado por investimentos contínuos em tecnologia, qualidade, valor agregado dos produtos e no fortalecimento de sua marca.',
                     'description' => '',
                     'logo' => [
@@ -135,7 +177,19 @@ trait CityTrait
                             'img'
                         ]
                     ],
-                    'products' => null,
+                    'products' => [
+                        'url' => '',
+                        'segment' => null,
+                        'parent' => '.col-main',
+                        'element' => '.category-products .products-list .item',
+                        'href' => 'href',
+                        'name' => 'alt',
+                        'src' => 'img',
+                        'alt' => 'alt',
+                        'code' => null,
+                        'price' => null,
+                        'description' => '.desc'
+                    ],
                     'tags' => [
                         'Meninos',
                         'Meninas'
@@ -149,9 +203,14 @@ trait CityTrait
                         'images' => null
                     ],
                     'details' => [
-                        'url' => 'http://grugui.com.br',
-                        'segment' => [
-                            'produtos'
+                        'url' => 'https://pecompe.com.br',
+                        'segment' => null,
+                        'menu' => [
+                            'element' => [
+                                'li.parent',
+                            ],
+                            'href' => 'href',
+                            'text' => '.has-children'
                         ]
                     ]
                 ],
@@ -162,7 +221,7 @@ trait CityTrait
                         'produtos'
                     ],
                     'name' => 'Pequito Calçados',
-                    'slug' => 'pequito-calcados',
+                    'slug' => 'pequito',
                     'title' => 'Diferencial competitivo: Design dos produtos, agilidade nos lançamentos, tecnologia e conforto',
                     'description' => '',
                     'logo' => [
@@ -175,16 +234,14 @@ trait CityTrait
                     ],
                     'products' => [
                         'url' => 'http://www.pequito.com.br',
-                        'segment' => [
-                            'produtos'
-                        ],
+                        'segment' => null,
                         'parent' => '.produtosLista',
                         'element' => '.colunaproduto',
                         'href' => null,
-                        'name' => '.colunaproduto p',
+                        'name' => '.colunaproduto',
                         'src' => 'href',
                         'alt' => null,
-                        'code' => null,
+                        'code' => 'title',
                         'price' => null,
                         'description' => null
                     ],
@@ -203,7 +260,16 @@ trait CityTrait
                     'details' => [
                         'url' => 'http://www.pequito.com.br',
                         'segment' => [
-                            'produtos'
+                            'produtos',
+                            'tenis-sola-caixa'
+                        ],
+                        'menu' => [
+                            'element' => [
+                                '.listaNav',
+                                'li'
+                            ],
+                            'href' => 'a',
+                            'text' => 'li a'
                         ]
                     ]
                 ],
@@ -213,7 +279,7 @@ trait CityTrait
                     'domain' => 'http://pinokio.com.br',
                     'segment' => null,
                     'name' => 'Pinokio Calçados Infantis',
-                    'slug' => 'pinokio-calcados',
+                    'slug' => 'pinokio',
                     'title' => 'Pinokio Calçados Infantis, qualidade, conforto, beleza, diversão e estilo ao pé da letra.',
                     'description' => '',
                     'logo' => [
@@ -225,7 +291,19 @@ trait CityTrait
                             'img'
                         ]
                     ],
-                    'products' => null,
+                    'products' => [
+                        'url' => 'http://www.pinokio.com.br',
+                        'segment' => null,
+                        'parent' => '.produtoslista',
+                        'element' => '.produtoColuna2',
+                        'href' => null,
+                        'name' => 'title',
+                        'src' => 'href',
+                        'alt' => null,
+                        'code' => 'title',
+                        'price' => null,
+                        'description' => null
+                    ],
                     'tags' => [
                         'Infantil',
                         'Juvenil'
@@ -239,21 +317,28 @@ trait CityTrait
                         'images' => null
                     ],
                     'details' => [
-                        'url' => 'http://grugui.com.br',
+                        'url' => 'http://www.pinokio.com.br',
                         'segment' => [
-                            'produtos'
+                            'produtos',
+                            'estrela'
+                        ],
+                        'menu' => [
+                            'element' => [
+                                '.produtoscategorias a'
+                            ],
+                            'href' => 'href',
+                            'text' => 'p'
                         ]
                     ]
                 ],
 
                 'plugt' => [
-                    'products_url' => 'domain',
                     'domain' => 'http://www.plugt.com.br',
                     'segment' => [
                         'wp'
                     ],
                     'name' => 'Plugt Calçados Infantis',
-                    'slug' => 'plugt-calcados-injetados',
+                    'slug' => 'plugt',
                     'title' => 'Sempre nos inspiramos no poder da imaginação das crianças para criar produtos divertidos e coloridos assim como a Plugt é! Ah, e sem deixar de lado o conforto, a praticidade de calce e a facilidade em lavar que as mamães amam!',
                     'description' => '',
                     'logo' => [
@@ -261,7 +346,19 @@ trait CityTrait
                         'style' => '',
                         'element' => ''
                     ],
-                    'products' => null,
+                    'products' => [
+                        'url' => '',
+                        'segment' => null,
+                        'parent' => '.container',
+                        'element' => '.grid-lg-3',
+                        'href' => null,
+                        'name' => null,
+                        'src' => 'img',
+                        'alt' => null,
+                        'code' => '.align-center',
+                        'price' => null,
+                        'description' => null
+                    ],
                     'tags' => [
                         'Acessórios',
                         'Calçados Injetados',
@@ -279,15 +376,14 @@ trait CityTrait
                         'images' => null
                     ],
                     'details' => [
-                        'url' => 'http://plugt.com.br',
+                        'url' => 'http://www.plugt.com.br',
                         'segment' => [
                             'wp',
                             'produtos'
-                        ]
+                        ],
+                        'menu' => null
                     ]
                 ],
-
-
 
             ],
 

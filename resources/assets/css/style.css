@@ -1724,6 +1724,8 @@ section.most-viewed{
     position: relative;
     overflow: hidden;
 }
+
+
 .item-large-image img{
     opacity: 1;
     transform: scale(1.06);

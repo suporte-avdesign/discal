@@ -94,8 +94,8 @@ class HomeController extends Controller
         $configHome = typeJson($this->configHome);
 
         //Lojas Cidade
-        $banners= [];
         $city = $this->getCity($configHome->city);
+
 
         //Últimas notícias
         $news  = $this->getBreakingNews($configHome->news);
@@ -146,22 +146,30 @@ class HomeController extends Controller
      */
     public function getCity($config)
     {
+        $this->cache->flush('city');
+        if (!$this->cache->has('city')) {
+            $content = typeJson($this->cityServices->getCity($config->slug));
+            if (!$content) {
+                return null;
+            }
 
-        $content = typeJson($this->cityServices->getCity($config->slug));
-        if (!$content) {
-            return null;
+            $this->cache->put('city', $content, $config->cache);
         }
 
+        $content = $this->cache->get('city');
+
         $i = 0;
+        $content->slug = $config->slug;
         $content->banners = null;
         foreach ($content->stores as $store) {
             if ($store->banners) {
+                $banners[$i]['store'] = $store->slug;
                 $banners[$i]['alt'] = $store->name;
                 $banners[$i]['logo'] = $store->logo;
-                $rand  = rand(1, count($store->banners));
+                $rand = rand(1, count($store->banners));
                 foreach ($store->banners as $key => $src) {
-                    if ($key == $rand-1)
-                     $banners[$i]['src'] = $src;
+                    if ($key == $rand - 1)
+                        $banners[$i]['src'] = $src;
                 }
                 $i++;
             }
@@ -170,7 +178,6 @@ class HomeController extends Controller
         $content->banners = typeJson($banners);
 
         return $content;
-
     }
 
 
