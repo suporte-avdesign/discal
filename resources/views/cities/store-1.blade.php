@@ -48,6 +48,29 @@
         </div>
     </section>
 
+    <section class="blog-content blog-content-2">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-8 col-sm-12">
+                    @include('cities.products.product-1')
+                </div>
+
+                <div class="col-md-4 col-sm-12">
+
+                    <div class="item-sidebar">
+
+                        @include('cities.sidebar.category-2')
+
+                        @include('cities.sidebar.advertisement-1')
+
+                        @include('cities.sidebar.stores-1')
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!--include('stores.products.product-1') -->
 
 

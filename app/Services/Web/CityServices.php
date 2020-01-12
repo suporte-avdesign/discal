@@ -59,11 +59,13 @@ class CityServices
         $config = typeJson($this->config->$slug);
         $store = $config->$store;
         $crawler = $this->getDomains($store, 'details');
+        $content['city'] = $slug;
+        $content['store'] = $store->slug;
         $content['logo'] = $this->getLogo($store, $crawler);
         $content['menu'] = $this->getMenu($store, $crawler);
         $content['category'] = $this->getCategory($store, $content['menu']);
         $content['products'] = $this->getProducts($store, $crawler);
-        $cache = Cache::get('city');
+        $cache = Cache::get('city_'.$slug);
         $content['banners'] = [];
         if ($cache) {
             foreach ($cache->stores as $value) {
@@ -72,6 +74,7 @@ class CityServices
                 }
             }
         }
+
 
         return $content;
     }

@@ -146,17 +146,17 @@ class HomeController extends Controller
      */
     public function getCity($config)
     {
-        $this->cache->flush('city');
-        if (!$this->cache->has('city')) {
+        //$this->cache->flush('city_'.$config->slug);
+        if (!$this->cache->has('city_'.$config->slug)) {
             $content = typeJson($this->cityServices->getCity($config->slug));
             if (!$content) {
                 return null;
             }
 
-            $this->cache->put('city', $content, $config->cache);
+            $this->cache->put('city_'.$config->slug, $content, $config->cache);
         }
 
-        $content = $this->cache->get('city');
+        $content = $this->cache->get('city_'.$config->slug);
 
         $i = 0;
         $content->slug = $config->slug;

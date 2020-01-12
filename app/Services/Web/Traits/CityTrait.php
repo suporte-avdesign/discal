@@ -260,7 +260,7 @@ trait CityTrait
                         'parent' => '.produtosLista',
                         'element' => '.colunaproduto',
                         'href' => null,
-                        'name' => '.colunaproduto',
+                        'name' => '.colunaproduto p',
                         'src' => 'href',
                         'alt' => null,
                         'code' => 'title',

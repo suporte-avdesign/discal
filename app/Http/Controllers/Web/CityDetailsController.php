@@ -6,13 +6,16 @@ use App\Services\Web\CityServices;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use Illuminate\Cache\Repository as Cache;
 
 class CityDetailsController extends Controller
 {
+    private $cache;
     private $view = 'cities';
 
-    public function __construct(CityServices $cityServices)
+    public function __construct(Cache $cache, CityServices $cityServices)
     {
+        $this->cache = $cache;
         $this->cityServices = $cityServices;
 
         $this->configStore = [
@@ -24,7 +27,7 @@ class CityDetailsController extends Controller
             'profile' => 1,           #profile (1,0)
             'relateds' => 1,          #relateds (1,0)
             'categories' => 0,        #categories (1,0)
-            'advertisement' => 0,     #advertisement (1,0)
+            'advertisement' => 1,     #advertisement (1,0)
             'maps' => [
                 'map' => 1,           #map (1,0)
                 'iframe' => 0,        #iframe (1,0)
@@ -49,12 +52,12 @@ class CityDetailsController extends Controller
     {
         $config = typeJson($this->cityServices->getConfig());
 
-
         if (!in_array($slug, $config->slug)) {
             return redirect()->route('home');
         }
 
         $content = $this->getCity($slug, $store);
+        $city = $this->getStores($slug);
 
         $agent = new \Jenssegers\Agent\Agent;
         ($agent->isMobile() == true ? $template = 'mobile' : $template = 'web');
@@ -74,7 +77,7 @@ class CityDetailsController extends Controller
 
 
         return view("{$this->view}.store-1", compact(
-                'template', 'content', 'configStore')
+             'city', 'template', 'content', 'configStore')
         );
     }
 
@@ -85,5 +88,13 @@ class CityDetailsController extends Controller
 
 
         return $city;
+    }
+
+    private function getStores($slug)
+    {
+        if ($this->cache->has('city_'.$slug)) {
+            return $this->cache->get('city_'.$slug);
+        }
+
     }
 }
