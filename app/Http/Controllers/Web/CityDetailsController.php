@@ -49,32 +49,41 @@ class CityDetailsController extends Controller
     {
         $config = typeJson($this->cityServices->getConfig());
 
+
         if (!in_array($slug, $config->slug)) {
             return redirect()->route('home');
         }
 
-        $content = $this->cityServices->getDetails($slug, $store);
-
-        dd($content);
+        $content = $this->getCity($slug, $store);
 
         $agent = new \Jenssegers\Agent\Agent;
-        ($agent->isMobile() == true ? $sub = 'api' : $sub = 'web');
+        ($agent->isMobile() == true ? $template = 'mobile' : $template = 'web');
 
         (count($content->banners) == 1 ? $this->configStore['photos'] = 1 : $this->configStore['photos'] = count($content->banners));
 
 
-        $this->configStore['title'] = $config->$slug->title;
-        $this->configStore['address'] = $config->$slug->address;
-        $this->configStore['description'] = $config->$slug->description;
-        $this->configStore['banner_height'] = $config->$slug->banners->height;
-        $this->configStore['bg_logo'] = $config->$slug->logo->style;
-        $this->configStore['map_marker'] = $config->$slug->maps->marker;
+        $this->configStore['title'] = $config->$slug->$store->title;
+        $this->configStore['address'] = $config->$slug->$store->address;
+        $this->configStore['description'] = $config->$slug->$store->description;
+        $this->configStore['banner_height'] = $config->$slug->$store->banners->height;
+        $this->configStore['bg_logo'] = $config->$slug->$store->logo->style;
+        $this->configStore['map_marker'] = $config->$slug->$store->maps->marker;
 
 
         $configStore = typeJson($this->configStore);
 
 
         return view("{$this->view}.store-1", compact(
-                'sub', 'content', 'configStore')
-        );    }
+                'template', 'content', 'configStore')
+        );
+    }
+
+
+    private function getCity($slug, $store)
+    {
+        $city = typeJson($this->cityServices->getDetails($slug, $store));
+
+
+        return $city;
+    }
 }

@@ -31,42 +31,16 @@
 
                 <div id="sidebar" class="col-md-4 col-sm-12">
                     <div class="item-sidebar">
-
                         <!-- Profile -->
-                    @include('stores.sidebar.profile-1')
-
-                    <!-- Categories -->
-                    @include('stores.categories.category-1')
-
-                    <!-- Recents Post -->
-                    @include('stores.sidebar.posts-1')
-
-                    <!-- Advertisement -->
-                        @include('stores.sidebar.advertisement-1')
-
-                        @include('stores.categories.category-2')
-
+                        @include('cities.sidebar.profile-1')
 
                     </div>
                 </div>
 
                 <div class="col-md-8 col-sm-12">
                     <div class="blog-wrapper">
-                        <!-- Photos -->
-                    @include('stores.photos.photo-1')
-
-                    @include('stores.categories.menu-1')
-
-
-
-                    <!-- Youtube -->
-                    @include('stores.videos.youtube-1')
-
-                    <!-- Video -->
-                    @include('stores.videos.vimeo-1')
-
-                    <!-- Sound -->
-                        @include('stores.sounds.sound-cloud-1')
+                        <!-- Banners -->
+                        @include('cities.banners.banner-1')
                     </div>
                 </div>
 
@@ -74,7 +48,7 @@
         </div>
     </section>
 
-    @include('stores.products.product-1')
+    <!--include('stores.products.product-1') -->
 
 
     <div class="map">
@@ -93,7 +67,7 @@
 <script src="{{asset('plugins/leaflet/leaflet.min.js')}}"></script>
 <script type="text/javascript">
     $(document).ready(function() {
-        var storeMap = L.map('mapid').setView([{{$configStore->map_marker}}], 18);
+        var storeMap = L.map('mapid').setView([{{$configStore->map_marker}}], 16);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(storeMap);

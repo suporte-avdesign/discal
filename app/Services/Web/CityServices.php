@@ -58,15 +58,11 @@ class CityServices
     {
         $config = typeJson($this->config->$slug);
         $store = $config->$store;
-
-
         $crawler = $this->getDomains($store, 'details');
         $content['logo'] = $this->getLogo($store, $crawler);
-
-
-
         $content['menu'] = $this->getMenu($store, $crawler);
-
+        $content['category'] = $this->getCategory($store, $content['menu']);
+        $content['products'] = $this->getProducts($store, $crawler);
         $cache = Cache::get('city');
         $content['banners'] = [];
         if ($cache) {
@@ -75,16 +71,9 @@ class CityServices
                     $content['banners'] = $value->banners;
                 }
             }
-
         }
 
-        $content['category'] = $this->getCategory($store, $content['menu']);
-
-
-        $content['products'] = $this->getProducts($store, $crawler);
-
-
-        dd($content);
+        return $content;
     }
 
     private function getBanners($store, $type, $crawler)
@@ -135,9 +124,7 @@ class CityServices
 
         if ($this->setParent($parent, $crawler)) {
             if ($this->setElement($element, $crawler)) {
-
                 $products = $crawler->filter($element)->each(function (Crawler $node) use ($store) {
-
                     $href = $this->filterHref($store->products->href, $node);
                     $src  = $this->filterSrc($store->products->url, $store->products->src, $node);
                     $alt  = $this->filterAlt($store->products->alt, $node);
@@ -157,8 +144,6 @@ class CityServices
                     ];
 
                 });
-
-
                 return $products;
             }
         }
@@ -192,18 +177,9 @@ class CityServices
             }
 
         }
-
-
         return $category;
-
     }
 
-    /**
-     * Retorna o html dos domínios especifico
-     *
-     * @param $config
-     * @return null|Crawler
-     */
     private function getDomains($store, $page)
     {
         $url = $this->getUrl($store, $page);
@@ -269,14 +245,6 @@ class CityServices
          return $url;
     }
 
-
-    /**
-     * Retorno o menu da loja específica
-     *
-     * @param $store
-     * @param $crawler
-     * @return null|string
-     */
     private function getMenu($store, $crawler)
     {
         if (!$store->details) {
@@ -301,14 +269,6 @@ class CityServices
         return $menu;
     }
 
-
-    /**
-     * Retorno o logo da loja específica
-     *
-     * @param $store
-     * @param $crawler
-     * @return null|string
-     */
     private function getLogo($store, $crawler)
     {
         if (!$store->logo->element) {
@@ -353,7 +313,6 @@ class CityServices
 
     private function setParent($parent, $crawler)
     {
-
         $count = $crawler->filter($parent)->count();
         if (!$count) {
             return false;
@@ -501,7 +460,5 @@ class CityServices
 
         return $description;
     }
-
-
 
 }
